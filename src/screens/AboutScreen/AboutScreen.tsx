@@ -18,8 +18,8 @@ const ServiceTab: React.FC<ServiceProps> = ({
   serviceParagraph,
 }) => {
   return (
-    <div className="service-tab">
-      <div className="service-square">
+    <div className="service-tab mt16">
+      <div className="service-square mt32">
         <img src={serviceImage} alt="icon" className="icon" />
       </div>
       <h4 className="service-heading mt16">{serviceHeading}</h4>
@@ -38,6 +38,16 @@ const AboutScreen = () => {
         <ServiceTab
           serviceImage={handshake}
           serviceHeading="Meet & Greet"
+          serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
+        ></ServiceTab>
+        <ServiceTab
+          serviceImage={airport}
+          serviceHeading="Curbside Service"
+          serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
+        ></ServiceTab>
+        <ServiceTab
+          serviceImage={car}
+          serviceHeading="Charter Service"
           serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
         ></ServiceTab>
       </main>
