@@ -6,6 +6,7 @@ interface ServiceProps {
   serviceHeading: string;
   serviceParagraph: string;
   serviceImage: string;
+  marginBottom?: string;
 }
 
 const handshake = require("../../assets/handshake.svg").default;
@@ -16,6 +17,7 @@ const ServiceTab: React.FC<ServiceProps> = ({
   serviceHeading,
   serviceImage,
   serviceParagraph,
+  marginBottom,
 }) => {
   return (
     <div className="service-tab mt16">
@@ -23,7 +25,9 @@ const ServiceTab: React.FC<ServiceProps> = ({
         <img src={serviceImage} alt="icon" className="icon" />
       </div>
       <h4 className="service-heading mt16">{serviceHeading}</h4>
-      <p className="service-paragraph mt16">{serviceParagraph}</p>
+      <p className={`service-paragraph mt16 ${marginBottom}`}>
+        {serviceParagraph}
+      </p>
     </div>
   );
 };
@@ -46,6 +50,7 @@ const AboutScreen = () => {
           serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
         ></ServiceTab>
         <ServiceTab
+          marginBottom="mb64"
           serviceImage={car}
           serviceHeading="Charter Service"
           serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."

@@ -40,8 +40,8 @@ export const RegularButton: React.FC<RegButtonProps> = ({
 export const FormButton: React.FC<FormProps> = ({ text, marginTop }) => {
   return (
     <div className={`btn-container ${marginTop}`}>
-      <button className="btn">{text}</button>
-      <figure className="pseudo"></figure>
+      <button className="btn white-bg">{text}</button>
+      <figure className="pseudo-white"></figure>
     </div>
   );
 };

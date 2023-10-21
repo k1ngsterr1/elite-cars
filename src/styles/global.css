@@ -36,7 +36,7 @@
 .heading-s {
   color: #2C2C2C;
   font-family: Lato;
-  font-size: clamp(14px, 6.54192vw, 56px);
+  font-size: clamp(16px, 7.47648vw, 64px);
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -80,6 +80,14 @@
   background: rgba(217, 217, 217, 0.2);
 }
 
+.white-bg {
+  background-color: white !important;
+}
+
+.white {
+  color: white;
+}
+
 .orange {
   color: #FF5722;
 }
@@ -112,6 +120,10 @@
   margin-top: clamp(32px, 14.95296vw, 128px);
 }
 
+.mb64 {
+  margin-bottom: clamp(32px, 14.95296vw, 128px);
+}
+
 .mt128 {
   margin-top: clamp(64px, 29.90592vw, 256px);
 }
@@ -130,4 +142,8 @@
 
 .w80 {
   width: 80%;
+}
+
+.w60 {
+  width: 60%;
 }/*# sourceMappingURL=global.css.map */
