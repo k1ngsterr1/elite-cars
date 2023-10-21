@@ -30,34 +30,34 @@ const BookingForm: React.FC = () => {
     <div className="form-container">
       <h3 className="form-heading">Step 1</h3>
 
-      <div className="form-group">
+      <div className="form-group mt32">
         <label className="label">Select Your Car Type</label>
         <Select options={carOptions} className="selector" />
       </div>
 
-      <div className="form-group">
+      <div className="form-group mt32">
         <label className="label">Select Service Type</label>
         <Select options={serviceOptions} className="selector" />
       </div>
 
-      <div className="form-group">
+      <div className="form-group mt32">
         <label className="label">Luggage</label>
         <Select options={luggageOptions} className="selector" />
       </div>
 
-      <div className="form-group">
+      <div className="form-group mt32">
         <label className="label">Passengers</label>
         <div className="counter">
           <button
             onClick={() => setPassengers(passengers - 1)}
-            className="counter-btn"
+            className="counter-btn left"
           >
             -
           </button>
           <span className="quantity">{passengers}</span>
           <button
             onClick={() => setPassengers(passengers + 1)}
-            className="counter-btn"
+            className="counter-btn right"
           >
             +
           </button>

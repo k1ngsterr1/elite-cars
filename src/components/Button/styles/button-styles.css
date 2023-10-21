@@ -59,7 +59,7 @@
   height: clamp(21.5px, 10.04652vw, 86px);
   border: 2px solid #FF5722;
   z-index: -1;
-  left: clamp(40px, 18.6912vw, 160px);
+  left: clamp(4.5px, 2.10276vw, 18px);
   top: -9px;
   position: absolute;
 }/*# sourceMappingURL=button-styles.css.map */

@@ -3,22 +3,17 @@
 .form-container {
   width: 90%;
   margin: clamp(25px, 11.682vw, 100px) auto;
-  padding: clamp(10px, 4.6728vw, 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #2C2C2C;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
-.form-group {
-  width: 90%;
-  margin-top: clamp(8px, 3.73824vw, 32px);
-  margin-bottom: clamp(10px, 4.6728vw, 40px);
+.form-container .form-group {
+  width: 83%;
 }
-
-.form-heading {
+.form-container .form-heading {
   color: #FF5722;
   font-family: Inter;
   font-size: clamp(9px, 4.20552vw, 36px);
@@ -26,10 +21,10 @@
   font-weight: 400;
   line-height: normal;
   text-transform: capitalize;
+  margin-top: clamp(8px, 3.73824vw, 32px);
   margin-bottom: clamp(8px, 3.73824vw, 32px);
 }
-
-.label {
+.form-container .label {
   color: #FFF;
   font-family: Inter;
   font-size: clamp(8px, 3.73824vw, 32px);
@@ -41,8 +36,7 @@
   margin-bottom: 10px;
   font-weight: bold;
 }
-
-.selector {
+.form-container .selector {
   color: #2C2C2C;
   font-family: Inter;
   font-size: clamp(7px, 3.27096vw, 28px);
@@ -51,29 +45,30 @@
   line-height: normal;
   text-transform: capitalize;
 }
-
-.counter {
+.form-container .counter {
   width: 100%;
   height: clamp(24px, 11.21472vw, 96px);
   background-color: white;
   display: flex;
   justify-content: space-between;
-  display: flex;
   align-items: center;
 }
-.counter .counter-btn {
+.form-container .counter .counter-btn {
   font-size: clamp(16px, 7.47648vw, 64px);
   color: #FF5722;
   background: none;
-  padding: 5px 15px;
-  margin: 0 10px;
-  background-color: #ddd;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   background-color: transparent !important;
 }
-.counter .quantity {
+.form-container .counter .left {
+  margin-left: clamp(8px, 3.73824vw, 32px);
+}
+.form-container .counter .right {
+  margin-right: clamp(8px, 3.73824vw, 32px);
+}
+.form-container .counter .quantity {
   color: #2C2C2C;
   font-family: Inter;
   font-size: clamp(9px, 4.20552vw, 36px);
@@ -82,12 +77,14 @@
   line-height: normal;
   text-transform: capitalize;
 }
-
-.submit-button {
-  padding: 10px 20px;
-  background-color: orange;
+.form-container .submit-button {
+  width: 85%;
+  height: clamp(24px, 11.21472vw, 96px);
+  background-color: #FF5722;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0px;
   cursor: pointer;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+  margin-bottom: clamp(16px, 7.47648vw, 64px);
 }/*# sourceMappingURL=car-form.css.map */

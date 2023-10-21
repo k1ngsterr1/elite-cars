@@ -33,12 +33,23 @@
   text-transform: capitalize;
 }
 
+.heading-s {
+  color: #2C2C2C;
+  font-family: Lato;
+  font-size: clamp(14px, 6.54192vw, 56px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
 .content {
   width: 90%;
   height: auto;
   margin: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
 }
 
@@ -71,6 +82,10 @@
 
 .orange {
   color: #FF5722;
+}
+
+.white-bg {
+  background-color: white;
 }
 
 .mt8 {
@@ -107,4 +122,8 @@
 
 .items-start {
   align-items: start;
+}
+
+.w80 {
+  width: 80%;
 }/*# sourceMappingURL=global.css.map */
