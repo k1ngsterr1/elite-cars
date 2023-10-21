@@ -1,0 +1,90 @@
+@import "./variables"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+#root
+    width: 100%
+    height: auto
+
+.screen
+    width: 100%
+    height: auto
+    display: flex
+    flex-direction: column
+
+.heading-container
+    display: flex
+    flex-direction: column
+
+.main-heading
+    color: $black
+    font-family: Lato
+    font-size: $font36mob
+    font-style: normal
+    font-weight: 800
+    line-height: normal
+    text-transform: capitalize
+
+.content
+    width: 90%
+    height: auto
+    margin: auto
+    display: flex
+    flex-direction: column
+    margin: auto
+
+.sub-heading
+    color: $black
+    font-family: Lato
+    font-size: $font17mob
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    text-transform: capitalize
+
+.text-center
+    text-align: center
+
+.paragraph
+    color: $black
+    font-family: Inter
+    font-size: clamp(8.5px,3.9718799999999996vw,34px)
+    font-style: normal
+    font-weight: 400
+    line-height: 144%
+
+.gray
+    background: rgba(217, 217, 217, 0.20)
+
+.orange
+    color: $orange
+
+.mt8
+    margin-top: $m8mob
+
+.mt16
+    margin-top: $m16mob
+
+.mt32
+    margin-top: $m32mob
+
+.mt48
+    margin-top: clamp(24px,11.21472vw,96px)
+
+.mt64
+    margin-top: $m64mob
+
+.mt128
+    margin-top: $m128mob
+
+.mb64
+    margin-bottom: $m64mob
+
+.items-end
+    align-items: flex-end
+
+.items-start
+    align-items: start

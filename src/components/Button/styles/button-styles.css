@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.btn-container {
+  width: auto;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: clamp(120px, 56.0736vw, 480px) !important;
+  height: clamp(21.5px, 10.04652vw, 86px) !important;
+  color: #2C2C2C !important;
+  font-family: Inter !important;
+  font-size: clamp(8.5px, 3.97188vw, 34px) !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: clamp(8.5px, 3.97188vw, 34px) !important;
+  background-color: #FF5722 !important;
+  cursor: pointer !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+  border-radius: 0 !important;
+  text-transform: none !important;
+}
+
+.reg-btn {
+  width: clamp(120px, 56.0736vw, 480px) !important;
+  height: clamp(21.5px, 10.04652vw, 86px) !important;
+  color: #FF5722 !important;
+  font-family: Inter !important;
+  font-size: clamp(8.5px, 3.97188vw, 34px) !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: clamp(8.5px, 3.97188vw, 34px) !important;
+  background-color: #2C2C2C !important;
+  cursor: pointer !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+  border-radius: 0 !important;
+  text-transform: none !important;
+  margin: auto;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+
+.pseudo {
+  width: clamp(120px, 56.0736vw, 480px);
+  height: clamp(21.5px, 10.04652vw, 86px);
+  border: 2px solid #FF5722;
+  z-index: -1;
+  left: clamp(40px, 18.6912vw, 160px);
+  top: -9px;
+  position: absolute;
+}/*# sourceMappingURL=button-styles.css.map */
