@@ -8,21 +8,38 @@ interface ServiceProps {
   serviceImage: string;
 }
 
+const handshake = require("../../assets/handshake.svg").default;
+const airport = require("../../assets/airport.svg").default;
+const car = require("../../assets/car.svg").default;
+
 const ServiceTab: React.FC<ServiceProps> = ({
   serviceHeading,
   serviceImage,
   serviceParagraph,
 }) => {
-  return <div className="service-tab"></div>;
+  return (
+    <div className="service-tab">
+      <div className="service-square">
+        <img src={serviceImage} alt="icon" className="icon" />
+      </div>
+      <h4 className="service-heading mt16">{serviceHeading}</h4>
+      <p className="service-paragraph mt16">{serviceParagraph}</p>
+    </div>
+  );
 };
 
 const AboutScreen = () => {
   return (
     <section className="screen bg-white">
       <main className="content">
-        <h2 className="heading-s w80 text-center">
+        <h2 className="heading-s w80 text-center mt32">
           Why you should <span className="orange">choose Us</span>
         </h2>
+        <ServiceTab
+          serviceImage={handshake}
+          serviceHeading="Meet & Greet"
+          serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
+        ></ServiceTab>
       </main>
     </section>
   );
