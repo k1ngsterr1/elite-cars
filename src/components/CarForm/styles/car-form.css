@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.form-container {
+  width: 90%;
+  margin: clamp(25px, 11.682vw, 100px) auto;
+  padding: clamp(10px, 4.6728vw, 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2C2C2C;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  width: 90%;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+  margin-bottom: clamp(10px, 4.6728vw, 40px);
+}
+
+.form-heading {
+  color: #FF5722;
+  font-family: Inter;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: clamp(8px, 3.73824vw, 32px);
+}
+
+.label {
+  color: #FFF;
+  font-family: Inter;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.selector {
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.counter {
+  width: 100%;
+  height: clamp(24px, 11.21472vw, 96px);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.counter .counter-btn {
+  font-size: clamp(16px, 7.47648vw, 64px);
+  color: #FF5722;
+  background: none;
+  padding: 5px 15px;
+  margin: 0 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent !important;
+}
+.counter .quantity {
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=car-form.css.map */

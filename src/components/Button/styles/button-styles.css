@@ -32,7 +32,7 @@
 
 .reg-btn {
   width: clamp(120px, 56.0736vw, 480px) !important;
-  height: clamp(21.5px, 10.04652vw, 86px) !important;
+  height: clamp(24px, 11.21472vw, 96px) !important;
   color: #FF5722 !important;
   font-family: Inter !important;
   font-size: clamp(8.5px, 3.97188vw, 34px) !important;

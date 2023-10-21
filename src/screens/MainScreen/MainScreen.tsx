@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
 import { Button, RegularButton } from "../../components/Button/Button";
+import BookingForm from "../../components/CarForm/BookingForm";
 
 const MainScreen = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -29,6 +30,7 @@ const MainScreen = () => {
         </p>
         <Button text="Explore Cars" scroll="" marginTop="mt32" />
         <RegularButton text="Book Now" marginTop="mt16" />
+        <BookingForm />
       </div>
     </div>
   );
