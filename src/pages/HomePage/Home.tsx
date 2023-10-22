@@ -5,6 +5,7 @@ import MainScreen from "../../screens/MainScreen/MainScreen";
 import AboutScreen from "../../screens/AboutScreen/AboutScreen";
 import FeaturesScreen from "../../screens/FeaturesScreen/FeaturesScreen";
 import ReviewsScreen from "../../screens/ReviewsScreen/ReviewsScreen";
+import ServiceScreen from "../../screens/ServicesScreen/ServiceScreen";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <AboutScreen />
       <FeaturesScreen />
       <ReviewsScreen />
+      <ServiceScreen />
     </div>
   );
 };

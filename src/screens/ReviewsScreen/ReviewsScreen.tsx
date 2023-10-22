@@ -44,6 +44,11 @@ const ReviewsScreen = () => {
           navigation={true}
           centeredSlides={true}
           pagination={false}
+          style={
+            {
+              "--swiper-navigation-color": "#FF5722",
+            } as React.CSSProperties
+          }
         >
           <SwiperSlide>
             <ReviewsTab
