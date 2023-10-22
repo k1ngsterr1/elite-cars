@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.request-form {
+  width: 90%;
+  margin: clamp(25px, 11.682vw, 100px) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px;
+}
+.request-form .input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(16px, 7.47648vw, 64px);
+}
+.request-form .input-group .label-in {
+  color: #FF5722;
+  font-family: Inter;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 137.4%;
+  margin-bottom: clamp(4px, 1.86912vw, 16px);
+}
+.request-form .input-group .counter {
+  width: 100%;
+  height: clamp(24px, 11.21472vw, 96px);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgba(44, 44, 44, 0.5);
+  align-items: center;
+}
+.request-form .input-group .counter .minus, .request-form .input-group .counter .plus {
+  background: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: clamp(16px, 7.47648vw, 64px);
+  color: #FF5722;
+}
+.request-form .input-group .counter .quantity {
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.request-form .input-group .counter .minus {
+  margin-left: clamp(8px, 3.73824vw, 32px);
+}
+.request-form .input-group .counter .plus {
+  margin-right: clamp(8px, 3.73824vw, 32px);
+}
+.request-form .input-group .input-form {
+  width: 100%;
+  border: 2px solid rgba(44, 44, 44, 0.5);
+  height: clamp(25px, 11.682vw, 100px);
+  transition: 0.3s all;
+  outline: none;
+  padding-left: clamp(8px, 0.83328vw, 32px);
+}
+.request-form .input-group .input-form:focus {
+  border: 2px solid #FF5722;
+  outline: none;
+}
+.request-form .form-heading {
+  color: #FF5722;
+  font-family: Inter;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+  margin-bottom: clamp(8px, 3.73824vw, 32px);
+}
+.request-form .label {
+  color: #FFF;
+  font-family: Inter;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: bold !important;
+  line-height: normal;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 10px;
+}
+.request-form .selector {
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.request-form .counter {
+  width: 100%;
+  height: clamp(24px, 11.21472vw, 96px);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.request-form .counter-btn {
+  font-size: clamp(16px, 7.47648vw, 64px);
+  color: #FF5722;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent !important;
+}
+.request-form .counter .left {
+  margin-left: clamp(8px, 3.73824vw, 32px);
+}
+.request-form .counter .right {
+  margin-right: clamp(8px, 3.73824vw, 32px);
+}
+.request-form .counter .quantity {
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}/*# sourceMappingURL=form.css.map */

@@ -1,0 +1,130 @@
+@import "../../../styles/variables"
+
+.request-form
+    width: 90%
+    margin: clamp(25px, 11.682vw, 100px) auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    border-radius: 0px
+
+    .input-group
+        width: 100%
+        display: flex
+        flex-direction: column
+        margin-bottom: $m32mob
+
+        .label-in
+            color: $orange
+            font-family: Inter
+            font-size: $font16mob
+            font-style: normal
+            font-weight: 400
+            line-height: 137.4%
+            margin-bottom: $m8mob
+
+        .counter
+            width: 100%
+            height: clamp(24px,11.21472vw,96px)
+            background-color: $white
+            display: flex
+            justify-content: space-between
+            border: 2px solid rgba(44, 44, 44, 0.50)
+            align-items: center
+
+            .minus, .plus
+                background: none
+                background-color: transparent
+                outline: none
+                border: none
+                font-size: $font32mob
+                color: $orange
+
+            .quantity
+                color: $black
+                font-family: Inter
+                font-size: $font18mob
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                text-transform: capitalize
+
+            .minus
+                margin-left: $m16mob
+
+            .plus
+                margin-right: $m16mob
+
+        .input-form
+            width: 100%
+            border: 2px solid rgba(44, 44, 44, 0.50)
+            height: clamp(25px,11.681999999999999vw,100px)
+            transition: 0.3s all
+            outline: none
+            padding-left: $m16
+            &:focus
+                border: 2px solid $orange
+                outline: none
+
+    .form-heading
+        color: $orange
+        font-family: Inter
+        font-size: $font18mob
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        text-transform: capitalize
+        margin-top: $m16mob
+        margin-bottom: $m16mob
+
+    .label
+        color: #FFF
+        font-family: Inter
+        font-size: $m16mob
+        font-style: normal
+        font-weight: bold !important
+        line-height: normal
+        text-transform: capitalize
+        display: block
+        margin-bottom: 10px
+
+    .selector
+        color: $black
+        font-family: Inter
+        font-size: $font14mob
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        text-transform: capitalize
+
+    .counter
+        width: 100%
+        height: clamp(24px, 11.21472vw, 96px)
+        background-color: $white
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        &-btn
+            font-size: $m32mob
+            color: $orange
+            background: none
+            border: none
+            border-radius: 5px
+            cursor: pointer
+            background-color: transparent !important
+
+        .left
+            margin-left: $m16mob
+
+        .right
+            margin-right: $m16mob
+
+        .quantity
+            color: $black
+            font-family: Inter
+            font-size: $font18mob
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            text-transform: capitalize

@@ -80,6 +80,10 @@
   background: rgba(217, 217, 217, 0.2);
 }
 
+.right {
+  float: right;
+}
+
 .white-bg {
   background-color: white !important;
 }
