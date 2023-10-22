@@ -8,6 +8,7 @@ import ReviewsScreen from "../../screens/ReviewsScreen/ReviewsScreen";
 import ServiceScreen from "../../screens/ServicesScreen/ServiceScreen";
 import RatesScreen from "../../screens/RatesScreen/RatesScreen";
 import FormScreen from "../../screens/FormScreen/FormScreen";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <ServiceScreen />
       <RatesScreen />
       <FormScreen />
+      <Footer />
     </div>
   );
 };

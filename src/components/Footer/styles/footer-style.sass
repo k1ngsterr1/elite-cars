@@ -1,1 +1,68 @@
-@import "../../../styles/variabless"
+@import "../../../styles/variables"
+
+.footer
+    width: 100%
+    height: auto
+    background-color: $orange
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .footer-content
+        width: 90%
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .footer-links
+            width: 100%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: start
+
+            .text
+                width: 80%
+                color: $white
+                font-family: Inter
+                font-size: $font16mob
+                font-style: italic
+                font-weight: 300
+                line-height: 146%
+
+            .navigation-container
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+
+                .nav-bold
+                    color: $white
+                    font-family: Lato
+                    font-size: clamp(12.5px,5.840999999999999vw,50px)
+                    font-style: normal
+                    font-weight: 600
+                    line-height: 146%
+
+                .link
+                    color: $white
+                    font-family: Inter
+                    font-size: $font16mob
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 146%
+                    text-decoration: none
+
+        .separator
+            width: 100%
+            height: 1px
+            background-color: $white
+
+        .text
+            color: $white
+            font-family: Inter
+            font-size: $font16mob
+            font-style: normal
+            font-weight: 400
+            line-height: 146%
+            margin-bottom: $m16mob
