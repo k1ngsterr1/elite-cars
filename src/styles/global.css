@@ -27,6 +27,10 @@
   align-items: flex-start !important;
 }
 
+.align-center {
+  align-items: center !important;
+}
+
 .main-heading {
   color: #2C2C2C;
   font-family: Lato;
