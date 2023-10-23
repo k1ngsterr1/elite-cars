@@ -5,7 +5,9 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
+
 import Home from "./pages/HomePage/Home";
+import Cadillac from "./pages/CadillacPage/Cadillac";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -22,6 +24,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/cadillac" element={<Cadillac />}></Route>
       </Routes>
     </Router>
   );

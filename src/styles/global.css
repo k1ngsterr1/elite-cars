@@ -23,6 +23,10 @@
   flex-direction: column;
 }
 
+.align-start {
+  align-items: flex-start !important;
+}
+
 .main-heading {
   color: #2C2C2C;
   font-family: Lato;

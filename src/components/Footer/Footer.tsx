@@ -76,21 +76,6 @@ const Footer = () => {
                 Example
               </Link>
             </div>
-            {/* <div className="navigation-container mt32">
-              <span className="nav-bold">Services</span>
-              <Link to="" className="link mt16">
-                Example
-              </Link>
-              <Link to="" className="link mt8">
-                Example
-              </Link>
-              <Link to="" className="link mt8">
-                Example
-              </Link>
-              <Link to="" className="link mt8">
-                Example
-              </Link>
-            </div> */}
           </div>
         </div>
         <figure className="separator mt32"></figure>

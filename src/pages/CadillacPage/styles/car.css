@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.bread-dots {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.bread-dots .link {
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 137.4%;
+  text-decoration: none;
+}
+.bread-dots .orange {
+  color: #FF5722;
+}
+.bread-dots .circle {
+  width: clamp(2.5px, 1.1682vw, 10px);
+  height: clamp(2.5px, 1.1682vw, 10px);
+  border-radius: 10px;
+  background-color: #2C2C2C;
+  margin-left: clamp(4px, 1.86912vw, 16px);
+  margin-right: clamp(4px, 1.86912vw, 16px);
+}
+.bread-dots .circle-orange {
+  width: clamp(2.5px, 1.1682vw, 10px);
+  height: clamp(2.5px, 1.1682vw, 10px);
+  border-radius: 10px;
+  background-color: #FF5722;
+  margin-left: clamp(4px, 1.86912vw, 16px);
+  margin-right: clamp(4px, 1.86912vw, 16px);
+}
+
+.car-heading {
+  width: 80%;
+  color: #FF5722;
+  font-family: Lato;
+  font-size: clamp(16px, 7.47648vw, 64px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.car-heading-s {
+  width: 80%;
+  color: #FF5722;
+  font-family: Lato;
+  font-size: clamp(14px, 6.54192vw, 56px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.car-paragraph {
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 137.4%;
+}
+
+.button-row {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.price {
+  color: #FF5722;
+  font-family: Lato;
+  font-size: clamp(8.5px, 3.97188vw, 34px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}/*# sourceMappingURL=car.css.map */
