@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/HomePage/Home";
-import Cadillac from "./pages/CadillacPage/Cadillac";
+import Cadillac from "./pages/Cars/CadillacPage/Cadillac";
+import ServicesPage from "./pages/ServicesPage/ServicesPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,7 +25,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/cadillac" element={<Cadillac />}></Route>
+        <Route path="/cars/cadillac" element={<Cadillac />}></Route>
+        <Route path="/services" element={<ServicesPage />}></Route>
       </Routes>
     </Router>
   );

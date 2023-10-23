@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.car-feature {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #FF5722;
+}
+.car-feature .feature-content {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+  margin-bottom: clamp(16px, 7.47648vw, 64px);
+}
+.car-feature .feature-content .feature-icon {
+  width: clamp(40.5px, 18.92484vw, 162px);
+  height: clamp(40.5px, 18.92484vw, 162px);
+}
+.car-feature .feature-content .feature-heading {
+  color: #2C2C2C;
+  font-family: Lato;
+  font-size: clamp(12px, 5.60736vw, 48px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.car-feature .feature-content .feature-description {
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 146%;
+  text-transform: capitalize;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}/*# sourceMappingURL=car-feature.css.map */

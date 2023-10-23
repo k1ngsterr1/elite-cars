@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.request-table {
+  width: 100%;
+  border: 3px solid #FF5722;
+}
+
+.request-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.request-header {
+  color: #2C2C2C;
+  font-family: Lato;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(255, 87, 34, 0.1);
+  padding-top: clamp(8px, 3.73824vw, 32px);
+  padding-bottom: clamp(8px, 3.73824vw, 32px);
+}
+
+.request-data {
+  color: #2C2C2C;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.request-row-main {
+  width: 100%;
+  display: table-row;
+  text-align: center;
+  border: 3px solid #FF5722;
+  background: rgba(255, 87, 34, 0.1);
+}
+.request-row-main .request-data {
+  width: 100%;
+  border: none;
+  padding-top: clamp(16px, 7.47648vw, 64px);
+  padding-bottom: clamp(16px, 7.47648vw, 64px) !important;
+}
+
+.request-row-add {
+  width: 100%;
+  display: table-row;
+  text-align: center;
+  border: 3px solid #FF5722;
+}
+.request-row-add .request-data {
+  width: 100%;
+  border: none;
+  padding-top: clamp(16px, 7.47648vw, 64px);
+  padding-bottom: clamp(16px, 7.47648vw, 64px) !important;
+}/*# sourceMappingURL=price-table.css.map */

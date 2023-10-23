@@ -15,6 +15,8 @@ const center = {
   lng: -38.523,
 };
 
+//! "AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls"
+
 const logo = require("../../assets/logo_white.svg").default;
 
 const Footer = () => {

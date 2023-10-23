@@ -51,9 +51,13 @@
   font-family: Lato;
   font-size: clamp(14px, 6.54192vw, 56px);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   text-transform: capitalize;
+}
+
+.black {
+  color: #2C2C2C;
 }
 
 .car-paragraph {
@@ -79,4 +83,10 @@
   font-weight: 500;
   line-height: normal;
   text-transform: capitalize;
+}
+
+.request-table {
+  width: 90%;
+  height: auto;
+  border: 1px solid #FF5722;
 }/*# sourceMappingURL=car.css.map */
