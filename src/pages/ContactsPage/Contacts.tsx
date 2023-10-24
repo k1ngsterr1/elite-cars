@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
-import { FormButton, RegularButton } from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
+import { FormButton, RegularButton } from "../../components/Button/Button";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "./styles/contacts.css";
 
 const containerStyle = {
@@ -17,6 +20,16 @@ const center = {
 
 const Contacts = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  //   const [loadMap, setLoadMap] = useState(false);
+
+  //   useEffect(() => {
+  //     const timer = setTimeout(() => {
+  //       setLoadMap(true);
+  //     }, 5000);
+
+  //     return () => clearTimeout(timer);
+  //   }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -73,6 +86,16 @@ const Contacts = () => {
           <RegularButton marginTop="mt32" text="Submit" />
         </form>
         <h2 className="heading-fourth mt64">Our Location</h2>
+
+        <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={10}
+          ></GoogleMap>
+        </LoadScript>
+        <span className="small-text mt32">Our Location</span>
+        <a href="" className="contact-link"></a>
       </main>
       <Footer />
     </div>

@@ -104,6 +104,17 @@
   line-height: 144%;
 }
 
+.small-text {
+  color: #2C2C2C;
+  text-align: right;
+  font-family: Lato;
+  font-size: clamp(11px, 5.14008vw, 44px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
 .gray {
   background: rgba(217, 217, 217, 0.2);
 }
