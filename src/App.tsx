@@ -9,6 +9,7 @@ import {
 import Home from "./pages/HomePage/Home";
 import Cadillac from "./pages/Cars/CadillacPage/Cadillac";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
+import PricesPage from "./pages/PricesPage/PricesPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,7 +28,7 @@ const App = () => {
         <Route path="/" element={<Home />}></Route>
         <Route path="/cars/cadillac" element={<Cadillac />}></Route>
         <Route path="/services" element={<ServicesPage />}></Route>
-        <Route path="/prices"></Route>
+        <Route path="/prices" element={<PricesPage />}></Route>
       </Routes>
     </Router>
   );
