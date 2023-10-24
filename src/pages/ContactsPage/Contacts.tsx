@@ -6,6 +6,12 @@ import { FormButton, RegularButton } from "../../components/Button/Button";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+
 import "./styles/contacts.css";
 
 const containerStyle = {
@@ -94,8 +100,24 @@ const Contacts = () => {
             zoom={10}
           ></GoogleMap>
         </LoadScript>
-        <span className="small-text mt32">Our Location</span>
-        <a href="" className="contact-link"></a>
+        <div className="contact-link-container mt32">
+          <FontAwesomeIcon icon={faPhone} className="fa-icon" />
+          <a href="tel: +13129723890" className="contact-link">
+            +1 (312) 972-3890
+          </a>
+        </div>
+        <div className="contact-link-container mt32">
+          <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
+          <a href="mailto: contact@[yourcompany].com" className="contact-link">
+            contact@[yourcompany].com
+          </a>
+        </div>
+        {/* <div className="contact-link-container mt32">
+          <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
+          <a href="" className="contact-link-adress">
+            200 E Randolph St, Suite 5100, Chicago, IL 60601
+          </a>
+        </div> */}
       </main>
       <Footer />
     </div>
