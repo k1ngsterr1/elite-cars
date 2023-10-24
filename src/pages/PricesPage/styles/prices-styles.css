@@ -1,2 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");/*# sourceMappingURL=prices-styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.charter-rates {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.charter-rates .table-heading {
+  width: 100%;
+  color: #2C2C2C;
+  font-family: Lato;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  background: rgba(255, 87, 34, 0.1);
+}
+.charter-rates .table-heading .table-heading-text {
+  padding-top: clamp(8px, 3.73824vw, 32px);
+  padding-left: clamp(8px, 3.73824vw, 32px);
+  padding-bottom: clamp(8px, 3.73824vw, 32px);
+  border: 3px solid #FF5722;
+}
+.charter-rates .rate-row {
+  width: 100%;
+  color: #2C2C2C;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  background: rgba(255, 87, 34, 0.1);
+}
+.charter-rates .rate-row .td {
+  padding-top: clamp(16px, 7.47648vw, 64px);
+  padding-bottom: clamp(16px, 7.47648vw, 64px);
+  text-align: center;
+  border: 3px solid #FF5722;
+}
+.charter-rates .rate-row-white {
+  width: 100%;
+  color: #2C2C2C;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.charter-rates .rate-row-white .td {
+  padding-top: clamp(16px, 7.47648vw, 64px);
+  padding-bottom: clamp(16px, 7.47648vw, 64px);
+  text-align: center;
+  border: 3px solid #FF5722;
+}
+.charter-rates .rate-row-white .td .td-low {
+  padding-top: clamp(16px, 7.47648vw, 64px);
+  text-align: center;
+}/*# sourceMappingURL=prices-styles.css.map */

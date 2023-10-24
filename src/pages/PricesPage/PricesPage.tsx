@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
 import CarRate from "../../components/CarRate/CarRate";
+import Form from "../../components/Form/Form";
+import Footer from "../../components/Footer/Footer";
+
+import "./styles/prices-styles.css";
 
 const rate01 = require("../../assets/rates_01.webp");
 const rate02 = require("../../assets/rates_02.webp");
@@ -34,56 +38,169 @@ const PricesPage = () => {
         </p>
         <h2 className="heading-s mt32">
           <span className="orange">Our Rates</span>
-          <CarRate
-            marginTop="mt32"
-            carImage={rate01}
-            carCategorie="Premium Sedan"
-            carName="Cadillac CT6 Luxury"
-            carHourPrice="$136.00"
-            carMilePrice="$3.00"
-          />
-          <CarRate
-            marginTop="mt32"
-            carImage={rate02}
-            carCategorie="Luxury Sedan"
-            carName="Mercedes-Benz S-Class S 580"
-            carHourPrice="$188.00"
-            carMilePrice="$3.50"
-          />
-          <CarRate
-            marginTop="mt32"
-            carImage={rate03}
-            carCategorie="Luxury Sedan"
-            carName="BMW 7-series 740i Xdrive"
-            carHourPrice="$188.00"
-            carMilePrice="$3.50"
-          />
-          <CarRate
-            marginTop="mt32"
-            carImage={rate04}
-            carCategorie="Luxury Sedan"
-            carName="2023 Cadillac Escalade ESV Sport"
-            carHourPrice="$136.00"
-            carMilePrice="$3.50"
-          />
-          <CarRate
-            marginTop="mt32"
-            carImage={rate05}
-            carCategorie="Van"
-            carName="Mercedes Sprinter Shuttle (14 pax.) plus luggage"
-            carHourPrice="$465.00"
-            carMilePrice="$4.00"
-          />
-          <CarRate
-            marginTop="mt32"
-            carImage={rate05}
-            carCategorie="Van"
-            carName="Mercedes Sprinter (11 pax.) with significant luggage space"
-            carHourPrice="$336.00"
-            carMilePrice="$4.00"
-          />
         </h2>
+        <CarRate
+          marginTop="mt32"
+          carImage={rate01}
+          carCategorie="Premium Sedan"
+          carName="Cadillac CT6 Luxury"
+          carHourPrice="$136.00"
+          carMilePrice="$3.00"
+        />
+        <CarRate
+          marginTop="mt32"
+          carImage={rate02}
+          carCategorie="Luxury Sedan"
+          carName="Mercedes-Benz S-Class S 580"
+          carHourPrice="$188.00"
+          carMilePrice="$3.50"
+        />
+        <CarRate
+          marginTop="mt32"
+          carImage={rate03}
+          carCategorie="Luxury Sedan"
+          carName="BMW 7-series 740i Xdrive"
+          carHourPrice="$188.00"
+          carMilePrice="$3.50"
+        />
+        <CarRate
+          marginTop="mt32"
+          carImage={rate04}
+          carCategorie="Luxury Sedan"
+          carName="2023 Cadillac Escalade ESV Sport"
+          carHourPrice="$136.00"
+          carMilePrice="$3.50"
+        />
+        <CarRate
+          marginTop="mt32"
+          carImage={rate05}
+          carCategorie="Van"
+          carName="Mercedes Sprinter Shuttle (14 pax.) plus luggage"
+          carHourPrice="$465.00"
+          carMilePrice="$4.00"
+        />
+        <CarRate
+          marginTop="mt32"
+          carImage={rate05}
+          carCategorie="Van"
+          carName="Mercedes Sprinter (11 pax.) with significant luggage space"
+          carHourPrice="$336.00"
+          carMilePrice="$4.00"
+        />
+        <h3 className="heading-third mt64">Arrivals</h3>
+        <table className="charter-rates">
+          <thead className="table-heading">
+            <tr>
+              <th className="table-heading-text" colSpan={3}>
+                HOURLY CHARTER RATES
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="rate-row">
+              <td className="td">
+                Standard Sedan – Lincoln Town Car Or Cadillac Sedan (Rate Incl.
+                32%)
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">
+                $75.00 ($99.00) / hour, or $3.00 ($3.96) / mile <br />
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">$192.00 (2.0 hr. minimum charge incl. 32%)</td>
+            </tr>
+            <tr className="rate-row">
+              <td className="td">
+                Premium Sedan – Mercedes S-Class or BMW 7-Series (Rate incl.
+                32%)
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">
+                $100.00 ($132.00) / hour, or $3.50 ($4.62) / mile
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">$256.00 (2.0 hr. minimum charge incl. 32%)</td>
+            </tr>
+            <tr className="rate-row">
+              <td className="td">
+                Premium Sedan – Mercedes S-Class or BMW 7-Series (Rate incl.
+                32%)
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">
+                $100.00 ($132.00) / hour, or $3.50 ($4.62) / mile
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">$256.00 (2.0 hr. minimum charge incl. 32%)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 className="heading-third mt64">Departures</h3>
+        <table className="charter-rates">
+          <thead className="table-heading">
+            <tr>
+              <th className="table-heading-text" colSpan={3}>
+                HOURLY CHARTER RATES
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="rate-row">
+              <td className="td">
+                Standard Sedan – Lincoln Town Car Or Cadillac Sedan (Rate Incl.
+                32%)
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">
+                $75.00 ($99.00) / hour, or $3.00 ($3.96) / mile <br />
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">$192.00 (2.0 hr. minimum charge incl. 32%)</td>
+            </tr>
+            <tr className="rate-row">
+              <td className="td">
+                Premium Sedan – Mercedes S-Class or BMW 7-Series (Rate incl.
+                32%)
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">
+                $100.00 ($132.00) / hour, or $3.50 ($4.62) / mile
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">$256.00 (2.0 hr. minimum charge incl. 32%)</td>
+            </tr>
+            <tr className="rate-row">
+              <td className="td">
+                Premium Sedan – Mercedes S-Class or BMW 7-Series (Rate incl.
+                32%)
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">
+                $100.00 ($132.00) / hour, or $3.50 ($4.62) / mile
+              </td>
+            </tr>
+            <tr className="rate-row-white">
+              <td className="td">$256.00 (2.0 hr. minimum charge incl. 32%)</td>
+            </tr>
+          </tbody>
+        </table>
       </main>
+      <h2 className="heading-s mt64 text-center">
+        Send <span className="orange">Request</span>
+      </h2>
+      <Form />
+      <Footer />
     </div>
   );
 };

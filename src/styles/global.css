@@ -51,6 +51,26 @@
   text-transform: capitalize;
 }
 
+.heading-third {
+  color: #FF5722;
+  font-family: Lato;
+  font-size: clamp(14px, 6.54192vw, 56px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 146%;
+}
+
+.heading-fourth {
+  color: #2C2C2C;
+  text-align: right;
+  font-family: Lato;
+  font-size: clamp(13.5px, 6.30828vw, 54px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
 .content {
   width: 90%;
   height: auto;
@@ -121,7 +141,7 @@
 }
 
 .mt32 {
-  margin-top: clamp(16px, 7.47648vw, 64px);
+  margin-top: clamp(16px, 7.47648vw, 64px) !important;
 }
 
 .mt48 {
