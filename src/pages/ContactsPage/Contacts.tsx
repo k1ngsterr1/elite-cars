@@ -92,14 +92,15 @@ const Contacts = () => {
           <RegularButton marginTop="mt32" text="Submit" />
         </form>
         <h2 className="heading-fourth mt64">Our Location</h2>
-
-        <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
-          <GoogleMap
-            mapContainerStyle={containerStyle}
-            center={center}
-            zoom={10}
-          ></GoogleMap>
-        </LoadScript>
+        <div className="map">
+          <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
+            <GoogleMap
+              mapContainerStyle={containerStyle}
+              center={center}
+              zoom={10}
+            ></GoogleMap>
+          </LoadScript>
+        </div>
         <div className="contact-link-container mt32">
           <FontAwesomeIcon icon={faPhone} className="fa-icon" />
           <a href="tel: +13129723890" className="contact-link">
