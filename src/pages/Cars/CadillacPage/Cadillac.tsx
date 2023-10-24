@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import Header from "../../../components/Header/Header";
 import Menu from "../../../components/Menu/Menu";
-import { Form, Link } from "react-router-dom";
-
-import "./styles/car.css";
 import { Button } from "../../../components/Button/Button";
 import PriceTable from "../../../components/PriceTable/PriceTable";
 import CarFeature from "../../../components/CarFeature/CarFeature";
 import FormScreen from "../../../screens/FormScreen/FormScreen";
 import Footer from "../../../components/Footer/Footer";
+import { Form, Link } from "react-router-dom";
+import SwiperCore from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "./styles/car.css";
 
 const cadillacMob = require("../../../assets/cadillac_mob.webp");
 const icon = require("../../../assets/icon.svg").default;
@@ -54,7 +57,38 @@ const Cadillac = () => {
           <span className="price mt16">From $3.50 / mile</span>
         </div>
       </section>
-      <img className="car-img mt64" src={cadillacMob} alt="cadillac"></img>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={100}
+        loop={true}
+        pagination={true}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        style={
+          {
+            "--swiper-pagination-color": "#FF5722",
+            "--swiper-pagination-bullet-inactive-color": "white",
+            "--swiper-navigation-color": "#FF5722",
+          } as React.CSSProperties
+        }
+        className="car-swiper"
+      >
+        <SwiperSlide>
+          <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+        </SwiperSlide>
+      </Swiper>
       <div className="content mt64 align-center">
         <h2 className="car-heading-s text-center">Prices</h2>
         <PriceTable

@@ -33,7 +33,7 @@ const Footer = () => {
     <footer className="footer mt64">
       <div className="footer-content mt32">
         {loadMap ? (
-          <LoadScript googleMapsApiKey="YOUR_API_KEY">
+          <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}
