@@ -55,15 +55,4 @@
   line-height: normal;
   margin-left: clamp(8px, 3.73824vw, 32px);
   text-decoration: none;
-}
-.contact-link-container .contact-link-adress {
-  color: #FF5722;
-  text-align: right;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-left: clamp(4px, 1.86912vw, 16px);
-  text-decoration: none;
 }/*# sourceMappingURL=contacts.css.map */
