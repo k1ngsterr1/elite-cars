@@ -11,6 +11,15 @@
   height: auto;
 }
 
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+
+.react-time-picker {
+  width: 100%;
+  background-color: white;
+}
+
 .screen {
   width: 100%;
   height: auto;

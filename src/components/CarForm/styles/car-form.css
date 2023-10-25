@@ -45,6 +45,18 @@
   line-height: normal;
   text-transform: capitalize;
 }
+.form-container .b-form {
+  width: 100%;
+  height: clamp(20px, 9.3456vw, 80px);
+  color: #2C2C2C;
+  font-family: Inter;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  padding-left: clamp(4px, 1.86912vw, 16px);
+}
 .form-container .counter {
   width: 100%;
   height: clamp(24px, 11.21472vw, 96px);
