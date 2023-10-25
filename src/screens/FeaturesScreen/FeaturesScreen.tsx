@@ -56,6 +56,23 @@ const FeaturesScreen = () => {
         src={feature_image}
         alt="features-image"
       ></img>
+      <div className="content-pc">
+        <div className="text-content mt64">
+          <h3 className="feature-heading">
+            <span className="black">
+              About <span className="white">Us</span>{" "}
+            </span>
+          </h3>
+          <p className="paragraph white w30 mt32">
+            Discover unrivaled luxury with [Your Service Name], the pinnacle of
+            distinguished private car service. We elevate every journey with a
+            unique blend of exclusive comfort, punctuality, and utmost
+            discretion. Navigate your travels with us, where every ride is
+            crafted to be an exquisite, memorable adventure, embodying the
+            epitome of elite traveling experiences.
+          </p>
+        </div>
+      </div>
     </section>
   );
 };

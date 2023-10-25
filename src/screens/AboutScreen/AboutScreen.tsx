@@ -62,21 +62,24 @@ const AboutScreen = () => {
         <h2 className="heading-s  text-center mt64">
           Why you should <span className="orange">choose Us</span>
         </h2>
-        <div className="tabs-container">
+        <div className="tabs-container mt64">
           <ServiceTab
             paragraphWidth="w80"
+            marginBottom="mb128"
             serviceImage={handshake}
             serviceHeading="Meet & Greet"
             serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
           ></ServiceTab>
           <ServiceTab
             paragraphWidth="w80"
+            marginBottom="mb128"
             serviceImage={airport}
             serviceHeading="Curbside Service"
             serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
           ></ServiceTab>
           <ServiceTab
             paragraphWidth="w80"
+            marginBottom="mb128"
             serviceImage={car}
             serviceHeading="Charter Service"
             serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
