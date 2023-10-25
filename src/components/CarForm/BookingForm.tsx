@@ -25,14 +25,20 @@ const luggageOptions = [
 ];
 
 const BookingForm: React.FC = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [selectedTime, setSelectedTime] = useState<string>("10:00");
-
+  // Step 1
   const [currentStep, setCurrentStep] = useState(1);
   const [passengers, setPassengers] = useState(1);
   const [carType, setCarType] = useState(null);
   const [serviceType, setServiceType] = useState(null);
   const [luggage, setLuggage] = useState(null);
+
+  // Step 2
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [selectedTime, setSelectedTime] = useState<string>("10:00");
+  const [pickupLocation, setPickUpLocation] = useState("");
+  const [dropoffLocation, setDropoffLocation] = useState("");
+
+  // Step 3
 
   if (passengers < 1) {
     setPassengers(1);
@@ -42,10 +48,16 @@ const BookingForm: React.FC = () => {
     if (carType && serviceType && luggage && passengers) {
       setCurrentStep(2);
     } else {
-      // You can add some alert or notification to inform user to fill all fields
+      alert("Please fill out all fields before proceeding!");
+    }
+
+    if (currentStep == 2 && pickupLocation && dropoffLocation) {
+      setCurrentStep(3);
+    } else {
       alert("Please fill out all fields before proceeding!");
     }
   };
+
   return (
     <div className="form-container">
       {currentStep === 1 ? (
@@ -106,6 +118,7 @@ const BookingForm: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Location"
+              onChange={(option: any) => setPickUpLocation(option?.value)}
               className="b-form"
             />
           </div>
@@ -114,6 +127,7 @@ const BookingForm: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Location"
+              onChange={(option: any) => setDropoffLocation(option?.value)}
               className="b-form"
             />
           </div>
