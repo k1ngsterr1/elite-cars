@@ -5,6 +5,7 @@ import "./styles/about-styles.css";
 interface ServiceProps {
   serviceHeading: string;
   serviceParagraph: string;
+  paragraphWidth?: string;
   serviceImage: string;
   marginBottom?: string;
 }
@@ -15,6 +16,7 @@ const car = require("../../assets/car.svg").default;
 
 const ServiceTab: React.FC<ServiceProps> = ({
   serviceHeading,
+  paragraphWidth,
   serviceImage,
   serviceParagraph,
   marginBottom,
@@ -24,8 +26,8 @@ const ServiceTab: React.FC<ServiceProps> = ({
       <div className="service-square mt32">
         <img src={serviceImage} alt="icon" className="icon" />
       </div>
-      <h4 className="service-heading mt16">{serviceHeading}</h4>
-      <p className={`service-paragraph mt16 ${marginBottom}`}>
+      <h4 className={`service-heading mt16`}>{serviceHeading}</h4>
+      <p className={`service-paragraph mt16 ${marginBottom} ${paragraphWidth}`}>
         {serviceParagraph}
       </p>
     </div>
@@ -55,6 +57,31 @@ const AboutScreen = () => {
           serviceHeading="Charter Service"
           serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
         ></ServiceTab>
+      </main>
+      <main className="content-pc jc-center column">
+        <h2 className="heading-s  text-center mt64">
+          Why you should <span className="orange">choose Us</span>
+        </h2>
+        <div className="tabs-container">
+          <ServiceTab
+            paragraphWidth="w80"
+            serviceImage={handshake}
+            serviceHeading="Meet & Greet"
+            serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
+          ></ServiceTab>
+          <ServiceTab
+            paragraphWidth="w80"
+            serviceImage={airport}
+            serviceHeading="Curbside Service"
+            serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
+          ></ServiceTab>
+          <ServiceTab
+            paragraphWidth="w80"
+            serviceImage={car}
+            serviceHeading="Charter Service"
+            serviceParagraph="Are you looking for a more formal greeting, help navigating a new airport, or assistance with your luggage? Your driver will be waiting in baggage claim holding a greeting sign with your name on it.  Learn more about our airport car service in Chicago."
+          ></ServiceTab>
+        </div>
       </main>
     </section>
   );

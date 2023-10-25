@@ -38,4 +38,58 @@
   font-style: normal;
   font-weight: 400;
   line-height: 146.023%;
+}
+
+@media screen and (min-width: 1024px) {
+  .tabs-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tabs-container .service-tab {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabs-container .service-tab .icon {
+    width: clamp(42.5px, 4.4268vw, 170px) !important;
+    height: clamp(42.5px, 4.4268vw, 170px) !important;
+  }
+  .tabs-container .service-tab .service-square {
+    width: clamp(95px, 9.8952vw, 380px);
+    height: clamp(95px, 9.8952vw, 380px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF5722;
+    border-radius: 7px;
+  }
+  .tabs-container .service-tab .service-square .icon {
+    width: clamp(32px, 3.33312vw, 128px);
+    height: clamp(32px, 3.33312vw, 128px);
+  }
+  .tabs-container .service-tab .service-heading {
+    color: #2C2C2C;
+    text-align: center;
+    font-family: Lato;
+    font-size: clamp(17.5px, 1.8228vw, 70px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .tabs-container .service-tab .service-paragraph {
+    color: #2C2C2C;
+    text-align: center;
+    font-family: Inter;
+    font-size: clamp(9px, 0.93744vw, 36px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146.023%;
+  }
 }/*# sourceMappingURL=about-styles.css.map */
