@@ -7,4 +7,55 @@
   justify-content: space-between;
   margin: auto;
   margin-top: clamp(24px, 11.21472vw, 96px);
+}
+.header .header-mob {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header .header-pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    width: 86.4583333333%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .header-mob {
+    display: none !important;
+  }
+  .header .header-pc {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .header-pc .logo {
+    width: clamp(76.5px, 7.96824vw, 306px);
+    height: clamp(30px, 3.1248vw, 120px);
+  }
+  .header .header-pc .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header .header-pc .links .link {
+    color: #2C2C2C;
+    font-family: Inter;
+    font-size: clamp(10.5px, 1.09368vw, 42px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    transition: 0.3s all;
+    margin-left: clamp(16px, 1.66656vw, 64px);
+  }
+  .header .header-pc .links .link:hover {
+    color: #FF5722;
+  }
 }/*# sourceMappingURL=header.css.map */

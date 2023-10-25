@@ -4,6 +4,8 @@ import Menu from "../Menu/Menu";
 import { Navigate, useNavigate } from "react-router-dom";
 
 import "./styles/header.css";
+import { Link as ScrollLink } from "react-scroll";
+import { Button } from "../Button/Button";
 
 interface HeaderProps {
   isMenuOpen?: any;
@@ -33,12 +35,32 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
 
   return (
     <header className="header">
-      <img src={logo} className="logo" onClick={navigateToMain} alt="logo" />
-      <Hamburger
-        color="#FF5722"
-        toggled={isMenuOpen ? true : false}
-        onToggle={toggleMenu}
-      ></Hamburger>
+      <div className="header-mob">
+        <img src={logo} className="logo" onClick={navigateToMain} alt="logo" />
+        <Hamburger
+          color="#FF5722"
+          toggled={isMenuOpen ? true : false}
+          onToggle={toggleMenu}
+        ></Hamburger>
+      </div>
+      <div className="header-pc">
+        <img src={logo} className="logo" onClick={navigateToMain} alt="logo" />
+        <nav className="links">
+          <ScrollLink to="" className="link">
+            Home
+          </ScrollLink>
+          <ScrollLink to="" className="link">
+            Services & Rates
+          </ScrollLink>
+          <ScrollLink to="" className="link">
+            FAQ
+          </ScrollLink>
+          <ScrollLink to="" className="link">
+            About Us
+          </ScrollLink>
+        </nav>
+        <Button text="Contact Us" scroll="contacts" marginTop="mt0" />
+      </div>
     </header>
   );
 };

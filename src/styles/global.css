@@ -183,10 +183,114 @@
   align-items: start;
 }
 
+.w90 {
+  width: 90%;
+}
+
 .w80 {
   width: 80%;
 }
 
 .w60 {
   width: 60%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.w40 {
+  width: 40%;
+}
+
+.w30 {
+  width: 30%;
+}
+
+.content-pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .mt8 {
+    margin-top: clamp(4px, 0.41664vw, 16px);
+  }
+  .mt16 {
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .mt32 {
+    margin-top: clamp(16px, 1.66656vw, 64px) !important;
+  }
+  .mt48 {
+    margin-top: clamp(24px, 11.21472vw, 96px);
+  }
+  .mt64 {
+    margin-top: clamp(32px, 3.33312vw, 128px);
+  }
+  .mb64 {
+    margin-bottom: clamp(32px, 3.33312vw, 128px);
+  }
+  .mt128 {
+    margin-top: clamp(64px, 6.66624vw, 256px) !important;
+  }
+  .mb64 {
+    margin-bottom: clamp(32px, 3.33312vw, 128px);
+  }
+  .content {
+    display: none;
+  }
+  .content-pc {
+    width: 86.4583333333%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .content-pc .text-content {
+    width: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .content-pc .paragraph {
+    color: #2C2C2C;
+    font-family: Inter;
+    display: inline-block;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 144%;
+  }
+  .content-pc .main-heading {
+    color: #2C2C2C;
+    font-family: Lato;
+    display: inline-block;
+    font-size: clamp(35px, 3.6456vw, 140px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .content-pc .sub-heading {
+    color: #2C2C2C;
+    font-family: Lato;
+    font-size: clamp(10.5px, 1.09368vw, 42px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .content-pc .button-row {
+    width: 61%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .content-pc .pc-img {
+    width: clamp(295px, 30.7272vw, 1180px);
+    height: clamp(345px, 35.9352vw, 1380px);
+  }
 }/*# sourceMappingURL=global.css.map */

@@ -68,3 +68,83 @@
     left: clamp(4.5px,2.10276vw,18px)
     top: -9px
     position: absolute
+
+@media screen and  (min-width: 1024px)
+
+    .btn-container
+        width: auto
+        position: relative
+        z-index: 0
+        display: flex
+        justify-content: center
+
+    .pseudo
+        width: clamp(136px,14.16576vw,544px) !important
+        height: clamp(25.5px,2.65608vw,102px) !important
+        border: 2px solid $orange
+        z-index: -1
+        left: clamp(4.5px,0.46872vw,18px)
+        top: -9px
+        position: absolute
+
+    .btn
+        width: clamp(136px,14.16576vw,544px) !important
+        height: clamp(25.5px,2.65608vw,102px) !important
+        color: $black !important
+        font-family: Inter !important
+        font-size: clamp(10.5px,1.09368vw,42px) !important
+        font-style: normal !important
+        font-weight: 600 !important
+        line-height: normal !important
+        display: flex !important
+        align-items: center !important
+        justify-content: center !important
+        background-color: $orange !important
+        cursor: pointer !important
+        z-index: 0 !important
+        overflow: hidden !important
+        border: none !important
+        border-radius: 0 !important
+        text-transform: none !important
+        transition: 0.3s all
+        &:hover
+            color: $orange !important
+            background-color: $black !important
+
+            .pseudo
+                background-color: red
+                border: 2px solid $black !important
+
+    .reg-btn
+        width: clamp(136px,14.16576vw,544px) !important
+        height: clamp(27.5px,2.8644000000000003vw,110px) !important
+        color: $orange !important
+        font-family: Inter !important
+        font-size: clamp(10.5px,1.09368vw,42px) !important
+        font-style: normal !important
+        font-weight: 600 !important
+        line-height: normal !important
+        display: flex !important
+        align-items: center !important
+        justify-content: center !important
+        background-color: $black !important
+        cursor: pointer !important
+        z-index: 0 !important
+        overflow: hidden !important
+        border: none !important
+        border-radius: 0 !important
+        text-transform: none !important
+        margin: auto
+        transition: 0.3s all
+        &:hover
+            background-color: $orange !important
+            color: $black !important
+
+    .pseudo-white
+        width: clamp(136px,14.16576vw,544px) !important
+        height: clamp(25.5px,2.65608vw,102px) !important
+        border: 2px solid $white
+        z-index: -1
+        left: clamp(4.5px,0.46872vw,18px)
+        top: -9px
+        position: absolute

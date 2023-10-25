@@ -151,8 +151,106 @@
 .items-start
     align-items: start
 
+.w90
+    width: 90%
+
 .w80
     width: 80%
 
 .w60
     width: 60%
+
+.w50
+    width: 50%
+
+.w40
+    width: 40%
+
+.w30
+    width: 30%
+
+.content-pc
+    display: none
+
+@media screen and  (min-width: 1024px)
+
+    .mt8
+        margin-top: $m8
+
+    .mt16
+        margin-top: $m16
+
+    .mt32
+        margin-top: $m32 !important
+
+    .mt48
+        margin-top: clamp(24px,11.21472vw,96px)
+
+    .mt64
+        margin-top: $m64
+
+    .mb64
+        margin-bottom: $m64
+
+    .mt128
+        margin-top: $m128 !important
+
+    .mb64
+        margin-bottom: $m64
+
+    .content
+        display: none
+
+    .content-pc
+        width: 86.45833333333333%
+        height: auto
+        margin: auto
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin: auto
+
+        .text-content
+            width: auto
+            display: inline-flex
+            flex-direction: column
+            align-items: flex-start
+
+        .paragraph
+            color: $black
+            font-family: Inter
+            display: inline-block
+            font-size: $font20
+            font-style: normal
+            font-weight: 400
+            line-height: 144%
+
+        .main-heading
+            color: $black
+            font-family: Lato
+            display: inline-block
+            font-size: clamp(35px,3.6456vw,140px)
+            font-style: normal
+            font-weight: 800
+            line-height: normal
+            text-transform: capitalize
+
+        .sub-heading
+            color: $black
+            font-family: Lato
+            font-size: clamp(10.5px,1.09368vw,42px)
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            text-transform: capitalize
+
+        .button-row
+            width: 61%
+            display: inline-flex
+            flex-direction: row
+            align-items: flex-end
+            justify-content: space-between
+
+        .pc-img
+            width: clamp(295px,30.7272vw,1180px)
+            height: clamp(345px,35.9352vw,1380px)
