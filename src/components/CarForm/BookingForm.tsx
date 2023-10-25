@@ -39,28 +39,34 @@ const BookingForm: React.FC = () => {
   const [dropoffLocation, setDropoffLocation] = useState("");
 
   // Step 3
+  const [fullName, setFullName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [emailAdress, setEmailAdress] = useState("");
 
   if (passengers < 1) {
     setPassengers(1);
   }
 
   const handleNextClick = () => {
-    if (carType && serviceType && luggage && passengers) {
-      setCurrentStep(2);
-    } else {
-      alert("Please fill out all fields before proceeding!");
-    }
-
-    if (currentStep == 2 && pickupLocation && dropoffLocation) {
-      setCurrentStep(3);
-    } else {
-      alert("Please fill out all fields before proceeding!");
+    if (currentStep === 1) {
+      if (carType && serviceType && luggage && passengers) {
+        setCurrentStep(2);
+      } else {
+        alert("Please fill out all fields in Step 1 before proceeding!");
+      }
+    } else if (currentStep === 2) {
+      if (pickupLocation && dropoffLocation && selectedTime && selectedDate) {
+        setCurrentStep(3);
+      } else {
+        alert("Please fill out all fields in Step 2 before proceeding!");
+      }
     }
   };
 
   return (
     <div className="form-container">
-      {currentStep === 1 ? (
+      {currentStep === 1 && (
         <>
           <h3 className="form-heading">Step 1</h3>
           <div className="form-group mt32">
@@ -109,7 +115,8 @@ const BookingForm: React.FC = () => {
             Next
           </button>
         </>
-      ) : (
+      )}
+      {currentStep === 2 && (
         <>
           {" "}
           <h3 className="form-heading">Step 2</h3>
@@ -118,7 +125,7 @@ const BookingForm: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Location"
-              onChange={(option: any) => setPickUpLocation(option?.value)}
+              onChange={(e: any) => setPickUpLocation(e.target.value)}
               className="b-form"
             />
           </div>
@@ -127,7 +134,7 @@ const BookingForm: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Location"
-              onChange={(option: any) => setDropoffLocation(option?.value)}
+              onChange={(e: any) => setDropoffLocation(e.target.value)}
               className="b-form"
             />
           </div>
@@ -152,6 +159,51 @@ const BookingForm: React.FC = () => {
               }}
               className="b-form"
               disableClock={true}
+            />
+          </div>
+          <button className="submit-button" onClick={handleNextClick}>
+            Next
+          </button>
+        </>
+      )}
+      {currentStep === 3 && (
+        <>
+          {" "}
+          <h3 className="form-heading">Step 3</h3>
+          <div className="form-group mt32">
+            <label className="label">First Name</label>
+            <input
+              type="text"
+              placeholder="First Name"
+              onChange={(e: any) => setFullName(e.target.value)}
+              className="b-form"
+            />
+          </div>
+          <div className="form-group mt32">
+            <label className="label">Last Name</label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              onChange={(e: any) => setLastName(e.target.value)}
+              className="b-form"
+            />
+          </div>
+          <div className="form-group mt32">
+            <label className="label">Phone Number</label>
+            <input
+              type="text"
+              placeholder="Phone Number"
+              onChange={(e: any) => setPhoneNumber(e.target.value)}
+              className="b-form"
+            />
+          </div>
+          <div className="form-group mt32">
+            <label className="label">Email Adress</label>
+            <input
+              type="text"
+              placeholder="example@gmail.com"
+              onChange={(e: any) => setEmailAdress(e.target.value)}
+              className="b-form"
             />
           </div>
           <button className="submit-button" onClick={handleNextClick}>
