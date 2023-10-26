@@ -79,7 +79,7 @@ const ReviewsScreen = () => {
           slidesPerView={3}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           navigation={true}
-          centeredSlides={true}
+          centeredSlides={false}
           pagination={false}
           style={
             {

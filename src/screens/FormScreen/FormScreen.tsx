@@ -7,12 +7,18 @@ const FormScreen = () => {
 
   return (
     <section className="screen mt64" id="contacts">
-      <main className="content">
+      <div className="content">
         <h2 className="heading-s">
           Send <span className="orange">request</span>
         </h2>
-        <Form></Form>
-      </main>
+        <Form />
+      </div>
+      <div className="content-pc column">
+        <h2 className="heading-s text-center">
+          Send <span className="orange">request</span>
+        </h2>
+        <Form />
+      </div>
     </section>
   );
 };
