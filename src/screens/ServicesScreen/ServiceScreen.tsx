@@ -10,7 +10,7 @@ const service04 = require("../../assets/service_04.webp");
 const ServiceScreen = () => {
   return (
     <section className="screen mt64">
-      <main className="content ">
+      <div className="content">
         <h2 className="heading-s">
           Our <span className="orange">Services</span>
         </h2>
@@ -34,7 +34,34 @@ const ServiceScreen = () => {
           <span className="service-text mt16">Service #4</span>
           <span className="more mt8">More Info</span>
         </div>
-      </main>
+      </div>
+      <div className="content-pc column">
+        <h2 className="heading-s text-right">
+          Our <span className="orange">Services</span>
+        </h2>
+        <div className="services-list mt64">
+          <div className="service-tab-s ">
+            <img src={service01} className="service" alt="service" />
+            <span className="service-text mt16">Service #1</span>
+            <span className="more mt8">More Info</span>
+          </div>
+          <div className="service-tab-s">
+            <img src={service02} className="service" alt="service" />
+            <span className="service-text mt16">Service #2</span>
+            <span className="more mt8">More Info</span>
+          </div>
+          <div className="service-tab-s ">
+            <img src={service03} className="service" alt="service" />
+            <span className="service-text mt16">Service #3</span>
+            <span className="more mt8">More Info</span>
+          </div>
+          <div className="service-tab-s ">
+            <img src={service04} className="service" alt="service" />
+            <span className="service-text mt16">Service #4</span>
+            <span className="more mt8">More Info</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

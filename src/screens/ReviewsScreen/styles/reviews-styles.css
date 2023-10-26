@@ -22,8 +22,8 @@
   margin-top: clamp(8px, 3.73824vw, 32px);
 }
 .review-tab .review-upper .review-name .circle {
-  width: 25px !important;
-  height: 25px !important;
+  width: 25px;
+  height: 25px;
   background-color: red;
   border-radius: 50px;
 }
@@ -58,4 +58,68 @@
 }
 .reviews-swiper .swiper-button {
   background-color: #FF5722;
+}
+
+@media screen and (min-width: 1024px) {
+  .review-tab {
+    width: clamp(185.5px, 19.32168vw, 742px);
+    height: clamp(169px, 17.60304vw, 676px);
+    background-color: #F7F7F7;
+    margin: auto;
+    margin-bottom: clamp(8px, 3.73824vw, 32px);
+  }
+  .review-upper {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .review-upper .review-name {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .review-upper .review-name .circle {
+    width: clamp(24.5px, 2.55192vw, 98px) !important;
+    height: clamp(24.5px, 2.55192vw, 98px) !important;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+  }
+  .review-upper .review-name .client-name {
+    color: #2C2C2C;
+    text-align: right;
+    font-family: Inter;
+    font-size: clamp(11.5px, 1.19784vw, 46px) !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: clamp(4px, 0.41664vw, 16px);
+  }
+  .client-review {
+    width: 90%;
+    color: #2C2C2C;
+    font-family: Inter;
+    font-size: clamp(8px, 0.83328vw, 32px) !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146%;
+    text-transform: capitalize;
+    margin: auto;
+    margin-top: clamp(8px, 0.83328vw, 32px) !important;
+    margin-bottom: clamp(8px, 0.83328vw, 32px) !important;
+  }
+  .reviews-swiper {
+    width: 100%;
+    height: auto;
+  }
+  .reviews-swiper .swiper-button {
+    background-color: #FF5722;
+  }
 }/*# sourceMappingURL=reviews-styles.css.map */

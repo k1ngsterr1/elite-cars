@@ -27,6 +27,12 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .feature-tabs {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .feature-tab {
     display: flex;
     flex-direction: column;
@@ -51,5 +57,11 @@
     line-height: 146%;
     text-transform: capitalize;
     margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .feature-img {
+    width: clamp(343.9px, 35.820624vw, 1375.6px);
+    height: clamp(288.5px, 30.05016vw, 1154px);
+    margin-top: clamp(32px, 3.33312vw, 128px);
+    margin-bottom: clamp(32px, 3.33312vw, 128px);
   }
 }/*# sourceMappingURL=features-styles.css.map */

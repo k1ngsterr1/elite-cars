@@ -22,8 +22,8 @@
             margin-top: $m16mob
 
             .circle
-                width: 25px !important
-                height: 25px !important
+                width: 25px
+                height: 25px
                 background-color: red
                 border-radius: 50px
 
@@ -58,3 +58,67 @@
 
     .swiper-button
         background-color: $orange
+
+@media screen and  (min-width: 1024px)
+
+    .review-tab
+        width: clamp(185.5px,19.32168vw,742px)
+        height: clamp(169px,17.60304vw,676px)
+        background-color: #F7F7F7
+        margin: auto
+        margin-bottom: $m16mob
+
+    .review-upper
+        width: 90%
+        height: auto
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .review-name
+            width: 90%
+            display: flex
+            align-items: center
+            margin: auto
+            margin-top: $m16
+
+            .circle
+                width: clamp(24.5px,2.55192vw,98px) !important
+                height: clamp(24.5px,2.55192vw,98px) !important
+                background-color: red
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 50px
+
+            .client-name
+                color: $black
+                text-align: right
+                font-family: Inter
+                font-size: clamp(11.5px,1.19784vw,46px) !important
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                text-transform: capitalize
+                margin-left: $m8
+
+    .client-review
+        width: 90%
+        color: $black
+        font-family: Inter
+        font-size: $m16 !important
+        font-style: normal
+        font-weight: 400
+        line-height: 146%
+        text-transform: capitalize
+        margin: auto
+        margin-top: $m16 !important
+        margin-bottom: $m16 !important
+        // border: 20px solid red
+
+    .reviews-swiper
+        width: 100%
+        height: auto
+
+        .swiper-button
+            background-color: $orange

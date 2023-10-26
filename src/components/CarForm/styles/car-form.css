@@ -10,6 +10,15 @@
   border-radius: 0px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+.form-container .mob-form-step-1, .form-container .mob-form-step-2, .form-container .mob-form-step-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-container .pc-form-step-1, .form-container .pc-form-step-2, .form-container .pc-form-step-3 {
+  display: none;
+}
 .form-container .form-group {
   width: 83%;
 }
@@ -99,4 +108,107 @@
   cursor: pointer;
   margin-top: clamp(16px, 7.47648vw, 64px);
   margin-bottom: clamp(16px, 7.47648vw, 64px);
+}
+
+@media screen and (min-width: 1024px) {
+  .form-container {
+    width: clamp(690px, 71.8704vw, 2760px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: clamp(32px, 3.33312vw, 128px);
+    margin-bottom: clamp(16px, 1.66656vw, 64px);
+  }
+  .mob-form-step-1, .mob-form-step-2, .mob-form-step-3 {
+    display: none !important;
+  }
+  .pc-form-step-1, .pc-form-step-2, .pc-form-step-3 {
+    width: 90.5797101449% !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pc-form-step-1 .title-row, .pc-form-step-2 .title-row, .pc-form-step-3 .title-row {
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .pc-form-step-1 .title-row .title, .pc-form-step-2 .title-row .title, .pc-form-step-3 .title-row .title {
+    color: white;
+    font-family: Inter;
+    font-size: clamp(9px, 0.93744vw, 36px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .pc-form-step-1 .input-row, .pc-form-step-2 .input-row, .pc-form-step-3 .input-row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pc-form-step-1 .input-row .form-group, .pc-form-step-2 .input-row .form-group, .pc-form-step-3 .input-row .form-group {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pc-form-step-1 .input-row .form-group .label, .pc-form-step-2 .input-row .form-group .label, .pc-form-step-3 .input-row .form-group .label {
+    color: white;
+    font-family: Inter;
+    font-size: clamp(9px, 0.93744vw, 36px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .pc-form-step-1 .input-row .form-group .selector, .pc-form-step-1 .input-row .form-group .b-form, .pc-form-step-2 .input-row .form-group .selector, .pc-form-step-2 .input-row .form-group .b-form, .pc-form-step-3 .input-row .form-group .selector, .pc-form-step-3 .input-row .form-group .b-form {
+    width: clamp(125px, 13.02vw, 500px) !important;
+    height: clamp(27.5px, 2.8644vw, 110px) !important;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    border-radius: 0px !important;
+  }
+  .pc-form-step-1 .input-row .form-group .counter, .pc-form-step-2 .input-row .form-group .counter, .pc-form-step-3 .input-row .form-group .counter {
+    width: clamp(125px, 13.02vw, 500px);
+    height: clamp(19px, 1.97904vw, 76px) !important;
+    border-radius: 3px;
+    margin-bottom: clamp(8px, 0.83328vw, 32px);
+  }
+  .pc-form-step-1 .input-row .form-group .counter-btn, .pc-form-step-2 .input-row .form-group .counter-btn, .pc-form-step-3 .input-row .form-group .counter-btn {
+    font-size: clamp(16px, 1.66656vw, 64px);
+  }
+  .pc-form-step-1 .input-row .form-group .right, .pc-form-step-2 .input-row .form-group .right, .pc-form-step-3 .input-row .form-group .right {
+    padding-right: clamp(4px, 0.41664vw, 16px);
+  }
+  .pc-form-step-1 .input-row .form-group .left, .pc-form-step-2 .input-row .form-group .left, .pc-form-step-3 .input-row .form-group .left {
+    padding-left: clamp(4px, 0.41664vw, 16px) !important;
+  }
+  .pc-form-step-1 .input-row .form-group .quantity, .pc-form-step-2 .input-row .form-group .quantity, .pc-form-step-3 .input-row .form-group .quantity {
+    font-size: clamp(9px, 0.93744vw, 36px);
+  }
+  .pc-form-step-1 .submit-button, .pc-form-step-2 .submit-button, .pc-form-step-3 .submit-button {
+    width: clamp(174px, 18.12384vw, 696px) !important;
+    height: clamp(25px, 2.604vw, 100px) !important;
+    color: #2C2C2C !important;
+    font-family: Inter;
+    font-size: clamp(11px, 1.14576vw, 44px) !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: #FF5722;
+    transition: 0.3s all;
+    margin-top: clamp(24px, 2.49984vw, 96px) !important;
+    margin-bottom: clamp(24px, 2.49984vw, 96px) !important;
+  }
+  .pc-form-step-1 .submit-button:hover, .pc-form-step-2 .submit-button:hover, .pc-form-step-3 .submit-button:hover {
+    color: white !important;
+  }
 }/*# sourceMappingURL=car-form.css.map */

@@ -10,6 +10,15 @@
     border-radius: 0px
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
 
+    .mob-form-step-1, .mob-form-step-2, .mob-form-step-3
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .pc-form-step-1, .pc-form-step-2, .pc-form-step-3
+        display: none
+
     .form-group
         width: 83%
         // margin-top: $m32mob
@@ -101,3 +110,104 @@
         cursor: pointer
         margin-top: $m32mob
         margin-bottom: $m32mob
+
+@media screen and  (min-width: 1024px)
+
+    .form-container
+        width: clamp(690px,71.8704vw,2760px)
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: auto
+        margin-top: $m64
+        margin-bottom: $m32
+
+    .mob-form-step-1, .mob-form-step-2, .mob-form-step-3
+        display: none !important
+
+    .pc-form-step-1, .pc-form-step-2, .pc-form-step-3
+        width: 90.57971014492753% !important
+        display: flex !important
+        flex-direction: column
+        align-items: center
+
+        .title-row
+            width: 70%
+            height: auto
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-top: $m32
+
+            .title
+                color: $white
+                font-family: Inter
+                font-size: clamp(9px,0.93744vw,36px)
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                text-transform: capitalize
+
+        .input-row
+            width: 100%
+            height: auto
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            .form-group
+                width: auto
+                height: auto
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+
+                .label
+                    color: $white
+                    font-family: Inter
+                    font-size: $font18
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+                    text-transform: capitalize
+
+                .selector, .b-form
+                    width: clamp(125px,13.02vw,500px) !important
+                    height: clamp(27.5px,2.8644000000000003vw,110px) !important
+                    font-size: $m16
+                    border-radius: 0px !important
+
+                .counter
+                    width: clamp(125px,13.02vw,500px)
+                    height: clamp(19px,1.9790400000000001vw,76px)!important
+                    border-radius: 3px
+                    margin-bottom: $m16
+
+                .counter-btn
+                    font-size: $m32
+
+                .right
+                    padding-right: $m8
+
+                .left
+                    padding-left: $m8 !important
+
+                .quantity
+                    font-size: $font18
+
+        .submit-button
+            width: clamp(174px,18.12384vw,696px) !important
+            height: clamp(25px,2.604vw,100px) !important
+            color: $black !important
+            font-family: Inter
+            font-size: clamp(11px,1.1457600000000001vw,44px) !important
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            background: $orange
+            transition: 0.3s all
+            margin-top: clamp(24px,2.49984vw,96px) !important
+            margin-bottom: clamp(24px,2.49984vw,96px)!important
+            &:hover
+                color: $white !important

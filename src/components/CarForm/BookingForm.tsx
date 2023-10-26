@@ -68,147 +68,311 @@ const BookingForm: React.FC = () => {
     <div className="form-container">
       {currentStep === 1 && (
         <>
-          <h3 className="form-heading">Step 1</h3>
-          <div className="form-group mt32">
-            <label className="label">Select Your Car Type</label>
-            <Select
-              options={carOptions}
-              className="selector"
-              onChange={(option: any) => setCarType(option?.value)}
-            />
-          </div>
-          <div className="form-group mt32">
-            <label className="label">Select Service Type</label>
-            <Select
-              options={serviceOptions}
-              className="selector"
-              onChange={(option: any) => setServiceType(option?.value)}
-            />
-          </div>
-          <div className="form-group mt32">
-            <label className="label">Luggage</label>
-            <Select
-              options={luggageOptions}
-              className="selector"
-              onChange={(option: any) => setLuggage(option?.value)}
-            />
-          </div>
-          <div className="form-group mt32">
-            <label className="label">Passengers</label>
-            <div className="counter">
-              <button
-                onClick={() => setPassengers(passengers - 1)}
-                className="counter-btn left"
-              >
-                -
-              </button>
-              <span className="quantity">{passengers}</span>
-              <button
-                onClick={() => setPassengers(passengers + 1)}
-                className="counter-btn right"
-              >
-                +
-              </button>
+          <div className="mob-form-step-1">
+            <h3 className="form-heading">Step 1</h3>
+            <div className="form-group mt32">
+              <label className="label">Select Your Car Type</label>
+              <Select
+                options={carOptions}
+                className="selector"
+                onChange={(option: any) => setCarType(option?.value)}
+              />
             </div>
+            <div className="form-group mt32">
+              <label className="label">Select Service Type</label>
+              <Select
+                options={serviceOptions}
+                className="selector"
+                onChange={(option: any) => setServiceType(option?.value)}
+              />
+            </div>
+            <div className="form-group mt32">
+              <label className="label">Luggage</label>
+              <Select
+                options={luggageOptions}
+                className="selector"
+                onChange={(option: any) => setLuggage(option?.value)}
+              />
+            </div>
+            <div className="form-group mt32">
+              <label className="label">Passengers</label>
+              <div className="counter">
+                <button
+                  onClick={() => setPassengers(passengers - 1)}
+                  className="counter-btn left"
+                >
+                  -
+                </button>
+                <span className="quantity">{passengers}</span>
+                <button
+                  onClick={() => setPassengers(passengers + 1)}
+                  className="counter-btn right"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <button className="submit-button" onClick={handleNextClick}>
+              Next
+            </button>
           </div>
-          <button className="submit-button" onClick={handleNextClick}>
-            Next
-          </button>
+          <div className="pc-form-step-1">
+            <div className="title-row">
+              <span className="title orange">Ride Info</span>
+              <span className="title">Select Vehicle</span>
+              <span className="title">Final Details</span>
+            </div>
+            <div className="input-row">
+              {" "}
+              <div className="form-group mt64">
+                <label className="label">Select Your Car Type</label>
+                <Select
+                  options={carOptions}
+                  className="selector"
+                  onChange={(option: any) => setCarType(option?.value)}
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Select Service Type</label>
+                <Select
+                  options={serviceOptions}
+                  className="selector"
+                  onChange={(option: any) => setServiceType(option?.value)}
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Luggage</label>
+                <Select
+                  options={luggageOptions}
+                  className="selector"
+                  onChange={(option: any) => setLuggage(option?.value)}
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Passengers</label>
+                <div className="counter">
+                  <button
+                    onClick={() => setPassengers(passengers - 1)}
+                    className="counter-btn left"
+                  >
+                    -
+                  </button>
+                  <span className="quantity">{passengers}</span>
+                  <button
+                    onClick={() => setPassengers(passengers + 1)}
+                    className="counter-btn right"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button className="submit-button" onClick={handleNextClick}>
+              Next
+            </button>
+          </div>
         </>
       )}
       {currentStep === 2 && (
         <>
-          {" "}
-          <h3 className="form-heading">Step 2</h3>
-          <div className="form-group mt32">
-            <label className="label">Pickup Location</label>
-            <input
-              type="text"
-              placeholder="Enter Location"
-              onChange={(e: any) => setPickUpLocation(e.target.value)}
-              className="b-form"
-            />
+          <div className="mob-form-step-2">
+            <h3 className="form-heading">Step 2</h3>
+            <div className="form-group mt32">
+              <label className="label">Pickup Location</label>
+              <input
+                type="text"
+                placeholder="Enter Location"
+                onChange={(e: any) => setPickUpLocation(e.target.value)}
+                className="b-form"
+              />
+            </div>
+            <div className="form-group mt32">
+              <label className="label">Dropoff Location</label>
+              <input
+                type="text"
+                placeholder="Enter Location"
+                onChange={(e: any) => setDropoffLocation(e.target.value)}
+                className="b-form"
+              />
+            </div>
+            <div className="form-group mt32">
+              <label className="label">Pick-up Date</label>
+              <DatePicker
+                selected={selectedDate}
+                onChange={(date: Date) => setSelectedDate(date)}
+                dateFormat="MMMM d, yyyy"
+                className="b-form"
+                placeholderText="Select Date"
+              />
+            </div>
+            <div className="form-group mt32">
+              <label className="label">Pick-up Time</label>
+              <TimePicker
+                value={selectedTime}
+                onChange={(value) => {
+                  if (value) {
+                    setSelectedTime(value);
+                  }
+                }}
+                className="b-form"
+                disableClock={true}
+              />
+            </div>
+            <button className="submit-button" onClick={handleNextClick}>
+              Next
+            </button>
           </div>
-          <div className="form-group mt32">
-            <label className="label">Dropoff Location</label>
-            <input
-              type="text"
-              placeholder="Enter Location"
-              onChange={(e: any) => setDropoffLocation(e.target.value)}
-              className="b-form"
-            />
+          <div className="pc-form-step-2">
+            {" "}
+            <div className="title-row">
+              <span className="title">Ride Info</span>
+              <span className="title orange">Select Vehicle</span>
+              <span className="title">Final Details</span>
+            </div>
+            <div className="input-row">
+              {" "}
+              <div className="form-group mt64">
+                <label className="label">Pickup Location</label>
+                <input
+                  type="text"
+                  placeholder="Enter Location"
+                  onChange={(e: any) => setPickUpLocation(e.target.value)}
+                  className="b-form"
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Dropoff Location</label>
+                <input
+                  type="text"
+                  placeholder="Enter Location"
+                  onChange={(e: any) => setDropoffLocation(e.target.value)}
+                  className="b-form"
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Pick-up Date</label>
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={(date: Date) => setSelectedDate(date)}
+                  dateFormat="MMMM d, yyyy"
+                  className="b-form"
+                  placeholderText="Select Date"
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Pick-up Time</label>
+                <TimePicker
+                  value={selectedTime}
+                  onChange={(value) => {
+                    if (value) {
+                      setSelectedTime(value);
+                    }
+                  }}
+                  className="b-form"
+                  disableClock={true}
+                />
+              </div>
+            </div>
+            <button className="submit-button" onClick={handleNextClick}>
+              Next
+            </button>
           </div>
-          <div className="form-group mt32">
-            <label className="label">Pick-up Date</label>
-            <DatePicker
-              selected={selectedDate}
-              onChange={(date: Date) => setSelectedDate(date)}
-              dateFormat="MMMM d, yyyy"
-              className="b-form"
-              placeholderText="Select Date"
-            />
-          </div>
-          <div className="form-group mt32">
-            <label className="label">Pick-up Time</label>
-            <TimePicker
-              value={selectedTime}
-              onChange={(value) => {
-                if (value) {
-                  setSelectedTime(value);
-                }
-              }}
-              className="b-form"
-              disableClock={true}
-            />
-          </div>
-          <button className="submit-button" onClick={handleNextClick}>
-            Next
-          </button>
         </>
       )}
       {currentStep === 3 && (
         <>
-          {" "}
-          <h3 className="form-heading">Step 3</h3>
-          <div className="form-group mt32">
-            <label className="label">First Name</label>
-            <input
-              type="text"
-              placeholder="First Name"
-              onChange={(e: any) => setFullName(e.target.value)}
-              className="b-form"
-            />
+          <div className="mob-form-step-3">
+            <h3 className="form-heading">Step 3</h3>
+            <div className="form-group mt32">
+              <label className="label">First Name</label>
+              <input
+                type="text"
+                placeholder="First Name"
+                onChange={(e: any) => setFullName(e.target.value)}
+                className="b-form"
+              />
+            </div>
+            <div className="form-group mt32">
+              <label className="label">Last Name</label>
+              <input
+                type="text"
+                placeholder="Last Name"
+                onChange={(e: any) => setLastName(e.target.value)}
+                className="b-form"
+              />
+            </div>
+            <div className="form-group mt32">
+              <label className="label">Phone Number</label>
+              <input
+                type="text"
+                placeholder="Phone Number"
+                onChange={(e: any) => setPhoneNumber(e.target.value)}
+                className="b-form"
+              />
+            </div>
+            <div className="form-group mt32">
+              <label className="label">Email Adress</label>
+              <input
+                type="text"
+                placeholder="example@gmail.com"
+                onChange={(e: any) => setEmailAdress(e.target.value)}
+                className="b-form"
+              />
+            </div>
+            <button className="submit-button" onClick={handleNextClick}>
+              Next
+            </button>
           </div>
-          <div className="form-group mt32">
-            <label className="label">Last Name</label>
-            <input
-              type="text"
-              placeholder="Last Name"
-              onChange={(e: any) => setLastName(e.target.value)}
-              className="b-form"
-            />
+          <div className="pc-form-step-3">
+            {" "}
+            <div className="title-row">
+              <span className="title">Ride Info</span>
+              <span className="title">Select Vehicle</span>
+              <span className="title orange">Final Details</span>
+            </div>
+            <div className="input-row">
+              {" "}
+              <div className="form-group mt64">
+                <label className="label">First Name</label>
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  onChange={(e: any) => setFullName(e.target.value)}
+                  className="b-form"
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Last Name</label>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  onChange={(e: any) => setLastName(e.target.value)}
+                  className="b-form"
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Phone Number</label>
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  onChange={(e: any) => setPhoneNumber(e.target.value)}
+                  className="b-form"
+                />
+              </div>
+              <div className="form-group mt64">
+                <label className="label">Email Adress</label>
+                <input
+                  type="text"
+                  placeholder="example@gmail.com"
+                  onChange={(e: any) => setEmailAdress(e.target.value)}
+                  className="b-form"
+                />
+              </div>
+            </div>
+            <button className="submit-button" onClick={handleNextClick}>
+              Next
+            </button>
           </div>
-          <div className="form-group mt32">
-            <label className="label">Phone Number</label>
-            <input
-              type="text"
-              placeholder="Phone Number"
-              onChange={(e: any) => setPhoneNumber(e.target.value)}
-              className="b-form"
-            />
-          </div>
-          <div className="form-group mt32">
-            <label className="label">Email Adress</label>
-            <input
-              type="text"
-              placeholder="example@gmail.com"
-              onChange={(e: any) => setEmailAdress(e.target.value)}
-              className="b-form"
-            />
-          </div>
-          <button className="submit-button" onClick={handleNextClick}>
-            Next
-          </button>
         </>
       )}
     </div>

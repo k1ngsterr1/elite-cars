@@ -55,6 +55,9 @@ const MainScreen = () => {
         </div>
         <img src={mainPhoto} alt="mercedes" className="pc-img" />
       </main>
+      <div className="pc-form">
+        <BookingForm />
+      </div>
     </section>
   );
 };

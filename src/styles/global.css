@@ -104,6 +104,11 @@
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+  float: right;
+}
+
 .paragraph {
   color: #2C2C2C;
   font-family: Inter;
@@ -141,7 +146,7 @@
 }
 
 .orange {
-  color: #FF5722;
+  color: #FF5722 !important;
 }
 
 .orange-bg {

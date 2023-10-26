@@ -25,4 +25,40 @@
   line-height: normal;
   text-decoration-line: underline;
   text-transform: capitalize;
+}
+
+@media screen and (min-width: 1024px) {
+  .services-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .services-list .service-tab-s {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .services-list .service-tab-s .service-text {
+    color: #2C2C2C;
+    text-align: right;
+    font-family: Lato;
+    font-size: clamp(11px, 1.14576vw, 44px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .services-list .service-tab-s .more {
+    color: #FF5722;
+    text-align: right;
+    font-family: Inter;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+  }
 }/*# sourceMappingURL=services-styles.css.map */

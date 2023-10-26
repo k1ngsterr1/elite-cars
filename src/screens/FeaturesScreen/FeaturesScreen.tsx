@@ -9,6 +9,7 @@ interface FeatureProps {
 }
 
 const feature_image = require("../../assets/features_img.webp");
+const feature_image_pc = require("../../assets/photo_about.webp");
 
 const FeatureTab: React.FC<FeatureProps> = ({
   featureDescription,
@@ -63,7 +64,7 @@ const FeaturesScreen = () => {
               About <span className="white">Us</span>{" "}
             </span>
           </h3>
-          <p className="paragraph white w30 mt32">
+          <p className="paragraph white w60 mt32">
             Discover unrivaled luxury with [Your Service Name], the pinnacle of
             distinguished private car service. We elevate every journey with a
             unique blend of exclusive comfort, punctuality, and utmost
@@ -71,7 +72,23 @@ const FeaturesScreen = () => {
             crafted to be an exquisite, memorable adventure, embodying the
             epitome of elite traveling experiences.
           </p>
+          <div className="feature-tabs">
+            <FeatureTab
+              featureHeading="20+"
+              featureDescription="Years of experience"
+            ></FeatureTab>
+            <FeatureTab
+              featureHeading="18+"
+              featureDescription="Rental Outlets"
+            ></FeatureTab>
+            <FeatureTab
+              featureHeading="32+"
+              featureDescription="Repair Shop"
+            ></FeatureTab>
+          </div>
+          <FormButton text="Our Services" marginTop="mt64" />
         </div>
+        <img src={feature_image_pc} alt="feature-img" className="feature-img" />
       </div>
     </section>
   );

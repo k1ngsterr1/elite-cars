@@ -33,7 +33,7 @@ const ReviewsTab: React.FC<ReviewsProps> = ({ clientName, clientReview }) => {
 const ReviewsScreen = () => {
   return (
     <section className="screen">
-      <main className="content">
+      <div className="content">
         <h2 className="heading-s w60 text-center mt64">
           Reviews from <span className="orange">Our Clients</span>
         </h2>
@@ -69,7 +69,62 @@ const ReviewsScreen = () => {
             ></ReviewsTab>
           </SwiperSlide>
         </Swiper>
-      </main>
+      </div>
+      <div className="content-pc column">
+        <h2 className="heading-s  text-center mt64">
+          Reviews from <span className="orange">Our Clients</span>
+        </h2>
+        <Swiper
+          className="reviews-swiper mt64"
+          slidesPerView={3}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          navigation={true}
+          centeredSlides={true}
+          pagination={false}
+          style={
+            {
+              "--swiper-navigation-color": "#FF5722",
+            } as React.CSSProperties
+          }
+        >
+          <SwiperSlide>
+            <ReviewsTab
+              clientName="Client"
+              clientReview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa"
+            ></ReviewsTab>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReviewsTab
+              clientName="Client"
+              clientReview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa"
+            ></ReviewsTab>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReviewsTab
+              clientName="Client"
+              clientReview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa"
+            ></ReviewsTab>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReviewsTab
+              clientName="Client"
+              clientReview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa"
+            ></ReviewsTab>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReviewsTab
+              clientName="Client"
+              clientReview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa"
+            ></ReviewsTab>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReviewsTab
+              clientName="Client"
+              clientReview="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa"
+            ></ReviewsTab>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </section>
   );
 };
