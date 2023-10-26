@@ -35,3 +35,44 @@
         line-height: normal
         text-transform: capitalize
         margin-top: $m16mob
+
+@media screen and  (min-width: 1024px)
+
+    .rates-list
+        width: 100%
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+
+        .rate-text
+            color: $orange
+            font-family: Lato
+            font-size: $m16
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            text-transform: capitalize
+            float: right
+            text-align: right
+            margin-bottom: $m8
+
+        .rate-name
+            color: $black
+            font-family: Lato
+            font-size: clamp(11px,1.1457600000000001vw,44px)
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            text-transform: capitalize
+            margin-top: $m8
+
+        .rate-price-hour, .rate-price-mile
+            color: $orange
+            font-family: Lato
+            font-size: $m16
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            text-transform: capitalize
+            margin-top: $m16

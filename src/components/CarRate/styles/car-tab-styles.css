@@ -35,4 +35,46 @@
   line-height: normal;
   text-transform: capitalize;
   margin-top: clamp(8px, 3.73824vw, 32px);
+}
+
+@media screen and (min-width: 1024px) {
+  .rates-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .rates-list .rate-text {
+    color: #FF5722;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    float: right;
+    text-align: right;
+    margin-bottom: clamp(4px, 0.41664vw, 16px);
+  }
+  .rates-list .rate-name {
+    color: #2C2C2C;
+    font-family: Lato;
+    font-size: clamp(11px, 1.14576vw, 44px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-top: clamp(4px, 0.41664vw, 16px);
+  }
+  .rates-list .rate-price-hour, .rates-list .rate-price-mile {
+    color: #FF5722;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
 }/*# sourceMappingURL=car-tab-styles.css.map */
