@@ -41,11 +41,16 @@
   .rates-list {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+  }
+  .rates-list .rates-row {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
     justify-content: space-between;
   }
-  .rates-list .rate-text {
+  .rates-list .rates-row .rate-text {
     color: #FF5722;
     font-family: Lato;
     font-size: clamp(8px, 0.83328vw, 32px);
@@ -57,7 +62,7 @@
     text-align: right;
     margin-bottom: clamp(4px, 0.41664vw, 16px);
   }
-  .rates-list .rate-name {
+  .rates-list .rates-row .rate-name {
     color: #2C2C2C;
     font-family: Lato;
     font-size: clamp(11px, 1.14576vw, 44px);
@@ -67,7 +72,7 @@
     text-transform: capitalize;
     margin-top: clamp(4px, 0.41664vw, 16px);
   }
-  .rates-list .rate-price-hour, .rates-list .rate-price-mile {
+  .rates-list .rates-row .rate-price-hour, .rates-list .rates-row .rate-price-mile {
     color: #FF5722;
     font-family: Lato;
     font-size: clamp(8px, 0.83328vw, 32px);
@@ -76,5 +81,9 @@
     line-height: normal;
     text-transform: capitalize;
     margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .rates-list .rates-row .rate-img {
+    width: clamp(178px, 18.54048vw, 712px);
+    height: clamp(178px, 18.54048vw, 712px);
   }
 }/*# sourceMappingURL=car-tab-styles.css.map */

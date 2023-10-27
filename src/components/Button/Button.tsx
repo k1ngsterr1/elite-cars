@@ -12,6 +12,7 @@ interface ButtonProps {
 interface RegButtonProps {
   text: string;
   marginTop: string;
+  clickFunction?: any;
 }
 
 interface FormProps {
@@ -33,8 +34,13 @@ export const Button: React.FC<ButtonProps> = ({ text, scroll, marginTop }) => {
 export const RegularButton: React.FC<RegButtonProps> = ({
   text,
   marginTop,
+  clickFunction,
 }) => {
-  return <button className={`reg-btn ${marginTop}`}>{text}</button>;
+  return (
+    <button onClick={clickFunction} className={`reg-btn ${marginTop}`}>
+      {text}
+    </button>
+  );
 };
 
 export const FormButton: React.FC<FormProps> = ({ text, marginTop }) => {

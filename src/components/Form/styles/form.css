@@ -177,12 +177,12 @@
     justify-content: space-between;
     margin-top: clamp(32px, 3.33312vw, 128px);
   }
-  .request-form .input-row .input-group {
-    width: 100%;
+  .request-form .input-row .input-group, .request-form .input-row .input-group-l {
+    width: auto;
     display: flex;
     flex-direction: column;
   }
-  .request-form .input-row .input-group .label-in {
+  .request-form .input-row .input-group .label-in, .request-form .input-row .input-group-l .label-in {
     color: #FF5722;
     font-family: Inter;
     font-size: clamp(8px, 0.83328vw, 32px);
@@ -190,7 +190,7 @@
     font-weight: 400;
     line-height: 137.4%;
   }
-  .request-form .input-row .input-group .input-form, .request-form .input-row .input-group .input-form-adress {
+  .request-form .input-row .input-group .input-form, .request-form .input-row .input-group .input-form-adress, .request-form .input-row .input-group-l .input-form, .request-form .input-row .input-group-l .input-form-adress {
     width: clamp(144.5px, 15.05112vw, 578px);
     height: clamp(25px, 2.604vw, 100px);
     color: rgba(44, 44, 44, 0.6);
@@ -203,14 +203,14 @@
     margin-top: clamp(8px, 0.83328vw, 32px);
     padding-left: clamp(4px, 0.41664vw, 16px);
   }
-  .request-form .input-row .input-group .input-form:focus, .request-form .input-row .input-group .input-form-adress:focus {
+  .request-form .input-row .input-group .input-form:focus, .request-form .input-row .input-group .input-form-adress:focus, .request-form .input-row .input-group-l .input-form:focus, .request-form .input-row .input-group-l .input-form-adress:focus {
     outline: none;
     border: 2px solid #FF5722;
   }
-  .request-form .input-row .input-group .input-form-adress {
+  .request-form .input-row .input-group .input-form-adress, .request-form .input-row .input-group-l .input-form-adress {
     width: 100% !important;
   }
-  .request-form .input-row .input-group .input-form-comment {
+  .request-form .input-row .input-group .input-form-comment, .request-form .input-row .input-group-l .input-form-comment {
     width: 100%;
     height: clamp(66.5px, 6.92664vw, 266px);
     color: #969696;
@@ -224,11 +224,11 @@
     border: 2px solid rgba(44, 44, 44, 0.5);
     margin-top: clamp(8px, 0.83328vw, 32px);
   }
-  .request-form .input-row .input-group .input-form-comment:focus {
+  .request-form .input-row .input-group .input-form-comment:focus, .request-form .input-row .input-group-l .input-form-comment:focus {
     outline: none;
     border: 2px solid #FF5722;
   }
-  .request-form .input-row .input-group .counter {
+  .request-form .input-row .input-group .counter, .request-form .input-row .input-group-l .counter {
     width: clamp(144.5px, 15.05112vw, 578px);
     height: clamp(25px, 2.604vw, 100px);
     color: rgba(44, 44, 44, 0.6);
@@ -238,20 +238,20 @@
     border: 2px solid rgba(44, 44, 44, 0.5);
     margin-top: clamp(8px, 0.83328vw, 32px);
   }
-  .request-form .input-row .input-group .counter .minus, .request-form .input-row .input-group .counter .plus {
+  .request-form .input-row .input-group .counter .minus, .request-form .input-row .input-group .counter .plus, .request-form .input-row .input-group-l .counter .minus, .request-form .input-row .input-group-l .counter .plus {
     font-size: clamp(16px, 1.66656vw, 64px);
     color: #FF5722;
     background-color: transparent;
     border: none;
     cursor: pointer;
   }
-  .request-form .input-row .input-group .counter .minus {
+  .request-form .input-row .input-group .counter .minus, .request-form .input-row .input-group-l .counter .minus {
     padding-left: clamp(8px, 0.83328vw, 32px);
   }
-  .request-form .input-row .input-group .counter .plus {
+  .request-form .input-row .input-group .counter .plus, .request-form .input-row .input-group-l .counter .plus {
     padding-right: clamp(8px, 0.83328vw, 32px);
   }
-  .request-form .input-row .input-group .counter .quantity {
+  .request-form .input-row .input-group .counter .quantity, .request-form .input-row .input-group-l .counter .quantity {
     color: #2C2C2C;
     font-family: Inter;
     font-size: clamp(10.5px, 1.09368vw, 42px);
@@ -259,5 +259,8 @@
     font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
+  }
+  .request-form .input-row .input-group-l {
+    width: 100%;
   }
 }/*# sourceMappingURL=form.css.map */

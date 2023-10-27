@@ -196,7 +196,92 @@ const PricesPage = () => {
           </tbody>
         </table>
       </main>
-
+      <main className="content-pc m64 column">
+        <h2 className="heading-s mt64 text-center auto">ELITE ARRIVAL</h2>
+        <p className="paragraph text-center w50 auto mt32">
+          Our fleet consists of Lincoln Town Cars and Cadillac Sedans,
+          Mercedes-Benz S-Class, and BMW 7-Series sedans, Ford Expedition,
+          Chevrolet Suburban, Lincoln Navigator, and Cadillac Escalade SUVs, the
+          Mercedes Sprinter in both 11 and 14 passenger configurations. Our
+          vehicles are washed at least twice daily and fully detailed a minimum
+          of twice a month.
+        </p>
+        <h3 className="heading-third mt64 auto">
+          <strong>
+            <span className="orange">Our Rates</span>
+          </strong>
+        </h3>
+        <div className="rates-list">
+          <div className="rates-row">
+            <CarRate
+              marginTop="mt64"
+              carImage={rate01}
+              carCategorie="Premium Sedan"
+              carName="Cadillac CT6 Luxury"
+              carHourPrice="$136.00"
+              carMilePrice="$3.00"
+            />
+            <CarRate
+              marginTop="mt32"
+              carImage={rate02}
+              carCategorie="Premium Sedan"
+              carName="Mercedes-Benz S-Class S 580"
+              carHourPrice="$188.00"
+              carMilePrice="$3.50"
+            />
+            <CarRate
+              marginTop="mt32"
+              carImage={rate03}
+              carCategorie="Premium Sedan"
+              carName="BMW 7-series 740i Xdrive"
+              carHourPrice="$188.00"
+              carMilePrice="$3.50"
+            />
+            <CarRate
+              marginTop="mt32"
+              carImage={rate04}
+              carCategorie="Luxury SUV"
+              carName="2023 Cadillac Escalade ESV Sport"
+              carHourPrice="$136.00"
+              carMilePrice="$3.50"
+            />
+          </div>
+          <div className="rates-row">
+            <CarRate
+              marginTop="mt64"
+              carImage={rate01}
+              carCategorie="Premium Sedan"
+              carName="Cadillac CT6 Luxury"
+              carHourPrice="$136.00"
+              carMilePrice="$3.00"
+            />
+            <CarRate
+              marginTop="mt32"
+              carImage={rate02}
+              carCategorie="Premium Sedan"
+              carName="Mercedes-Benz S-Class S 580"
+              carHourPrice="$188.00"
+              carMilePrice="$3.50"
+            />
+            <CarRate
+              marginTop="mt32"
+              carImage={rate03}
+              carCategorie="Premium Sedan"
+              carName="BMW 7-series 740i Xdrive"
+              carHourPrice="$188.00"
+              carMilePrice="$3.50"
+            />
+            <CarRate
+              marginTop="mt32"
+              carImage={rate04}
+              carCategorie="Luxury SUV"
+              carName="2023 Cadillac Escalade ESV Sport"
+              carHourPrice="$136.00"
+              carMilePrice="$3.50"
+            />
+          </div>
+        </div>
+      </main>
       <h2 className="heading-s mt64 text-center">
         Send <span className="orange">Request</span>
       </h2>

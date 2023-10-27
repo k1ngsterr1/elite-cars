@@ -165,7 +165,7 @@ const Form = () => {
           </div>
         </div>
         <div className="input-row mt32">
-          <div className="input-group">
+          <div className="input-group-l">
             <label className="label-in">Pickup Address*</label>
             <input
               type="text"
@@ -175,8 +175,8 @@ const Form = () => {
           </div>
         </div>
         <div className="input-row mt32">
-          <div className="input-group">
-            <label className="label-in">Pickup Address*</label>
+          <div className="input-group-l">
+            <label className="label-in">Dropoff Address*</label>
             <input
               type="text"
               className="input-form-adress"
@@ -185,7 +185,7 @@ const Form = () => {
           </div>
         </div>
         <div className="input-row mt32">
-          <div className="input-group">
+          <div className="input-group-l">
             <label className="label-in">Comment</label>
             <textarea
               className="input-form-comment"
