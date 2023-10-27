@@ -104,9 +104,18 @@
   text-align: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .text-right {
   text-align: right;
   float: right;
+}
+
+.text-left {
+  text-align: left !important;
+  float: left !important;
 }
 
 .paragraph {
@@ -205,6 +214,14 @@
   width: 80%;
 }
 
+.w75 {
+  width: 75%;
+}
+
+.w70 {
+  width: 70%;
+}
+
 .w60 {
   width: 60%;
 }
@@ -227,6 +244,10 @@
 
 .image {
   display: inline-block;
+}
+
+.auto {
+  margin: auto;
 }
 
 @media screen and (min-width: 1024px) {

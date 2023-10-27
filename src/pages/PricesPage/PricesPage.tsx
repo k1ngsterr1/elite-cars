@@ -196,6 +196,7 @@ const PricesPage = () => {
           </tbody>
         </table>
       </main>
+
       <h2 className="heading-s mt64 text-center">
         Send <span className="orange">Request</span>
       </h2>

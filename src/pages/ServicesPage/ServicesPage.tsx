@@ -6,8 +6,17 @@ import { Link as ScrollLink } from "react-scroll";
 
 import "./styles/services.css";
 import FormScreen from "../../screens/FormScreen/FormScreen";
+import { Fade, Slide } from "react-awesome-reveal";
 
 interface ServiceTabProps {
+  serviceHeading: string;
+  serviceDescription: string;
+  serviceImage: string;
+  scrollLinkText: string;
+  scroll: string;
+}
+
+interface ServiceTabPropsPc {
   serviceHeading: string;
   serviceDescription: string;
   serviceImage: string;
@@ -30,6 +39,29 @@ const ServiceTab: React.FC<ServiceTabProps> = ({
       <ScrollLink className="scroll-link mt32" to={scroll}>
         {scrollLinkText}
       </ScrollLink>
+    </div>
+  );
+};
+
+const ServiceTabPc: React.FC<ServiceTabPropsPc> = ({
+  serviceDescription,
+  serviceHeading,
+  serviceImage,
+  scroll,
+  scrollLinkText,
+}) => {
+  return (
+    <div className="service-tab-pc mt64">
+      <div className="service-content">
+        <h4 className="heading-fourth text-left">
+          <span className="orange">{serviceHeading}</span>
+        </h4>
+        <p className="paragraph w70 mt16">{serviceDescription}</p>
+        <ScrollLink to={scroll} className="scroll-link mt32">
+          {scrollLinkText}
+        </ScrollLink>
+      </div>
+      <img src={serviceImage} alt="service-image" className="service-img" />
     </div>
   );
 };
@@ -88,6 +120,55 @@ const ServicesPage = () => {
           serviceImage={service04}
         />
       </section>
+      <main className="content-pc column mt128">
+        <h1 className="heading-s auto">Our Services</h1>
+        <div className="tabs">
+          <Fade direction="left" duration={1000} triggerOnce>
+            <ServiceTabPc
+              serviceHeading="Airport Transfers"
+              serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
+            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!
+            "
+              scroll=""
+              scrollLinkText="Book Now"
+              serviceImage={service01}
+            />
+          </Fade>
+          <Fade direction="left" duration={1500} triggerOnce>
+            <ServiceTabPc
+              serviceHeading="Airport Transfers"
+              serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
+            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!
+            "
+              scroll=""
+              scrollLinkText="Book Now"
+              serviceImage={service02}
+            />
+          </Fade>
+          <Fade direction="left" duration={2000}>
+            <ServiceTabPc
+              serviceHeading="Airport Transfers"
+              serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
+            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!
+            "
+              scroll=""
+              scrollLinkText="Book Now"
+              serviceImage={service03}
+            />
+          </Fade>
+          <Fade direction="left" duration={2500}>
+            <ServiceTabPc
+              serviceHeading="Airport Transfers"
+              serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
+            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!
+            "
+              scroll=""
+              scrollLinkText="Book Now"
+              serviceImage={service04}
+            />
+          </Fade>
+        </div>
+      </main>
       <FormScreen />
       <Footer />
     </div>

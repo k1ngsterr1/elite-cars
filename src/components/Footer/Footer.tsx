@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
-
-import "./styles/footer-style.css";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+
+import "./styles/footer-style.css";
 
 const containerStyle = {
   width: "100%",
@@ -82,6 +84,76 @@ const Footer = () => {
         </div>
         <figure className="separator mt32"></figure>
         <span className="text mt16">All rights reserved</span>
+      </div>
+      <div className="footer-content-pc">
+        <div className="content-pc">
+          <div className="logo-group">
+            <img src={logo} alt="logo-white" />
+            <span className="logo-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore{" "}
+            </span>
+          </div>
+          <div className="nav-container">
+            <span className="navigation-bold">Navigation</span>
+            <nav className="links">
+              <a className="link" href="">
+                Example
+              </a>
+              <a className="link" href="">
+                Example
+              </a>
+              <a className="link" href="">
+                Example
+              </a>
+              <a className="link" href="">
+                Example
+              </a>
+              <a className="link" href="">
+                Example
+              </a>
+            </nav>
+          </div>
+          <div className="nav-container">
+            <span className="navigation-bold">Services</span>
+            <nav className="links">
+              <a className="link" href="">
+                Example
+              </a>
+              <a className="link" href="">
+                Example
+              </a>
+              <a className="link" href="">
+                Example
+              </a>
+              <a className="link" href="">
+                Example
+              </a>
+              <a className="link" href="">
+                Example
+              </a>
+            </nav>
+          </div>
+          <div className="nav-container">
+            <span className="navigation-bold">Get In Touch</span>
+            <nav className="links">
+              <span className="contact-bold">Contact:</span>
+              <div className="contact-group">
+                <FontAwesomeIcon className="icon" icon={faPhone} />
+                <a className="link-g" href="">
+                  +773-494-9021
+                </a>
+              </div>
+              <span className="contact-bold">Email:</span>
+              <div className="contact-group">
+                <FontAwesomeIcon className="icon" icon={faEnvelope} />
+                <a className="link-g" href="">
+                  cars@example.com
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
       </div>
     </footer>
   );

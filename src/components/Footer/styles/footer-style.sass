@@ -11,7 +11,7 @@
     .footer-content
         width: 90%
         height: auto
-        display: flex
+        display: flex !important
         flex-direction: column
         align-items: center
 
@@ -66,3 +66,101 @@
             font-weight: 400
             line-height: 146%
             margin-bottom: $m16mob
+
+.footer-content-pc
+    display: none
+
+@media screen and  (min-width: 1024px)
+
+    .footer
+        width: 100%
+        height: auto
+        background-color: $orange
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .footer-content
+            display: none !important
+
+        .footer-content-pc
+            width: 86.45833333333333%
+            height: auto
+            display: flex
+            justify-content: center
+            margin-top: $m32
+            margin-bottom: $m32
+
+            .content-pc
+
+                .logo-group
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+
+                    .logo-text
+                        width: 50%
+                        color: $white
+                        font-family: Inter
+                        font-size: $m16
+                        font-style: italic
+                        font-weight: 300
+                        line-height: 146%
+                        margin-top: $m16
+
+                .nav-container
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+
+                    .navigation-bold
+                        color: $white
+                        font-family: Lato
+                        font-size: clamp(11px,1.1457600000000001vw,44px)
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 146%
+
+                    .links
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+
+                        .contact-bold
+                            color: $white
+                            font-family: Inter
+                            font-size: $m16
+                            font-style: normal
+                            font-weight: 500
+                            line-height: 146%
+                            margin-top: $m16
+
+                        .contact-group
+                            display: flex
+                            align-items: center
+                            margin-top: $m8
+
+                            .icon
+                                color: $white
+                                font-size: clamp(9px,0.93744vw,36px)
+                                margin-right: $m8
+
+                            .link-g
+                                color: $white
+                                font-family: Inter
+                                font-size: $m16
+                                font-style: normal
+                                font-weight: 400
+                                line-height: 146%
+                                text-decoration: none
+                                margin-top: 0
+
+                        .link
+                            color: $white
+                            font-family: Inter
+                            font-size: $m16
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 146%
+                            text-decoration: none
+                            margin-top: $m8
