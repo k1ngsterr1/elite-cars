@@ -131,7 +131,49 @@ const Contacts = () => {
           any of the means below, and our dedicated team will be in touch
           shortly.
         </p>
-        <div className="contacts-container"></div>
+        <div className="contacts-container">
+          <div className="contact-form">
+            <h5 className="contact-heading">Contact Form</h5>
+            <div className="input-group-pc">
+              <label htmlFor="" className="label">
+                Name*
+              </label>
+              <input
+                type="text"
+                className="form-input"
+                placeholder="Your Name"
+              />
+            </div>
+            <div className="input-group-pc">
+              <label htmlFor="" className="label">
+                Phone Number or Email*
+              </label>
+              <input
+                type="number"
+                className="form-input"
+                placeholder="Phone Number or Email"
+              />
+            </div>
+            <div className="input-group-pc">
+              <label htmlFor="" className="label">
+                Subject*
+              </label>
+              <input type="text" className="form-input" placeholder="Subject" />
+            </div>
+            <div className="input-group-pc">
+              <label htmlFor="" className="label">
+                Comment
+              </label>
+              <textarea
+                className="form-input-comment"
+                placeholder="Your Name"
+              />
+            </div>
+            <div className="btn-container">
+              <RegularButton text="Submit" marginTop="mt32 left" />
+            </div>
+          </div>
+        </div>
       </main>
       <Footer />
     </div>

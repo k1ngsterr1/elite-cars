@@ -69,3 +69,76 @@
     //     line-height: normal
     //     margin-left: $m8mob
     //     text-decoration: none
+
+@media screen and  (min-width: 1024px)
+
+    .contacts-container
+        width: 100%
+        height: auto
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+
+        .contact-form
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+
+            .contact-heading
+                color: #2C2C2C
+                text-align: right
+                font-family: Lato
+                font-size: clamp(17.5px,1.8228vw,70px)
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                text-transform: capitalize
+
+            .input-group-pc
+                width: auto
+                display: flex
+                flex-direction: column
+                margin-top: $m32
+
+                .label
+                    color: $orange
+                    font-family: Inter
+                    font-size: clamp(8px,0.83328vw,32px)
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 137.4%
+
+                .form-input
+                    width: clamp(270px,28.1232vw,1080px)
+                    height: clamp(21.5px,2.23944vw,86px)
+                    color: rgba(44, 44, 44, 0.60)
+                    font-family: Inter
+                    font-size: $m16
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 137.4%
+                    border: 2px solid rgba(44, 44, 44, 0.50)
+                    padding-left: $m16
+                    outline: none
+                    transition: 0.3s all
+                    &:focus
+                        outline: none
+                        border: 2px solid $orange
+
+                .form-input-comment
+                    width: clamp(270px,28.1232vw,1080px)
+                    height: clamp(66.5px,6.92664vw,266px)
+                    color: rgba(44, 44, 44, 0.60)
+                    font-family: Inter
+                    font-size: $m16
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 137.4%
+                    border: 2px solid rgba(44, 44, 44, 0.50)
+                    padding-left: $m16
+                    padding-top: $m16
+                    outline: none
+                    transition: 0.3s all
+                    &:focus
+                        outline: none
+                        border: 2px solid $orange
