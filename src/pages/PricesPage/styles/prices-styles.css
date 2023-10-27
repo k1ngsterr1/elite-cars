@@ -73,4 +73,67 @@
     align-items: center;
     justify-content: space-between;
   }
+  .charter-rates {
+    width: 70%;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .charter-rates .table-heading {
+    width: 100%;
+    color: #2C2C2C;
+    font-family: Lato;
+    font-size: clamp(10.5px, 1.09368vw, 42px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: left;
+    background: rgba(255, 87, 34, 0.1);
+  }
+  .charter-rates .table-heading .table-heading-text {
+    padding-top: clamp(8px, 0.83328vw, 32px);
+    padding-left: clamp(8px, 0.83328vw, 32px);
+    padding-bottom: clamp(8px, 0.83328vw, 32px);
+    border: 3px solid #FF5722;
+  }
+  .charter-rates .rate-row {
+    width: 100%;
+    color: #2C2C2C;
+    font-family: Lato;
+    font-size: clamp(9px, 0.93744vw, 36px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    text-transform: capitalize;
+    background-color: white;
+  }
+  .charter-rates .rate-row .td {
+    padding-top: clamp(16px, 1.66656vw, 64px);
+    padding-bottom: clamp(16px, 1.66656vw, 64px);
+    padding-left: clamp(8px, 0.83328vw, 32px);
+    text-align: left;
+    border: 3px solid #FF5722;
+  }
+  .charter-rates .rate-row-white {
+    width: 100%;
+    color: #2C2C2C;
+    font-family: Lato;
+    font-size: clamp(8px, 3.73824vw, 32px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .charter-rates .rate-row-white .td {
+    padding-top: clamp(16px, 7.47648vw, 64px);
+    padding-bottom: clamp(16px, 7.47648vw, 64px);
+    text-align: center;
+    border: 3px solid #FF5722;
+  }
+  .charter-rates .rate-row-white .td .td-low {
+    padding-top: clamp(16px, 7.47648vw, 64px);
+    text-align: center;
+  }
 }/*# sourceMappingURL=prices-styles.css.map */

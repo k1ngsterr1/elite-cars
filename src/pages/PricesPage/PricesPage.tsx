@@ -6,6 +6,7 @@ import Form from "../../components/Form/Form";
 import Footer from "../../components/Footer/Footer";
 
 import "./styles/prices-styles.css";
+import PriceTable from "../../components/PriceTable/PriceTable";
 
 const rate01 = require("../../assets/rates_01.webp");
 const rate02 = require("../../assets/rates_02.webp");
@@ -281,6 +282,206 @@ const PricesPage = () => {
             />
           </div>
         </div>
+        <span className="heading-third mt128 auto">
+          <strong>
+            <span className="orange">Arrivals</span>
+          </strong>
+        </span>
+        <table className="charter-rates">
+          <thead className="table-heading">
+            <tr>
+              <th className="table-heading-text" colSpan={3}>
+                HOURLY CHARTER RATES
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="rate-row">
+              <td className="td">
+                <p className="mt0">
+                  Standard Sedan – Lincoln Town Car or Cadillac Sedan (
+                  <span className="orange">
+                    <strong> Rate incl. 32% </strong>
+                  </span>{" "}
+                  )
+                </p>
+                <p className="mt8">
+                  $75.00 ({" "}
+                  <span className="orange">
+                    <strong>$99.00</strong>{" "}
+                  </span>
+                  ) / hour, or $3.00 (
+                  <span className="orange">
+                    <strong>$3.96</strong>
+                  </span>
+                  ) / mile
+                </p>
+                <p className="mt8">
+                  <span className="orange">
+                    <strong>$192.00</strong>
+                  </span>{" "}
+                  (2.0 hr. minimum charge incl. 32%)
+                </p>
+              </td>
+            </tr>
+            <tr className="rate-row">
+              <td className="td">
+                <p className="mt0">
+                  Standard Sedan – Lincoln Town Car or Cadillac Sedan (
+                  <span className="orange">
+                    <strong> Rate incl. 32% </strong>
+                  </span>{" "}
+                  )
+                </p>
+                <p className="mt8">
+                  $75.00 ({" "}
+                  <span className="orange">
+                    <strong>$99.00</strong>{" "}
+                  </span>
+                  ) / hour, or $3.00 (
+                  <span className="orange">
+                    <strong>$3.96</strong>
+                  </span>
+                  ) / mile
+                </p>
+                <p className="mt8">
+                  <span className="orange">
+                    <strong>$192.00</strong>
+                  </span>{" "}
+                  (2.0 hr. minimum charge incl. 32%)
+                </p>
+              </td>
+            </tr>
+            <tr className="rate-row">
+              <td className="td">
+                <p className="mt0">
+                  Standard Sedan – Lincoln Town Car or Cadillac Sedan (
+                  <span className="orange">
+                    <strong> Rate incl. 32% </strong>
+                  </span>{" "}
+                  )
+                </p>
+                <p className="mt8">
+                  $75.00 ({" "}
+                  <span className="orange">
+                    <strong>$99.00</strong>{" "}
+                  </span>
+                  ) / hour, or $3.00 (
+                  <span className="orange">
+                    <strong>$3.96</strong>
+                  </span>
+                  ) / mile
+                </p>
+                <p className="mt8">
+                  <span className="orange">
+                    <strong>$192.00</strong>
+                  </span>{" "}
+                  (2.0 hr. minimum charge incl. 32%)
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <span className="heading-third mt128 auto">
+          <strong>
+            <span className="orange">Departures</span>
+          </strong>
+        </span>
+        <table className="charter-rates">
+          <thead className="table-heading">
+            <tr>
+              <th className="table-heading-text" colSpan={3}>
+                HOURLY CHARTER RATES
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="rate-row">
+              <td className="td">
+                <p className="mt0">
+                  Standard Sedan – Lincoln Town Car or Cadillac Sedan (
+                  <span className="orange">
+                    <strong> Rate incl. 32% </strong>
+                  </span>{" "}
+                  )
+                </p>
+                <p className="mt8">
+                  $75.00 ({" "}
+                  <span className="orange">
+                    <strong>$99.00</strong>{" "}
+                  </span>
+                  ) / hour, or $3.00 (
+                  <span className="orange">
+                    <strong>$3.96</strong>
+                  </span>
+                  ) / mile
+                </p>
+                <p className="mt8">
+                  <span className="orange">
+                    <strong>$192.00</strong>
+                  </span>{" "}
+                  (2.0 hr. minimum charge incl. 32%)
+                </p>
+              </td>
+            </tr>
+            <tr className="rate-row">
+              <td className="td">
+                <p className="mt0">
+                  Standard Sedan – Lincoln Town Car or Cadillac Sedan (
+                  <span className="orange">
+                    <strong> Rate incl. 32% </strong>
+                  </span>{" "}
+                  )
+                </p>
+                <p className="mt8">
+                  $75.00 ({" "}
+                  <span className="orange">
+                    <strong>$99.00</strong>{" "}
+                  </span>
+                  ) / hour, or $3.00 (
+                  <span className="orange">
+                    <strong>$3.96</strong>
+                  </span>
+                  ) / mile
+                </p>
+                <p className="mt8">
+                  <span className="orange">
+                    <strong>$192.00</strong>
+                  </span>{" "}
+                  (2.0 hr. minimum charge incl. 32%)
+                </p>
+              </td>
+            </tr>
+            <tr className="rate-row">
+              <td className="td">
+                <p className="mt0">
+                  Standard Sedan – Lincoln Town Car or Cadillac Sedan (
+                  <span className="orange">
+                    <strong> Rate incl. 32% </strong>
+                  </span>{" "}
+                  )
+                </p>
+                <p className="mt8">
+                  $75.00 ({" "}
+                  <span className="orange">
+                    <strong>$99.00</strong>{" "}
+                  </span>
+                  ) / hour, or $3.00 (
+                  <span className="orange">
+                    <strong>$3.96</strong>
+                  </span>
+                  ) / mile
+                </p>
+                <p className="mt8">
+                  <span className="orange">
+                    <strong>$192.00</strong>
+                  </span>{" "}
+                  (2.0 hr. minimum charge incl. 32%)
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </main>
       <h2 className="heading-s mt64 text-center">
         Send <span className="orange">Request</span>
