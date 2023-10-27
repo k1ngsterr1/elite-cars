@@ -38,6 +38,7 @@
   .header .header-pc .logo {
     width: clamp(76.5px, 7.96824vw, 306px);
     height: clamp(30px, 3.1248vw, 120px);
+    cursor: pointer;
   }
   .header .header-pc .links {
     display: flex;

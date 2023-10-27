@@ -145,7 +145,7 @@ const ServicesPage = () => {
               serviceImage={service02}
             />
           </Fade>
-          <Fade direction="left" duration={2000}>
+          <Fade direction="left" duration={2000} triggerOnce>
             <ServiceTabPc
               serviceHeading="Airport Transfers"
               serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
@@ -156,7 +156,7 @@ const ServicesPage = () => {
               serviceImage={service03}
             />
           </Fade>
-          <Fade direction="left" duration={2500}>
+          <Fade direction="left" duration={2500} triggerOnce>
             <ServiceTabPc
               serviceHeading="Airport Transfers"
               serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.

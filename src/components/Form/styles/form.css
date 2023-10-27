@@ -61,6 +61,7 @@
   border: none;
   font-size: clamp(16px, 7.47648vw, 64px);
   color: #FF5722;
+  cursor: pointer;
 }
 .request-form .mobile-form .input-group .counter .quantity {
   color: #2C2C2C;
@@ -242,6 +243,7 @@
     color: #FF5722;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
   .request-form .input-row .input-group .counter .minus {
     padding-left: clamp(8px, 0.83328vw, 32px);

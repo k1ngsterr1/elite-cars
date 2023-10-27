@@ -6,7 +6,7 @@ const FormScreen = () => {
   const [luggage, setLuggage] = useState(1);
 
   return (
-    <section className="screen mt64" id="contacts">
+    <section className="screen mt128" id="contacts">
       <div className="content">
         <h2 className="heading-s">
           Send <span className="orange">request</span>
