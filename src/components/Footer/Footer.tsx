@@ -32,7 +32,7 @@ const Footer = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <footer className="footer mt64">
+    <footer className="footer mt128">
       <div className="footer-content mt32">
         {loadMap ? (
           <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">

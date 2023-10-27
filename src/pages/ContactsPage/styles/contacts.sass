@@ -83,6 +83,7 @@
             display: flex
             flex-direction: column
             align-items: flex-start
+            margin-top: 0px !important
 
             .contact-heading
                 color: #2C2C2C
@@ -142,3 +143,25 @@
                     &:focus
                         outline: none
                         border: 2px solid $orange
+
+        .map-content
+            width: 100%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+
+            .location-container
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+
+                .fa-icon, .contact-link
+                    color: $orange
+                    text-align: right
+                    font-family: Inter
+                    font-size: clamp(10px,1.0416vw,40px)
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+                    margin-left: $m16

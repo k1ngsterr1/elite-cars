@@ -75,6 +75,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 0px !important;
   }
   .contacts-container .contact-form .contact-heading {
     color: #2C2C2C;
@@ -136,5 +137,27 @@
   .contacts-container .contact-form .input-group-pc .form-input-comment:focus {
     outline: none;
     border: 2px solid #FF5722;
+  }
+  .contacts-container .map-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contacts-container .map-content .location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contacts-container .map-content .location-container .fa-icon, .contacts-container .map-content .location-container .contact-link {
+    color: #FF5722;
+    text-align: right;
+    font-family: Inter;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: clamp(8px, 0.83328vw, 32px);
   }
 }/*# sourceMappingURL=contacts.css.map */

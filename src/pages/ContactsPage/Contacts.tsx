@@ -16,7 +16,7 @@ import "./styles/contacts.css";
 
 const containerStyle = {
   width: "100%",
-  height: "300px",
+  height: "clamp(240px,24.9984vw,960px)",
 };
 
 const center = {
@@ -131,7 +131,7 @@ const Contacts = () => {
           any of the means below, and our dedicated team will be in touch
           shortly.
         </p>
-        <div className="contacts-container">
+        <div className="contacts-container mt128">
           <div className="contact-form">
             <h5 className="contact-heading">Contact Form</h5>
             <div className="input-group-pc">
@@ -149,7 +149,7 @@ const Contacts = () => {
                 Phone Number or Email*
               </label>
               <input
-                type="number"
+                type="phone"
                 className="form-input"
                 placeholder="Phone Number or Email"
               />
@@ -171,6 +171,38 @@ const Contacts = () => {
             </div>
             <div className="btn-container">
               <RegularButton text="Submit" marginTop="mt32 left" />
+            </div>
+          </div>
+          <div className="map-content">
+            <LoadScript googleMapsApiKey="API_">
+              <GoogleMap
+                mapContainerStyle={containerStyle}
+                center={center}
+                zoom={10}
+              ></GoogleMap>
+            </LoadScript>
+            <div className="location-container">
+              <div className="contact-link-container mt32">
+                <FontAwesomeIcon icon={faPhone} className="fa-icon" />
+                <a href="tel: +13129723890" className="contact-link">
+                  +1 (312) 972-3890
+                </a>
+              </div>
+              <div className="contact-link-container mt32">
+                <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
+                <a
+                  href="mailto: contact@[yourcompany].com"
+                  className="contact-link"
+                >
+                  contact@[yourcompany].com
+                </a>
+              </div>
+              <div className="contact-link-container mt32">
+                <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
+                <a href="" className="contact-link">
+                  200 E Randolph St, Suite 5100, Chicago, IL 60601
+                </a>
+              </div>
             </div>
           </div>
         </div>
