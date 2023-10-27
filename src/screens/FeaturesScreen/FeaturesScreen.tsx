@@ -86,7 +86,7 @@ const FeaturesScreen = () => {
               featureDescription="Repair Shop"
             ></FeatureTab>
           </div>
-          <FormButton text="Our Services" marginTop="mt64" />
+          <FormButton text="Our Services" marginTop="mt64 " />
         </div>
         <img src={feature_image_pc} alt="feature-img" className="feature-img" />
       </div>
