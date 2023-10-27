@@ -120,6 +120,19 @@ const Contacts = () => {
           </a>
         </div> */}
       </main>
+      <main className="content-pc column mt128">
+        <h1 className="heading-s auto">
+          Our <span className="orange">Contacts</span>
+        </h1>
+        <p className="paragraph w50 text-center auto mt32">
+          At [Your Company Name], we prioritize open channels of communication.
+          We're here to answer your queries, listen to your feedback, and
+          discuss any opportunities for collaboration. Reach out to us through
+          any of the means below, and our dedicated team will be in touch
+          shortly.
+        </p>
+        <div className="contacts-container"></div>
+      </main>
       <Footer />
     </div>
   );
