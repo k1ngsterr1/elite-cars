@@ -60,10 +60,13 @@
     .request-tbody
         display: none
 
+    .request-table
+        width: 100% !important
+
     .request-table-pc
         width: 100%
         display: table !important
-        border: 3px solid $orange
+        border: clamp(1.5px,0.15624vw,6px) solid $orange
         border-collapse: collapse
 
         .request-header-pc
@@ -91,7 +94,7 @@
             padding-top: $m32
             padding-bottom: $m32
             background: rgba(255, 87, 34, 0.10)
-            border: 3px solid $orange
+            border: clamp(1.5px,0.15624vw,6px) solid $orange
 
         .table-additional-row-pc
             color: $black
@@ -103,4 +106,4 @@
             text-align: center
             padding-top: $m32
             padding-bottom: $m32
-            border: 3px solid $orange
+            border: clamp(1.5px,0.15624vw,6px) solid $orange

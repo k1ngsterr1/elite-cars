@@ -12,6 +12,7 @@ import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import PricesPage from "./pages/PricesPage/PricesPage";
 import Contacts from "./pages/ContactsPage/Contacts";
 import AirportTransfers from "./pages/Services/AirportTransfers/AirportTransfers";
+import CorporateTravel from "./pages/Services/CorporateTravel/CorporateTravel";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,6 +36,10 @@ const App = () => {
         <Route
           path="/services/airport-transfers"
           element={<AirportTransfers />}
+        ></Route>
+        <Route
+          path="/services/corporate-travel"
+          element={<CorporateTravel />}
         ></Route>
       </Routes>
     </Router>

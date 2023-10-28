@@ -210,6 +210,10 @@
   align-items: center !important;
 }
 
+.w100 {
+  width: 100% !important;
+}
+
 .w90 {
   width: 90%;
 }

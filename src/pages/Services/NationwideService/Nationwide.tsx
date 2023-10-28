@@ -11,7 +11,7 @@ import "./styles/airport-styles.css";
 const service = require("../../../assets/service_airport.webp");
 const service_pc = require("../../../assets/service_airport_pc.webp");
 
-const AirportTransfers = () => {
+const Nationwide = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -25,25 +25,25 @@ const AirportTransfers = () => {
       {isMenuOpen && <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />}
       <div className="content mt64">
         <h1 className="heading-s">
-          <span className="orange">Airport Transfers</span>
+          <span className="orange">Nationwide Service</span>
         </h1>
         <p className="paragraph text-center mt32">
-          We offer reliable and efficient airport transfer services to and from
-          all major airports in the Chicago area. Our experienced drivers will
-          ensure that you reach your destination on time and in style, taking
-          away the stress of navigating through traffic or finding parking.
+          While we are based in Chicago, we also provide car rental services
+          with drivers across the country. Whether you need transportation for a
+          business trip or a leisurely vacation, our nationwide service ensures
+          that you have a reliable and professional driver wherever you go.
         </p>
         <Button text="Order Now" marginTop="mt32" scroll="contacts" />
       </div>
       <div className="content-pc column mt128">
         <h1 className="heading-service">
-          <div className="orange">Airport Transfers</div>
+          <div className="orange">Nationwide Service</div>
         </h1>
         <p className="paragraph w40 mt32">
-          We offer reliable and efficient airport transfer services to and from
-          all major airports in the Chicago area. Our experienced drivers will
-          ensure that you reach your destination on time and in style, taking
-          away the stress of navigating through traffic or finding parking.
+          While we are based in Chicago, we also provide car rental services
+          with drivers across the country. Whether you need transportation for a
+          business trip or a leisurely vacation, our nationwide service ensures
+          that you have a reliable and professional driver wherever you go.
         </p>
         <div className="button-row">
           <Button text="Order Now" scroll="" marginTop="mt32" />
@@ -83,4 +83,4 @@ const AirportTransfers = () => {
   );
 };
 
-export default AirportTransfers;
+export default Nationwide;

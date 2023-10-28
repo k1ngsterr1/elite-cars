@@ -61,10 +61,13 @@
   .request-tbody {
     display: none;
   }
+  .request-table {
+    width: 100% !important;
+  }
   .request-table-pc {
     width: 100%;
     display: table !important;
-    border: 3px solid #FF5722;
+    border: clamp(1.5px, 0.15624vw, 6px) solid #FF5722;
     border-collapse: collapse;
   }
   .request-table-pc .request-header-pc {
@@ -92,7 +95,7 @@
     padding-top: clamp(16px, 1.66656vw, 64px);
     padding-bottom: clamp(16px, 1.66656vw, 64px);
     background: rgba(255, 87, 34, 0.1);
-    border: 3px solid #FF5722;
+    border: clamp(1.5px, 0.15624vw, 6px) solid #FF5722;
   }
   .request-table-pc .table-additional-row-pc {
     color: #2C2C2C;
@@ -104,6 +107,6 @@
     text-align: center;
     padding-top: clamp(16px, 1.66656vw, 64px);
     padding-bottom: clamp(16px, 1.66656vw, 64px);
-    border: 3px solid #FF5722;
+    border: clamp(1.5px, 0.15624vw, 6px) solid #FF5722;
   }
 }/*# sourceMappingURL=price-table.css.map */

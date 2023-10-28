@@ -140,8 +140,10 @@ const Cadillac = () => {
           <span className="orange">Gallery</span>
         </h2>
         <Swiper
-          slidesPerView={1}
+          slidesPerView={4}
+          spaceBetween={400}
           navigation={true}
+          loop={true}
           centeredSlides={true}
           pagination={false}
           modules={[Pagination, Navigation]}
@@ -169,7 +171,47 @@ const Cadillac = () => {
           <SwiperSlide>
             <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
           </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
         </Swiper>
+      </div>
+      <div className="content-pc column items-center mt128">
+        <h3 className="heading-s text-centers">
+          <span className="orange">Prices</span>
+        </h3>
+        <PriceTable
+          cityRent="136$"
+          courtyYard="102"
+          minimalRentTime="6"
+          holidayPrices="112"
+        />
+      </div>
+      <div className="content-pc column mt128">
+        <h4 className="heading-s w100">
+          Car <span className="orange">Features</span>
+        </h4>
+        <p className="paragraph mt16 w60">
+          Experience luxury like never before with our Cadillac Private Premium
+          Service. Tailored for the discerning individual, we combine the
+          timeless elegance of Cadillac with an unmatched level of personalized
+          service. Whether you're heading to a special event, business meeting,
+          or simply seeking a refined journey, our fleet of pristine Cadillacs
+          ensures a seamless and sophisticated ride every time. Choose
+          excellence. Choose Cadillac Private Premium
+        </p>
       </div>
       <div className="content mt64 align-center">
         <h2 className="car-heading-s text-center">Prices</h2>
