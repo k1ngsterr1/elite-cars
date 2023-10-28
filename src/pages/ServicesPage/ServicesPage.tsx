@@ -7,13 +7,14 @@ import { Link as ScrollLink } from "react-scroll";
 import "./styles/services.css";
 import FormScreen from "../../screens/FormScreen/FormScreen";
 import { Fade, Slide } from "react-awesome-reveal";
+import { Button } from "../../components/Button/Button";
 
 interface ServiceTabProps {
   serviceHeading: string;
   serviceDescription: string;
   serviceImage: string;
   scrollLinkText: string;
-  scroll: string;
+  navigate: any;
 }
 
 interface ServiceTabPropsPc {
@@ -21,14 +22,14 @@ interface ServiceTabPropsPc {
   serviceDescription: string;
   serviceImage: string;
   scrollLinkText: string;
-  scroll: string;
+  navigate: any;
 }
 
 const ServiceTab: React.FC<ServiceTabProps> = ({
   serviceDescription,
   serviceHeading,
   serviceImage,
-  scroll,
+  navigate,
   scrollLinkText,
 }) => {
   return (
@@ -36,9 +37,9 @@ const ServiceTab: React.FC<ServiceTabProps> = ({
       <img className="service-img" src={serviceImage} alt="service"></img>
       <h4 className="heading-fourth mt32">{serviceHeading}</h4>
       <p className="service-description mt16">{serviceDescription}</p>
-      <ScrollLink className="scroll-link mt32" to={scroll}>
+      <button className="scroll-link mt32" onClick={navigate}>
         {scrollLinkText}
-      </ScrollLink>
+      </button>
     </div>
   );
 };
@@ -47,7 +48,7 @@ const ServiceTabPc: React.FC<ServiceTabPropsPc> = ({
   serviceDescription,
   serviceHeading,
   serviceImage,
-  scroll,
+  navigate,
   scrollLinkText,
 }) => {
   return (
@@ -57,9 +58,7 @@ const ServiceTabPc: React.FC<ServiceTabPropsPc> = ({
           <span className="orange">{serviceHeading}</span>
         </h4>
         <p className="paragraph w70 mt16">{serviceDescription}</p>
-        <ScrollLink to={scroll} className="scroll-link mt32">
-          {scrollLinkText}
-        </ScrollLink>
+        <button className="scroll-link mt32">{scrollLinkText}</button>
       </div>
       <img src={serviceImage} alt="service-image" className="service-img" />
     </div>
@@ -85,91 +84,87 @@ const ServicesPage = () => {
         <h1 className="main-heading">
           Our <span className="orange">Services</span>
         </h1>
+        <p className="paragraph mt32 text-center">
+          At Elite Arrival, we take pride in providing top-notch car rental
+          services with professional drivers in Chicago. Our range of services
+          includes:
+        </p>
         <ServiceTab
-          scroll=""
+          navigate={""}
           scrollLinkText="Book Now"
           serviceHeading="Airport Transfers"
-          serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
-            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!"
+          serviceDescription=" Airport Transfers: We offer reliable and efficient airport transfer services to and from all major airports in the Chicago area. Our experienced drivers will ensure that you reach your destination on time and in style, taking away the stress of navigating through traffic or finding parking."
           serviceImage={service01}
         />
 
         <ServiceTab
-          scroll=""
+          navigate={""}
           scrollLinkText="Book Now"
-          serviceHeading="Airport Transfers"
-          serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
-            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!"
+          serviceHeading="Corporate Travel"
+          serviceDescription="Corporate Travel: We understand the importance of making a good impression when it comes to corporate travel. That's why we offer executive car rental services for business professionals. Our fleet of luxury vehicles is well-maintained and equipped with amenities to ensure a comfortable and productive journey."
           serviceImage={service02}
         />
 
         <ServiceTab
-          scroll=""
+          navigate={""}
           scrollLinkText="Book Now"
-          serviceHeading="Airport Transfers"
-          serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
-            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!"
+          serviceHeading="Nationwide Service"
+          serviceDescription=" Nationwide Service: While we are based in Chicago, we also provide car rental services with drivers across the country. Whether you need transportation for a business trip or a leisurely vacation, our nationwide service ensures that you have a reliable and professional driver wherever you go."
           serviceImage={service03}
         />
         <ServiceTab
-          scroll=""
+          navigate={""}
           scrollLinkText="Book Now"
-          serviceHeading="Airport Transfers"
-          serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
-            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!"
+          serviceHeading="Special Events"
+          serviceDescription="Special Events: From weddings to prom nights, we understand that special events require special transportation. Our team is experienced in providing luxurious and stylish transportation for any occasion. We offer a range of vehicles to choose from, ensuring that you arrive at your event in style and comfort."
           serviceImage={service04}
         />
       </section>
       <main className="content-pc column mt128">
         <h1 className="heading-s auto">Our Services</h1>
         <div className="tabs">
-          <Fade direction="left" duration={1000} triggerOnce>
+          <Fade direction="left" duration={1000} triggerOnce={true}>
             <ServiceTabPc
               serviceHeading="Airport Transfers"
-              serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
-            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!
-            "
-              scroll=""
+              serviceDescription=" Airport Transfers: We offer reliable and efficient airport transfer services to and from all major airports in the Chicago area. Our experienced drivers will ensure that you reach your destination on time and in style, taking away the stress of navigating through traffic or finding parking."
               scrollLinkText="Book Now"
+              navigate={""}
               serviceImage={service01}
             />
           </Fade>
-          <Fade direction="left" duration={1500} triggerOnce>
+          <Fade direction="left" duration={1500} triggerOnce={true}>
             <ServiceTabPc
-              serviceHeading="Airport Transfers"
-              serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
-            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!
-            "
-              scroll=""
+              serviceHeading="Corporate Travel"
+              serviceDescription=" Corporate Travel: We understand the importance of making a good impression when it comes to corporate travel. That's why we offer executive car rental services for business professionals. Our fleet of luxury vehicles is well-maintained and equipped with amenities to ensure a comfortable and productive journey."
               scrollLinkText="Book Now"
+              navigate={""}
               serviceImage={service02}
             />
           </Fade>
-          <Fade direction="left" duration={2000} triggerOnce>
+          <Fade direction="left" duration={2000} triggerOnce={true}>
             <ServiceTabPc
-              serviceHeading="Airport Transfers"
-              serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
-            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!
-            "
-              scroll=""
+              serviceHeading="Nationwide Service"
+              serviceDescription=" Nationwide Service: While we are based in Chicago, we also provide car rental services with drivers across the country. Whether you need transportation for a business trip or a leisurely vacation, our nationwide service ensures that you have a reliable and professional driver wherever you go."
               scrollLinkText="Book Now"
+              navigate={""}
               serviceImage={service03}
             />
           </Fade>
-          <Fade direction="left" duration={2500} triggerOnce>
+          <Fade direction="left" duration={2500} triggerOnce={true}>
             <ServiceTabPc
-              serviceHeading="Airport Transfers"
-              serviceDescription="Looking for a reliable airport transportation service to or from O’Hare International Airport in Chicago, IL? Look no further than LimoRSVP! Our O’Hare limo service offers top-notch transportation to meet your needs, whether you’re traveling for business or pleasure. Our experienced drivers will ensure you arrive at your destination safely and comfortably.
-            We offer competitive O’Hare limo service rates and a range of vehicles to choose from, including luxury sedans, SUVs, and Mercedes Sprinter Vans. Additionally, we provide car service to O’Hare and limo service from O’Hare to suburbs surrounding Chicago. With LimoRSVP, you can expect timely, efficient, and affordable transportation every time. Contact us today to book your next ride!
-            "
-              scroll=""
+              serviceHeading="Special Events"
+              serviceDescription="4. Special Events: From weddings to prom nights, we understand that special events require special transportation. Our team is experienced in providing luxurious and stylish transportation for any occasion. We offer a range of vehicles to choose from, ensuring that you arrive at your event in style and comfort."
+              navigate={""}
               scrollLinkText="Book Now"
               serviceImage={service04}
             />
           </Fade>
         </div>
       </main>
-      <FormScreen />
+      <FormScreen
+        formParagraph="Contact us today to learn more about our services and receive a personalized quote for your car rental needs in Chicago. Experience the Elite Arrival difference and let us take care of your transportation requirements with professionalism and style.
+"
+      />
       <Footer />
     </div>
   );

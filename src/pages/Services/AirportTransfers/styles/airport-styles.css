@@ -4,7 +4,14 @@
   display: none;
 }
 
+.service-img-mob {
+  display: flex;
+}
+
 @media screen and (min-width: 1024px) {
+  .service-img-mob {
+    display: none !important;
+  }
   .heading-service {
     color: #FF5722;
     font-family: Lato;

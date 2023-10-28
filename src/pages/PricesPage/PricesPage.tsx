@@ -26,16 +26,13 @@ const PricesPage = () => {
       <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
       {isMenuOpen && <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />}
       <main className="content mt64">
-        <h1 className="main-heading">
-          <span className="orange">Elite Arrival</span>
-        </h1>
+        <h1 className="main-heading text-center">Cars for rent and prices</h1>
         <p className="paragraph text-center mt32">
-          Our fleet consists of Lincoln Town Cars and Cadillac Sedans,
-          Mercedes-Benz S-Class, and BMW 7-Series sedans, Ford Expedition,
-          Chevrolet Suburban, Lincoln Navigator, and Cadillac Escalade SUVs, the
-          Mercedes Sprinter in both 11 and 14 passenger configurations. Our
-          vehicles are washed at least twice daily and fully detailed a minimum
-          of twice a month.
+          We provide transparent and competitive pricing for our car rental
+          service with professional drivers in Chicago. We believe in offering
+          value for money without compromising on the quality of our service. We
+          look forward to serving you and exceeding your expectations with our
+          exceptional service and competitive rates.
         </p>
         <h2 className="heading-s mt32">
           <span className="orange">Our Rates</span>
@@ -88,6 +85,19 @@ const PricesPage = () => {
           carHourPrice="$336.00"
           carMilePrice="$4.00"
         />
+        <p className="paragraph text-center w90  mt64">
+          Experience the convenience, comfort, and professionalism of Elite
+          Arrival's car rental service with drivers in Chicago. Contact us today
+          to receive a personalized quote and book your next journey with us. At
+          Elite Arrival, we strive to offer competitive rates while maintaining
+          the highest standards of service. Our goal is to provide you with a
+          seamless and luxurious transportation experience at a reasonable
+          price. When you choose Elite Arrival, reliability is guaranteed. Our
+          professional drivers prioritize punctuality, ensuring you never miss
+          an important appointment or event. Safety is also paramount to us.
+          Rest assured that our chauffeurs are highly trained and experienced,
+          prioritizing your well-being throughout the entire journey.
+        </p>
         <h3 className="heading-third mt64">Arrivals</h3>
         <table className="charter-rates">
           <thead className="table-heading">
@@ -198,14 +208,15 @@ const PricesPage = () => {
         </table>
       </main>
       <main className="content-pc m64 column">
-        <h2 className="heading-s mt64 text-center auto">ELITE ARRIVAL</h2>
+        <h2 className="heading-s mt64 text-center auto">
+          Cars for rent and prices
+        </h2>
         <p className="paragraph text-center w50 auto mt32">
-          Our fleet consists of Lincoln Town Cars and Cadillac Sedans,
-          Mercedes-Benz S-Class, and BMW 7-Series sedans, Ford Expedition,
-          Chevrolet Suburban, Lincoln Navigator, and Cadillac Escalade SUVs, the
-          Mercedes Sprinter in both 11 and 14 passenger configurations. Our
-          vehicles are washed at least twice daily and fully detailed a minimum
-          of twice a month.
+          We provide transparent and competitive pricing for our car rental
+          service with professional drivers in Chicago. We believe in offering
+          value for money without compromising on the quality of our service. We
+          look forward to serving you and exceeding your expectations with our
+          exceptional service and competitive rates.
         </p>
         <h3 className="heading-third mt64 auto">
           <strong>
@@ -282,6 +293,19 @@ const PricesPage = () => {
             />
           </div>
         </div>
+        <p className="paragraph text-center w50 auto mt64">
+          Experience the convenience, comfort, and professionalism of Elite
+          Arrival's car rental service with drivers in Chicago. Contact us today
+          to receive a personalized quote and book your next journey with us. At
+          Elite Arrival, we strive to offer competitive rates while maintaining
+          the highest standards of service. Our goal is to provide you with a
+          seamless and luxurious transportation experience at a reasonable
+          price. When you choose Elite Arrival, reliability is guaranteed. Our
+          professional drivers prioritize punctuality, ensuring you never miss
+          an important appointment or event. Safety is also paramount to us.
+          Rest assured that our chauffeurs are highly trained and experienced,
+          prioritizing your well-being throughout the entire journey.
+        </p>
         <span className="heading-third mt128 auto">
           <strong>
             <span className="orange">Arrivals</span>
