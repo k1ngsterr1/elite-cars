@@ -31,24 +31,23 @@ const FeaturesScreen = () => {
           About <span className="white">Us</span>
         </h2>
         <p className="paragraph white text-center mt32">
-          Discover unrivaled luxury with [Your Service Name], the pinnacle of
-          distinguished private car service. We elevate every journey with a
-          unique blend of exclusive comfort, punctuality, and utmost discretion.
-          Navigate your travels with us, where every ride is crafted to be an
-          exquisite, memorable adventure, embodying the epitome of elite
-          traveling experiences.
+          Elite Arrival is a premier transportation service that caters to the
+          discerning needs of our clients. With a commitment to excellence, we
+          provide luxurious and reliable transportation solutions for various
+          occasions. Our fleet of high-end vehicles is meticulously maintained
+          to ensure the utmost comfort and style for our customers.
         </p>
         <FeatureTab
           featureHeading="20+"
           featureDescription="Years of experience"
         ></FeatureTab>
         <FeatureTab
-          featureHeading="18+"
-          featureDescription="Rental Outlets"
+          featureHeading="24/7"
+          featureDescription="Every day"
         ></FeatureTab>
         <FeatureTab
-          featureHeading="32+"
-          featureDescription="Repair Shop"
+          featureHeading="20000"
+          featureDescription="Сlients"
         ></FeatureTab>
         <FormButton text="Our Services" marginTop="mt32" />
       </div>
@@ -65,12 +64,11 @@ const FeaturesScreen = () => {
             </span>
           </h3>
           <p className="paragraph white w60 mt32">
-            Discover unrivaled luxury with [Your Service Name], the pinnacle of
-            distinguished private car service. We elevate every journey with a
-            unique blend of exclusive comfort, punctuality, and utmost
-            discretion. Navigate your travels with us, where every ride is
-            crafted to be an exquisite, memorable adventure, embodying the
-            epitome of elite traveling experiences.
+            Elite Arrival is a premier transportation service that caters to the
+            discerning needs of our clients. With a commitment to excellence, we
+            provide luxurious and reliable transportation solutions for various
+            occasions. Our fleet of high-end vehicles is meticulously maintained
+            to ensure the utmost comfort and style for our customers.
           </p>
           <div className="feature-tabs">
             <FeatureTab
@@ -78,12 +76,12 @@ const FeaturesScreen = () => {
               featureDescription="Years of experience"
             ></FeatureTab>
             <FeatureTab
-              featureHeading="18+"
-              featureDescription="Rental Outlets"
+              featureHeading="24/7"
+              featureDescription="Every Day"
             ></FeatureTab>
             <FeatureTab
-              featureHeading="32+"
-              featureDescription="Repair Shop"
+              featureHeading="20000"
+              featureDescription="Clients"
             ></FeatureTab>
           </div>
           <FormButton text="Our Services" marginTop="mt64 " />

@@ -4,7 +4,6 @@ import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-
 import "./styles/footer-style.css";
 
 const containerStyle = {
@@ -90,48 +89,42 @@ const Footer = () => {
           <div className="logo-group">
             <img src={logo} alt="logo-white" />
             <span className="logo-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore{" "}
+              Elite Arrival ensures that every ride is not only luxurious but
+              also secure
             </span>
           </div>
           <div className="nav-container">
             <span className="navigation-bold">Navigation</span>
             <nav className="links">
               <a className="link" href="">
-                Example
+                Home
               </a>
               <a className="link" href="">
-                Example
+                Services
               </a>
               <a className="link" href="">
-                Example
+                Cars & Rates
               </a>
               <a className="link" href="">
-                Example
-              </a>
-              <a className="link" href="">
-                Example
+                Contacts
               </a>
             </nav>
           </div>
           <div className="nav-container">
             <span className="navigation-bold">Services</span>
             <nav className="links">
-              <a className="link" href="">
-                Example
-              </a>
-              <a className="link" href="">
-                Example
-              </a>
-              <a className="link" href="">
-                Example
-              </a>
-              <a className="link" href="">
-                Example
-              </a>
-              <a className="link" href="">
-                Example
-              </a>
+              <Link className="link" to="/services/airport-transfers">
+                Airport Transfers
+              </Link>
+              <Link className="link" to="">
+                Corporate Travel
+              </Link>
+              <Link className="link" to="">
+                Nationwide Service
+              </Link>
+              <Link className="link" to="">
+                Special Events
+              </Link>
             </nav>
           </div>
           <div className="nav-container">

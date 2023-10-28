@@ -50,13 +50,13 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             Home
           </ScrollLink>
           <ScrollLink to="" className="link" smooth>
-            Services & Rates
+            Services
           </ScrollLink>
           <ScrollLink to="" className="link" smooth>
-            FAQ
+            Cars & Rates
           </ScrollLink>
           <ScrollLink to="" className="link" smooth>
-            About Us
+            Contacts
           </ScrollLink>
         </nav>
         <Button text="Contact Us" scroll="contacts" marginTop="mt0" />

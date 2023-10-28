@@ -22,13 +22,16 @@ const MainScreen = () => {
           Premier Private <span className="orange">Car Service</span>
         </span>
         <h1 className="main-heading text-center mt16">
-          Drive into the Future with our <span className="orange">cars</span>
+          Elite arrival - car rental{" "}
+          <span className="orange"> with driver</span>
         </h1>
         <p className="paragraph mt16 text-center">
-          Experience elite travel with [Your Service Name], where luxury and
-          discretion drive your private car experience. Every journey with us is
-          a tailor-made, sophisticated adventure, ensuring each mile is as
-          exclusive and memorable as the last.
+          At Elite Arrival, we understand the importance of punctuality and
+          professionalism. Our team of highly trained chauffeurs is dedicated to
+          delivering a seamless and enjoyable experience from the moment you
+          step into our vehicles. Whether it's airport transfers, corporate
+          events, weddings, or special occasions, we strive to exceed
+          expectations with our exceptional service.
         </p>
         <Button text="Explore Cars" scroll="" marginTop="mt32" />
         <RegularButton text="Book Now" marginTop="mt16" />
@@ -40,13 +43,16 @@ const MainScreen = () => {
             Premier Private <span className="orange">Car Service</span>
           </span>
           <h1 className="main-heading mt16 w90">
-            Drive into the Future with <span className="orange">our cars</span>
+            Elite arrival - car rental{" "}
+            <span className="orange">with driver</span>
           </h1>
           <p className="paragraph mt32 w50">
-            Experience elite travel with [Your Service Name], where luxury and
-            discretion drive your private car experience. Every journey with us
-            is a tailor-made, sophisticated adventure, ensuring each mile is as
-            exclusive and memorable as the last.
+            At Elite Arrival, we understand the importance of punctuality and
+            professionalism. Our team of highly trained chauffeurs is dedicated
+            to delivering a seamless and enjoyable experience from the moment
+            you step into our vehicles. Whether it's airport transfers,
+            corporate events, weddings, or special occasions, we strive to
+            exceed expectations with our exceptional service.
           </p>
           <div className="button-row mt32">
             <Button text="Explore Cars" scroll="rates" marginTop="mt0" />
