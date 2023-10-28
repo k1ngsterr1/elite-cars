@@ -11,9 +11,15 @@ import SwiperCore from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 import "./styles/car.css";
 
 const cadillacMob = require("../../../assets/cadillac_mob.webp");
+const cadillacPc = require("../../../assets/cadillac_pc.webp");
 const icon = require("../../../assets/icon.svg").default;
 
 const Cadillac = () => {
@@ -57,6 +63,46 @@ const Cadillac = () => {
           <span className="price mt16">From $3.50 / mile</span>
         </div>
       </section>
+      <section className="content-pc mt128">
+        <div className="text-content">
+          <div className="bread-dots">
+            <Link to="/" className="bread-link">
+              Home
+            </Link>
+            <div className="circle"></div>
+            <Link to="/rates" className="bread-link">
+              Rates
+            </Link>
+            <div className="circle-orange"></div>
+            <Link to="/cars/cadillac" className="bread-link">
+              <span className="orange">Cadillac Escalade</span>
+            </Link>
+          </div>
+          <div className="text-content mt32">
+            <h1 className="heading-s orange w30">
+              2023 Cadillac Escalade ESV Sport
+            </h1>
+            <p className="paragraph mt32 w40">
+              Experience luxury like never before with our Cadillac Private
+              Premium Service. Tailored for the discerning individual, we
+              combine the timeless elegance of Cadillac with an unmatched level
+              of personalized service. Whether you're heading to a special
+              event, business meeting, or simply seeking a refined journey, our
+              fleet of pristine Cadillacs ensures a seamless and sophisticated
+              ride every time. Choose excellence. Choose Cadillac Private
+              Premium
+            </p>
+          </div>
+          <div className="button-row-car">
+            <Button text="Order Now" marginTop="mt32" scroll="contacts" />
+            <div className="prices-group mt32">
+              <span className="text-price orange">From $136.00 / hour</span>
+              <span className="text-price orange mt8">From $3.50 / mile</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <img src={cadillacPc} alt="car-pc" className="car-pc-img" />
       <Swiper
         slidesPerView={1}
         spaceBetween={100}
@@ -89,6 +135,42 @@ const Cadillac = () => {
           <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
         </SwiperSlide>
       </Swiper>
+      <div className="content-pc items-center column justify-center mt256">
+        <h2 className="heading-s text-center">
+          <span className="orange">Gallery</span>
+        </h2>
+        <Swiper
+          slidesPerView={1}
+          navigation={true}
+          centeredSlides={true}
+          pagination={false}
+          modules={[Pagination, Navigation]}
+          style={
+            {
+              "--swiper-pagination-color": "#FF5722",
+              "--swiper-pagination-bullet-inactive-color": "white",
+              "--swiper-navigation-color": "#FF5722",
+            } as React.CSSProperties
+          }
+          className="car-swiper-pc"
+        >
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
       <div className="content mt64 align-center">
         <h2 className="car-heading-s text-center">Prices</h2>
         <PriceTable

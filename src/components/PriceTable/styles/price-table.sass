@@ -52,6 +52,9 @@
             padding-top: $m32mob
             padding-bottom: $m32mob !important
 
+.request-table-pc
+    display: none !important
+
 @media screen and  (min-width: 1024px)
 
     .request-tbody
@@ -59,10 +62,11 @@
 
     .request-table-pc
         width: 100%
+        display: table !important
         border: 3px solid $orange
         border-collapse: collapse
 
-        .request-header
+        .request-header-pc
             color: $black
             font-family: Lato
             font-size: clamp(12px,1.24992vw,48px)
@@ -76,7 +80,7 @@
             padding-top: $m16
             padding-bottom: $m16
 
-        .table-additional-heading
+        .table-additional-heading-pc
             color: $black
             font-family: Lato
             font-size: clamp(10.5px,1.09368vw,42px)
@@ -89,7 +93,7 @@
             background: rgba(255, 87, 34, 0.10)
             border: 3px solid $orange
 
-        .table-additional-row
+        .table-additional-row-pc
             color: $black
             font-family: Inter
             font-size: $font18

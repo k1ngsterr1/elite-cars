@@ -9,7 +9,7 @@ const service04 = require("../../assets/service_04.webp");
 
 const ServiceScreen = () => {
   return (
-    <section className="screen mt128">
+    <section className="screen mt128" id="services">
       <div className="content">
         <h2 className="heading-s">
           Our <span className="orange">Services</span>

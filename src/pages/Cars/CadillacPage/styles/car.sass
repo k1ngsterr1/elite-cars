@@ -87,3 +87,66 @@
 .car-swiper
     width: 100%
     height: auto
+
+.car-pc-img
+    display: none
+
+@media screen and  (min-width: 1024px)
+
+    .car-swiper
+        display: none
+
+    .bread-dots
+        display: flex
+        align-items: center
+
+        .bread-link
+            color: $black
+            font-family: Inter
+            font-size: $font18
+            font-style: normal
+            font-weight: 400
+            line-height: 137.4%
+            text-decoration: none
+
+            .circle
+                width: clamp(2.5px,0.2604vw,10px)
+                height: clamp(2.5px,0.2604vw,10px)
+                background-color: $black
+
+            .circle-orange
+                width: clamp(2.5px,0.2604vw,10px)
+                height: clamp(2.5px,0.2604vw,10px)
+                background-color: $orange
+
+    .button-row-car
+        width: 30%
+        display: flex
+        flex-direction: row
+        align-items: flex-end
+        justify-content: space-between
+
+        .prices-group
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+
+            .text-price
+                color: $orange
+                font-family: Lato
+                font-size: $font20
+                font-style: normal
+                font-weight: 500
+                line-height: normal
+                text-transform: capitalize
+
+    .car-pc-img
+        position: absolute
+        right: 0
+        display: flex
+        top: clamp(130px,13.5408vw,520px)
+        width: clamp(450px,46.872vw,1800px)
+
+    .car-swiper-pc
+        width: 90%
+        height: auto

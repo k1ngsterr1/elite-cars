@@ -71,7 +71,7 @@ const RatesScreen = () => {
   };
 
   return (
-    <section className="screen mt128">
+    <section className="screen mt128" id="rates">
       <div className="content">
         <h2 className="heading-s">
           Our <span className="orange">rates</span>

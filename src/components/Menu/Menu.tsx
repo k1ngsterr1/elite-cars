@@ -38,16 +38,31 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, toggleMenu }) => {
         <img className="logo" src={logo} alt="logo" />
         <figure className="separator" />
         <nav className="links mt16">
-          <ScrollLink className="link" to="home">
+          <ScrollLink className="link" to="home" onClick={closeMenu} smooth>
             Home
           </ScrollLink>
-          <ScrollLink className="link mt16" to="services">
+          <ScrollLink
+            className="link mt16"
+            to="services"
+            onClick={closeMenu}
+            smooth
+          >
             Services
           </ScrollLink>
-          <ScrollLink className="link mt16" to="rates">
+          <ScrollLink
+            className="link mt16"
+            to="rates"
+            onClick={closeMenu}
+            smooth
+          >
             Cars & Rates
           </ScrollLink>
-          <ScrollLink className="link mt16" to="contacts">
+          <ScrollLink
+            className="link mt16"
+            to="contacts"
+            onClick={closeMenu}
+            smooth
+          >
             Contacts
           </ScrollLink>
         </nav>

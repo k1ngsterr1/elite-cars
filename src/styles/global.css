@@ -199,11 +199,11 @@
 }
 
 .items-end {
-  align-items: flex-end;
+  align-items: flex-end !important;
 }
 
 .items-start {
-  align-items: start;
+  align-items: start !important;
 }
 
 .items-center {

@@ -53,16 +53,21 @@
   padding-bottom: clamp(16px, 7.47648vw, 64px) !important;
 }
 
+.request-table-pc {
+  display: none !important;
+}
+
 @media screen and (min-width: 1024px) {
   .request-tbody {
     display: none;
   }
   .request-table-pc {
     width: 100%;
+    display: table !important;
     border: 3px solid #FF5722;
     border-collapse: collapse;
   }
-  .request-table-pc .request-header {
+  .request-table-pc .request-header-pc {
     color: #2C2C2C;
     font-family: Lato;
     font-size: clamp(12px, 1.24992vw, 48px);
@@ -76,7 +81,7 @@
     padding-top: clamp(8px, 0.83328vw, 32px);
     padding-bottom: clamp(8px, 0.83328vw, 32px);
   }
-  .request-table-pc .table-additional-heading {
+  .request-table-pc .table-additional-heading-pc {
     color: #2C2C2C;
     font-family: Lato;
     font-size: clamp(10.5px, 1.09368vw, 42px);
@@ -89,7 +94,7 @@
     background: rgba(255, 87, 34, 0.1);
     border: 3px solid #FF5722;
   }
-  .request-table-pc .table-additional-row {
+  .request-table-pc .table-additional-row-pc {
     color: #2C2C2C;
     font-family: Inter;
     font-size: clamp(9px, 0.93744vw, 36px);

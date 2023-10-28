@@ -16,7 +16,7 @@ const Form = () => {
   }
 
   return (
-    <div className="request-form">
+    <div className="request-form" id="contacts">
       <form className="mobile-form">
         <div className="input-group">
           <label className="label-in">Name*</label>

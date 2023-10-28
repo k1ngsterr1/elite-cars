@@ -14,7 +14,7 @@ const MainScreen = () => {
   };
 
   return (
-    <section className="screen gray">
+    <section className="screen gray" id="home">
       <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
       {isMenuOpen && <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />}
       <main className="content mt64">

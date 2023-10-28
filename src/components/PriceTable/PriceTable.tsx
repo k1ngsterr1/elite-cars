@@ -64,21 +64,23 @@ const PriceTable: React.FC<TableProps> = ({
       </tbody>
       <tbody className="request-table-pc">
         <tr className="request-row">
-          <th className="request-header" colSpan={4}>
+          <th className="request-header-pc" colSpan={4}>
             CITY RENT
           </th>
         </tr>
         <tr>
-          <td className="table-additional-heading">City rent ($ / hour)</td>
-          <td className="table-additional-heading">Courtyard rent ($ / km)</td>
-          <td className="table-additional-heading">Minimal rent time</td>
-          <td className="table-additional-heading">Holiday Prices</td>
+          <td className="table-additional-heading-pc">City rent ($ / hour)</td>
+          <td className="table-additional-heading-pc">
+            Courtyard rent ($ / km)
+          </td>
+          <td className="table-additional-heading-pc">Minimal rent time</td>
+          <td className="table-additional-heading-pc">Holiday Prices</td>
         </tr>
         <tr>
-          <td className="table-additional-row">{cityRent}</td>
-          <td className="table-additional-row">{courtyYard}</td>
-          <td className="table-additional-row">{minimalRentTime}</td>
-          <td className="table-additional-row">{holidayPrices}</td>
+          <td className="table-additional-row-pc">{cityRent}</td>
+          <td className="table-additional-row-pc">{courtyYard}</td>
+          <td className="table-additional-row-pc">{minimalRentTime}</td>
+          <td className="table-additional-row-pc">{holidayPrices}</td>
         </tr>
       </tbody>
     </table>
