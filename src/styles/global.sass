@@ -90,7 +90,7 @@
     text-align: center
 
 .justify-center
-    justify-content: center
+    justify-content: center !important
 
 .text-right
     text-align: right
@@ -169,6 +169,9 @@
 .items-start
     align-items: start
 
+.items-center
+    align-items: center !important
+
 .w90
     width: 90%
 
@@ -233,6 +236,9 @@
 
     .mt128
         margin-top: $m128 !important
+
+    .mt256
+        margin-top: clamp(128px,13.33248vw,512px) !important
 
     .mb64
         margin-bottom: $m64

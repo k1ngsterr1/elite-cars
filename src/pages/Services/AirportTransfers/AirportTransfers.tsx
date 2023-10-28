@@ -63,7 +63,10 @@ const AirportTransfers = () => {
           <Button text="Order Now" scroll="" marginTop="mt32" />
         </div>
         <img className="pc-img-service" src={service_pc} alt="pc-img" />
-        <div className="content-pc mt128">
+        <div className="content-pc column justify-center items-center mt256">
+          <h2 className="heading-s text-center">
+            <span className="orange">Prices</span>
+          </h2>
           <PriceTable
             cityRent="136$"
             courtyYard="102"
@@ -71,6 +74,8 @@ const AirportTransfers = () => {
             holidayPrices="112"
           />
         </div>
+        <h4 className="heading-s text-center mt128">Send Request</h4>
+        <Form />
       </div>
       <img className="img mt64" src={service} alt="img" />
       <div className="content mt64">

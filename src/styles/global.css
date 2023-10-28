@@ -105,7 +105,7 @@
 }
 
 .justify-center {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .text-right {
@@ -206,6 +206,10 @@
   align-items: start;
 }
 
+.items-center {
+  align-items: center !important;
+}
+
 .w90 {
   width: 90%;
 }
@@ -280,6 +284,9 @@
   }
   .mt128 {
     margin-top: clamp(64px, 6.66624vw, 256px) !important;
+  }
+  .mt256 {
+    margin-top: clamp(128px, 13.33248vw, 512px) !important;
   }
   .mb64 {
     margin-bottom: clamp(32px, 3.33312vw, 128px);
