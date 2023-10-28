@@ -13,6 +13,8 @@ import PricesPage from "./pages/PricesPage/PricesPage";
 import Contacts from "./pages/ContactsPage/Contacts";
 import AirportTransfers from "./pages/Services/AirportTransfers/AirportTransfers";
 import CorporateTravel from "./pages/Services/CorporateTravel/CorporateTravel";
+import Nationwide from "./pages/Services/NationwideService/Nationwide";
+import SpecialEvents from "./pages/Services/SpecialEvents/SpecialEvents";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -40,6 +42,11 @@ const App = () => {
         <Route
           path="/services/corporate-travel"
           element={<CorporateTravel />}
+        ></Route>
+        <Route path="/services/nationwide" element={<Nationwide />}></Route>
+        <Route
+          path="/services/special-events"
+          element={<SpecialEvents />}
         ></Route>
       </Routes>
     </Router>

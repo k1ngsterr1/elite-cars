@@ -212,6 +212,28 @@ const Cadillac = () => {
           ensures a seamless and sophisticated ride every time. Choose
           excellence. Choose Cadillac Private Premium
         </p>
+        <div className="features-row mt64">
+          <CarFeature
+            icon={icon}
+            featureName="Elite Fleet Selection"
+            featureDescription="Our meticulously maintained collection of Cadillacs represents the pinnacle of luxury automotive design. Every vehicle is modern, spotless, and equipped with the latest features to ensure a driving experience that's unparalleled."
+          />
+          <CarFeature
+            icon={icon}
+            featureName="Elite Fleet Selection"
+            featureDescription="Our meticulously maintained collection of Cadillacs represents the pinnacle of luxury automotive design. Every vehicle is modern, spotless, and equipped with the latest features to ensure a driving experience that's unparalleled."
+          />
+          <CarFeature
+            icon={icon}
+            featureName="Elite Fleet Selection"
+            featureDescription="Our meticulously maintained collection of Cadillacs represents the pinnacle of luxury automotive design. Every vehicle is modern, spotless, and equipped with the latest features to ensure a driving experience that's unparalleled."
+          />
+          <CarFeature
+            icon={icon}
+            featureName="Elite Fleet Selection"
+            featureDescription="Our meticulously maintained collection of Cadillacs represents the pinnacle of luxury automotive design. Every vehicle is modern, spotless, and equipped with the latest features to ensure a driving experience that's unparalleled."
+          />
+        </div>
       </div>
       <div className="content mt64 align-center">
         <h2 className="car-heading-s text-center">Prices</h2>

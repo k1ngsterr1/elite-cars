@@ -160,4 +160,10 @@
     width: 90%;
     height: auto;
   }
+  .features-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=car.css.map */

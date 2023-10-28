@@ -40,3 +40,48 @@
             line-height: 146%
             text-transform: capitalize
             margin-top: $m16mob
+
+@media screen and  (min-width: 1024px)
+
+    .car-feature
+        width: 380px
+        height: auto !important
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        border: 3px solid $orange
+
+        .feature-content
+            width: 90%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            margin-top: $m32
+            margin-bottom: $m32
+
+            .feature-icon
+                width: clamp(40.5px,4.2184800000000005vw,162px)
+                height: clamp(40.5px,4.2184800000000005vw,162px)
+
+            .feature-heading
+                color: #2C2C2C
+                font-family: Lato
+                font-size: clamp(13px,1.35408vw,52px)
+                font-style: normal
+                font-weight: 700
+                line-height: normal
+                text-transform: capitalize
+                margin-top: $m16
+
+            .feature-description
+                width: 80%
+                color: $black
+                font-family: Inter
+                font-size: $m16
+                font-style: normal
+                font-weight: 400
+                line-height: 146%
+                text-transform: capitalize
+                margin-top: $m16
