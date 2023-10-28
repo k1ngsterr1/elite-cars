@@ -1,0 +1,48 @@
+@import "../../../styles/variables"
+
+.menu
+    position: absolute
+    top: 0
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-color: $orange
+    z-index: 1000
+
+    .menu-content
+        width: 90%
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin: auto
+
+        .hamburger-btn
+            position: absolute
+            right: clamp(12.5px,5.840999999999999vw,50px)
+            top: $m32mob
+
+        .logo
+            width: clamp(100px,46.727999999999994vw,400px)
+            height: clamp(50px,23.363999999999997vw,200px)
+
+        .separator
+            width: clamp(100px,46.727999999999994vw,400px)
+            height: 1px
+            background-color: $white
+
+        .links
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            .link
+                color: $white
+                font-family: Inter
+                font-size: clamp(12px,5.60736vw,48px)
+                font-style: normal
+                font-weight: 400
+                line-height: normal

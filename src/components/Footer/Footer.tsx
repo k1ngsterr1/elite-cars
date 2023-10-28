@@ -47,36 +47,36 @@ const Footer = () => {
         <div className="footer-links mt32">
           <img className="logo" src={logo} alt="logo"></img>
           <span className="text white mt16">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore
+            Elite Arrival ensures that every ride is not only luxurious but also
+            secure
           </span>
           <div className="navigation-container mt32">
             <span className="nav-bold">Navigation</span>
-            <Link to="" className="link mt16">
-              Example
+            <ScrollLink to="home" className="link mt16">
+              Home
+            </ScrollLink>
+            <ScrollLink to="services" className="link mt8">
+              Services
+            </ScrollLink>
+            <Link to="rates" className="link mt8">
+              Cars & Rates
             </Link>
-            <Link to="" className="link mt8">
-              Example
-            </Link>
-            <Link to="" className="link mt8">
-              Example
-            </Link>
-            <Link to="" className="link mt8">
-              Example
+            <Link to="contacts" className="link mt8">
+              Contacts
             </Link>
             <div className="navigation-container mt32">
               <span className="nav-bold">Services</span>
-              <Link to="" className="link mt16">
-                Example
+              <Link to="/services/airport-transfers" className="link mt16">
+                Airport Transfers
               </Link>
-              <Link to="" className="link mt8">
-                Example
+              <Link to="/services/corporate-travel" className="link mt8">
+                Corporate Travel
               </Link>
-              <Link to="" className="link mt8">
-                Example
+              <Link to="/services/nationwide-service" className="link mt8">
+                Nationwide Service
               </Link>
-              <Link to="" className="link mt8">
-                Example
+              <Link to="/services/special-events" className="link mt8">
+                Special Events
               </Link>
             </div>
           </div>
@@ -96,18 +96,18 @@ const Footer = () => {
           <div className="nav-container">
             <span className="navigation-bold">Navigation</span>
             <nav className="links">
-              <a className="link" href="">
+              <ScrollLink className="link" to="home">
                 Home
-              </a>
-              <a className="link" href="">
+              </ScrollLink>
+              <ScrollLink className="link" to="services">
                 Services
-              </a>
-              <a className="link" href="">
+              </ScrollLink>
+              <ScrollLink className="link" to="rates">
                 Cars & Rates
-              </a>
-              <a className="link" href="">
+              </ScrollLink>
+              <ScrollLink className="link" to="contacts">
                 Contacts
-              </a>
+              </ScrollLink>
             </nav>
           </div>
           <div className="nav-container">
@@ -119,10 +119,10 @@ const Footer = () => {
               <Link className="link" to="">
                 Corporate Travel
               </Link>
-              <Link className="link" to="">
+              <Link className="link" to="/services/nationwide-service">
                 Nationwide Service
               </Link>
-              <Link className="link" to="">
+              <Link className="link" to="/services/special-events">
                 Special Events
               </Link>
             </nav>
