@@ -3,14 +3,9 @@
 .request-table {
   width: 100%;
   border: 3px solid #FF5722;
-}
-
-.request-table {
-  width: 100%;
   border-collapse: collapse;
 }
-
-.request-header {
+.request-table .request-header {
   color: #2C2C2C;
   font-family: Lato;
   font-size: clamp(9px, 4.20552vw, 36px);
@@ -24,8 +19,7 @@
   padding-top: clamp(8px, 3.73824vw, 32px);
   padding-bottom: clamp(8px, 3.73824vw, 32px);
 }
-
-.request-data {
+.request-table .request-data {
   color: #2C2C2C;
   font-family: Lato;
   font-size: clamp(8px, 3.73824vw, 32px);
@@ -33,30 +27,78 @@
   font-weight: 600;
   line-height: normal;
 }
-
-.request-row-main {
+.request-table .request-row-main {
   width: 100%;
   display: table-row;
   text-align: center;
   border: 3px solid #FF5722;
   background: rgba(255, 87, 34, 0.1);
 }
-.request-row-main .request-data {
+.request-table .request-row-main .request-data {
+  width: 100%;
+  border: none;
+  padding-top: clamp(16px, 7.47648vw, 64px);
+  padding-bottom: clamp(16px, 7.47648vw, 64px) !important;
+}
+.request-table .request-row-add {
+  width: 100%;
+  display: table-row;
+  text-align: center;
+  border: 3px solid #FF5722;
+}
+.request-table .request-row-add .request-data {
   width: 100%;
   border: none;
   padding-top: clamp(16px, 7.47648vw, 64px);
   padding-bottom: clamp(16px, 7.47648vw, 64px) !important;
 }
 
-.request-row-add {
-  width: 100%;
-  display: table-row;
-  text-align: center;
-  border: 3px solid #FF5722;
-}
-.request-row-add .request-data {
-  width: 100%;
-  border: none;
-  padding-top: clamp(16px, 7.47648vw, 64px);
-  padding-bottom: clamp(16px, 7.47648vw, 64px) !important;
+@media screen and (min-width: 1024px) {
+  .request-tbody {
+    display: none;
+  }
+  .request-table-pc {
+    width: 100%;
+    border: 3px solid #FF5722;
+    border-collapse: collapse;
+  }
+  .request-table-pc .request-header {
+    color: #2C2C2C;
+    font-family: Lato;
+    font-size: clamp(12px, 1.24992vw, 48px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    background: rgba(255, 87, 34, 0.1);
+    padding-top: clamp(8px, 0.83328vw, 32px);
+    padding-bottom: clamp(8px, 0.83328vw, 32px);
+  }
+  .request-table-pc .table-additional-heading {
+    color: #2C2C2C;
+    font-family: Lato;
+    font-size: clamp(10.5px, 1.09368vw, 42px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    padding-top: clamp(16px, 1.66656vw, 64px);
+    padding-bottom: clamp(16px, 1.66656vw, 64px);
+    background: rgba(255, 87, 34, 0.1);
+    border: 3px solid #FF5722;
+  }
+  .request-table-pc .table-additional-row {
+    color: #2C2C2C;
+    font-family: Inter;
+    font-size: clamp(9px, 0.93744vw, 36px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding-top: clamp(16px, 1.66656vw, 64px);
+    padding-bottom: clamp(16px, 1.66656vw, 64px);
+    border: 3px solid #FF5722;
+  }
 }/*# sourceMappingURL=price-table.css.map */

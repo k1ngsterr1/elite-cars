@@ -14,4 +14,10 @@
     line-height: normal;
     text-transform: capitalize;
   }
+  .pc-img-service {
+    position: absolute;
+    width: clamp(382px, 39.78912vw, 1528px) !important;
+    height: clamp(250px, 26.04vw, 1000px) !important;
+    right: 0;
+  }
 }/*# sourceMappingURL=airport-styles.css.map */

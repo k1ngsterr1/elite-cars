@@ -60,9 +60,17 @@ const AirportTransfers = () => {
           transportation every time. Contact us today to book your next ride!
         </p>
         <div className="button-row">
-          <Button text="Explore Cars" scroll="" marginTop="mt32" />
+          <Button text="Order Now" scroll="" marginTop="mt32" />
         </div>
-        <img className="pc-img" src={service_pc} alt="pc-img" />
+        <img className="pc-img-service" src={service_pc} alt="pc-img" />
+        <div className="content-pc mt128">
+          <PriceTable
+            cityRent="136$"
+            courtyYard="102"
+            minimalRentTime="6"
+            holidayPrices="112"
+          />
+        </div>
       </div>
       <img className="img mt64" src={service} alt="img" />
       <div className="content mt64">

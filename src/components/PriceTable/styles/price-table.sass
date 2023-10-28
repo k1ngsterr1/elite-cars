@@ -3,54 +3,100 @@
 .request-table
     width: 100%
     border: 3px solid $orange
-
-.request-table
-    width: 100%
     border-collapse: collapse
 
-.request-header
-    color: $black
-    font-family: Lato
-    font-size: $font18mob
-    font-style: normal
-    font-weight: 600
-    line-height: normal
-    text-transform: uppercase
-    text-align: center
-    font-weight: bold
-    background: rgba(255, 87, 34, 0.10)
-    padding-top: $m16mob
-    padding-bottom: $m16mob
-
-.request-data
-    color: $black
-    font-family: Lato
-    font-size: $font16mob
-    font-style: normal
-    font-weight: 600
-    line-height: normal
-
-.request-row-main
-    width: 100%
-    display: table-row
-    text-align: center
-    border: 3px solid $orange
-    background: rgba(255, 87, 34, 0.10)
+    .request-header
+        color: $black
+        font-family: Lato
+        font-size: $font18mob
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+        text-transform: uppercase
+        text-align: center
+        font-weight: bold
+        background: rgba(255, 87, 34, 0.10)
+        padding-top: $m16mob
+        padding-bottom: $m16mob
 
     .request-data
-        width: 100%
-        border: none
-        padding-top: $m32mob
-        padding-bottom: $m32mob !important
+        color: $black
+        font-family: Lato
+        font-size: $font16mob
+        font-style: normal
+        font-weight: 600
+        line-height: normal
 
-.request-row-add
-    width: 100%
-    display: table-row
-    text-align: center
-    border: 3px solid $orange
-
-    .request-data
+    .request-row-main
         width: 100%
-        border: none
-        padding-top: $m32mob
-        padding-bottom: $m32mob !important
+        display: table-row
+        text-align: center
+        border: 3px solid $orange
+        background: rgba(255, 87, 34, 0.10)
+
+        .request-data
+            width: 100%
+            border: none
+            padding-top: $m32mob
+            padding-bottom: $m32mob !important
+
+    .request-row-add
+        width: 100%
+        display: table-row
+        text-align: center
+        border: 3px solid $orange
+
+        .request-data
+            width: 100%
+            border: none
+            padding-top: $m32mob
+            padding-bottom: $m32mob !important
+
+@media screen and  (min-width: 1024px)
+
+    .request-tbody
+        display: none
+
+    .request-table-pc
+        width: 100%
+        border: 3px solid $orange
+        border-collapse: collapse
+
+        .request-header
+            color: $black
+            font-family: Lato
+            font-size: clamp(12px,1.24992vw,48px)
+            font-style: normal
+            font-weight: 600
+            line-height: normal
+            text-transform: uppercase
+            text-align: center
+            font-weight: bold
+            background: rgba(255, 87, 34, 0.10)
+            padding-top: $m16
+            padding-bottom: $m16
+
+        .table-additional-heading
+            color: $black
+            font-family: Lato
+            font-size: clamp(10.5px,1.09368vw,42px)
+            font-style: normal
+            font-weight: 600
+            line-height: normal
+            text-align: center
+            padding-top: $m32
+            padding-bottom: $m32
+            background: rgba(255, 87, 34, 0.10)
+            border: 3px solid $orange
+
+        .table-additional-row
+            color: $black
+            font-family: Inter
+            font-size: $font18
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            text-align: center
+            padding-top: $m32
+            padding-bottom: $m32
+            border: 3px solid $orange
