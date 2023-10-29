@@ -46,16 +46,16 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       <div className="header-pc">
         <img src={logo} className="logo" onClick={navigateToMain} alt="logo" />
         <nav className="links">
-          <ScrollLink to="" className="link" smooth>
+          <ScrollLink to="home" className="link" smooth>
             Home
           </ScrollLink>
-          <ScrollLink to="" className="link" smooth>
+          <ScrollLink to="services" className="link" smooth>
             Services
           </ScrollLink>
-          <ScrollLink to="" className="link" smooth>
+          <ScrollLink to="rates" className="link" smooth>
             Cars & Rates
           </ScrollLink>
-          <ScrollLink to="" className="link" smooth>
+          <ScrollLink to="contacts" className="link" smooth>
             Contacts
           </ScrollLink>
         </nav>

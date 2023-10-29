@@ -29,6 +29,7 @@ function ScrollToTop() {
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/services" element={<ServicesPage />} />

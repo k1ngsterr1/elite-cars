@@ -163,7 +163,7 @@
 }
 
 .white-bg {
-  background-color: white;
+  background-color: white !important;
 }
 
 .mt8 {

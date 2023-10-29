@@ -21,7 +21,6 @@
   align-items: center !important;
   justify-content: center !important;
   font-size: clamp(8.5px, 3.97188vw, 34px) !important;
-  background-color: #FF5722 !important;
   cursor: pointer !important;
   z-index: 0 !important;
   overflow: hidden !important;
@@ -103,7 +102,6 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background-color: #FF5722 !important;
     cursor: pointer !important;
     z-index: 0 !important;
     overflow: hidden !important;

@@ -1,7 +1,8 @@
 import React from "react";
+import { FormButton } from "../../components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 import "./styles/features-styles.css";
-import { FormButton } from "../../components/Button/Button";
 
 interface FeatureProps {
   featureHeading: string;
@@ -24,6 +25,12 @@ const FeatureTab: React.FC<FeatureProps> = ({
 };
 
 const FeaturesScreen = () => {
+  const navigate = useNavigate();
+
+  function navigateServices() {
+    navigate("/services");
+  }
+
   return (
     <section className="screen orange-bg">
       <div className="content">
@@ -49,7 +56,11 @@ const FeaturesScreen = () => {
           featureHeading="20000"
           featureDescription="Сlients"
         ></FeatureTab>
-        <FormButton text="Our Services" marginTop="mt32" />
+        <FormButton
+          text="Our Services"
+          click={navigateServices}
+          marginTop="mt32"
+        />
       </div>
       <img
         className="image mt32"
@@ -84,7 +95,11 @@ const FeaturesScreen = () => {
               featureDescription="Clients"
             ></FeatureTab>
           </div>
-          <FormButton text="Our Services" marginTop="mt64 " />
+          <FormButton
+            text="Our Services"
+            click={navigateServices}
+            marginTop="mt64"
+          />
         </div>
         <img src={feature_image_pc} alt="feature-img" className="feature-img" />
       </div>
