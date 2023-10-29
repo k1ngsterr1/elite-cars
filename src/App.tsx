@@ -10,6 +10,7 @@ import Home from "./pages/HomePage/Home";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import PricesPage from "./pages/PricesPage/PricesPage";
 import Contacts from "./pages/ContactsPage/Contacts";
+import Error from "./pages/404/Error";
 
 // Services
 import AirportTransfers from "./pages/Services/AirportTransfers/AirportTransfers";
@@ -60,6 +61,7 @@ const App = () => {
         />
         <Route path="/services/nationwide" element={<Nationwide />} />
         <Route path="/services/special-events" element={<SpecialEvents />} />
+        <Route path="/error" element={<Error />} />
       </Routes>
     </Router>
   );
