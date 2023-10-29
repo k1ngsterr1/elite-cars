@@ -7,14 +7,22 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/HomePage/Home";
-import Cadillac from "./pages/Cars/CadillacPage/Cadillac";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import PricesPage from "./pages/PricesPage/PricesPage";
 import Contacts from "./pages/ContactsPage/Contacts";
+
+// Services
 import AirportTransfers from "./pages/Services/AirportTransfers/AirportTransfers";
 import CorporateTravel from "./pages/Services/CorporateTravel/CorporateTravel";
 import Nationwide from "./pages/Services/NationwideService/Nationwide";
 import SpecialEvents from "./pages/Services/SpecialEvents/SpecialEvents";
+
+// Cars
+import CadillacEscalade from "./pages/Cars/CadillacPage/Cadillac";
+import MercedesSClass from "./pages/Cars/MercedesSClass/Mercedes";
+import BMW7 from "./pages/Cars/BMW7/Bmw7";
+import MBSprinter from "./pages/Cars/MBSprinter/MBSprinter";
+import FordExpedition from "./pages/Cars/FordExpedition/FordExpedition";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,20 +43,21 @@ const App = () => {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/prices" element={<PricesPage />} />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="/cars/cadillac" element={<Cadillac />} />
+        <Route path="/cars/cadillac-escalade" element={<CadillacEscalade />} />
+        <Route path="/cars/mercedes-s-class" element={<MercedesSClass />} />
+        <Route path="/cars/bmw-7" element={<BMW7 />} />
+        <Route path="/cars/mercedes-sprinter" element={<MBSprinter />} />
+        <Route path="cars/ford-expedition" element={<FordExpedition />} />
         <Route
           path="/services/airport-transfers"
           element={<AirportTransfers />}
-        ></Route>
+        />
         <Route
           path="/services/corporate-travel"
           element={<CorporateTravel />}
-        ></Route>
-        <Route path="/services/nationwide" element={<Nationwide />}></Route>
-        <Route
-          path="/services/special-events"
-          element={<SpecialEvents />}
-        ></Route>
+        />
+        <Route path="/services/nationwide" element={<Nationwide />} />
+        <Route path="/services/special-events" element={<SpecialEvents />} />
       </Routes>
     </Router>
   );

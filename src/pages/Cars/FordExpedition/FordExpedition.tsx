@@ -16,13 +16,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import "./styles/car.css";
+import "../CadillacPage/styles/car.css";
 
 const cadillacMob = require("../../../assets/cadillac_mob.webp");
 const cadillacPc = require("../../../assets/cadillac_pc.webp");
 const icon = require("../../../assets/icon.svg").default;
 
-const CadillacEscalade = () => {
+const FordExpedition = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -43,16 +43,16 @@ const CadillacEscalade = () => {
             Rates
           </Link>
           <div className="circle-orange"></div>
-          <Link to="/cars/cadillac-escalade" className="link orange">
-            Cadillac Escalade
+          <Link to="/cars/ford-expedition" className="link orange">
+            Ford Expedition
           </Link>
         </div>
-        <h1 className="car-heading mt32">2023 Cadillac Escalade ESV Sport</h1>
+        <h1 className="car-heading mt32">Ford Expedition</h1>
         <p className="car-paragraph mt32">
-          For those seeking a blend of style, comfort, and versatility, the
-          Cadillac Escalade ESV Sport is the ideal choice. This luxurious SUV
-          offers ample space for passengers and luggage, along with a host of
-          premium features that will make your journey enjoyable and convenient.
+          The Ford Expedition is a full-size SUV that delivers both power and
+          refinement. With its spacious cabin, advanced technology, and
+          impressive towing capacity, this vehicle is perfect for family trips
+          or outdoor adventures in style.
         </p>
         <div className="button-row">
           <Button text="Order Now" marginTop="mt64" scroll="contact" />
@@ -71,20 +71,17 @@ const CadillacEscalade = () => {
               Rates
             </Link>
             <div className="circle-orange"></div>
-            <Link to="/cars/cadillac-escalade" className="bread-link">
-              <span className="orange">Cadillac Escalade</span>
+            <Link to="/cars/ford-expedition" className="bread-link">
+              <span className="orange">Ford Expedition</span>
             </Link>
           </div>
           <div className="text-content mt32">
-            <h1 className="heading-s orange w30">
-              2023 Cadillac Escalade ESV Sport
-            </h1>
+            <h1 className="heading-s orange w30">Ford Expedition</h1>
             <p className="paragraph mt32 w40">
-              For those seeking a blend of style, comfort, and versatility, the
-              Cadillac Escalade ESV Sport is the ideal choice. This luxurious
-              SUV offers ample space for passengers and luggage, along with a
-              host of premium features that will make your journey enjoyable and
-              convenient.
+              The Ford Expedition is a full-size SUV that delivers both power
+              and refinement. With its spacious cabin, advanced technology, and
+              impressive towing capacity, this vehicle is perfect for family
+              trips or outdoor adventures in style.
             </p>
           </div>
           <div className="button-row-car">
@@ -268,10 +265,10 @@ const CadillacEscalade = () => {
           featureDescription="In addition to our Meet & Greet service, our experienced drivers are trained to provide professional assistance throughout your journey. They can help you navigate unfamiliar airports, offer recommendations for local attractions and dining options, and assist with any luggage or special requests you may have. With Elite Arrival, you can trust that our team will go above and beyond to ensure your comfort and satisfaction."
         />
       </div>
-      <FormScreen formParagraph="The Cadillac CT6 Luxury is a top-of-the-line sedan that offers a truly luxurious experience. Its plush leather seats provide maximum comfort, allowing passengers to relax and enjoy the ride. The advanced technology features include a touchscreen infotainment system, Bluetooth connectivity, and a premium sound system, ensuring a seamless and enjoyable journey. The powerful engine and smooth handling of the CT6 Luxury make it a pleasure to drive, providing a refined and exhilarating driving experience." />
+      <FormScreen formParagraph="The Ford Expedition is a full-size SUV that offers a perfect combination of power and refinement. Its spacious cabin provides comfortable seating for up to eight passengers, making it ideal for family trips or outdoor adventures. The Expedition is equipped with advanced technology features such as a touchscreen infotainment system, Apple CarPlay, and Android Auto compatibility. With its impressive towing capacity and versatile cargo space, this SUV is well-suited for both everyday driving and outdoor activities. The Ford Expedition delivers a smooth and comfortable ride, making it an excellent choice for those seeking a balance of luxury and capability." />
       <Footer />
     </div>
   );
 };
 
-export default CadillacEscalade;
+export default FordExpedition;

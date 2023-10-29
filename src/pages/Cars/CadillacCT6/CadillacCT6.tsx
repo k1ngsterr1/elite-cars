@@ -16,13 +16,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import "./styles/car.css";
+import "../CadillacPage/styles/car.css";
 
 const cadillacMob = require("../../../assets/cadillac_mob.webp");
 const cadillacPc = require("../../../assets/cadillac_pc.webp");
 const icon = require("../../../assets/icon.svg").default;
 
-const CadillacEscalade = () => {
+const CadillacCT6 = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -43,16 +43,16 @@ const CadillacEscalade = () => {
             Rates
           </Link>
           <div className="circle-orange"></div>
-          <Link to="/cars/cadillac-escalade" className="link orange">
-            Cadillac Escalade
+          <Link to="/cars/cadillac-ct6" className="link orange">
+            Cadillac CT6 Luxury
           </Link>
         </div>
-        <h1 className="car-heading mt32">2023 Cadillac Escalade ESV Sport</h1>
+        <h1 className="car-heading mt32">Cadillac CT6 Luxury</h1>
         <p className="car-paragraph mt32">
-          For those seeking a blend of style, comfort, and versatility, the
-          Cadillac Escalade ESV Sport is the ideal choice. This luxurious SUV
-          offers ample space for passengers and luggage, along with a host of
-          premium features that will make your journey enjoyable and convenient.
+          This elegant and spacious sedan offers a comfortable ride with its
+          plush leather seats and advanced technology features. With its
+          powerful engine and smooth handling, the Cadillac CT6 Luxury ensures a
+          luxurious and enjoyable journey.
         </p>
         <div className="button-row">
           <Button text="Order Now" marginTop="mt64" scroll="contact" />
@@ -71,20 +71,17 @@ const CadillacEscalade = () => {
               Rates
             </Link>
             <div className="circle-orange"></div>
-            <Link to="/cars/cadillac-escalade" className="bread-link">
-              <span className="orange">Cadillac Escalade</span>
+            <Link to="/cars/cadillac-ct6" className="bread-link">
+              <span className="orange">Cadillac CT6 Luxury</span>
             </Link>
           </div>
           <div className="text-content mt32">
-            <h1 className="heading-s orange w30">
-              2023 Cadillac Escalade ESV Sport
-            </h1>
+            <h1 className="heading-s orange w30">Cadillac CT6 Luxury</h1>
             <p className="paragraph mt32 w40">
-              For those seeking a blend of style, comfort, and versatility, the
-              Cadillac Escalade ESV Sport is the ideal choice. This luxurious
-              SUV offers ample space for passengers and luggage, along with a
-              host of premium features that will make your journey enjoyable and
-              convenient.
+              This elegant and spacious sedan offers a comfortable ride with its
+              plush leather seats and advanced technology features. With its
+              powerful engine and smooth handling, the Cadillac CT6 Luxury
+              ensures a luxurious and enjoyable journey.
             </p>
           </div>
           <div className="button-row-car">
@@ -274,4 +271,4 @@ const CadillacEscalade = () => {
   );
 };
 
-export default CadillacEscalade;
+export default CadillacCT6;

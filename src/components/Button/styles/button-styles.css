@@ -98,6 +98,7 @@
     font-size: clamp(10.5px, 1.09368vw, 42px) !important;
     font-style: normal !important;
     font-weight: 600 !important;
+    background-color: #FF5722;
     line-height: normal !important;
     display: flex !important;
     align-items: center !important;

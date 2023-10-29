@@ -16,13 +16,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import "./styles/car.css";
+import "../CadillacPage/styles/car.css";
 
 const cadillacMob = require("../../../assets/cadillac_mob.webp");
 const cadillacPc = require("../../../assets/cadillac_pc.webp");
 const icon = require("../../../assets/icon.svg").default;
 
-const CadillacEscalade = () => {
+const MBSprinter = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -43,16 +43,16 @@ const CadillacEscalade = () => {
             Rates
           </Link>
           <div className="circle-orange"></div>
-          <Link to="/cars/cadillac-escalade" className="link orange">
-            Cadillac Escalade
+          <Link to="/cars/mercedes-sprinter" className="link orange">
+            MB Sprinter
           </Link>
         </div>
-        <h1 className="car-heading mt32">2023 Cadillac Escalade ESV Sport</h1>
+        <h1 className="car-heading mt32">MB Sprinter</h1>
         <p className="car-paragraph mt32">
-          For those seeking a blend of style, comfort, and versatility, the
-          Cadillac Escalade ESV Sport is the ideal choice. This luxurious SUV
-          offers ample space for passengers and luggage, along with a host of
-          premium features that will make your journey enjoyable and convenient.
+          Our Mercedes-Benz Sprinter is perfect for group transportation or
+          corporate events. With its spacious interior, comfortable seating, and
+          high-end amenities, this luxury van provides a first-class experience
+          for both business and leisure travel.
         </p>
         <div className="button-row">
           <Button text="Order Now" marginTop="mt64" scroll="contact" />
@@ -71,20 +71,17 @@ const CadillacEscalade = () => {
               Rates
             </Link>
             <div className="circle-orange"></div>
-            <Link to="/cars/cadillac-escalade" className="bread-link">
-              <span className="orange">Cadillac Escalade</span>
+            <Link to="/cars/mercedes-sprinter" className="bread-link">
+              <span className="orange">MB Sprinter</span>
             </Link>
           </div>
           <div className="text-content mt32">
-            <h1 className="heading-s orange w30">
-              2023 Cadillac Escalade ESV Sport
-            </h1>
+            <h1 className="heading-s orange w30">MB S-class S580</h1>
             <p className="paragraph mt32 w40">
-              For those seeking a blend of style, comfort, and versatility, the
-              Cadillac Escalade ESV Sport is the ideal choice. This luxurious
-              SUV offers ample space for passengers and luggage, along with a
-              host of premium features that will make your journey enjoyable and
-              convenient.
+              Our Mercedes-Benz Sprinter is perfect for group transportation or
+              corporate events. With its spacious interior, comfortable seating,
+              and high-end amenities, this luxury van provides a first-class
+              experience for both business and leisure travel.
             </p>
           </div>
           <div className="button-row-car">
@@ -198,11 +195,10 @@ const CadillacEscalade = () => {
           Car <span className="orange">Features</span>
         </h4>
         <p className="paragraph mt16 w60">
-          Don't settle for anything less than the best when it comes to your
-          transportation needs in Chicago. Book your Chicago limo with Elite
-          Arrival today and experience the difference of our unparalleled
-          chauffeured services. Trust us to elevate your travel experience to
-          new heights and make your journey truly memorable.
+          When it comes to elite car rental with a driver in Chicago, Elite
+          Arrival is the company you can trust. Our Chicago Limo Fleet offers a
+          luxurious and reliable transportation service that will exceed your
+          expectations.
         </p>
         <div className="features-row mt64">
           <CarFeature
@@ -241,11 +237,10 @@ const CadillacEscalade = () => {
           <span className="black">Car</span> Features
         </h2>
         <p className="car-paragraph align-center text-center mt32">
-          Don't settle for anything less than the best when it comes to your
-          transportation needs in Chicago. Book your Chicago limo with Elite
-          Arrival today and experience the difference of our unparalleled
-          chauffeured services. Trust us to elevate your travel experience to
-          new heights and make your journey truly memorable.
+          When it comes to elite car rental with a driver in Chicago, Elite
+          Arrival is the company you can trust. Our Chicago Limo Fleet offers a
+          luxurious and reliable transportation service that will exceed your
+          expectations.
         </p>
         <CarFeature
           icon={icon}
@@ -268,10 +263,10 @@ const CadillacEscalade = () => {
           featureDescription="In addition to our Meet & Greet service, our experienced drivers are trained to provide professional assistance throughout your journey. They can help you navigate unfamiliar airports, offer recommendations for local attractions and dining options, and assist with any luggage or special requests you may have. With Elite Arrival, you can trust that our team will go above and beyond to ensure your comfort and satisfaction."
         />
       </div>
-      <FormScreen formParagraph="The Cadillac CT6 Luxury is a top-of-the-line sedan that offers a truly luxurious experience. Its plush leather seats provide maximum comfort, allowing passengers to relax and enjoy the ride. The advanced technology features include a touchscreen infotainment system, Bluetooth connectivity, and a premium sound system, ensuring a seamless and enjoyable journey. The powerful engine and smooth handling of the CT6 Luxury make it a pleasure to drive, providing a refined and exhilarating driving experience." />
+      <FormScreen formParagraph="The Mercedes-Benz Sprinter is a luxury van that offers spacious and comfortable transportation for group travel or corporate events. Its interior is designed with comfort in mind, featuring plush seating, ample legroom, and high-end amenities such as a mini-fridge and entertainment system. The Sprinter's advanced safety features, including lane-keeping assist and collision prevention assist, provide peace of mind during the journey. With its smooth ride and powerful engine, this luxury van ensures a first-class experience for both business and leisure travel." />
       <Footer />
     </div>
   );
 };
 
-export default CadillacEscalade;
+export default MBSprinter;

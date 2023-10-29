@@ -16,13 +16,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import "./styles/car.css";
+import "../CadillacPage/styles/car.css";
 
 const cadillacMob = require("../../../assets/cadillac_mob.webp");
 const cadillacPc = require("../../../assets/cadillac_pc.webp");
 const icon = require("../../../assets/icon.svg").default;
 
-const CadillacEscalade = () => {
+const BMW7 = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -43,16 +43,17 @@ const CadillacEscalade = () => {
             Rates
           </Link>
           <div className="circle-orange"></div>
-          <Link to="/cars/cadillac-escalade" className="link orange">
-            Cadillac Escalade
+          <Link to="/cars/bmw-7" className="link orange">
+            BMW 7
           </Link>
         </div>
-        <h1 className="car-heading mt32">2023 Cadillac Escalade ESV Sport</h1>
+        <h1 className="car-heading mt32"> BMW 7</h1>
         <p className="car-paragraph mt32">
-          For those seeking a blend of style, comfort, and versatility, the
-          Cadillac Escalade ESV Sport is the ideal choice. This luxurious SUV
-          offers ample space for passengers and luggage, along with a host of
-          premium features that will make your journey enjoyable and convenient.
+          The BMW 7 Series combines sophistication and performance seamlessly.
+          With its sleek exterior and opulent interior, this luxury sedan exudes
+          style and elegance. Equipped with innovative features and advanced
+          safety systems, the BMW 7 Series ensures a comfortable and secure
+          ride.
         </p>
         <div className="button-row">
           <Button text="Order Now" marginTop="mt64" scroll="contact" />
@@ -71,20 +72,18 @@ const CadillacEscalade = () => {
               Rates
             </Link>
             <div className="circle-orange"></div>
-            <Link to="/cars/cadillac-escalade" className="bread-link">
-              <span className="orange">Cadillac Escalade</span>
+            <Link to="/cars/bmw-7" className="bread-link">
+              <span className="orange">BMW 7</span>
             </Link>
           </div>
           <div className="text-content mt32">
-            <h1 className="heading-s orange w30">
-              2023 Cadillac Escalade ESV Sport
-            </h1>
+            <h1 className="heading-s orange w30">BMW 7</h1>
             <p className="paragraph mt32 w40">
-              For those seeking a blend of style, comfort, and versatility, the
-              Cadillac Escalade ESV Sport is the ideal choice. This luxurious
-              SUV offers ample space for passengers and luggage, along with a
-              host of premium features that will make your journey enjoyable and
-              convenient.
+              The BMW 7 Series combines sophistication and performance
+              seamlessly. With its sleek exterior and opulent interior, this
+              luxury sedan exudes style and elegance. Equipped with innovative
+              features and advanced safety systems, the BMW 7 Series ensures a
+              comfortable and secure ride.
             </p>
           </div>
           <div className="button-row-car">
@@ -198,11 +197,12 @@ const CadillacEscalade = () => {
           Car <span className="orange">Features</span>
         </h4>
         <p className="paragraph mt16 w60">
-          Don't settle for anything less than the best when it comes to your
-          transportation needs in Chicago. Book your Chicago limo with Elite
-          Arrival today and experience the difference of our unparalleled
-          chauffeured services. Trust us to elevate your travel experience to
-          new heights and make your journey truly memorable.
+          No matter the occasion, our impressive fleet of limo is ready to cater
+          to your needs. Whether you're heading to the airport, attending a
+          corporate event, or planning a night out on the town, we have the
+          perfect vehicle to suit your style and preferences. Our limo are
+          equipped with the latest amenities and technologies, ensuring your
+          comfort and safety throughout your journey.
         </p>
         <div className="features-row mt64">
           <CarFeature
@@ -241,11 +241,12 @@ const CadillacEscalade = () => {
           <span className="black">Car</span> Features
         </h2>
         <p className="car-paragraph align-center text-center mt32">
-          Don't settle for anything less than the best when it comes to your
-          transportation needs in Chicago. Book your Chicago limo with Elite
-          Arrival today and experience the difference of our unparalleled
-          chauffeured services. Trust us to elevate your travel experience to
-          new heights and make your journey truly memorable.
+          No matter the occasion, our impressive fleet of limo is ready to cater
+          to your needs. Whether you're heading to the airport, attending a
+          corporate event, or planning a night out on the town, we have the
+          perfect vehicle to suit your style and preferences. Our limo are
+          equipped with the latest amenities and technologies, ensuring your
+          comfort and safety throughout your journey.
         </p>
         <CarFeature
           icon={icon}
@@ -268,10 +269,10 @@ const CadillacEscalade = () => {
           featureDescription="In addition to our Meet & Greet service, our experienced drivers are trained to provide professional assistance throughout your journey. They can help you navigate unfamiliar airports, offer recommendations for local attractions and dining options, and assist with any luggage or special requests you may have. With Elite Arrival, you can trust that our team will go above and beyond to ensure your comfort and satisfaction."
         />
       </div>
-      <FormScreen formParagraph="The Cadillac CT6 Luxury is a top-of-the-line sedan that offers a truly luxurious experience. Its plush leather seats provide maximum comfort, allowing passengers to relax and enjoy the ride. The advanced technology features include a touchscreen infotainment system, Bluetooth connectivity, and a premium sound system, ensuring a seamless and enjoyable journey. The powerful engine and smooth handling of the CT6 Luxury make it a pleasure to drive, providing a refined and exhilarating driving experience." />
+      <FormScreen formParagraph="The BMW 7 Series is a perfect blend of style, performance, and luxury. Its sleek exterior design exudes elegance and sophistication, while the opulent interior features high-quality materials and advanced technology. The BMW 7 Series is equipped with innovative features such as gesture control, wireless charging, and a customizable digital instrument cluster. With its powerful engines and precise handling, this luxury sedan delivers a dynamic and exhilarating driving experience. Additionally, the BMW 7 Series prioritizes safety with its advanced safety systems, ensuring a secure and comfortable ride." />
       <Footer />
     </div>
   );
 };
 
-export default CadillacEscalade;
+export default BMW7;

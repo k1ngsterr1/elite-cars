@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/Menu";
-import { Link as ScrollLink } from "react-scroll";
-
-import "./styles/services.css";
 import FormScreen from "../../screens/FormScreen/FormScreen";
+import { Link as ScrollLink } from "react-scroll";
 import { Fade, Slide } from "react-awesome-reveal";
 import { Button } from "../../components/Button/Button";
+import { Navigate, useNavigate } from "react-router-dom";
+
+import "./styles/services.css";
 
 interface ServiceTabProps {
   serviceHeading: string;
@@ -73,6 +74,24 @@ const service04 = require("../../assets/service_04.webp");
 const ServicesPage = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
+  const navigate = useNavigate();
+
+  function navigateAirportTransfers() {
+    navigate("/services/airport-transfers");
+  }
+
+  function navigateCorporateTravel() {
+    navigate("/services/corporate-travel");
+  }
+
+  function navigateNationwide() {
+    navigate("/services/nationwide");
+  }
+
+  function navigateSpecialEvents() {
+    navigate("/services/special-events");
+  }
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -90,30 +109,28 @@ const ServicesPage = () => {
           includes:
         </p>
         <ServiceTab
-          navigate={""}
+          navigate={navigateAirportTransfers}
           scrollLinkText="Book Now"
           serviceHeading="Airport Transfers"
           serviceDescription=" Airport Transfers: We offer reliable and efficient airport transfer services to and from all major airports in the Chicago area. Our experienced drivers will ensure that you reach your destination on time and in style, taking away the stress of navigating through traffic or finding parking."
           serviceImage={service01}
         />
-
         <ServiceTab
-          navigate={""}
+          navigate={navigateCorporateTravel}
           scrollLinkText="Book Now"
           serviceHeading="Corporate Travel"
           serviceDescription="Corporate Travel: We understand the importance of making a good impression when it comes to corporate travel. That's why we offer executive car rental services for business professionals. Our fleet of luxury vehicles is well-maintained and equipped with amenities to ensure a comfortable and productive journey."
           serviceImage={service02}
         />
-
         <ServiceTab
-          navigate={""}
+          navigate={navigateNationwide}
           scrollLinkText="Book Now"
           serviceHeading="Nationwide Service"
           serviceDescription=" Nationwide Service: While we are based in Chicago, we also provide car rental services with drivers across the country. Whether you need transportation for a business trip or a leisurely vacation, our nationwide service ensures that you have a reliable and professional driver wherever you go."
           serviceImage={service03}
         />
         <ServiceTab
-          navigate={""}
+          navigate={navigateSpecialEvents}
           scrollLinkText="Book Now"
           serviceHeading="Special Events"
           serviceDescription="Special Events: From weddings to prom nights, we understand that special events require special transportation. Our team is experienced in providing luxurious and stylish transportation for any occasion. We offer a range of vehicles to choose from, ensuring that you arrive at your event in style and comfort."
@@ -125,46 +142,43 @@ const ServicesPage = () => {
         <div className="tabs">
           <Fade direction="left" duration={1000} triggerOnce={true}>
             <ServiceTabPc
+              navigate={navigateAirportTransfers}
               serviceHeading="Airport Transfers"
               serviceDescription=" Airport Transfers: We offer reliable and efficient airport transfer services to and from all major airports in the Chicago area. Our experienced drivers will ensure that you reach your destination on time and in style, taking away the stress of navigating through traffic or finding parking."
               scrollLinkText="Book Now"
-              navigate={""}
               serviceImage={service01}
             />
           </Fade>
           <Fade direction="left" duration={1500} triggerOnce={true}>
             <ServiceTabPc
+              navigate={navigateCorporateTravel}
               serviceHeading="Corporate Travel"
               serviceDescription=" Corporate Travel: We understand the importance of making a good impression when it comes to corporate travel. That's why we offer executive car rental services for business professionals. Our fleet of luxury vehicles is well-maintained and equipped with amenities to ensure a comfortable and productive journey."
               scrollLinkText="Book Now"
-              navigate={""}
               serviceImage={service02}
             />
           </Fade>
           <Fade direction="left" duration={2000} triggerOnce={true}>
             <ServiceTabPc
+              navigate={navigateNationwide}
               serviceHeading="Nationwide Service"
               serviceDescription=" Nationwide Service: While we are based in Chicago, we also provide car rental services with drivers across the country. Whether you need transportation for a business trip or a leisurely vacation, our nationwide service ensures that you have a reliable and professional driver wherever you go."
               scrollLinkText="Book Now"
-              navigate={""}
               serviceImage={service03}
             />
           </Fade>
           <Fade direction="left" duration={2500} triggerOnce={true}>
             <ServiceTabPc
+              navigate={navigateSpecialEvents}
               serviceHeading="Special Events"
               serviceDescription="4. Special Events: From weddings to prom nights, we understand that special events require special transportation. Our team is experienced in providing luxurious and stylish transportation for any occasion. We offer a range of vehicles to choose from, ensuring that you arrive at your event in style and comfort."
-              navigate={""}
               scrollLinkText="Book Now"
               serviceImage={service04}
             />
           </Fade>
         </div>
       </main>
-      <FormScreen
-        formParagraph="Contact us today to learn more about our services and receive a personalized quote for your car rental needs in Chicago. Experience the Elite Arrival difference and let us take care of your transportation requirements with professionalism and style.
-"
-      />
+      <FormScreen formParagraph="Contact us today to learn more about our services and receive a personalized quote for your car rental needs in Chicago. Experience the Elite Arrival difference and let us take care of your transportation requirements with professionalism and style." />
       <Footer />
     </div>
   );
