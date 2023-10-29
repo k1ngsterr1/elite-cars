@@ -202,7 +202,7 @@ const Contacts = () => {
               </div>
             </div>
             <div className="map-content">
-              <LoadScript googleMapsApiKey="API_A">
+              <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
                 <GoogleMap
                   mapContainerStyle={containerStyle}
                   center={center}
