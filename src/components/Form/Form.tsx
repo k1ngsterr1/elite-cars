@@ -1,30 +1,86 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+import {
+  Button,
+  FormButton,
+  FormButtonOrange,
+  RegularButton,
+} from "../Button/Button";
 
 import "./styles/form.css";
-import { Button, FormButton, RegularButton } from "../Button/Button";
 
 const Form = () => {
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [pickupAddress, setPickupAddress] = useState("");
+  const [dropoffAddress, setDropoffAddress] = useState("");
+  const [comment, setComment] = useState("");
   const [passengers, setPassengers] = useState(1);
   const [luggage, setLuggage] = useState(1);
 
-  if (passengers < 1) {
-    setPassengers(1);
-  }
+  const form = useRef<HTMLFormElement>(null);
 
-  if (luggage < 1) {
+  useEffect(() => {
+    if (passengers < 1) {
+      setPassengers(1);
+    }
+
+    if (luggage < 1) {
+      setLuggage(1);
+    }
+  }, [passengers, luggage]);
+
+  function sendEmail(e: any) {
+    e.preventDefault();
+    setFullName("");
+    setPhone("");
+    setPickupAddress("");
+    setDropoffAddress("");
+    setComment("");
+    setPassengers(1);
     setLuggage(1);
+    // setOpen((o) => !o);
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID!,
+        process.env.REACT_APP_TEMPLATE_ID!,
+        e.target,
+        process.env.REACT_APP_EMAILJS_KEY!
+      )
+      .then((res) => {
+        console.log("SUCCESS");
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
     <div className="request-form" id="contacts">
-      <form className="mobile-form">
+      <form className="mobile-form" ref={form} onSubmit={sendEmail}>
         <div className="input-group">
           <label className="label-in">Name*</label>
-          <input type="text" className="input-form" placeholder="Your Name" />
+          <input
+            type="text"
+            className="input-form"
+            placeholder="Your Name"
+            id="fullName"
+            name="fullName"
+            required={true}
+            onChange={(event) => setFullName(event.target.value)}
+          />
         </div>
         <div className="input-group">
           <label className="label-in">Phone Number*</label>
-          <input type="tel" className="input-form" placeholder="Phone Number" />
+          <input
+            type="tel"
+            className="input-form"
+            placeholder="Phone Number"
+            id="phoneNumber"
+            name="phoneNumber"
+            required={true}
+            onChange={(event) => setPhone(event.target.value)}
+          />
         </div>
         <div className="input-group">
           <label className="label-in">Passengers*</label>
@@ -33,7 +89,7 @@ const Form = () => {
               className="minus"
               onClick={(event) => {
                 event.preventDefault();
-                setPassengers(passengers + -1);
+                setPassengers((prev) => Math.max(1, prev - 1));
               }}
             >
               −
@@ -43,11 +99,17 @@ const Form = () => {
               className="plus"
               onClick={(event) => {
                 event.preventDefault();
-                setPassengers(passengers + 1);
+                setPassengers((prev) => prev + 1);
               }}
             >
               +
             </button>
+            <input
+              type="hidden"
+              name="passengersNumber"
+              id="passengersNumber"
+              value={passengers}
+            />
           </div>
         </div>
         <div className="input-group">
@@ -57,7 +119,7 @@ const Form = () => {
               className="minus"
               onClick={(event) => {
                 event.preventDefault();
-                setLuggage(luggage - 1);
+                setLuggage((prev) => prev - 1);
               }}
             >
               −
@@ -67,11 +129,17 @@ const Form = () => {
               className="plus"
               onClick={(event) => {
                 event.preventDefault();
-                setLuggage(luggage + 1);
+                setLuggage((prev) => prev + 1);
               }}
             >
               +
             </button>
+            <input
+              type="hidden"
+              name="luggageNumber"
+              id="luggageNumber"
+              value={luggage}
+            />
           </div>
         </div>
         <div className="input-group">
@@ -80,6 +148,10 @@ const Form = () => {
             type="text"
             className="input-form"
             placeholder="Choose your pickup address"
+            name="pickupAddress"
+            id="pickupAddress"
+            required={true}
+            onChange={(event) => setPickupAddress(event.target.value)}
           />
         </div>
         <div className="input-group">
@@ -88,22 +160,38 @@ const Form = () => {
             type="text"
             className="input-form"
             placeholder="Choose your drop off address"
+            name="dropoffAddress"
+            id="dropoffAddress"
+            required={true}
+            onChange={(event) => setDropoffAddress(event.target.value)}
           />
         </div>
         <div className="input-group">
           <label className="label-in">Comment</label>
           <textarea
             className="comment"
+            name="comment"
+            id="comment"
+            required={true}
+            onChange={(event) => setComment(event.target.value)}
             placeholder="Tell us about your trip"
           ></textarea>
         </div>
-        <Button text="Send Request" scroll="" marginTop="mt16" />
+        <FormButtonOrange text="Send Request" marginTop="mt16" />
       </form>
-      <form action="" className="pc-form">
+      <form className="pc-form" ref={form} onSubmit={sendEmail}>
         <div className="input-row">
           <div className="input-group">
             <label className="label-in">Name*</label>
-            <input type="text" className="input-form" placeholder="Your Name" />
+            <input
+              type="text"
+              className="input-form"
+              placeholder="Your Name"
+              id="fullName"
+              name="fullName"
+              required={true}
+              onChange={(event) => setFullName(event.target.value)}
+            />
           </div>
           <div className="input-group">
             <label className="label-in">Phone Number*</label>
@@ -111,6 +199,10 @@ const Form = () => {
               type="tel"
               className="input-form"
               placeholder="Phone Number"
+              id="phoneNumber"
+              name="phoneNumber"
+              required={true}
+              onChange={(event) => setPhone(event.target.value)}
             />
           </div>
         </div>
@@ -122,7 +214,7 @@ const Form = () => {
                 className="minus"
                 onClick={(event) => {
                   event.preventDefault();
-                  setPassengers(passengers + -1);
+                  setPassengers((prev) => Math.max(1, prev - 1));
                 }}
               >
                 −
@@ -132,11 +224,17 @@ const Form = () => {
                 className="plus"
                 onClick={(event) => {
                   event.preventDefault();
-                  setPassengers(passengers + 1);
+                  setPassengers((prev) => prev + 1);
                 }}
               >
                 +
               </button>
+              <input
+                type="hidden"
+                name="passengersNumber"
+                id="passengersNumber"
+                value={passengers}
+              />
             </div>
           </div>
           <div className="input-group">
@@ -146,7 +244,7 @@ const Form = () => {
                 className="minus"
                 onClick={(event) => {
                   event.preventDefault();
-                  setLuggage(luggage - 1);
+                  setLuggage((prev) => prev - 1);
                 }}
               >
                 −
@@ -156,11 +254,17 @@ const Form = () => {
                 className="plus"
                 onClick={(event) => {
                   event.preventDefault();
-                  setLuggage(luggage + 1);
+                  setLuggage((prev) => prev + 1);
                 }}
               >
                 +
               </button>
+              <input
+                type="hidden"
+                name="luggageNumber"
+                id="luggageNumber"
+                value={luggage}
+              />
             </div>
           </div>
         </div>
@@ -171,6 +275,10 @@ const Form = () => {
               type="text"
               className="input-form-adress"
               placeholder="Choose your pickup address"
+              name="pickupAddress"
+              id="pickupAddress"
+              required={true}
+              onChange={(event) => setPickupAddress(event.target.value)}
             />
           </div>
         </div>
@@ -181,6 +289,10 @@ const Form = () => {
               type="text"
               className="input-form-adress"
               placeholder="Choose your dropoff address"
+              name="dropoffAddress"
+              id="dropoffAddress"
+              required={true}
+              onChange={(event) => setDropoffAddress(event.target.value)}
             />
           </div>
         </div>
@@ -189,7 +301,11 @@ const Form = () => {
             <label className="label-in">Comment</label>
             <textarea
               className="input-form-comment"
-              placeholder="Choose your dropoff address"
+              placeholder="Tell us about your trip"
+              name="comment"
+              id="comment"
+              required={true}
+              onChange={(event) => setComment(event.target.value)}
             />
           </div>
         </div>

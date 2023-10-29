@@ -54,3 +54,18 @@ export const FormButton: React.FC<FormProps> = ({ text, marginTop, click }) => {
     </div>
   );
 };
+
+export const FormButtonOrange: React.FC<FormProps> = ({
+  text,
+  marginTop,
+  click,
+}) => {
+  return (
+    <div className={`btn-container ${marginTop}`}>
+      <button className="btn" onClick={click}>
+        {text}
+      </button>
+      <figure className="pseudo"></figure>
+    </div>
+  );
+};
