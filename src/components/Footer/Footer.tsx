@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+
 import "./styles/footer-style.css";
 
 const containerStyle = {
@@ -22,6 +23,7 @@ const logo = require("../../assets/logo_white.svg").default;
 
 const Footer = () => {
   const [loadMap, setLoadMap] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -52,16 +54,16 @@ const Footer = () => {
           </span>
           <div className="navigation-container mt32">
             <span className="nav-bold">Navigation</span>
-            <ScrollLink to="home" className="link mt16">
+            <Link to="/" className="link mt16">
               Home
-            </ScrollLink>
-            <ScrollLink to="services" className="link mt8">
+            </Link>
+            <Link to="/services" className="link mt8">
               Services
-            </ScrollLink>
-            <Link to="rates" className="link mt8">
+            </Link>
+            <Link to="/prices" className="link mt8">
               Cars & Rates
             </Link>
-            <Link to="contacts" className="link mt8">
+            <Link to="/contacts" className="link mt8">
               Contacts
             </Link>
             <div className="navigation-container mt32">
@@ -96,18 +98,18 @@ const Footer = () => {
           <div className="nav-container">
             <span className="navigation-bold">Navigation</span>
             <nav className="links">
-              <ScrollLink className="link" to="home">
+              <Link to="/" className="link mt16">
                 Home
-              </ScrollLink>
-              <ScrollLink className="link" to="services">
+              </Link>
+              <Link to="/services" className="link mt8">
                 Services
-              </ScrollLink>
-              <ScrollLink className="link" to="rates">
+              </Link>
+              <Link to="/prices" className="link mt8">
                 Cars & Rates
-              </ScrollLink>
-              <ScrollLink className="link" to="contacts">
+              </Link>
+              <Link to="/contacts" className="link mt8">
                 Contacts
-              </ScrollLink>
+              </Link>
             </nav>
           </div>
           <div className="nav-container">

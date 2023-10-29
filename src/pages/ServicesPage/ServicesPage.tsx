@@ -60,7 +60,9 @@ const ServiceTabPc: React.FC<ServiceTabPropsPc> = ({
           <span className="orange">{serviceHeading}</span>
         </h4>
         <p className="paragraph w70 mt16">{serviceDescription}</p>
-        <button className="scroll-link mt32">{scrollLinkText}</button>
+        <button className="scroll-link mt32" onClick={navigate}>
+          {scrollLinkText}
+        </button>
       </div>
       <img src={serviceImage} alt="service-image" className="service-img" />
     </div>
