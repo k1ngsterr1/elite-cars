@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
-import { Button, RegularButton } from "../../components/Button/Button";
+import {
+  Button,
+  RegularButton,
+  RegularScrollButton,
+} from "../../components/Button/Button";
 import BookingForm from "../../components/CarForm/BookingForm";
+import { useNavigate } from "react-router-dom";
 
 const mainPhoto = require("../../assets/main_photo.webp");
 
 const MainScreen = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -34,7 +40,11 @@ const MainScreen = () => {
           expectations with our exceptional service.
         </p>
         <Button text="Explore Cars" scroll="" marginTop="mt32" />
-        <RegularButton text="Book Now" marginTop="mt16" />
+        <RegularScrollButton
+          text="Book Now"
+          marginTop="mt16"
+          clickFunction="contacts"
+        />
         <BookingForm />
       </main>
       <main className="content-pc mt128">
@@ -56,7 +66,11 @@ const MainScreen = () => {
           </p>
           <div className="button-row mt32">
             <Button text="Explore Cars" scroll="rates" marginTop="mt0" />
-            <RegularButton text="Book Now" marginTop="" />
+            <RegularScrollButton
+              text="Book Now"
+              marginTop="mt16"
+              clickFunction="contacts"
+            />
           </div>
         </div>
         <img src={mainPhoto} alt="mercedes" className="pc-img" />

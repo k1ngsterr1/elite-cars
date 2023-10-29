@@ -44,6 +44,18 @@ export const RegularButton: React.FC<RegButtonProps> = ({
   );
 };
 
+export const RegularScrollButton: React.FC<RegButtonProps> = ({
+  text,
+  marginTop,
+  clickFunction,
+}) => {
+  return (
+    <ScrollLink to={clickFunction} className={`reg-btn ${marginTop}`} smooth>
+      {text}
+    </ScrollLink>
+  );
+};
+
 export const FormButton: React.FC<FormProps> = ({ text, marginTop, click }) => {
   return (
     <div className={`btn-container ${marginTop}`}>
