@@ -7,7 +7,9 @@ import {
   RegularScrollButton,
 } from "../../components/Button/Button";
 import BookingForm from "../../components/CarForm/BookingForm";
+
 import { useNavigate } from "react-router-dom";
+import CookieBanner from "../../components/CookiesButton/CookiesButton";
 
 const mainPhoto = require("../../assets/main_photo.webp");
 
@@ -39,6 +41,7 @@ const MainScreen = () => {
           events, weddings, or special occasions, we strive to exceed
           expectations with our exceptional service.
         </p>
+        <CookieBanner />
         <Button text="Explore Cars" scroll="" marginTop="mt32" />
         <RegularScrollButton
           text="Book Now"
@@ -64,6 +67,7 @@ const MainScreen = () => {
             corporate events, weddings, or special occasions, we strive to
             exceed expectations with our exceptional service.
           </p>
+          <CookieBanner />
           <div className="button-row mt32">
             <Button text="Explore Cars" scroll="rates" marginTop="mt0" />
             <RegularScrollButton

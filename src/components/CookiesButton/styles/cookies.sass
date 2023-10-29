@@ -1,0 +1,27 @@
+@import "../../../styles/variables"
+
+.cookie-banner
+    position: fixed
+    bottom: 0
+    width: 100%
+    background-color: $orange
+    padding: 10px
+    text-align: center
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1)
+    z-index: 10000
+
+.cookie-text
+    color: white
+    margin: 0 0 10px 0
+
+.accept-button
+    background-color: white
+    color: $orange
+    border: none
+    border-radius: 4px
+    padding: 5px 15px
+    cursor: pointer
+    transition: background-color 0.3s ease
+
+    &:hover
+        background-color: rgba(255, 255, 255, 0.9)
