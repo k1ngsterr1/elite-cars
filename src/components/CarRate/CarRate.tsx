@@ -9,6 +9,7 @@ interface CarTabProps {
   carMilePrice: string;
   carImage: any;
   marginTop: string;
+  navigate: any;
 }
 
 const CarRate: React.FC<CarTabProps> = ({
@@ -18,9 +19,10 @@ const CarRate: React.FC<CarTabProps> = ({
   carMilePrice,
   carImage,
   marginTop,
+  navigate,
 }) => {
   return (
-    <div className={`rates-tab ${marginTop}`}>
+    <div className={`rates-tab ${marginTop}`} onClick={navigate}>
       <span className="rate-text right">{carCategorie}</span>
       <img className="rate-img" src={carImage} alt="rate01"></img>
       <span className="rate-name">{carName}</span>

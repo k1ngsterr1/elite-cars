@@ -3,6 +3,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import CarRate from "../../components/CarRate/CarRate";
 import { RegularButton } from "../../components/Button/Button";
 import { Fade } from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
 
 const rate01 = require("../../assets/rates_01.webp");
 const rate02 = require("../../assets/rates_02.webp");
@@ -14,6 +15,8 @@ const rate06 = require("../../assets/rate_06.webp");
 const RatesScreen = () => {
   const [seeAll, setSeeAll] = useState(false);
 
+  const navigate = useNavigate();
+
   const allCars = [
     {
       image: rate01,
@@ -22,6 +25,7 @@ const RatesScreen = () => {
       hourPrice: "$136.00",
       milePrice: "$3.00",
       marginTop: "mt64",
+      navigate: navigate("/cars/cadillac-ct6"),
     },
     {
       image: rate02,
@@ -30,6 +34,7 @@ const RatesScreen = () => {
       hourPrice: "$188.00",
       milePrice: "$3.50",
       marginTop: "mt32",
+      navigate: navigate("/cars/mercedes-s-class"),
     },
     {
       image: rate03,
@@ -38,6 +43,7 @@ const RatesScreen = () => {
       hourPrice: "$188.00",
       milePrice: "$3.50",
       marginTop: "mt32",
+      navigate: navigate("/cars/bmw-7"),
     },
     {
       image: rate04,
@@ -46,22 +52,25 @@ const RatesScreen = () => {
       hourPrice: "$136.00",
       milePrice: "$3.50",
       marginTop: "mt32",
+      navigate: navigate("/cars/cadillac-escalade"),
     },
     {
       image: rate05,
       category: "Premium Sedan",
-      name: "Example Car 5",
+      name: "Ford Expedition",
       hourPrice: "$150.00",
       milePrice: "$3.50",
       marginTop: "mt32",
+      navigate: navigate("/cars/ford-expedition"),
     },
     {
       image: rate06,
       category: "Luxury SUV",
-      name: "Example Car 6",
+      name: "MB Sprinter",
       hourPrice: "$140.00",
       milePrice: "$3.40",
       marginTop: "mt32",
+      navigate: navigate("/cars/mercedes-sprinter"),
     },
   ];
   const displayedCars = seeAll ? allCars : allCars.slice(0, 4);
@@ -86,6 +95,7 @@ const RatesScreen = () => {
               carName={car.name}
               carHourPrice={car.hourPrice}
               carMilePrice={car.milePrice}
+              navigate={car.navigate}
             />
           </Fade>
         ))}
@@ -102,6 +112,7 @@ const RatesScreen = () => {
         <div className="rates-list">
           <div className="rates-row">
             <CarRate
+              navigate={navigate("/cars/cadillac-ct6")}
               marginTop="mt64"
               carImage={rate01}
               carCategorie="Premium Sedan"
@@ -110,6 +121,7 @@ const RatesScreen = () => {
               carMilePrice="$3.00"
             />
             <CarRate
+              navigate={navigate("/cars/cadillac-ct6")}
               marginTop="mt32"
               carImage={rate02}
               carCategorie="Premium Sedan"
@@ -118,6 +130,7 @@ const RatesScreen = () => {
               carMilePrice="$3.50"
             />
             <CarRate
+              navigate={navigate("/cars/cadillac-ct6")}
               marginTop="mt32"
               carImage={rate03}
               carCategorie="Premium Sedan"
@@ -126,6 +139,7 @@ const RatesScreen = () => {
               carMilePrice="$3.50"
             />
             <CarRate
+              navigate={navigate("/cars/cadillac-ct6")}
               marginTop="mt32"
               carImage={rate04}
               carCategorie="Luxury SUV"
@@ -138,6 +152,7 @@ const RatesScreen = () => {
             <Fade className="rates-row" triggerOnce>
               <div className="rates-row">
                 <CarRate
+                  navigate={navigate("/cars/cadillac-ct6")}
                   marginTop="mt64"
                   carImage={rate01}
                   carCategorie="Premium Sedan"
@@ -146,6 +161,7 @@ const RatesScreen = () => {
                   carMilePrice="$3.00"
                 />
                 <CarRate
+                  navigate={navigate("/cars/cadillac-ct6")}
                   marginTop="mt32"
                   carImage={rate02}
                   carCategorie="Premium Sedan"
@@ -154,6 +170,7 @@ const RatesScreen = () => {
                   carMilePrice="$3.50"
                 />
                 <CarRate
+                  navigate={navigate("/cars/cadillac-ct6")}
                   marginTop="mt32"
                   carImage={rate03}
                   carCategorie="Premium Sedan"
@@ -162,6 +179,7 @@ const RatesScreen = () => {
                   carMilePrice="$3.50"
                 />
                 <CarRate
+                  navigate={navigate("/cars/cadillac-ct6")}
                   marginTop="mt32"
                   carImage={rate04}
                   carCategorie="Luxury SUV"

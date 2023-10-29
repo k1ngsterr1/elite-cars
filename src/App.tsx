@@ -23,6 +23,7 @@ import MercedesSClass from "./pages/Cars/MercedesSClass/Mercedes";
 import BMW7 from "./pages/Cars/BMW7/Bmw7";
 import MBSprinter from "./pages/Cars/MBSprinter/MBSprinter";
 import FordExpedition from "./pages/Cars/FordExpedition/FordExpedition";
+import CadillacCT6 from "./pages/Cars/CadillacCT6/CadillacCT6";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/cars/bmw-7" element={<BMW7 />} />
         <Route path="/cars/mercedes-sprinter" element={<MBSprinter />} />
         <Route path="cars/ford-expedition" element={<FordExpedition />} />
+        <Route path="cars/cadillac-ct6" element={<CadillacCT6 />} />
         <Route
           path="/services/airport-transfers"
           element={<AirportTransfers />}

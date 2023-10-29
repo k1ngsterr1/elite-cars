@@ -44,8 +44,8 @@
 
 @media screen and (min-width: 1024px) {
   .car-feature {
-    width: 380px;
-    height: auto !important;
+    width: clamp(190px, 19.7916666667vw, 760px);
+    height: clamp(265px, 27.6041666667vw, 1060px) !important;
     height: auto;
     display: flex;
     flex-direction: column;

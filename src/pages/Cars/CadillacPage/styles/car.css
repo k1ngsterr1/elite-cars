@@ -6,7 +6,7 @@
   justify-content: flex-start;
 }
 .bread-dots .link {
-  color: #2c2c2c;
+  color: #2C2C2C;
   font-family: Inter;
   font-size: clamp(9px, 4.20552vw, 36px);
   font-style: normal;
@@ -15,13 +15,13 @@
   text-decoration: none;
 }
 .bread-dots .orange {
-  color: #ff5722;
+  color: #FF5722;
 }
 .bread-dots .circle {
   width: clamp(2.5px, 1.1682vw, 10px);
   height: clamp(2.5px, 1.1682vw, 10px);
   border-radius: 10px;
-  background-color: #2c2c2c;
+  background-color: #2C2C2C;
   margin-left: clamp(4px, 1.86912vw, 16px);
   margin-right: clamp(4px, 1.86912vw, 16px);
 }
@@ -29,14 +29,14 @@
   width: clamp(2.5px, 1.1682vw, 10px);
   height: clamp(2.5px, 1.1682vw, 10px);
   border-radius: 10px;
-  background-color: #ff5722;
+  background-color: #FF5722;
   margin-left: clamp(4px, 1.86912vw, 16px);
   margin-right: clamp(4px, 1.86912vw, 16px);
 }
 
 .car-heading {
   width: 80%;
-  color: #ff5722;
+  color: #FF5722;
   font-family: Lato;
   font-size: clamp(16px, 7.47648vw, 64px);
   font-style: normal;
@@ -47,7 +47,7 @@
 
 .car-heading-s {
   width: 80%;
-  color: #ff5722;
+  color: #FF5722;
   font-family: Lato;
   font-size: clamp(14px, 6.54192vw, 56px);
   font-style: normal;
@@ -57,11 +57,11 @@
 }
 
 .black {
-  color: #2c2c2c;
+  color: #2C2C2C;
 }
 
 .car-paragraph {
-  color: #2c2c2c;
+  color: #2C2C2C;
   font-family: Inter;
   font-size: clamp(8px, 3.73824vw, 32px);
   font-style: italic;
@@ -76,7 +76,7 @@
 }
 
 .price {
-  color: #ff5722;
+  color: #FF5722;
   font-family: Lato;
   font-size: clamp(8.5px, 3.97188vw, 34px);
   font-style: normal;
@@ -88,7 +88,7 @@
 .request-table {
   width: 90%;
   height: auto;
-  border: 3px solid #ff5722;
+  border: 3px solid #FF5722;
   margin-top: clamp(16px, 7.47648vw, 64px);
 }
 
@@ -110,7 +110,7 @@
     align-items: center;
   }
   .bread-dots .bread-link {
-    color: #2c2c2c;
+    color: #2C2C2C;
     font-family: Inter;
     font-size: clamp(9px, 0.93744vw, 36px);
     font-style: normal;
@@ -121,12 +121,12 @@
   .bread-dots .bread-link .circle {
     width: clamp(2.5px, 0.2604vw, 10px);
     height: clamp(2.5px, 0.2604vw, 10px);
-    background-color: #2c2c2c;
+    background-color: #2C2C2C;
   }
   .bread-dots .bread-link .circle-orange {
     width: clamp(2.5px, 0.2604vw, 10px);
     height: clamp(2.5px, 0.2604vw, 10px);
-    background-color: #ff5722;
+    background-color: #FF5722;
   }
   .button-row-car {
     width: 30%;
@@ -141,7 +141,7 @@
     align-items: flex-start;
   }
   .button-row-car .prices-group .text-price {
-    color: #ff5722;
+    color: #FF5722;
     font-family: Lato;
     font-size: clamp(10px, 1.0416vw, 40px);
     font-style: normal;
@@ -166,4 +166,4 @@
     align-items: center;
     justify-content: space-between;
   }
-} /*# sourceMappingURL=car.css.map */
+}/*# sourceMappingURL=car.css.map */

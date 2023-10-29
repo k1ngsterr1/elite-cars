@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import PriceTable from "../../components/PriceTable/PriceTable";
 
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 import "./styles/prices-styles.css";
 
@@ -18,6 +19,8 @@ const rate05 = require("../../assets/rates_05.webp");
 
 const PricesPage = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -59,6 +62,7 @@ const PricesPage = () => {
             <span className="orange">Our Rates</span>
           </h2>
           <CarRate
+            navigate={navigate("/cars/cadillac-ct6")}
             marginTop="mt32"
             carImage={rate01}
             carCategorie="Premium Sedan"
@@ -67,6 +71,7 @@ const PricesPage = () => {
             carMilePrice="$3.00"
           />
           <CarRate
+            navigate={navigate("/cars/mercedes-s-class")}
             marginTop="mt32"
             carImage={rate02}
             carCategorie="Luxury Sedan"
@@ -75,6 +80,7 @@ const PricesPage = () => {
             carMilePrice="$3.50"
           />
           <CarRate
+            navigate={navigate("/cars/bmw-7")}
             marginTop="mt32"
             carImage={rate03}
             carCategorie="Luxury Sedan"
@@ -83,6 +89,7 @@ const PricesPage = () => {
             carMilePrice="$3.50"
           />
           <CarRate
+            navigate={navigate("/cars/cadillac-escalade")}
             marginTop="mt32"
             carImage={rate04}
             carCategorie="Luxury Sedan"
@@ -91,6 +98,7 @@ const PricesPage = () => {
             carMilePrice="$3.50"
           />
           <CarRate
+            navigate={navigate("/cars/mercedes-sprinter")}
             marginTop="mt32"
             carImage={rate05}
             carCategorie="Van"
@@ -99,6 +107,7 @@ const PricesPage = () => {
             carMilePrice="$4.00"
           />
           <CarRate
+            navigate={navigate("/cars/mercedes-sprinter")}
             marginTop="mt32"
             carImage={rate05}
             carCategorie="Van"
@@ -260,7 +269,8 @@ const PricesPage = () => {
           <div className="rates-list">
             <div className="rates-row">
               <CarRate
-                marginTop="mt64"
+                navigate={navigate("/cars/cadillac-ct6")}
+                marginTop="mt32"
                 carImage={rate01}
                 carCategorie="Premium Sedan"
                 carName="Cadillac CT6 Luxury"
@@ -268,62 +278,49 @@ const PricesPage = () => {
                 carMilePrice="$3.00"
               />
               <CarRate
+                navigate={navigate("/cars/mercedes-s-class")}
                 marginTop="mt32"
                 carImage={rate02}
-                carCategorie="Premium Sedan"
+                carCategorie="Luxury Sedan"
                 carName="Mercedes-Benz S-Class S 580"
                 carHourPrice="$188.00"
                 carMilePrice="$3.50"
               />
               <CarRate
+                navigate={navigate("/cars/bmw-7")}
                 marginTop="mt32"
                 carImage={rate03}
-                carCategorie="Premium Sedan"
+                carCategorie="Luxury Sedan"
                 carName="BMW 7-series 740i Xdrive"
                 carHourPrice="$188.00"
                 carMilePrice="$3.50"
               />
               <CarRate
+                navigate={navigate("/cars/cadillac-escalade")}
                 marginTop="mt32"
                 carImage={rate04}
-                carCategorie="Luxury SUV"
+                carCategorie="Luxury Sedan"
                 carName="2023 Cadillac Escalade ESV Sport"
                 carHourPrice="$136.00"
                 carMilePrice="$3.50"
               />
-            </div>
-            <div className="rates-row">
               <CarRate
-                marginTop="mt64"
-                carImage={rate01}
-                carCategorie="Premium Sedan"
-                carName="Cadillac CT6 Luxury"
-                carHourPrice="$136.00"
-                carMilePrice="$3.00"
+                navigate={navigate("/cars/mercedes-sprinter")}
+                marginTop="mt32"
+                carImage={rate05}
+                carCategorie="Van"
+                carName="Mercedes Sprinter Shuttle (14 pax.) plus luggage"
+                carHourPrice="$465.00"
+                carMilePrice="$4.00"
               />
               <CarRate
+                navigate={navigate("/cars/mercedes-sprinter")}
                 marginTop="mt32"
-                carImage={rate02}
-                carCategorie="Premium Sedan"
-                carName="Mercedes-Benz S-Class S 580"
-                carHourPrice="$188.00"
-                carMilePrice="$3.50"
-              />
-              <CarRate
-                marginTop="mt32"
-                carImage={rate03}
-                carCategorie="Premium Sedan"
-                carName="BMW 7-series 740i Xdrive"
-                carHourPrice="$188.00"
-                carMilePrice="$3.50"
-              />
-              <CarRate
-                marginTop="mt32"
-                carImage={rate04}
-                carCategorie="Luxury SUV"
-                carName="2023 Cadillac Escalade ESV Sport"
-                carHourPrice="$136.00"
-                carMilePrice="$3.50"
+                carImage={rate05}
+                carCategorie="Van"
+                carName="Mercedes Sprinter (11 pax.) with significant luggage space"
+                carHourPrice="$336.00"
+                carMilePrice="$4.00"
               />
             </div>
           </div>

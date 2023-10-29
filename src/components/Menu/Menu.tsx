@@ -3,6 +3,7 @@ import { Slide } from "react-awesome-reveal";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import Hamburger from "hamburger-react";
+import { Link } from "react-router-dom";
 
 import "./styles/menu-styles.css";
 interface MenuProps {
@@ -38,33 +39,18 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, toggleMenu }) => {
         <img className="logo" src={logo} alt="logo" />
         <figure className="separator" />
         <nav className="links mt16">
-          <ScrollLink className="link" to="home" onClick={closeMenu} smooth>
+          <Link className="link" to="/home" onClick={closeMenu}>
             Home
-          </ScrollLink>
-          <ScrollLink
-            className="link mt16"
-            to="services"
-            onClick={closeMenu}
-            smooth
-          >
+          </Link>
+          <Link className="link mt16" to="/services" onClick={closeMenu}>
             Services
-          </ScrollLink>
-          <ScrollLink
-            className="link mt16"
-            to="rates"
-            onClick={closeMenu}
-            smooth
-          >
+          </Link>
+          <Link className="link mt16" to="/prices" onClick={closeMenu}>
             Cars & Rates
-          </ScrollLink>
-          <ScrollLink
-            className="link mt16"
-            to="contacts"
-            onClick={closeMenu}
-            smooth
-          >
+          </Link>
+          <Link className="link mt16" to="/contacts" onClick={closeMenu}>
             Contacts
-          </ScrollLink>
+          </Link>
         </nav>
       </div>
     </Slide>
