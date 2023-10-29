@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
+
 import Hamburger from "hamburger-react";
 import Menu from "../Menu/Menu";
-import { Navigate, useNavigate } from "react-router-dom";
 
-import "./styles/header.css";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "../Button/Button";
+
+import "./styles/header.css";
 
 interface HeaderProps {
   isMenuOpen?: any;
@@ -19,6 +21,18 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
 
   function navigateToMain() {
     navigate("/");
+  }
+
+  function navigateToServices() {
+    navigate("/services");
+  }
+
+  function navigateToCarsAndRates() {
+    navigate("/prices");
+  }
+
+  function navigateToContacts() {
+    navigate("/contacts");
   }
 
   useEffect(() => {
@@ -46,18 +60,18 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       <div className="header-pc">
         <img src={logo} className="logo" onClick={navigateToMain} alt="logo" />
         <nav className="links">
-          <ScrollLink to="home" className="link" smooth>
+          <Link to="/" className="link">
             Home
-          </ScrollLink>
-          <ScrollLink to="services" className="link" smooth>
+          </Link>
+          <Link to="/services" className="link">
             Services
-          </ScrollLink>
-          <ScrollLink to="rates" className="link" smooth>
+          </Link>
+          <Link to="/prices" className="link">
             Cars & Rates
-          </ScrollLink>
-          <ScrollLink to="contacts" className="link" smooth>
+          </Link>
+          <Link to="/contacts" className="link">
             Contacts
-          </ScrollLink>
+          </Link>
         </nav>
         <Button text="Contact Us" scroll="contacts" marginTop="mt0" />
       </div>

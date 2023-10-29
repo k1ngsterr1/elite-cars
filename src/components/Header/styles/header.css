@@ -55,6 +55,7 @@
     cursor: pointer;
     transition: 0.3s all;
     margin-left: clamp(16px, 1.66656vw, 64px);
+    text-decoration: none;
   }
   .header .header-pc .links .link:hover {
     color: #FF5722;

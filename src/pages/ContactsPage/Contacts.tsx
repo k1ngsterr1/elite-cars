@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from "react-helmet";
+
 import { FormButton, RegularButton } from "../../components/Button/Button";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -42,173 +44,200 @@ const Contacts = () => {
   };
 
   return (
-    <div className="screen">
-      <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
-      {isMenuOpen && <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />}
-      <main className="content mt64">
-        <h1 className="main-heading">
-          Our <span className="orange">Contacts</span>
-        </h1>
-        <p className="paragraph text-center mt32">
-          At [Your Company Name], we prioritize open channels of communication.
-          We're here to answer your queries, listen to your feedback, and
-          discuss any opportunities for collaboration. Reach out to us through
-          any of the means below, and our dedicated team will be in touch
-          shortly.
-        </p>
-        <form action="" className="contact-form">
-          <div className="input-group">
-            <label htmlFor="" className="label">
-              Name*
-            </label>
-            <input type="text" className="input" placeholder="Your Name" />
-          </div>
-          <div className="input-group mt32">
-            <label htmlFor="" className="label">
-              Phone Number or Email*
-            </label>
-            <input
-              type="text"
-              className="input"
-              placeholder="Phone Number or Email"
-            />
-          </div>
-          <div className="input-group mt32">
-            <label htmlFor="" className="label">
-              Subject*
-            </label>
-            <input type="text" className="input" placeholder="Subject" />
-          </div>
-          <div className="input-group mt32">
-            <label htmlFor="" className="label">
-              Comment
-            </label>
-            <input
-              type="text"
-              className="input"
-              placeholder="Write your message"
-            />
-          </div>
-          <RegularButton marginTop="mt32" text="Submit" />
-        </form>
-        <h2 className="heading-fourth mt64">Our Location</h2>
-        <div className="map">
-          <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
-            <GoogleMap
-              mapContainerStyle={containerStyle}
-              center={center}
-              zoom={10}
-            ></GoogleMap>
-          </LoadScript>
-        </div>
-        <div className="contact-link-container mt32">
-          <FontAwesomeIcon icon={faPhone} className="fa-icon" />
-          <a href="tel: +13129723890" className="contact-link">
-            +1 (312) 972-3890
-          </a>
-        </div>
-        <div className="contact-link-container mt32">
-          <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
-          <a href="mailto: contact@[yourcompany].com" className="contact-link">
-            contact@[yourcompany].com
-          </a>
-        </div>
-        {/* <div className="contact-link-container mt32">
-          <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
-          <a href="" className="contact-link-adress">
-            200 E Randolph St, Suite 5100, Chicago, IL 60601
-          </a>
-        </div> */}
-      </main>
-      <main className="content-pc column mt128">
-        <h1 className="heading-s auto">
-          Our <span className="orange">Contacts</span>
-        </h1>
-        <p className="paragraph w50 text-center auto mt32">
-          At [Your Company Name], we prioritize open channels of communication.
-          We're here to answer your queries, listen to your feedback, and
-          discuss any opportunities for collaboration. Reach out to us through
-          any of the means below, and our dedicated team will be in touch
-          shortly.
-        </p>
-        <div className="contacts-container mt128">
-          <div className="contact-form">
-            <h5 className="contact-heading">Contact Form</h5>
-            <div className="input-group-pc">
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Contact Elite Arrival | Luxury Car Rental with Driver in Chicago
+        </title>
+        <meta
+          property="og:title"
+          content="Contact Elite Arrival | Luxury Car Rental with Driver in Chicago"
+        ></meta>
+        <meta
+          property="og:description"
+          content="For all your luxury car rental needs in Chicago. Dedicated team is available to assist you. Experience the highest level of service and comfort"
+        ></meta>
+        <meta
+          name="description"
+          content="For all your luxury car rental needs in Chicago. Dedicated team is available to assist you. Experience the highest level of service and comfort"
+        ></meta>
+      </Helmet>
+      <div className="screen">
+        <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
+        {isMenuOpen && <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />}
+        <main className="content mt64">
+          <h1 className="main-heading">
+            Our <span className="orange">Contacts</span>
+          </h1>
+          <p className="paragraph text-center mt32">
+            At [Your Company Name], we prioritize open channels of
+            communication. We're here to answer your queries, listen to your
+            feedback, and discuss any opportunities for collaboration. Reach out
+            to us through any of the means below, and our dedicated team will be
+            in touch shortly.
+          </p>
+          <form action="" className="contact-form">
+            <div className="input-group">
               <label htmlFor="" className="label">
                 Name*
               </label>
-              <input
-                type="text"
-                className="form-input"
-                placeholder="Your Name"
-              />
+              <input type="text" className="input" placeholder="Your Name" />
             </div>
-            <div className="input-group-pc">
+            <div className="input-group mt32">
               <label htmlFor="" className="label">
                 Phone Number or Email*
               </label>
               <input
-                type="phone"
-                className="form-input"
+                type="text"
+                className="input"
                 placeholder="Phone Number or Email"
               />
             </div>
-            <div className="input-group-pc">
+            <div className="input-group mt32">
               <label htmlFor="" className="label">
                 Subject*
               </label>
-              <input type="text" className="form-input" placeholder="Subject" />
+              <input type="text" className="input" placeholder="Subject" />
             </div>
-            <div className="input-group-pc">
+            <div className="input-group mt32">
               <label htmlFor="" className="label">
                 Comment
               </label>
-              <textarea
-                className="form-input-comment"
-                placeholder="Your Name"
+              <input
+                type="text"
+                className="input"
+                placeholder="Write your message"
               />
             </div>
-            <div className="btn-container">
-              <RegularButton text="Submit" marginTop="mt32 left" />
-            </div>
-          </div>
-          <div className="map-content">
-            <LoadScript googleMapsApiKey="API_">
+            <RegularButton marginTop="mt32" text="Submit" />
+          </form>
+          <h2 className="heading-fourth mt64">Our Location</h2>
+          <div className="map">
+            <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
               <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={center}
                 zoom={10}
               ></GoogleMap>
             </LoadScript>
-            <div className="location-container">
-              <div className="contact-link-container mt32">
-                <FontAwesomeIcon icon={faPhone} className="fa-icon" />
-                <a href="tel: +13129723890" className="contact-link">
-                  +1 (312) 972-3890
-                </a>
+          </div>
+          <div className="contact-link-container mt32">
+            <FontAwesomeIcon icon={faPhone} className="fa-icon" />
+            <a href="tel: +13129723890" className="contact-link">
+              +1 (312) 972-3890
+            </a>
+          </div>
+          <div className="contact-link-container mt32">
+            <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
+            <a
+              href="mailto: contact@[yourcompany].com"
+              className="contact-link"
+            >
+              contact@[yourcompany].com
+            </a>
+          </div>
+          {/* <div className="contact-link-container mt32">
+          <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
+          <a href="" className="contact-link-adress">
+            200 E Randolph St, Suite 5100, Chicago, IL 60601
+          </a>
+        </div> */}
+        </main>
+        <main className="content-pc column mt128">
+          <h1 className="heading-s auto">
+            Our <span className="orange">Contacts</span>
+          </h1>
+          <p className="paragraph w50 text-center auto mt32">
+            At [Your Company Name], we prioritize open channels of
+            communication. We're here to answer your queries, listen to your
+            feedback, and discuss any opportunities for collaboration. Reach out
+            to us through any of the means below, and our dedicated team will be
+            in touch shortly.
+          </p>
+          <div className="contacts-container mt128">
+            <div className="contact-form">
+              <h5 className="contact-heading">Contact Form</h5>
+              <div className="input-group-pc">
+                <label htmlFor="" className="label">
+                  Name*
+                </label>
+                <input
+                  type="text"
+                  className="form-input"
+                  placeholder="Your Name"
+                />
               </div>
-              <div className="contact-link-container mt32">
-                <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
-                <a
-                  href="mailto: contact@[yourcompany].com"
-                  className="contact-link"
-                >
-                  contact@[yourcompany].com
-                </a>
+              <div className="input-group-pc">
+                <label htmlFor="" className="label">
+                  Phone Number or Email*
+                </label>
+                <input
+                  type="phone"
+                  className="form-input"
+                  placeholder="Phone Number or Email"
+                />
               </div>
-              <div className="contact-link-container mt32">
-                <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
-                <a href="" className="contact-link">
-                  200 E Randolph St, Suite 5100, Chicago, IL 60601
-                </a>
+              <div className="input-group-pc">
+                <label htmlFor="" className="label">
+                  Subject*
+                </label>
+                <input
+                  type="text"
+                  className="form-input"
+                  placeholder="Subject"
+                />
+              </div>
+              <div className="input-group-pc">
+                <label htmlFor="" className="label">
+                  Comment
+                </label>
+                <textarea
+                  className="form-input-comment"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div className="btn-container">
+                <RegularButton text="Submit" marginTop="mt32 left" />
+              </div>
+            </div>
+            <div className="map-content">
+              <LoadScript googleMapsApiKey="API_A">
+                <GoogleMap
+                  mapContainerStyle={containerStyle}
+                  center={center}
+                  zoom={10}
+                ></GoogleMap>
+              </LoadScript>
+              <div className="location-container">
+                <div className="contact-link-container mt32">
+                  <FontAwesomeIcon icon={faPhone} className="fa-icon" />
+                  <a href="tel: +13129723890" className="contact-link">
+                    +1 (312) 972-3890
+                  </a>
+                </div>
+                <div className="contact-link-container mt32">
+                  <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
+                  <a
+                    href="mailto: contact@[yourcompany].com"
+                    className="contact-link"
+                  >
+                    contact@[yourcompany].com
+                  </a>
+                </div>
+                <div className="contact-link-container mt32">
+                  <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
+                  <a href="" className="contact-link">
+                    200 E Randolph St, Suite 5100, Chicago, IL 60601
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
