@@ -304,6 +304,8 @@ const PricesPage = () => {
                 carHourPrice="$136.00"
                 carMilePrice="$3.50"
               />
+            </div>
+            <div className="rates-row">
               <CarRate
                 navigate={navigate("/cars/mercedes-sprinter")}
                 marginTop="mt32"

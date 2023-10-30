@@ -50,8 +50,8 @@ const App = () => {
         <Route path="/cars/mercedes-s-class" element={<MercedesSClass />} />
         <Route path="/cars/bmw-7" element={<BMW7 />} />
         <Route path="/cars/mercedes-sprinter" element={<MBSprinter />} />
-        <Route path="cars/ford-expedition" element={<FordExpedition />} />
-        <Route path="cars/cadillac-ct6" element={<CadillacCT6 />} />
+        <Route path="/cars/ford-expedition" element={<FordExpedition />} />
+        <Route path="/cars/cadillac-ct6" element={<CadillacCT6 />} />
         <Route
           path="/services/airport-transfers"
           element={<AirportTransfers />}
@@ -63,7 +63,6 @@ const App = () => {
         <Route path="/services/nationwide" element={<Nationwide />} />
         <Route path="/services/special-events" element={<SpecialEvents />} />
         <Route path="/policy" element={<Policy />} />
-        <Route path="/error" element={<Error />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
