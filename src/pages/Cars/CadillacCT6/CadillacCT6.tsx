@@ -20,8 +20,8 @@ import "swiper/css/scrollbar";
 
 import "../CadillacPage/styles/car.css";
 
-const cadillacMob = require("../../../assets/cadillac_mob.webp");
-const cadillacPc = require("../../../assets/cadillac_pc.webp");
+const cadillacMob = require("../../../assets/cadillac-ct-6-mob.webp");
+const cadillacPc = require("../../../assets/cadillac-ct-6.webp");
 const icon = require("../../../assets/icon.svg").default;
 
 const CadillacCT6 = () => {

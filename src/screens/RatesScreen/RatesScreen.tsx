@@ -12,6 +12,9 @@ const rate04 = require("../../assets/rates_04.webp");
 const rate05 = require("../../assets/rates_05.webp");
 const rate06 = require("../../assets/rate_06.webp");
 
+const fordExpedition = require("../../assets/expedition-rate.webp");
+const sprinterRate = require("../../assets/sprinter-rate.webp");
+
 const RatesScreen = () => {
   const [seeAll, setSeeAll] = useState(false);
 
@@ -125,40 +128,22 @@ const RatesScreen = () => {
             carMilePrice="$3.50"
           />
           <CarRate
-            navigate={() => navigate("/cars/cadillac-ct6")}
+            navigate={() => navigate("/cars/ford-expedition")}
+            marginTop="mt32"
+            carImage={fordExpedition}
+            carCategorie="Luxury SUV"
+            carName="Ford Expedition"
+            carHourPrice="$136.00"
+            carMilePrice="$3.50"
+          />
+          <CarRate
+            navigate={() => navigate("/cars/mercedes-sprinter")}
             marginTop="mt64"
-            carImage={rate01}
-            carCategorie="Premium Sedan"
-            carName="Cadillac CT6 Luxury"
+            carImage={sprinterRate}
+            carCategorie="Van"
+            carName="Mercedes Sprinter"
             carHourPrice="$136.00"
             carMilePrice="$3.00"
-          />
-          <CarRate
-            navigate={() => navigate("/cars/cadillac-ct6")}
-            marginTop="mt32"
-            carImage={rate02}
-            carCategorie="Premium Sedan"
-            carName="Mercedes-Benz S-Class S 580"
-            carHourPrice="$188.00"
-            carMilePrice="$3.50"
-          />
-          <CarRate
-            navigate={() => navigate("/cars/cadillac-ct6")}
-            marginTop="mt32"
-            carImage={rate03}
-            carCategorie="Premium Sedan"
-            carName="BMW 7-series 740i Xdrive"
-            carHourPrice="$188.00"
-            carMilePrice="$3.50"
-          />
-          <CarRate
-            navigate={() => navigate("/cars/cadillac-ct6")}
-            marginTop="mt32"
-            carImage={rate04}
-            carCategorie="Luxury SUV"
-            carName="2023 Cadillac Escalade ESV Sport"
-            carHourPrice="$136.00"
-            carMilePrice="$3.50"
           />
         </div>
       </div>
@@ -211,18 +196,18 @@ const RatesScreen = () => {
                 <CarRate
                   navigate={() => navigate("/cars/cadillac-ct6")}
                   marginTop="mt64"
-                  carImage={rate01}
-                  carCategorie="Premium Sedan"
-                  carName="Cadillac CT6 Luxury"
+                  carImage={fordExpedition}
+                  carCategorie="Luxury SUV"
+                  carName="Ford Expedition"
                   carHourPrice="$136.00"
                   carMilePrice="$3.00"
                 />
                 <CarRate
-                  navigate={() => navigate("/cars/cadillac-ct6")}
+                  navigate={() => navigate("/cars/mercedes-sprinter")}
                   marginTop="mt32"
-                  carImage={rate02}
-                  carCategorie="Premium Sedan"
-                  carName="Mercedes-Benz S-Class S 580"
+                  carImage={sprinterRate}
+                  carCategorie="Van"
+                  carName="Mercedes Sprinter"
                   carHourPrice="$188.00"
                   carMilePrice="$3.50"
                 />

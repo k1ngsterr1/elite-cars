@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
 import TimePicker from "react-time-picker";
+import emailjs from "@emailjs/browser";
+
 import "react-datepicker/dist/react-datepicker.css"; // Import the CSS
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
@@ -35,18 +37,49 @@ const BookingForm: React.FC = () => {
   // Step 2
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string>("10:00");
-  const [pickupLocation, setPickUpLocation] = useState("");
-  const [dropoffLocation, setDropoffLocation] = useState("");
+  const [pickupAddress, setPickUpAddress] = useState("");
+  const [dropoffAddress, setDropoffAddress] = useState("");
 
   // Step 3
-  const [fullName, setFullName] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [emailAdress, setEmailAdress] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
 
   if (passengers < 1) {
     setPassengers(1);
   }
+
+  const sendEmail = () => {
+    emailjs
+      .send(
+        process.env.REACT_APP_SERVICE_ID!,
+        process.env.REACT_APP_SECOND_TEMPLATE_ID!,
+        {
+          carType: carType,
+          serviceType: serviceType,
+          luggage: luggage,
+          passengers: passengers,
+          pickupAddress: pickupAddress,
+          dropoffAddress: dropoffAddress,
+          selectedTime: selectedTime,
+          selectedDate: selectedDate,
+          firstName: firstName,
+          lastName: lastName,
+          phoneNumber: phoneNumber,
+          emailAddress: emailAddress,
+        },
+        process.env.REACT_APP_EMAILJS_KEY!
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   const handleNextClick = () => {
     if (currentStep === 1) {
@@ -55,15 +88,22 @@ const BookingForm: React.FC = () => {
       } else {
         alert("Please fill out all fields in Step 1 before proceeding!");
       }
-    } else if (currentStep === 2) {
-      if (pickupLocation && dropoffLocation && selectedTime && selectedDate) {
+    }
+    if (currentStep === 2) {
+      if (pickupAddress && dropoffAddress && selectedTime && selectedDate) {
         setCurrentStep(3);
       } else {
         alert("Please fill out all fields in Step 2 before proceeding!");
       }
     }
+    if (currentStep === 3) {
+      if (firstName && lastName && phoneNumber && emailAddress) {
+        sendEmail();
+      } else {
+        alert("Please fill out all fields in Step 3 before proceeding!");
+      }
+    }
   };
-
   return (
     <div className="form-container">
       {currentStep === 1 && (
@@ -91,6 +131,7 @@ const BookingForm: React.FC = () => {
               <Select
                 options={luggageOptions}
                 className="selector"
+                name="luggage"
                 onChange={(option: any) => setLuggage(option?.value)}
               />
             </div>
@@ -98,18 +139,30 @@ const BookingForm: React.FC = () => {
               <label className="label">Passengers</label>
               <div className="counter">
                 <button
-                  onClick={() => setPassengers(passengers - 1)}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setPassengers((prev) => Math.max(1, prev - 1));
+                  }}
                   className="counter-btn left"
                 >
                   -
                 </button>
                 <span className="quantity">{passengers}</span>
                 <button
-                  onClick={() => setPassengers(passengers + 1)}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setPassengers((prev) => prev + 1);
+                  }}
                   className="counter-btn right"
                 >
                   +
                 </button>
+                <input
+                  type="hidden"
+                  name="passengers"
+                  id="passengers"
+                  value={passengers}
+                />
               </div>
             </div>
             <button className="submit-button" onClick={handleNextClick}>
@@ -129,6 +182,7 @@ const BookingForm: React.FC = () => {
                 <Select
                   options={carOptions}
                   className="selector"
+                  name="carType"
                   onChange={(option: any) => setCarType(option?.value)}
                 />
               </div>
@@ -137,6 +191,7 @@ const BookingForm: React.FC = () => {
                 <Select
                   options={serviceOptions}
                   className="selector"
+                  name="serviceType"
                   onChange={(option: any) => setServiceType(option?.value)}
                 />
               </div>
@@ -145,6 +200,7 @@ const BookingForm: React.FC = () => {
                 <Select
                   options={luggageOptions}
                   className="selector"
+                  name="luggage"
                   onChange={(option: any) => setLuggage(option?.value)}
                 />
               </div>
@@ -152,18 +208,30 @@ const BookingForm: React.FC = () => {
                 <label className="label">Passengers</label>
                 <div className="counter">
                   <button
-                    onClick={() => setPassengers(passengers - 1)}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setPassengers((prev) => Math.max(1, prev - 1));
+                    }}
                     className="counter-btn left"
                   >
                     -
                   </button>
                   <span className="quantity">{passengers}</span>
                   <button
-                    onClick={() => setPassengers(passengers + 1)}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setPassengers((prev) => prev + 1);
+                    }}
                     className="counter-btn right"
                   >
                     +
                   </button>
+                  <input
+                    type="hidden"
+                    name="passengers"
+                    id="passengers"
+                    value={passengers}
+                  />
                 </div>
               </div>
             </div>
@@ -182,7 +250,8 @@ const BookingForm: React.FC = () => {
               <input
                 type="text"
                 placeholder="Enter Location"
-                onChange={(e: any) => setPickUpLocation(e.target.value)}
+                name="pickupAddress"
+                onChange={(e: any) => setPickUpAddress(e.target.value)}
                 className="b-form"
               />
             </div>
@@ -190,8 +259,9 @@ const BookingForm: React.FC = () => {
               <label className="label">Dropoff Location</label>
               <input
                 type="text"
+                name="dropoffAddress"
                 placeholder="Enter Location"
-                onChange={(e: any) => setDropoffLocation(e.target.value)}
+                onChange={(e: any) => setDropoffAddress(e.target.value)}
                 className="b-form"
               />
             </div>
@@ -235,8 +305,9 @@ const BookingForm: React.FC = () => {
                 <label className="label">Pickup Location</label>
                 <input
                   type="text"
+                  name="pickupAddress"
                   placeholder="Enter Location"
-                  onChange={(e: any) => setPickUpLocation(e.target.value)}
+                  onChange={(e: any) => setPickUpAddress(e.target.value)}
                   className="b-form"
                 />
               </div>
@@ -244,8 +315,9 @@ const BookingForm: React.FC = () => {
                 <label className="label">Dropoff Location</label>
                 <input
                   type="text"
+                  name="dropoffAddress"
                   placeholder="Enter Location"
-                  onChange={(e: any) => setDropoffLocation(e.target.value)}
+                  onChange={(e: any) => setDropoffAddress(e.target.value)}
                   className="b-form"
                 />
               </div>
@@ -287,8 +359,9 @@ const BookingForm: React.FC = () => {
               <label className="label">First Name</label>
               <input
                 type="text"
+                name="firstName"
                 placeholder="First Name"
-                onChange={(e: any) => setFullName(e.target.value)}
+                onChange={(e: any) => setFirstName(e.target.value)}
                 className="b-form"
               />
             </div>
@@ -296,6 +369,7 @@ const BookingForm: React.FC = () => {
               <label className="label">Last Name</label>
               <input
                 type="text"
+                name="lastName"
                 placeholder="Last Name"
                 onChange={(e: any) => setLastName(e.target.value)}
                 className="b-form"
@@ -305,6 +379,7 @@ const BookingForm: React.FC = () => {
               <label className="label">Phone Number</label>
               <input
                 type="text"
+                name="phoneNumber"
                 placeholder="Phone Number"
                 onChange={(e: any) => setPhoneNumber(e.target.value)}
                 className="b-form"
@@ -314,8 +389,9 @@ const BookingForm: React.FC = () => {
               <label className="label">Email Adress</label>
               <input
                 type="text"
+                name="emailAddress"
                 placeholder="example@gmail.com"
-                onChange={(e: any) => setEmailAdress(e.target.value)}
+                onChange={(e: any) => setEmailAddress(e.target.value)}
                 className="b-form"
               />
             </div>
@@ -336,8 +412,9 @@ const BookingForm: React.FC = () => {
                 <label className="label">First Name</label>
                 <input
                   type="text"
+                  name="firstName"
                   placeholder="First Name"
-                  onChange={(e: any) => setFullName(e.target.value)}
+                  onChange={(e: any) => setFirstName(e.target.value)}
                   className="b-form"
                 />
               </div>
@@ -345,6 +422,7 @@ const BookingForm: React.FC = () => {
                 <label className="label">Last Name</label>
                 <input
                   type="text"
+                  name="lastName"
                   placeholder="Last Name"
                   onChange={(e: any) => setLastName(e.target.value)}
                   className="b-form"
@@ -354,6 +432,7 @@ const BookingForm: React.FC = () => {
                 <label className="label">Phone Number</label>
                 <input
                   type="text"
+                  name="phoneNumber"
                   placeholder="Phone Number"
                   onChange={(e: any) => setPhoneNumber(e.target.value)}
                   className="b-form"
@@ -363,8 +442,9 @@ const BookingForm: React.FC = () => {
                 <label className="label">Email Adress</label>
                 <input
                   type="text"
+                  name="emailAddress"
                   placeholder="example@gmail.com"
-                  onChange={(e: any) => setEmailAdress(e.target.value)}
+                  onChange={(e: any) => setEmailAddress(e.target.value)}
                   className="b-form"
                 />
               </div>
