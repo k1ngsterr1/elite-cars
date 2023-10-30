@@ -20,8 +20,8 @@ import "swiper/css/scrollbar";
 
 import "../CadillacPage/styles/car.css";
 
-const cadillacMob = require("../../../assets/cadillac_mob.webp");
-const cadillacPc = require("../../../assets/cadillac_pc.webp");
+const cadillacMob = require("../../../assets/bmw-7-mob.webp");
+const bmwPc = require("../../../assets/bmw-7.webp");
 const icon = require("../../../assets/icon.svg").default;
 
 const BMW7 = () => {
@@ -114,7 +114,7 @@ const BMW7 = () => {
             </div>
           </div>
         </section>
-        <img src={cadillacPc} alt="car-pc" className="car-pc-img" />
+        <img src={bmwPc} alt="car-pc" className="car-pc-img" />
         <Swiper
           slidesPerView={1}
           spaceBetween={100}
