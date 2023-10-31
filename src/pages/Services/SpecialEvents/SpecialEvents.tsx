@@ -10,8 +10,8 @@ import { Button } from "../../../components/Button/Button";
 
 import "../AirportTransfers/styles/airport-styles.css";
 
-const service = require("../../../assets/service_airport.webp");
-const service_pc = require("../../../assets/service_airport_pc.webp");
+const service = require("../../../assets/service_special_mob.webp");
+const service_pc = require("../../../assets/service_special_event.webp");
 
 const SpecialEvents = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -56,7 +56,7 @@ const SpecialEvents = () => {
           </p>
           <Button text="Order Now" marginTop="mt32" scroll="contacts" />
         </div>
-        <img className="service-img mt64" src={service} alt="img" />
+        <img className="service-img-mob mt64" src={service} alt="img" />
         <div className="content-pc column mt128">
           <h1 className="heading-service">
             <div className="orange">Special Events</div>
