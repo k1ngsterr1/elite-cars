@@ -10,8 +10,8 @@ import { Helmet } from "react-helmet";
 
 import "../AirportTransfers/styles/airport-styles.css";
 
-const service = require("../../../assets/service_airport.webp");
-const service_pc = require("../../../assets/service_airport_pc.webp");
+const service = require("../../../assets/service_corporate_mob.webp");
+const service_pc = require("../../../assets/service_corporate_travel.webp");
 
 const CorporateTravel = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
