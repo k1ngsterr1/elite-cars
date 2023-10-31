@@ -63,6 +63,7 @@ const App = () => {
         <Route path="/services/nationwide" element={<Nationwide />} />
         <Route path="/services/special-events" element={<SpecialEvents />} />
         <Route path="/policy" element={<Policy />} />
+        <Route path="/error" element={<Error />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

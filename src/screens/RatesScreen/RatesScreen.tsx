@@ -20,64 +20,6 @@ const RatesScreen = () => {
 
   const navigate = useNavigate();
 
-  const allCars = [
-    {
-      image: rate01,
-      category: "Premium Sedan",
-      name: "Cadillac CT6 Luxury",
-      hourPrice: "$136.00",
-      milePrice: "$3.00",
-      marginTop: "mt64",
-      path: "/cars/cadillac-ct6",
-    },
-    {
-      image: rate02,
-      category: "Premium Sedan",
-      name: "Mercedes-Benz S-Class S 580",
-      hourPrice: "$188.00",
-      milePrice: "$3.50",
-      marginTop: "mt32",
-      path: "/cars/mercedes-s-class",
-    },
-    {
-      image: rate03,
-      category: "Premium Sedan",
-      name: "BMW 7-series 740i Xdrive",
-      hourPrice: "$188.00",
-      milePrice: "$3.50",
-      marginTop: "mt32",
-      path: "/cars/bmw-7",
-    },
-    {
-      image: rate04,
-      category: "Luxury SUV",
-      name: "2023 Cadillac Escalade ESV Sport",
-      hourPrice: "$136.00",
-      milePrice: "$3.50",
-      marginTop: "mt32",
-      path: "/cars/cadillac-escalade",
-    },
-    {
-      image: rate05,
-      category: "Premium Sedan",
-      name: "Ford Expedition",
-      hourPrice: "$150.00",
-      milePrice: "$3.50",
-      marginTop: "mt32",
-      path: "/cars/ford-expedition",
-    },
-    {
-      image: rate06,
-      category: "Luxury SUV",
-      name: "MB Sprinter",
-      hourPrice: "$140.00",
-      milePrice: "$3.40",
-      marginTop: "mt32",
-      path: "/cars/mercedes-sprinter",
-    },
-  ];
-  const displayedCars = seeAll ? allCars : allCars.slice(0, 4);
-
   const handleSeeAllClick = (event: any) => {
     setSeeAll(!seeAll);
     event.preventDefault();
@@ -192,7 +134,7 @@ const RatesScreen = () => {
           </div>
           {seeAll && (
             <Fade className="rates-row" triggerOnce>
-              <div className="rates-row">
+              <div className="rates-row-centered">
                 <CarRate
                   navigate={() => navigate("/cars/cadillac-ct6")}
                   marginTop="mt64"
@@ -209,24 +151,6 @@ const RatesScreen = () => {
                   carCategorie="Van"
                   carName="Mercedes Sprinter"
                   carHourPrice="$188.00"
-                  carMilePrice="$3.50"
-                />
-                <CarRate
-                  navigate={() => navigate("/cars/cadillac-ct6")}
-                  marginTop="mt32"
-                  carImage={rate03}
-                  carCategorie="Premium Sedan"
-                  carName="BMW 7-series 740i Xdrive"
-                  carHourPrice="$188.00"
-                  carMilePrice="$3.50"
-                />
-                <CarRate
-                  navigate={() => navigate("/cars/cadillac-ct6")}
-                  marginTop="mt32"
-                  carImage={rate04}
-                  carCategorie="Luxury SUV"
-                  carName="2023 Cadillac Escalade ESV Sport"
-                  carHourPrice="$136.00"
                   carMilePrice="$3.50"
                 />
               </div>

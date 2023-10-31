@@ -39,7 +39,7 @@ export const RegularButton: React.FC<RegButtonProps> = ({
 }) => {
   return (
     <button
-      type="button"
+      type="submit"
       onClick={clickFunction}
       className={`reg-btn ${marginTop}`}
     >

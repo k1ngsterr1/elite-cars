@@ -4,7 +4,6 @@ import Menu from "../../components/Menu/Menu";
 import CarRate from "../../components/CarRate/CarRate";
 import Form from "../../components/Form/Form";
 import Footer from "../../components/Footer/Footer";
-import PriceTable from "../../components/PriceTable/PriceTable";
 
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +15,9 @@ const rate02 = require("../../assets/rates_02.webp");
 const rate03 = require("../../assets/rates_03.webp");
 const rate04 = require("../../assets/rates_04.webp");
 const rate05 = require("../../assets/rates_05.webp");
+
+const fordExpedition = require("../../assets/expedition-rate.webp");
+const sprinterRate = require("../../assets/sprinter-rate.webp");
 
 const PricesPage = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -62,7 +64,7 @@ const PricesPage = () => {
             <span className="orange">Our Rates</span>
           </h2>
           <CarRate
-            navigate={navigate("/cars/cadillac-ct6")}
+            navigate={() => navigate("/cars/cadillac-ct6")}
             marginTop="mt32"
             carImage={rate01}
             carCategorie="Premium Sedan"
@@ -71,7 +73,7 @@ const PricesPage = () => {
             carMilePrice="$3.00"
           />
           <CarRate
-            navigate={navigate("/cars/mercedes-s-class")}
+            navigate={() => navigate("/cars/mercedes-s-class")}
             marginTop="mt32"
             carImage={rate02}
             carCategorie="Luxury Sedan"
@@ -80,7 +82,7 @@ const PricesPage = () => {
             carMilePrice="$3.50"
           />
           <CarRate
-            navigate={navigate("/cars/bmw-7")}
+            navigate={() => navigate("/cars/bmw-7")}
             marginTop="mt32"
             carImage={rate03}
             carCategorie="Luxury Sedan"
@@ -89,7 +91,7 @@ const PricesPage = () => {
             carMilePrice="$3.50"
           />
           <CarRate
-            navigate={navigate("/cars/cadillac-escalade")}
+            navigate={() => navigate("/cars/cadillac-escalade")}
             marginTop="mt32"
             carImage={rate04}
             carCategorie="Luxury Sedan"
@@ -98,7 +100,7 @@ const PricesPage = () => {
             carMilePrice="$3.50"
           />
           <CarRate
-            navigate={navigate("/cars/mercedes-sprinter")}
+            navigate={() => navigate("/cars/mercedes-sprinter")}
             marginTop="mt32"
             carImage={rate05}
             carCategorie="Van"
@@ -107,13 +109,13 @@ const PricesPage = () => {
             carMilePrice="$4.00"
           />
           <CarRate
-            navigate={navigate("/cars/mercedes-sprinter")}
+            navigate={() => navigate("/cars/ford-expedition")}
             marginTop="mt32"
-            carImage={rate05}
-            carCategorie="Van"
-            carName="Mercedes Sprinter (11 pax.) with significant luggage space"
-            carHourPrice="$336.00"
-            carMilePrice="$4.00"
+            carImage={fordExpedition}
+            carCategorie="Luxury SUV"
+            carName="Ford Expedition"
+            carHourPrice="$136.00"
+            carMilePrice="$3.00"
           />
           <p className="paragraph text-center w90  mt64">
             Experience the convenience, comfort, and professionalism of Elite
@@ -269,7 +271,7 @@ const PricesPage = () => {
           <div className="rates-list">
             <div className="rates-row">
               <CarRate
-                navigate={navigate("/cars/cadillac-ct6")}
+                navigate={() => navigate("/cars/cadillac-ct6")}
                 marginTop="mt32"
                 carImage={rate01}
                 carCategorie="Premium Sedan"
@@ -278,7 +280,7 @@ const PricesPage = () => {
                 carMilePrice="$3.00"
               />
               <CarRate
-                navigate={navigate("/cars/mercedes-s-class")}
+                navigate={() => navigate("/cars/mercedes-s-class")}
                 marginTop="mt32"
                 carImage={rate02}
                 carCategorie="Luxury Sedan"
@@ -287,7 +289,7 @@ const PricesPage = () => {
                 carMilePrice="$3.50"
               />
               <CarRate
-                navigate={navigate("/cars/bmw-7")}
+                navigate={() => navigate("/cars/bmw-7")}
                 marginTop="mt32"
                 carImage={rate03}
                 carCategorie="Luxury Sedan"
@@ -296,7 +298,7 @@ const PricesPage = () => {
                 carMilePrice="$3.50"
               />
               <CarRate
-                navigate={navigate("/cars/cadillac-escalade")}
+                navigate={() => navigate("/cars/cadillac-escalade")}
                 marginTop="mt32"
                 carImage={rate04}
                 carCategorie="Luxury Sedan"
@@ -305,24 +307,24 @@ const PricesPage = () => {
                 carMilePrice="$3.50"
               />
             </div>
-            <div className="rates-row">
+            <div className="rates-row-centered">
               <CarRate
-                navigate={navigate("/cars/mercedes-sprinter")}
+                navigate={() => navigate("/cars/ford-expedition")}
                 marginTop="mt32"
-                carImage={rate05}
-                carCategorie="Van"
-                carName="Mercedes Sprinter Shuttle (14 pax.) plus luggage"
-                carHourPrice="$465.00"
-                carMilePrice="$4.00"
+                carImage={fordExpedition}
+                carCategorie="Luxury SUV"
+                carName="Ford Expedition"
+                carHourPrice="$136.00"
+                carMilePrice="$3.00"
               />
               <CarRate
-                navigate={navigate("/cars/mercedes-sprinter")}
+                navigate={() => navigate("/cars/mercedes-sprinter")}
                 marginTop="mt32"
-                carImage={rate05}
+                carImage={sprinterRate}
                 carCategorie="Van"
-                carName="Mercedes Sprinter (11 pax.) with significant luggage space"
-                carHourPrice="$336.00"
-                carMilePrice="$4.00"
+                carName="Mercedes Sprinter"
+                carHourPrice="$188.00"
+                carMilePrice="$3.50"
               />
             </div>
           </div>

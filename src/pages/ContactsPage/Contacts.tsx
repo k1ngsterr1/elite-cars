@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
 import Footer from "../../components/Footer/Footer";
+import emailjs, { send } from "@emailjs/browser";
 import { Helmet } from "react-helmet";
 
 import { FormButton, RegularButton } from "../../components/Button/Button";
@@ -28,19 +29,37 @@ const center = {
 
 const Contacts = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [phoneNumber, setPhone] = useState("");
+  const [comment, setComment] = useState("");
 
-  //   const [loadMap, setLoadMap] = useState(false);
-
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //       setLoadMap(true);
-  //     }, 5000);
-
-  //     return () => clearTimeout(timer);
-  //   }, []);
+  const form = useRef<HTMLFormElement>(null);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
+  };
+
+  const sendEmail = (event: any) => {
+    event.preventDefault();
+    emailjs
+      .send(
+        process.env.REACT_APP_SERVICE_ID!,
+        process.env.REACT_APP_TEMPLATE_ID!,
+        {
+          fullName: fullName,
+          phoneNumber: phoneNumber,
+          comment: comment,
+        },
+        process.env.REACT_APP_EMAILJS_KEY!
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -77,12 +96,25 @@ const Contacts = () => {
             to us through any of the means below, and our dedicated team will be
             in touch shortly.
           </p>
-          <form action="" className="contact-form">
+          <form
+            ref={form}
+            action=""
+            onSubmit={sendEmail}
+            className="contact-form"
+          >
             <div className="input-group">
               <label htmlFor="" className="label">
                 Name*
               </label>
-              <input type="text" className="input" placeholder="Your Name" />
+              <input
+                type="text"
+                className="input"
+                placeholder="Your Name"
+                id="fullName"
+                name="fullName"
+                required
+                onChange={(event) => setFullName(event.target.value)}
+              />
             </div>
             <div className="input-group mt32">
               <label htmlFor="" className="label">
@@ -92,14 +124,23 @@ const Contacts = () => {
                 type="text"
                 className="input"
                 placeholder="Phone Number or Email"
+                id="phoneNumber"
+                name="phoneNumber"
+                required
+                onChange={(event) => setPhone(event.target.value)}
               />
             </div>
-            <div className="input-group mt32">
+            {/* <div className="input-group mt32">
               <label htmlFor="" className="label">
                 Subject*
               </label>
-              <input type="text" className="input" placeholder="Subject" />
-            </div>
+              <input
+                type="text"
+                className="input"
+                placeholder="Subject"
+                required
+              />
+            </div> */}
             <div className="input-group mt32">
               <label htmlFor="" className="label">
                 Comment
@@ -108,6 +149,10 @@ const Contacts = () => {
                 type="text"
                 className="input"
                 placeholder="Write your message"
+                name="comment"
+                id="comment"
+                required={true}
+                onChange={(event) => setComment(event.target.value)}
               />
             </div>
             <RegularButton marginTop="mt32" text="Submit" />
@@ -124,8 +169,8 @@ const Contacts = () => {
           </div>
           <div className="contact-link-container mt32">
             <FontAwesomeIcon icon={faPhone} className="fa-icon" />
-            <a href="tel: +13129723890" className="contact-link">
-              +1 (312) 972-3890
+            <a href="tel: +773-494-9021" className="contact-link">
+              +773-494-9021
             </a>
           </div>
           <div className="contact-link-container mt32">
@@ -156,7 +201,7 @@ const Contacts = () => {
             in touch shortly.
           </p>
           <div className="contacts-container mt128">
-            <div className="contact-form">
+            <form className="contact-form" ref={form} onSubmit={sendEmail}>
               <h5 className="contact-heading">Contact Form</h5>
               <div className="input-group-pc">
                 <label htmlFor="" className="label">
@@ -165,6 +210,9 @@ const Contacts = () => {
                 <input
                   type="text"
                   className="form-input"
+                  id="fullName"
+                  name="fullName"
+                  required
                   placeholder="Your Name"
                 />
               </div>
@@ -175,10 +223,13 @@ const Contacts = () => {
                 <input
                   type="phone"
                   className="form-input"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  required
                   placeholder="Phone Number or Email"
                 />
               </div>
-              <div className="input-group-pc">
+              {/* <div className="input-group-pc">
                 <label htmlFor="" className="label">
                   Subject*
                 </label>
@@ -187,20 +238,24 @@ const Contacts = () => {
                   className="form-input"
                   placeholder="Subject"
                 />
-              </div>
+              </div> */}
               <div className="input-group-pc">
                 <label htmlFor="" className="label">
                   Comment
                 </label>
                 <textarea
                   className="form-input-comment"
-                  placeholder="Your Name"
+                  placeholder="Comment"
+                  name="comment"
+                  id="comment"
+                  required={true}
+                  onChange={(event) => setComment(event.target.value)}
                 />
               </div>
               <div className="btn-container">
                 <RegularButton text="Submit" marginTop="mt32 left" />
               </div>
-            </div>
+            </form>
             <div className="map-content">
               <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
                 <GoogleMap
@@ -212,17 +267,17 @@ const Contacts = () => {
               <div className="location-container">
                 <div className="contact-link-container mt32">
                   <FontAwesomeIcon icon={faPhone} className="fa-icon" />
-                  <a href="tel: +13129723890" className="contact-link">
-                    +1 (312) 972-3890
+                  <a href="tel: +773-494-9021" className="contact-link">
+                    +773-494-9021
                   </a>
                 </div>
                 <div className="contact-link-container mt32">
                   <FontAwesomeIcon icon={faEnvelope} className="fa-icon" />
                   <a
-                    href="mailto: contact@[yourcompany].com"
+                    href="mailto: elitearrivalchicago@gmail.com"
                     className="contact-link"
                   >
-                    contact@[yourcompany].com
+                    elitearrivalchicago@gmail.com
                   </a>
                 </div>
                 <div className="contact-link-container mt32">

@@ -73,6 +73,12 @@
     align-items: center;
     justify-content: space-between;
   }
+  .rates .rates-row-centered {
+    width: 47.5%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
   .charter-rates {
     width: 70%;
     border-collapse: collapse;
