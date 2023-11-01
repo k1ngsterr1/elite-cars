@@ -14,6 +14,18 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.header .header-mob .logo-container {
+  width: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-mob .logo-container .phone {
+  color: #FF5722;
+  font-size: clamp(12px, 5.60736vw, 48px);
+}
 .header .header-pc {
   display: none;
 }

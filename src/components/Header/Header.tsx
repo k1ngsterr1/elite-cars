@@ -6,6 +6,8 @@ import Menu from "../Menu/Menu";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Button } from "../Button/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/header.css";
 
@@ -50,7 +52,17 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   return (
     <header className="header">
       <div className="header-mob">
-        <img src={logo} className="logo" onClick={navigateToMain} alt="logo" />
+        <div className="logo-container">
+          <img
+            src={logo}
+            className="logo"
+            onClick={navigateToMain}
+            alt="logo"
+          />
+          <a href="tel:+1 (312) 972-3890">
+            <FontAwesomeIcon className="phone" icon={faPhone} />
+          </a>
+        </div>
         <Hamburger
           color="#FF5722"
           toggled={isMenuOpen ? true : false}
