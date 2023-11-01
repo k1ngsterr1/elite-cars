@@ -128,10 +128,10 @@ const ServiceScreen = () => {
               src={service04}
               className="service"
               alt="service"
-              onClick={navigateCorporateTravel}
+              onClick={navigateSpecialEvents}
             />
             <span className="service-text mt16">Special Events</span>
-            <span className="more mt8" onClick={navigateCorporateTravel}>
+            <span className="more mt8" onClick={navigateSpecialEvents}>
               More Info
             </span>
           </div>

@@ -79,7 +79,7 @@ const MBSprinter = () => {
               </Link>
             </div>
             <div className="text-content mt32">
-              <h1 className="heading-s orange w30">MB S-class S580</h1>
+              <h1 className="heading-s orange w30">MB Sprinter</h1>
               <p className="paragraph mt32 w40">
                 Our Mercedes-Benz Sprinter is perfect for group transportation
                 or corporate events. With its spacious interior, comfortable
