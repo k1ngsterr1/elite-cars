@@ -3,6 +3,7 @@ import Select from "react-select";
 import DatePicker from "react-datepicker";
 import TimePicker from "react-time-picker";
 import emailjs from "@emailjs/browser";
+import ThanksPopup from "../Popup/ThanksPopup";
 
 import "react-datepicker/dist/react-datepicker.css"; // Import the CSS
 import "react-time-picker/dist/TimePicker.css";
@@ -20,6 +21,8 @@ const carOptions = [
 const serviceOptions = [
   { value: "From Airport", label: "From Airport" },
   { value: "To Airport", label: "To Airport" },
+  { value: "Point to Point", label: "Point To point" },
+  { value: "Hourly Charter", label: "Hourly charter" },
 ];
 
 const luggageOptions = [
@@ -34,6 +37,7 @@ const BookingForm: React.FC = () => {
   const [carType, setCarType] = useState(null);
   const [serviceType, setServiceType] = useState(null);
   const [luggage, setLuggage] = useState(null);
+  const [isOpen, setOpen] = useState(false);
 
   // Step 2
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -52,6 +56,7 @@ const BookingForm: React.FC = () => {
   }
 
   const sendEmail = () => {
+    setOpen((o) => !o);
     emailjs
       .send(
         process.env.REACT_APP_SERVICE_ID!,
@@ -456,6 +461,7 @@ const BookingForm: React.FC = () => {
           </div>
         </>
       )}
+      <ThanksPopup open={isOpen} closeMenu={() => setOpen(false)} />
     </div>
   );
 };

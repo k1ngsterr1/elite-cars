@@ -97,6 +97,9 @@ const Nationwide = () => {
               holidayPrices="112"
             />
           </div>
+          <h3 className="heading-s text-center mt128">
+            <span className="orange">Our Fleet</span>
+          </h3>
           <div className="rates-list mt64">
             <div className="rates-row">
               <CarRate
@@ -157,8 +160,7 @@ const Nationwide = () => {
               />
             </div>
           </div>
-          <h4 className="heading-s text-center mt128">Send Request</h4>
-          <p className="paragraph text-center auto w60 mt64">
+          <p className="paragraph text-center auto w60 mt128">
             At Elite Arrival, we understand that luxury goes beyond just a
             vehicle. That's why we offer a world-class fleet of late-model
             executive vehicles that are meticulously maintained to provide the
@@ -199,6 +201,8 @@ const Nationwide = () => {
             Contact us today to book your next corporate journey and elevate
             your travel experience to new heights.
           </p>
+          <h4 className="heading-s text-center mt128">Send Request</h4>
+
           <Form />
         </div>
         <img className="img mt64" src={service} alt="img" />
@@ -212,6 +216,9 @@ const Nationwide = () => {
             minimalRentTime="6"
             holidayPrices="112"
           />
+          <h3 className="heading-s text-center mt128">
+            <span className="orange">Our Fleet</span>
+          </h3>
           <CarRate
             navigate={() => navigate("/cars/cadillac-ct6")}
             marginTop="mt32"
@@ -266,8 +273,7 @@ const Nationwide = () => {
             carHourPrice="$136.00"
             carMilePrice="$3.00"
           />
-          <h4 className="heading-s text-center mt128">Send Request</h4>
-          <p className="paragraph text-center mt32 ">
+          <p className="paragraph text-center mt128 ">
             At Elite Arrival, we understand that luxury goes beyond just a
             vehicle. That's why we offer a world-class fleet of late-model
             executive vehicles that are meticulously maintained to provide the
@@ -308,6 +314,8 @@ const Nationwide = () => {
             Contact us today to book your next corporate journey and elevate
             your travel experience to new heights.
           </p>
+          <h4 className="heading-s text-center mt128">Send Request</h4>
+
           <div className="mt64" style={{ width: "100%" }}>
             <Form />
           </div>

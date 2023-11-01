@@ -145,6 +145,7 @@
     margin-right: clamp(4px, 0.41664vw, 16px);
   }
   .footer .footer-content-pc .content-pc .nav-container .links .contact-group .link-g {
+    width: 100%;
     color: white;
     font-family: Inter;
     font-size: clamp(8px, 0.83328vw, 32px);

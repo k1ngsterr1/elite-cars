@@ -345,6 +345,7 @@ const FordExpedition = () => {
             featureDescription="In addition to our Meet & Greet service, our experienced drivers are trained to provide professional assistance throughout your journey. They can help you navigate unfamiliar airports, offer recommendations for local attractions and dining options, and assist with any luggage or special requests you may have. With Elite Arrival, you can trust that our team will go above and beyond to ensure your comfort and satisfaction."
           />
         </div>
+
         <FormScreen formParagraph="The Ford Expedition is a full-size SUV that offers a perfect combination of power and refinement. Its spacious cabin provides comfortable seating for up to eight passengers, making it ideal for family trips or outdoor adventures. The Expedition is equipped with advanced technology features such as a touchscreen infotainment system, Apple CarPlay, and Android Auto compatibility. With its impressive towing capacity and versatile cargo space, this SUV is well-suited for both everyday driving and outdoor activities. The Ford Expedition delivers a smooth and comfortable ride, making it an excellent choice for those seeking a balance of luxury and capability." />
         <Footer />
       </div>

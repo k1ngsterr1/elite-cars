@@ -63,7 +63,7 @@ const ServiceTabPc: React.FC<ServiceTabPropsPc> = ({
   return (
     <div className="service-tab-pc mt64">
       <div className="service-content">
-        <h4 className="heading-fourth text-left" onClick={navigate}>
+        <h4 className="heading-fourth text-left pointer" onClick={navigate}>
           <span className="orange">{serviceHeading}</span>
         </h4>
         <p className="paragraph w70 mt16">{serviceDescription}</p>
@@ -74,7 +74,7 @@ const ServiceTabPc: React.FC<ServiceTabPropsPc> = ({
       <img
         src={serviceImage}
         alt="service-image"
-        className="service-img"
+        className="service-img pointer"
         onClick={navigate}
       />
     </div>
@@ -216,8 +216,14 @@ const ServicesPage = () => {
               />
             </Fade>
           </div>
+          <p className="paragraph text-center w60 auto mt128">
+            Contact us today to learn more about our services and receive a
+            personalized quote for your car rental needs in Chicago. Experience
+            the Elite Arrival difference and let us take care of your
+            transportation requirements with professionalism and style.
+          </p>
         </main>
-        <FormScreen formParagraph="Contact us today to learn more about our services and receive a personalized quote for your car rental needs in Chicago. Experience the Elite Arrival difference and let us take care of your transportation requirements with professionalism and style." />
+        <FormScreen />
         <Footer />
       </div>
     </>

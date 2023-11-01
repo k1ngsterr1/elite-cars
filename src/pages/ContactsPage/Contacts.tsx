@@ -3,6 +3,7 @@ import BingMapsReact from "bingmaps-react";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
 import Footer from "../../components/Footer/Footer";
+import ThanksPopup from "../../components/Popup/ThanksPopup";
 import emailjs, { send } from "@emailjs/browser";
 import { Helmet } from "react-helmet";
 
@@ -26,10 +27,11 @@ const containerStyle = {
 
 const Contacts = () => {
   const [loadMap, setLoadMap] = useState(false);
-  const [isMenuOpen, setMenuOpen] = useState(false);
   const [fullName, setFullName] = useState("");
   const [phoneNumber, setPhone] = useState("");
   const [comment, setComment] = useState("");
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const form = useRef<HTMLFormElement>(null);
 
@@ -47,6 +49,7 @@ const Contacts = () => {
 
   const sendEmail = (event: any) => {
     event.preventDefault();
+    setOpen((o) => !o);
     emailjs
       .send(
         process.env.REACT_APP_SERVICE_ID!,
@@ -167,10 +170,7 @@ const Contacts = () => {
             </div>
             <RegularButton marginTop="mt32" text="Submit" />
           </form>
-          <h2 className="heading-fourth mt64">Our Location</h2>
-          <div className="map">
-            <Map />
-          </div>
+          {/* <h2 className="heading-fourth mt64">Our Location</h2> */}
           <div className="contact-link-container mt32">
             <FontAwesomeIcon icon={faPhone} className="fa-icon" />
             <a href="tel: +1 (312) 972-3890" className="contact-link">
@@ -193,7 +193,7 @@ const Contacts = () => {
             </a>
           </div>
         </main>
-        <main className="content-pc column mt128">
+        <main className="content-pc column  mt128">
           <h1 className="heading-s auto">
             Our <span className="orange">Contacts</span>
           </h1>
@@ -208,7 +208,7 @@ const Contacts = () => {
             Contact us today to experience the exceptional service of Elite
             Arrival, the leading car rental service with drivers in Chicago.
           </p>
-          <div className="contacts-container mt128">
+          <div className="contacts-container column align-center items-center  mt128">
             <form className="contact-form" ref={form} onSubmit={sendEmail}>
               <h5 className="contact-heading">Contact Form</h5>
               <div className="input-group-pc">
@@ -265,7 +265,6 @@ const Contacts = () => {
               </div>
             </form>
             <div className="map-content">
-              <Map />
               <div className="location-container">
                 <div className="contact-link-container mt32">
                   <FontAwesomeIcon icon={faPhone} className="fa-icon" />
@@ -292,6 +291,7 @@ const Contacts = () => {
             </div>
           </div>
         </main>
+        <ThanksPopup open={isOpen} closeMenu={() => setOpen(false)} />
         <Footer />
       </div>
     </>

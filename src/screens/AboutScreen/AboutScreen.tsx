@@ -44,15 +44,18 @@ const AboutScreen = () => {
         </h2>
         <ServiceTab
           serviceImage={handshake}
-          serviceParagraph="Meet & Greet: Experience the VIP treatment from the moment you arrive with our Meet & Greet service. Our professional chauffeurs will be waiting for you at the airport, ready to assist with your luggage and ensure a smooth transition to our luxurious vehicles. Start your journey in style and comfort with Elite Arrival."
+          serviceHeading="Meet & Greet"
+          serviceParagraph="Experience the VIP treatment from the moment you arrive with our Meet & Greet service. Our professional chauffeurs will be waiting for you at the airport, ready to assist with your luggage and ensure a smooth transition to our luxurious vehicles. Start your journey in style and comfort with Elite Arrival."
         ></ServiceTab>
         <ServiceTab
           serviceImage={airport}
-          serviceParagraph=" Point-to-Point Service: Experience the ease and convenience of our Point-to-Point Service. Our professional chauffeurs will pick you up from your desired location and drop you off directly at your destination. Whether it's a business meeting, a special event, or a night out with friends, our reliable drivers will ensure a smooth and efficient journey. Sit back, relax, and arrive in style with Elite Arrival's Point-to-Point Service."
+          serviceHeading="Point-to-Point Service"
+          serviceParagraph="Experience the ease and convenience of our Point-to-Point Service. Our professional chauffeurs will pick you up from your desired location and drop you off directly at your destination. Whether it's a business meeting, a special event, or a night out with friends, our reliable drivers will ensure a smooth and efficient journey. Sit back, relax, and arrive in style with Elite Arrival's Point-to-Point Service."
         ></ServiceTab>
         <ServiceTab
           marginBottom="mb64"
           serviceImage={car}
+          serviceHeading="Charter Service"
           serviceParagraph="Take full control of your itinerary with our Charter Service. Whether you're planning a day of sightseeing, attending multiple events, or simply want the flexibility to explore the city at your own pace, our dedicated chauffeurs will be at your disposal. Experience the ultimate luxury and convenience with Elite Arrival's Charter Service."
         ></ServiceTab>
       </main>

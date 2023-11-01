@@ -39,8 +39,10 @@ const Home = () => {
         <ReviewsScreen />
         <ServiceScreen />
         <RatesScreen />
-        <FormScreen />
-        <MapScreen />
+        <FormScreen
+          formParagraphLower="We pride ourselves on our attention to detail and personalized approach. Our customer-centric philosophy means that we tailor our services to meet your specific requirements. From selecting the perfect vehicle to accommodating any special requests, we go above and beyond to make your journey unforgettable.
+Choose Elite Arrival for an unparalleled transportation experience that combines elegance, professionalism, and comfort. Let us elevate your journey and make every moment truly memorable."
+        />
         <Footer />
       </div>
     </>

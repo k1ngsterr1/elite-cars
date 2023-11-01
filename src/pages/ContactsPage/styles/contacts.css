@@ -72,9 +72,10 @@
     align-items: flex-start;
   }
   .contacts-container .contact-form {
+    width: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 0px !important;
   }
   .contacts-container .contact-form .contact-heading {
@@ -139,16 +140,17 @@
     border: 2px solid #FF5722;
   }
   .contacts-container .map-content {
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    margin-top: clamp(8px, 0.83328vw, 32px);
   }
   .contacts-container .map-content .location-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   .contacts-container .map-content .location-container .fa-icon, .contacts-container .map-content .location-container .contact-link {
     color: #FF5722;

@@ -24,7 +24,6 @@ const Footer = () => {
   return (
     <footer className="footer mt128">
       <div className="footer-content mt32">
-        <Map />
         <div className="footer-links mt32">
           <img className="logo" src={logo} alt="logo"></img>
           <span className="text white mt16">

@@ -346,10 +346,7 @@ const MercedesSClass = () => {
             featureDescription="In addition to our Meet & Greet service, our experienced drivers are trained to provide professional assistance throughout your journey. They can help you navigate unfamiliar airports, offer recommendations for local attractions and dining options, and assist with any luggage or special requests you may have. With Elite Arrival, you can trust that our team will go above and beyond to ensure your comfort and satisfaction."
           />
         </div>
-        <FormScreen
-          formParagraph="The Mercedes-Benz S-Class S580 is the epitome of luxury and sophistication. Its stunning design and exquisite craftsmanship are evident in every detail, from the elegant exterior to the opulent interior. The S-Class S580 is equipped with cutting-edge technology, including a widescreen digital cockpit display, voice control, and advanced driver assistance systems. The refined interior features premium materials, comfortable seating, and ambient lighting, creating a serene and luxurious atmosphere. With its powerful performance and smooth ride, the S-Class S580 offers an unparalleled driving experience.
-"
-        />
+        <FormScreen formParagraph="The Mercedes-Benz S-Class S580 is the epitome of luxury and sophistication. Its stunning design and exquisite craftsmanship are evident in every detail, from the elegant exterior to the opulent interior. The S-Class S580 is equipped with cutting-edge technology, including a widescreen digital cockpit display, voice control, and advanced driver assistance systems. The refined interior features premium materials, comfortable seating, and ambient lighting, creating a serene and luxurious atmosphere. With its powerful performance and smooth ride, the S-Class S580 offers an unparalleled driving experience." />
         <Footer />
       </div>
     </>

@@ -64,8 +64,8 @@
     justify-content: center;
   }
   .popup-content {
-    background-color: transparent;
-    border: none;
+    background-color: transparent !important;
+    border: none !important;
   }
   .modal-window {
     width: clamp(388.5px, 40.46616vw, 1554px);
