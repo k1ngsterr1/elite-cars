@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import BingMapsReact from "bingmaps-react";
 import Header from "../../components/Header/Header";
 import Menu from "../../components/Menu/Menu";
 import Footer from "../../components/Footer/Footer";
@@ -22,18 +23,22 @@ const containerStyle = {
   height: "clamp(240px,24.9984vw,960px)",
 };
 
-const center = {
-  lat: -3.745,
-  lng: -38.523,
-};
-
 const Contacts = () => {
+  const [loadMap, setLoadMap] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [fullName, setFullName] = useState("");
   const [phoneNumber, setPhone] = useState("");
   const [comment, setComment] = useState("");
 
   const form = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadMap(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -159,13 +164,19 @@ const Contacts = () => {
           </form>
           <h2 className="heading-fourth mt64">Our Location</h2>
           <div className="map">
-            <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
-              <GoogleMap
-                mapContainerStyle={containerStyle}
-                center={center}
-                zoom={10}
-              ></GoogleMap>
-            </LoadScript>
+            <div
+              style={{ width: "100%", height: "clamp(150px,70.092vw,600px)" }}
+            >
+              {loadMap && (
+                <BingMapsReact
+                  viewOptions={{
+                    center: { latitude: 41.8781, longitude: -87.6298 },
+                  }}
+                  zoom={10}
+                  bingMapsKey="Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn"
+                />
+              )}
+            </div>
           </div>
           <div className="contact-link-container mt32">
             <FontAwesomeIcon icon={faPhone} className="fa-icon" />
@@ -257,13 +268,19 @@ const Contacts = () => {
               </div>
             </form>
             <div className="map-content">
-              <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
-                <GoogleMap
-                  mapContainerStyle={containerStyle}
-                  center={center}
-                  zoom={10}
-                ></GoogleMap>
-              </LoadScript>
+              <div
+                style={{ width: "100%", height: "clamp(150px,70.092vw,600px)" }}
+              >
+                {loadMap && (
+                  <BingMapsReact
+                    viewOptions={{
+                      center: { latitude: 41.8781, longitude: -87.6298 },
+                    }}
+                    zoom={10}
+                    bingMapsKey="Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn"
+                  />
+                )}
+              </div>
               <div className="location-container">
                 <div className="contact-link-container mt32">
                   <FontAwesomeIcon icon={faPhone} className="fa-icon" />

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import { Link as ScrollLink } from "react-scroll";
+import BingMapsReact from "bingmaps-react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -10,11 +9,6 @@ import "./styles/footer-style.css";
 const containerStyle = {
   width: "100%",
   height: "300px",
-};
-
-const center = {
-  lat: -3.745,
-  lng: -38.523,
 };
 
 //! "AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls"
@@ -28,24 +22,24 @@ const Footer = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoadMap(true);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
   return (
     <footer className="footer mt128">
       <div className="footer-content mt32">
-        {loadMap ? (
-          <LoadScript googleMapsApiKey="AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls">
-            <GoogleMap
-              mapContainerStyle={containerStyle}
-              center={center}
+        <div style={{ width: "100%", height: "clamp(150px,70.092vw,600px)" }}>
+          {loadMap && (
+            <BingMapsReact
+              viewOptions={{
+                center: { latitude: 41.8781, longitude: -87.6298 },
+              }}
               zoom={10}
-            ></GoogleMap>
-          </LoadScript>
-        ) : (
-          <></>
-        )}
+              bingMapsKey="Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn"
+            />
+          )}
+        </div>
         <div className="footer-links mt32">
           <img className="logo" src={logo} alt="logo"></img>
           <span className="text white mt16">
