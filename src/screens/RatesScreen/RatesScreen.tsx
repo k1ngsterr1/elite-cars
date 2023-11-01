@@ -140,7 +140,7 @@ const RatesScreen = () => {
           <div className="rates-row">
             <div className="rates-row-centered">
               <CarRate
-                navigate={() => navigate("/cars/cadillac-ct6")}
+                navigate={() => navigate("/cars/ford-expedition")}
                 marginTop="mt64"
                 carImage={fordExpedition}
                 carCategorie="Luxury SUV"

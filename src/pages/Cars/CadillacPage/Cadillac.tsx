@@ -59,7 +59,7 @@ const CadillacEscalade = () => {
               Home
             </Link>
             <div className="circle"></div>
-            <Link to="/rates" className="link">
+            <Link to="/prices" className="link">
               Rates
             </Link>
             <div className="circle-orange"></div>
@@ -88,7 +88,7 @@ const CadillacEscalade = () => {
                 Home
               </Link>
               <div className="circle"></div>
-              <Link to="/rates" className="bread-link">
+              <Link to="/prices" className="bread-link">
                 Rates
               </Link>
               <div className="circle-orange"></div>
@@ -289,7 +289,7 @@ const CadillacEscalade = () => {
             featureDescription="In addition to our Meet & Greet service, our experienced drivers are trained to provide professional assistance throughout your journey. They can help you navigate unfamiliar airports, offer recommendations for local attractions and dining options, and assist with any luggage or special requests you may have. With Elite Arrival, you can trust that our team will go above and beyond to ensure your comfort and satisfaction."
           />
         </div>
-        <FormScreen formParagraph="The Cadillac CT6 Luxury is a top-of-the-line sedan that offers a truly luxurious experience. Its plush leather seats provide maximum comfort, allowing passengers to relax and enjoy the ride. The advanced technology features include a touchscreen infotainment system, Bluetooth connectivity, and a premium sound system, ensuring a seamless and enjoyable journey. The powerful engine and smooth handling of the CT6 Luxury make it a pleasure to drive, providing a refined and exhilarating driving experience." />
+        <FormScreen formParagraph="The Cadillac Escalade ESV Sport is a luxurious SUV that combines style, comfort, and versatility. Its spacious interior provides ample room for passengers and luggage, making it ideal for family trips or group travel. The Escalade ESV Sport is equipped with premium features such as leather seating, a panoramic sunroof, and a state-of-the-art entertainment system. The advanced safety systems, including forward collision alert and lane-keeping assist, ensure a safe and secure journey. With its powerful engine and smooth handling, this SUV offers both luxury and performance." />
         <Footer />
       </div>
     </>

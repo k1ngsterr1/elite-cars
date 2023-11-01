@@ -36,7 +36,7 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, toggleMenu }) => {
         <div className="hamburger-btn">
           <Hamburger toggled={true} toggle={closeMenu} color="#fff" />
         </div>
-        <img className="logo" src={logo} alt="logo" />
+        <img className="logo" src={logo} alt="logo" onClick={navigateToMain} />
         <figure className="separator" />
         <nav className="links mt16">
           <Link className="link" to="/" onClick={closeMenu}>

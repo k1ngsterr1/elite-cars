@@ -60,7 +60,7 @@ const MercedesSClass = () => {
               Home
             </Link>
             <div className="circle"></div>
-            <Link to="/rates" className="link">
+            <Link to="/prices" className="link">
               Rates
             </Link>
             <div className="circle-orange"></div>
@@ -89,7 +89,7 @@ const MercedesSClass = () => {
                 Home
               </Link>
               <div className="circle"></div>
-              <Link to="/rates" className="bread-link">
+              <Link to="/prices" className="bread-link">
                 Rates
               </Link>
               <div className="circle-orange"></div>

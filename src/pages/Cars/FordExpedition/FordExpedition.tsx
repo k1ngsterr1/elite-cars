@@ -19,8 +19,8 @@ import "swiper/css/scrollbar";
 
 import "../CadillacPage/styles/car.css";
 
-const cadillacMob = require("../../../assets/cadillac_mob.webp");
-const cadillacPc = require("../../../assets/cadillac_pc.webp");
+const cadillacMob = require("../../../assets/ford-expedition-mob.webp");
+const cadillacPc = require("../../../assets/ford-expedition.webp");
 const icon = require("../../../assets/icon.svg").default;
 
 const FordExpedition = () => {
@@ -59,7 +59,7 @@ const FordExpedition = () => {
               Home
             </Link>
             <div className="circle"></div>
-            <Link to="/rates" className="link">
+            <Link to="/prices" className="link">
               Rates
             </Link>
             <div className="circle-orange"></div>
@@ -87,7 +87,7 @@ const FordExpedition = () => {
                 Home
               </Link>
               <div className="circle"></div>
-              <Link to="/rates" className="bread-link">
+              <Link to="/prices" className="bread-link">
                 Rates
               </Link>
               <div className="circle-orange"></div>

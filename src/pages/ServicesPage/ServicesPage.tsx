@@ -161,7 +161,12 @@ const ServicesPage = () => {
         </section>
         <main className="content-pc column mt128">
           <h1 className="heading-s auto">Our Services</h1>
-          <div className="tabs">
+          <p className="paragraph text-center auto mt32 w50">
+            At Elite Arrival, we take pride in providing top-notch car rental
+            services with professional drivers in Chicago. Our range of services
+            includes:
+          </p>
+          <div className="tabs mt64">
             <Fade direction="left" duration={1000} triggerOnce={true}>
               <ServiceTabPc
                 navigate={navigateAirportTransfers}

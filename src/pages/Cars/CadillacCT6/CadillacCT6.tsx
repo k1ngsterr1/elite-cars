@@ -60,7 +60,7 @@ const CadillacCT6 = () => {
               Home
             </Link>
             <div className="circle"></div>
-            <Link to="/rates" className="link">
+            <Link to="/prices" className="link">
               Rates
             </Link>
             <div className="circle-orange"></div>
@@ -88,7 +88,7 @@ const CadillacCT6 = () => {
                 Home
               </Link>
               <div className="circle"></div>
-              <Link to="/rates" className="bread-link">
+              <Link to="/prices" className="bread-link">
                 Rates
               </Link>
               <div className="circle-orange"></div>

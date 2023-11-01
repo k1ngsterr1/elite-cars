@@ -11,19 +11,20 @@ import "react-clock/dist/Clock.css";
 import "./styles/car-form.css";
 
 const carOptions = [
-  { value: "sedan", label: "Sedan" },
-  { value: "suv", label: "SUV" },
+  { value: "Sedan", label: "Sedan" },
+  { value: "Suv", label: "SUV" },
+  { value: "Van", label: "Van" },
   // ... Add other car types here
 ];
 
 const serviceOptions = [
-  { value: "fromAirport", label: "From Airport" },
-  { value: "toAirport", label: "To Airport" },
+  { value: "From Airport", label: "From Airport" },
+  { value: "To Airport", label: "To Airport" },
 ];
 
 const luggageOptions = [
-  { value: "yes", label: "Yes" },
-  { value: "no", label: "No" },
+  { value: "Yes", label: "Yes" },
+  { value: "No", label: "No" },
 ];
 
 const BookingForm: React.FC = () => {
