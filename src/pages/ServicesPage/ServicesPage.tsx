@@ -132,30 +132,30 @@ const ServicesPage = () => {
           </p>
           <ServiceTab
             navigate={navigateAirportTransfers}
-            scrollLinkText="Book Now"
+            scrollLinkText="Learn More"
             serviceHeading="Airport Transfers"
-            serviceDescription=" Airport Transfers: We offer reliable and efficient airport transfer services to and from all major airports in the Chicago area. Our experienced drivers will ensure that you reach your destination on time and in style, taking away the stress of navigating through traffic or finding parking."
+            serviceDescription="We offer reliable and efficient airport transfer services to and from all major airports in the Chicago area. Our experienced drivers will ensure that you reach your destination on time and in style, taking away the stress of navigating through traffic or finding parking."
             serviceImage={service01}
           />
           <ServiceTab
             navigate={navigateCorporateTravel}
-            scrollLinkText="Book Now"
+            scrollLinkText="Learn More"
             serviceHeading="Corporate Travel"
-            serviceDescription="Corporate Travel: We understand the importance of making a good impression when it comes to corporate travel. That's why we offer executive car rental services for business professionals. Our fleet of luxury vehicles is well-maintained and equipped with amenities to ensure a comfortable and productive journey."
+            serviceDescription="We understand the importance of making a good impression when it comes to corporate travel. That's why we offer executive car rental services for business professionals. Our fleet of luxury vehicles is well-maintained and equipped with amenities to ensure a comfortable and productive journey."
             serviceImage={service02}
           />
           <ServiceTab
             navigate={navigateNationwide}
-            scrollLinkText="Book Now"
+            scrollLinkText="Learn More"
             serviceHeading="Nationwide Service"
-            serviceDescription=" Nationwide Service: While we are based in Chicago, we also provide car rental services with drivers across the country. Whether you need transportation for a business trip or a leisurely vacation, our nationwide service ensures that you have a reliable and professional driver wherever you go."
+            serviceDescription="While we are based in Chicago, we also provide car rental services with drivers across the country. Whether you need transportation for a business trip or a leisurely vacation, our nationwide service ensures that you have a reliable and professional driver wherever you go."
             serviceImage={service03}
           />
           <ServiceTab
             navigate={navigateSpecialEvents}
-            scrollLinkText="Book Now"
+            scrollLinkText="Learn More"
             serviceHeading="Special Events"
-            serviceDescription="Special Events: From weddings to prom nights, we understand that special events require special transportation. Our team is experienced in providing luxurious and stylish transportation for any occasion. We offer a range of vehicles to choose from, ensuring that you arrive at your event in style and comfort."
+            serviceDescription="From weddings to prom nights, we understand that special events require special transportation. Our team is experienced in providing luxurious and stylish transportation for any occasion. We offer a range of vehicles to choose from, ensuring that you arrive at your event in style and comfort."
             serviceImage={service04}
           />
         </section>
@@ -166,8 +166,8 @@ const ServicesPage = () => {
               <ServiceTabPc
                 navigate={navigateAirportTransfers}
                 serviceHeading="Airport Transfers"
-                serviceDescription=" Airport Transfers: We offer reliable and efficient airport transfer services to and from all major airports in the Chicago area. Our experienced drivers will ensure that you reach your destination on time and in style, taking away the stress of navigating through traffic or finding parking."
-                scrollLinkText="Book Now"
+                serviceDescription="We offer reliable and efficient airport transfer services to and from all major airports in the Chicago area. Our experienced drivers will ensure that you reach your destination on time and in style, taking away the stress of navigating through traffic or finding parking."
+                scrollLinkText="Learn More"
                 serviceImage={service01}
               />
             </Fade>
@@ -175,8 +175,8 @@ const ServicesPage = () => {
               <ServiceTabPc
                 navigate={navigateCorporateTravel}
                 serviceHeading="Corporate Travel"
-                serviceDescription=" Corporate Travel: We understand the importance of making a good impression when it comes to corporate travel. That's why we offer executive car rental services for business professionals. Our fleet of luxury vehicles is well-maintained and equipped with amenities to ensure a comfortable and productive journey."
-                scrollLinkText="Book Now"
+                serviceDescription="We understand the importance of making a good impression when it comes to corporate travel. That's why we offer executive car rental services for business professionals. Our fleet of luxury vehicles is well-maintained and equipped with amenities to ensure a comfortable and productive journey."
+                scrollLinkText="Learn More"
                 serviceImage={service02}
               />
             </Fade>
@@ -184,8 +184,8 @@ const ServicesPage = () => {
               <ServiceTabPc
                 navigate={navigateNationwide}
                 serviceHeading="Nationwide Service"
-                serviceDescription=" Nationwide Service: While we are based in Chicago, we also provide car rental services with drivers across the country. Whether you need transportation for a business trip or a leisurely vacation, our nationwide service ensures that you have a reliable and professional driver wherever you go."
-                scrollLinkText="Book Now"
+                serviceDescription="While we are based in Chicago, we also provide car rental services with drivers across the country. Whether you need transportation for a business trip or a leisurely vacation, our nationwide service ensures that you have a reliable and professional driver wherever you go."
+                scrollLinkText="Learn More"
                 serviceImage={service03}
               />
             </Fade>
@@ -193,8 +193,8 @@ const ServicesPage = () => {
               <ServiceTabPc
                 navigate={navigateSpecialEvents}
                 serviceHeading="Special Events"
-                serviceDescription="4. Special Events: From weddings to prom nights, we understand that special events require special transportation. Our team is experienced in providing luxurious and stylish transportation for any occasion. We offer a range of vehicles to choose from, ensuring that you arrive at your event in style and comfort."
-                scrollLinkText="Book Now"
+                serviceDescription="From weddings to prom nights, we understand that special events require special transportation. Our team is experienced in providing luxurious and stylish transportation for any occasion. We offer a range of vehicles to choose from, ensuring that you arrive at your event in style and comfort."
+                scrollLinkText="Learn More"
                 serviceImage={service04}
               />
             </Fade>

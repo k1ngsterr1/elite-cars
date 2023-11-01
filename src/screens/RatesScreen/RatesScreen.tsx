@@ -26,6 +26,10 @@ const RatesScreen = () => {
     event.stopPropagation();
   };
 
+  const navigateToRates = () => {
+    navigate("/prices");
+  };
+
   return (
     <section className="screen mt128" id="rates">
       <div className="content">
@@ -132,34 +136,34 @@ const RatesScreen = () => {
               carMilePrice="$3.50"
             />
           </div>
-          {seeAll && (
-            <Fade className="rates-row" triggerOnce>
-              <div className="rates-row-centered">
-                <CarRate
-                  navigate={() => navigate("/cars/cadillac-ct6")}
-                  marginTop="mt64"
-                  carImage={fordExpedition}
-                  carCategorie="Luxury SUV"
-                  carName="Ford Expedition"
-                  carHourPrice="$136.00"
-                  carMilePrice="$3.00"
-                />
-                <CarRate
-                  navigate={() => navigate("/cars/mercedes-sprinter")}
-                  marginTop="mt32"
-                  carImage={sprinterRate}
-                  carCategorie="Van"
-                  carName="Mercedes Sprinter"
-                  carHourPrice="$188.00"
-                  carMilePrice="$3.50"
-                />
-              </div>
-            </Fade>
-          )}
+          {/* {seeAll && ( */}
+          <div className="rates-row">
+            <div className="rates-row-centered">
+              <CarRate
+                navigate={() => navigate("/cars/cadillac-ct6")}
+                marginTop="mt64"
+                carImage={fordExpedition}
+                carCategorie="Luxury SUV"
+                carName="Ford Expedition"
+                carHourPrice="$136.00"
+                carMilePrice="$3.00"
+              />
+              <CarRate
+                navigate={() => navigate("/cars/mercedes-sprinter")}
+                marginTop="mt32"
+                carImage={sprinterRate}
+                carCategorie="Van"
+                carName="Mercedes Sprinter"
+                carHourPrice="$188.00"
+                carMilePrice="$3.50"
+              />
+            </div>
+          </div>
+          {/* )} */}
         </div>
         <RegularButton
-          text={seeAll ? "See Less" : "See All"}
-          clickFunction={handleSeeAllClick}
+          text={"See All"}
+          clickFunction={navigateToRates}
           marginTop="mt32"
         />
       </div>

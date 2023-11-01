@@ -11,8 +11,6 @@ const containerStyle = {
   height: "300px",
 };
 
-//! "AIzaSyB8xYBxapbDpusz8RsfkxoqFhyZXw_cvls"
-
 const logo = require("../../assets/logo_white.svg").default;
 
 const Footer = () => {
@@ -68,7 +66,7 @@ const Footer = () => {
               <Link to="/services/corporate-travel" className="link mt8">
                 Corporate Travel
               </Link>
-              <Link to="/services/nationwide-service" className="link mt8">
+              <Link to="/services/nationwide" className="link mt8">
                 Nationwide Service
               </Link>
               <Link to="/services/special-events" className="link mt8">
@@ -112,10 +110,10 @@ const Footer = () => {
               <Link className="link" to="/services/airport-transfers">
                 Airport Transfers
               </Link>
-              <Link className="link" to="">
+              <Link className="link" to="/services/corporate-travel">
                 Corporate Travel
               </Link>
-              <Link className="link" to="/services/nationwide-service">
+              <Link className="link" to="/services/nationwide">
                 Nationwide Service
               </Link>
               <Link className="link" to="/services/special-events">

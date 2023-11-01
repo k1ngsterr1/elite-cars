@@ -34,28 +34,48 @@ const ServiceScreen = () => {
           Our <span className="orange">Services</span>
         </h2>
         <div className="service-tab-s mt64">
-          <img src={service01} className="service" alt="service" />
+          <img
+            src={service01}
+            className="service"
+            alt="service"
+            onClick={navigateAirportTransfers}
+          />
           <span className="service-text mt16">Airport Transfers</span>
           <span className="more mt8" onClick={navigateAirportTransfers}>
             More Info
           </span>
         </div>
         <div className="service-tab-s mt32">
-          <img src={service02} className="service" alt="service" />
+          <img
+            src={service02}
+            className="service"
+            alt="service"
+            onClick={navigateCorporateTravel}
+          />
           <span className="service-text mt16">Corporate Travel</span>
           <span className="more mt8" onClick={navigateCorporateTravel}>
             More Info
           </span>
         </div>
         <div className="service-tab-s mt32">
-          <img src={service03} className="service" alt="service" />
+          <img
+            src={service03}
+            className="service"
+            alt="service"
+            onClick={navigateNationwide}
+          />
           <span className="service-text mt16">Nationwide Service</span>
           <span className="more mt8" onClick={navigateNationwide}>
             More Info
           </span>
         </div>
         <div className="service-tab-s mt32">
-          <img src={service04} className="service" alt="service" />
+          <img
+            src={service04}
+            className="service"
+            alt="service"
+            onClick={navigateSpecialEvents}
+          />
           <span className="service-text mt16">Special Events</span>
           <span className="more mt8" onClick={navigateSpecialEvents}>
             More Info
@@ -68,28 +88,48 @@ const ServiceScreen = () => {
         </h2>
         <div className="services-list mt64">
           <div className="service-tab-s ">
-            <img src={service01} className="service" alt="service" />
+            <img
+              src={service01}
+              className="service"
+              alt="service"
+              onClick={navigateAirportTransfers}
+            />
             <span className="service-text mt16">Airport Transfers</span>
             <span className="more mt8" onClick={navigateAirportTransfers}>
               More Info
             </span>
           </div>
           <div className="service-tab-s">
-            <img src={service02} className="service" alt="service" />
+            <img
+              src={service02}
+              className="service"
+              alt="service"
+              onClick={navigateCorporateTravel}
+            />
             <span className="service-text mt16">Corporate Travel</span>
             <span className="more mt8" onClick={navigateCorporateTravel}>
               More Info
             </span>
           </div>
           <div className="service-tab-s ">
-            <img src={service03} className="service" alt="service" />
+            <img
+              src={service03}
+              className="service"
+              alt="service"
+              onClick={navigateNationwide}
+            />
             <span className="service-text mt16">Nationwide Service</span>
             <span className="more mt8" onClick={navigateNationwide}>
               More Info
             </span>
           </div>
           <div className="service-tab-s ">
-            <img src={service04} className="service" alt="service" />
+            <img
+              src={service04}
+              className="service"
+              alt="service"
+              onClick={navigateCorporateTravel}
+            />
             <span className="service-text mt16">Special Events</span>
             <span className="more mt8" onClick={navigateCorporateTravel}>
               More Info

@@ -180,8 +180,8 @@ const Contacts = () => {
           </div>
           <div className="contact-link-container mt32">
             <FontAwesomeIcon icon={faPhone} className="fa-icon" />
-            <a href="tel: +773-494-9021" className="contact-link">
-              +773-494-9021
+            <a href="tel: +1 (312) 972-3890" className="contact-link">
+              +1 (312) 972-3890
             </a>
           </div>
           <div className="contact-link-container mt32">
@@ -190,15 +190,15 @@ const Contacts = () => {
               href="mailto: contact@[yourcompany].com"
               className="contact-link"
             >
-              contact@[yourcompany].com
+              elitearrivalchicago@gmail.com{" "}
             </a>
           </div>
-          {/* <div className="contact-link-container mt32">
-          <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
-          <a href="" className="contact-link-adress">
-            200 E Randolph St, Suite 5100, Chicago, IL 60601
-          </a>
-        </div> */}
+          <div className="contact-link-container mt32">
+            <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
+            <a href="" className="contact-link">
+              5516 N Major Ave Chicago IL 60630{" "}
+            </a>
+          </div>
         </main>
         <main className="content-pc column mt128">
           <h1 className="heading-s auto">
@@ -284,8 +284,8 @@ const Contacts = () => {
               <div className="location-container">
                 <div className="contact-link-container mt32">
                   <FontAwesomeIcon icon={faPhone} className="fa-icon" />
-                  <a href="tel: +773-494-9021" className="contact-link">
-                    +773-494-9021
+                  <a href="tel: +1 (312) 972-3890" className="contact-link">
+                    +1 (312) 972-3890{" "}
                   </a>
                 </div>
                 <div className="contact-link-container mt32">
@@ -300,7 +300,7 @@ const Contacts = () => {
                 <div className="contact-link-container mt32">
                   <FontAwesomeIcon icon={faLocationDot} className="fa-icon" />
                   <a href="" className="contact-link">
-                    200 E Randolph St, Suite 5100, Chicago, IL 60601
+                    5516 N Major Ave Chicago IL 60630{" "}
                   </a>
                 </div>
               </div>

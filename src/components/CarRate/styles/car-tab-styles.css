@@ -86,6 +86,11 @@
   .rates-list .rates-row .rate-img {
     width: clamp(178px, 18.54048vw, 712px);
     height: clamp(178px, 18.54048vw, 712px);
+    transition: 0.3s all;
+    cursor: pointer;
+  }
+  .rates-list .rates-row .rate-img:hover {
+    scale: 1.02;
   }
   .rates-list .rates-row-centered {
     width: 47.5%;

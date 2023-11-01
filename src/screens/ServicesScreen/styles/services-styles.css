@@ -43,6 +43,11 @@
   .services-list .service-tab-s .service {
     width: clamp(178px, 18.54048vw, 712px);
     height: clamp(178px, 18.54048vw, 712px);
+    cursor: pointer;
+    transition: 0.3s all;
+  }
+  .services-list .service-tab-s .service:hover {
+    scale: 1.05;
   }
   .services-list .service-tab-s .service-text {
     color: #2C2C2C;

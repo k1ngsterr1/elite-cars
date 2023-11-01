@@ -39,7 +39,7 @@ const Menu: React.FC<MenuProps> = ({ isMenuOpen, toggleMenu }) => {
         <img className="logo" src={logo} alt="logo" />
         <figure className="separator" />
         <nav className="links mt16">
-          <Link className="link" to="/home" onClick={closeMenu}>
+          <Link className="link" to="/" onClick={closeMenu}>
             Home
           </Link>
           <Link className="link mt16" to="/services" onClick={closeMenu}>
