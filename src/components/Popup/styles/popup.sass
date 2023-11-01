@@ -1,7 +1,7 @@
 @import "../../../styles/variables"
 
 .modal-window
-    // position: absolute
+    position: absolute
     width: clamp(183px,85.51223999999999vw,732px)
     height: auto
     display: flex
@@ -9,6 +9,7 @@
     align-items: center
     justify-content: center
     background-color: $white
+    right: -40%
     border-radius: clamp(9px,4.20552vw,36px)
 
     .modal-window-content
@@ -62,6 +63,10 @@
         align-items: center
         justify-content: center
 
+    .popup-content
+        background-color: transparent
+        border: none
+
     .modal-window
         width: clamp(388.5px,40.46616vw,1554px)
         height: auto
@@ -70,6 +75,7 @@
         align-items: center
         justify-content: center
         background-color: $white
+        right: 0px
         border-radius: clamp(9px,0.93744vw,36px)
 
         .modal-window-content

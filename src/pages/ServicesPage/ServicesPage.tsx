@@ -36,8 +36,15 @@ const ServiceTab: React.FC<ServiceTabProps> = ({
 }) => {
   return (
     <div className="service-tab mt64">
-      <img className="service-img" src={serviceImage} alt="service"></img>
-      <h4 className="heading-fourth mt32">{serviceHeading}</h4>
+      <img
+        className="service-img"
+        src={serviceImage}
+        onClick={navigate}
+        alt="service"
+      />
+      <h4 className="heading-fourth mt32" onClick={navigate}>
+        {serviceHeading}
+      </h4>
       <p className="service-description mt16">{serviceDescription}</p>
       <button className="scroll-link mt32" onClick={navigate}>
         {scrollLinkText}
@@ -56,7 +63,7 @@ const ServiceTabPc: React.FC<ServiceTabPropsPc> = ({
   return (
     <div className="service-tab-pc mt64">
       <div className="service-content">
-        <h4 className="heading-fourth text-left">
+        <h4 className="heading-fourth text-left" onClick={navigate}>
           <span className="orange">{serviceHeading}</span>
         </h4>
         <p className="paragraph w70 mt16">{serviceDescription}</p>
@@ -64,7 +71,12 @@ const ServiceTabPc: React.FC<ServiceTabPropsPc> = ({
           {scrollLinkText}
         </button>
       </div>
-      <img src={serviceImage} alt="service-image" className="service-img" />
+      <img
+        src={serviceImage}
+        alt="service-image"
+        className="service-img"
+        onClick={navigate}
+      />
     </div>
   );
 };

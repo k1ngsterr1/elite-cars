@@ -40,6 +40,14 @@
   align-items: center !important;
 }
 
+.ml16 {
+  margin-left: clamp(8px, 3.73824vw, 32px);
+}
+
+.pc-form {
+  display: none;
+}
+
 .main-heading {
   color: #2C2C2C;
   font-family: Lato;
@@ -262,6 +270,12 @@
   .car-img-gallery {
     width: clamp(200px, 20.832vw, 800px);
     height: clamp(200px, 20.832vw, 800px);
+  }
+  .mt356 {
+    margin-top: clamp(178px, 18.54048vw, 712px) !important;
+  }
+  .pc-form {
+    display: flex;
   }
   .black {
     color: #2C2C2C;

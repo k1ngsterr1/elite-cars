@@ -2,9 +2,14 @@ import React, { useEffect, useState } from "react";
 import BingMapsReact from "bingmaps-react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faPhone,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/footer-style.css";
+import { Map } from "../Map/Map";
 
 const containerStyle = {
   width: "100%",
@@ -14,30 +19,12 @@ const containerStyle = {
 const logo = require("../../assets/logo_white.svg").default;
 
 const Footer = () => {
-  const [loadMap, setLoadMap] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoadMap(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
   return (
     <footer className="footer mt128">
       <div className="footer-content mt32">
-        <div style={{ width: "100%", height: "clamp(150px,70.092vw,600px)" }}>
-          {loadMap && (
-            <BingMapsReact
-              viewOptions={{
-                center: { latitude: 41.8781, longitude: -87.6298 },
-              }}
-              zoom={10}
-              bingMapsKey="Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn"
-            />
-          )}
-        </div>
+        <Map />
         <div className="footer-links mt32">
           <img className="logo" src={logo} alt="logo"></img>
           <span className="text white mt16">
@@ -72,6 +59,27 @@ const Footer = () => {
               <Link to="/services/special-events" className="link mt8">
                 Special Events
               </Link>
+            </div>
+            <div className="navigation-container mt32">
+              <span className="nav-bold">Contacts</span>
+              <a className="link mt16" href="tel:+1 (312) 972-3890">
+                <FontAwesomeIcon className="contacts-icon" icon={faPhone} />
+                <span className="ml16">+1 (312) 972-3890</span>
+              </a>
+              <a
+                className="link mt16"
+                href="mailto:elitearrivalchicago@gmail.com"
+              >
+                <FontAwesomeIcon className="contacts-icon" icon={faEnvelope} />
+                <span className="ml16">elitearrivalchicago@gmail.com</span>
+              </a>
+              <a className="link mt16">
+                <FontAwesomeIcon
+                  className="contacts-icon"
+                  icon={faLocationDot}
+                />
+                <span className="ml16">5516 N Major Ave Chicago IL 60630</span>
+              </a>
             </div>
           </div>
         </div>
@@ -127,15 +135,18 @@ const Footer = () => {
               <span className="contact-bold">Contact:</span>
               <div className="contact-group">
                 <FontAwesomeIcon className="icon" icon={faPhone} />
-                <a className="link-g" href="">
-                  +773-494-9021
+                <a className="link-g" href="tel:+1 (312) 972-3890">
+                  +1 (312) 972-3890
                 </a>
               </div>
               <span className="contact-bold">Email:</span>
               <div className="contact-group">
                 <FontAwesomeIcon className="icon" icon={faEnvelope} />
-                <a className="link-g" href="">
-                  cars@example.com
+                <a
+                  className="link-g"
+                  href="mailto: elitearrivalchicago@gmail.com"
+                >
+                  elitearrivalchicago@gmail.com
                 </a>
               </div>
             </nav>

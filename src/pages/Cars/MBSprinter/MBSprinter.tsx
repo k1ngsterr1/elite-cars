@@ -149,13 +149,13 @@ const MBSprinter = () => {
             />
           </SwiperSlide>
         </Swiper>
-        <div className="content-pc items-center column justify-center mt256">
+        <div className="content-pc items-center column justify-center mt356">
           <h2 className="heading-s text-center">
             <span className="orange">Gallery</span>
           </h2>
           <Swiper
             slidesPerView={4}
-            spaceBetween={180}
+            spaceBetween={190}
             navigation={true}
             pagination={false}
             modules={[Pagination, Navigation]}

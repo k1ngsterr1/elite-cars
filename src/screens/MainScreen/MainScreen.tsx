@@ -42,7 +42,7 @@ const MainScreen = () => {
           expectations with our exceptional service.
         </p>
         <CookieBanner />
-        <Button text="Explore Cars" scroll="" marginTop="mt32" />
+        <Button text="Explore Cars" scroll="rates" marginTop="mt32" />
         <RegularScrollButton
           text="Book Now"
           marginTop="mt16"

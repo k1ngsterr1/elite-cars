@@ -17,6 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/contacts.css";
+import { Map } from "../../components/Map/Map";
 
 const containerStyle = {
   width: "100%",
@@ -168,19 +169,7 @@ const Contacts = () => {
           </form>
           <h2 className="heading-fourth mt64">Our Location</h2>
           <div className="map">
-            <div
-              style={{ width: "100%", height: "clamp(150px,70.092vw,600px)" }}
-            >
-              {loadMap && (
-                <BingMapsReact
-                  viewOptions={{
-                    center: { latitude: 41.8781, longitude: -87.6298 },
-                  }}
-                  zoom={10}
-                  bingMapsKey="Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn"
-                />
-              )}
-            </div>
+            <Map />
           </div>
           <div className="contact-link-container mt32">
             <FontAwesomeIcon icon={faPhone} className="fa-icon" />
@@ -276,19 +265,7 @@ const Contacts = () => {
               </div>
             </form>
             <div className="map-content">
-              <div
-                style={{ width: "100%", height: "clamp(150px,70.092vw,600px)" }}
-              >
-                {loadMap && (
-                  <BingMapsReact
-                    viewOptions={{
-                      center: { latitude: 41.8781, longitude: -87.6298 },
-                    }}
-                    zoom={10}
-                    bingMapsKey="Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn"
-                  />
-                )}
-              </div>
+              <Map />
               <div className="location-container">
                 <div className="contact-link-container mt32">
                   <FontAwesomeIcon icon={faPhone} className="fa-icon" />
