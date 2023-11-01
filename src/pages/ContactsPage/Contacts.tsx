@@ -95,11 +95,15 @@ const Contacts = () => {
             Our <span className="orange">Contacts</span>
           </h1>
           <p className="paragraph text-center mt32">
-            At [Your Company Name], we prioritize open channels of
-            communication. We're here to answer your queries, listen to your
-            feedback, and discuss any opportunities for collaboration. Reach out
-            to us through any of the means below, and our dedicated team will be
-            in touch shortly.
+            Let us take the stress out of your journey. With Elite Arrival, you
+            can sit back, relax, and enjoy the ride, knowing that our
+            professional chauffeurs are handling the logistics for you.
+            <br /> <br /> Arrive in style and make a lasting impression with
+            Elite Arrival's Point-to-Point Service. Whether it's for business or
+            pleasure, our service will enhance your professional or social
+            image, leaving a positive and memorable impression. <br /> <br />{" "}
+            Contact us today to experience the exceptional service of Elite
+            Arrival, the leading car rental service with drivers in Chicago.
           </p>
           <form
             ref={form}
@@ -205,11 +209,15 @@ const Contacts = () => {
             Our <span className="orange">Contacts</span>
           </h1>
           <p className="paragraph w50 text-center auto mt32">
-            At [Your Company Name], we prioritize open channels of
-            communication. We're here to answer your queries, listen to your
-            feedback, and discuss any opportunities for collaboration. Reach out
-            to us through any of the means below, and our dedicated team will be
-            in touch shortly.
+            Let us take the stress out of your journey. With Elite Arrival, you
+            can sit back, relax, and enjoy the ride, knowing that our
+            professional chauffeurs are handling the logistics for you.
+            <br /> <br /> Arrive in style and make a lasting impression with
+            Elite Arrival's Point-to-Point Service. Whether it's for business or
+            pleasure, our service will enhance your professional or social
+            image, leaving a positive and memorable impression. <br /> <br />{" "}
+            Contact us today to experience the exceptional service of Elite
+            Arrival, the leading car rental service with drivers in Chicago.
           </p>
           <div className="contacts-container mt128">
             <form className="contact-form" ref={form} onSubmit={sendEmail}>
