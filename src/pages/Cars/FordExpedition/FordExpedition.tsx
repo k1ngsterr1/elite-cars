@@ -131,19 +131,39 @@ const FordExpedition = () => {
           className="car-swiper"
         >
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
         </Swiper>
         <div className="content-pc items-center column justify-center mt256">
@@ -168,34 +188,74 @@ const FordExpedition = () => {
             className="car-swiper-pc"
           >
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
           </Swiper>
         </div>

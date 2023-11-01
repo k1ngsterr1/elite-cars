@@ -99,7 +99,7 @@ const MBSprinter = () => {
         <img src={cadillacPc} alt="car-pc" className="car-pc-img" />
         <Swiper
           slidesPerView={1}
-          spaceBetween={100}
+          spaceBetween={0}
           loop={true}
           pagination={true}
           navigation={true}
@@ -114,19 +114,39 @@ const MBSprinter = () => {
           className="car-swiper"
         >
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+            <img
+              className="car-img-gallery mt64"
+              src={cadillacMob}
+              alt="cadillac"
+            />
           </SwiperSlide>
         </Swiper>
         <div className="content-pc items-center column justify-center mt256">
@@ -135,10 +155,8 @@ const MBSprinter = () => {
           </h2>
           <Swiper
             slidesPerView={4}
-            spaceBetween={400}
+            spaceBetween={180}
             navigation={true}
-            loop={true}
-            centeredSlides={true}
             pagination={false}
             modules={[Pagination, Navigation]}
             style={
@@ -151,34 +169,74 @@ const MBSprinter = () => {
             className="car-swiper-pc"
           >
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="car-img mt64" src={cadillacMob} alt="cadillac" />
+              <img
+                className="car-img-gallery mt64"
+                src={cadillacMob}
+                alt="cadillac"
+              />
             </SwiperSlide>
           </Swiper>
         </div>

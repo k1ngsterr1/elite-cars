@@ -9,6 +9,7 @@ import {
 } from "../Button/Button";
 
 import "./styles/form.css";
+import ThanksPopup from "../Popup/ThanksPopup";
 
 const Form = () => {
   const [fullName, setFullName] = useState("");
@@ -19,6 +20,7 @@ const Form = () => {
   const [passengers, setPassengers] = useState(1);
   const [luggage, setLuggage] = useState(1);
 
+  const [isOpen, setOpen] = useState(false);
   const form = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const Form = () => {
     setComment("");
     setPassengers(1);
     setLuggage(1);
-    // setOpen((o) => !o);
+    setOpen((o) => !o);
 
     emailjs
       .sendForm(
@@ -311,6 +313,7 @@ const Form = () => {
         </div>
         <RegularButton text="Send Request" marginTop="mt32" />
       </form>
+      <ThanksPopup open={isOpen} closeMenu={() => setOpen(false)} />
     </div>
   );
 };

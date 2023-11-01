@@ -1,0 +1,120 @@
+@import "../../../styles/variables"
+
+.modal-window
+    // position: absolute
+    width: clamp(183px,85.51223999999999vw,732px)
+    height: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: $white
+    border-radius: clamp(9px,4.20552vw,36px)
+
+    .modal-window-content
+        width: 90%
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: $m64mob
+        margin-bottom: $m64mob
+
+        .modal-text
+            color: $orange
+            text-align: center
+            font-family: Inter
+            font-size: $m32mob
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            margin-top: $m32mob
+
+        .paragraph-text
+            color: $black
+            text-align: center
+            font-family: Inter
+            font-size: clamp(9.5px,4.439159999999999vw,38px)
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            margin-top: $m16mob
+
+        .modal-btn
+            width: clamp(120px,56.0736vw,480px)
+            height: clamp(25px,11.681999999999999vw,100px)
+            color: #FFF
+            font-family: Inter
+            font-size: $font17mob
+            font-style: normal
+            font-weight: 600
+            line-height: normal
+            background-color: $black
+            margin-top: $m32mob
+            border: none
+            outline: none
+
+@media screen and  (min-width: 1024px)
+
+    .modal-animation
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    .modal-window
+        width: clamp(388.5px,40.46616vw,1554px)
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background-color: $white
+        border-radius: clamp(9px,0.93744vw,36px)
+
+        .modal-window-content
+            width: 90%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-top: $m64
+            margin-bottom: $m64
+
+            .modal-text
+                color: $black
+                text-align: center
+                font-family: Inter
+                font-size: $m32
+                font-style: normal
+                font-weight: 500
+                line-height: normal
+                margin-top: $m32
+
+            .paragraph-text
+                color: $black
+                text-align: center
+                font-family: Inter
+                font-size: clamp(9.5px,0.9895200000000001vw,38px)
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                margin-top: $m16
+
+            .modal-btn
+                width: clamp(120px,12.4992vw,480px)
+                height: clamp(25px,2.604vw,100px)
+                color: #FFF
+                font-family: Inter
+                font-size: clamp(8.5px,0.88536vw,34px)
+                font-style: normal
+                font-weight: 600
+                line-height: normal
+                background-color: $black
+                margin-top: $m32
+                border: none
+                outline: none
+                cursor: pointer
+                transition: 0.3s all
+                &:hover
+                    background-color: $orange
