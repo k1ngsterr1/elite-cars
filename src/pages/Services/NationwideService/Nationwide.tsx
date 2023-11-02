@@ -289,35 +289,34 @@ const Nationwide = () => {
             confidentiality. They will ensure that your executives arrive at
             their destination on time and in style, leaving a lasting impression
             on clients and business partners alike.
-            <br />
-            <br />
-            We pride ourselves on offering comprehensive transportation
-            solutions that go beyond the basics. From point-to-point
-            transportation to specialized transportation management, we cater to
-            every need. Our goal is to make your travel experience seamless and
-            stress-free, allowing you to focus on what matters most – your
-            business.
-            <br />
-            <br />
-            With Elite Arrival, you can expect consistent quality assurance no
-            matter where you're headed. Our commitment to excellence remains
-            uncompromised, ensuring that the Elite Arrival experience is
-            unparalleled in every city we serve. And with our 24/7 customer
-            helpline, we are always there to support you, no matter the time or
-            location.
-            <br />
-            <br />
-            In a world filled with choices, let Elite Arrival be your clear
-            choice for unparalleled chauffeured services. Experience the
-            difference of our nationwide service and discover why we are the
-            preferred choice for elite car rental with a driver in Chicago.
-            Contact us today to book your next corporate journey and elevate
-            your travel experience to new heights.
           </p>
           <h4 className="heading-s text-center mt128">Send Request</h4>
-
-          <div className="mt64" style={{ width: "100%" }}>
+          <div className="mt16" style={{ width: "100%" }}>
             <Form />
+            <div className="form-lower-mob paragraph text-center">
+              We pride ourselves on offering comprehensive transportation
+              solutions that go beyond the basics. From point-to-point
+              transportation to specialized transportation management, we cater
+              to every need. Our goal is to make your travel experience seamless
+              and stress-free, allowing you to focus on what matters most – your
+              business.
+              <br />
+              <br />
+              With Elite Arrival, you can expect consistent quality assurance no
+              matter where you're headed. Our commitment to excellence remains
+              uncompromised, ensuring that the Elite Arrival experience is
+              unparalleled in every city we serve. And with our 24/7 customer
+              helpline, we are always there to support you, no matter the time
+              or location.
+              <br />
+              <br />
+              In a world filled with choices, let Elite Arrival be your clear
+              choice for unparalleled chauffeured services. Experience the
+              difference of our nationwide service and discover why we are the
+              preferred choice for elite car rental with a driver in Chicago.
+              Contact us today to book your next corporate journey and elevate
+              your travel experience to new heights.
+            </div>
           </div>
         </div>
         <Footer />

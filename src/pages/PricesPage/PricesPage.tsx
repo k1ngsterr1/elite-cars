@@ -243,14 +243,7 @@ const PricesPage = () => {
             Arrival's car rental service with drivers in Chicago. Contact us
             today to receive a personalized quote and book your next journey
             with us. At Elite Arrival, we strive to offer competitive rates
-            while maintaining the highest standards of service. Our goal is to
-            provide you with a seamless and luxurious transportation experience
-            at a reasonable price. When you choose Elite Arrival, reliability is
-            guaranteed. Our professional drivers prioritize punctuality,
-            ensuring you never miss an important appointment or event. Safety is
-            also paramount to us. Rest assured that our chauffeurs are highly
-            trained and experienced, prioritizing your well-being throughout the
-            entire journey.
+            while maintaining the highest standards of service.
           </p>
         </main>
         <main className="content-pc m64 column">
@@ -549,6 +542,15 @@ const PricesPage = () => {
           Send <span className="orange">Request</span>
         </h2>
         <Form />
+        <p className="form-lower-mob paragraph text-center w80 auto">
+          Our goal is to provide you with a seamless and luxurious
+          transportation experience at a reasonable price. When you choose Elite
+          Arrival, reliability is guaranteed. Our professional drivers
+          prioritize punctuality, ensuring you never miss an important
+          appointment or event. Safety is also paramount to us. Rest assured
+          that our chauffeurs are highly trained and experienced, prioritizing
+          your well-being throughout the entire journey.
+        </p>
         <Footer />
       </div>
     </>

@@ -294,25 +294,28 @@ const CorporateTravel = () => {
             providing a comfortable and elegant atmosphere for your corporate
             travel needs. Whether you prefer a sleek sedan for a solo executive
             or a spacious SUV for a larger group, we have the perfect vehicle to
-            accommodate your requirements. <br /> <br /> We also understand that
-            flexibility is crucial in the corporate world. That's why Elite
-            Arrival offers 24/7 availability, ensuring that we are always ready
-            to meet your last-minute travel requests or changes in plans. Our
-            customer support team is available round the clock to assist you
-            with any queries or concerns you may have. At Elite Arrival, we
-            strive to exceed your expectations with our corporate limo services.
-            We believe that reliable and professional transportation is the
-            foundation of successful business travel. Let us take care of your
-            corporate transportation needs, so you can focus on what matters
-            most – your business. <br /> <br /> Choose Elite Arrival for your
-            corporate travel requirements in Chicago, and experience the
-            difference of our exceptional service. Contact us today to book your
-            next corporate journey and discover why we are the preferred choice
-            for elite car rental with driver in Chicago.
+            accommodate your requirements.
           </p>
           <h4 className="heading-s text-center mt128">Send Request</h4>
           <div className="mt64" style={{ width: "100%" }}>
             <Form />
+            <div className="form-lower-mob paragraph text-center">
+              <br /> <br /> We also understand that flexibility is crucial in
+              the corporate world. That's why Elite Arrival offers 24/7
+              availability, ensuring that we are always ready to meet your
+              last-minute travel requests or changes in plans. Our customer
+              support team is available round the clock to assist you with any
+              queries or concerns you may have. At Elite Arrival, we strive to
+              exceed your expectations with our corporate limo services. We
+              believe that reliable and professional transportation is the
+              foundation of successful business travel. Let us take care of your
+              corporate transportation needs, so you can focus on what matters
+              most – your business. <br /> <br /> Choose Elite Arrival for your
+              corporate travel requirements in Chicago, and experience the
+              difference of our exceptional service. Contact us today to book
+              your next corporate journey and discover why we are the preferred
+              choice for elite car rental with driver in Chicago.
+            </div>
           </div>
         </div>
         <Footer />

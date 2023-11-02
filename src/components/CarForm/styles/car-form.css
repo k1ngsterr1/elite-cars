@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+}
+
 .form-container {
   width: 90%;
   margin: clamp(25px, 11.682vw, 100px) auto;
@@ -21,6 +33,62 @@
 }
 .form-container .form-group {
   width: 83%;
+}
+.form-container .form-group .form-swiper {
+  width: 100%;
+}
+.form-container .form-group .form-swiper .slide {
+  display: flex;
+  flex-direction: column;
+}
+.form-container .form-group .form-swiper .slide .car-card {
+  width: clamp(90px, 42.0552vw, 360px);
+  height: clamp(90px, 42.0552vw, 360px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.form-container .form-group .form-swiper .slide .car-card .checkbox {
+  width: clamp(10px, 4.6728vw, 40px);
+  height: clamp(10px, 4.6728vw, 40px);
+  border: 2px solid #ddd;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 50%;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.form-container .form-group .form-swiper .slide .car-card .checkbox:checked {
+  background-color: #FF5722;
+}
+.form-container .form-group .form-swiper .slide .car-card .card-text {
+  color: #FF5722;
+  font-family: Inter;
+  font-size: clamp(8.5px, 3.97188vw, 34px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.form-container .form-group .form-swiper .slide .car-card .car-card-image {
+  width: 90%;
+}
+.form-container .form-group .form-swiper .slide .field {
+  width: 65%;
+  height: clamp(22.5px, 10.5138vw, 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.form-container .form-group .form-swiper .slide .field .text, .form-container .form-group .form-swiper .slide .field .icon {
+  font-size: clamp(11px, 5.14008vw, 44px) !important;
+}
+.form-container .form-group .form-swiper .slide .field .text {
+  font-family: Inter;
+  margin-left: clamp(8px, 3.73824vw, 32px);
 }
 .form-container .form-heading {
   color: #FF5722;

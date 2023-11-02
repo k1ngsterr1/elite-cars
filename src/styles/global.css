@@ -19,6 +19,10 @@
   width: 100% !important;
 }
 
+.form-lower-mob {
+  display: block !important;
+}
+
 .react-time-picker {
   width: 100%;
   background-color: white;
@@ -271,6 +275,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .form-lower-mob {
+    display: none !important;
+  }
   .car-img-gallery {
     width: clamp(200px, 20.832vw, 800px);
     height: clamp(200px, 20.832vw, 800px);

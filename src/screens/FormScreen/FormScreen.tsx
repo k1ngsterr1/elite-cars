@@ -3,12 +3,15 @@ import Form from "../../components/Form/Form";
 
 interface FormScreenProps {
   formParagraph?: string;
+  formParagraphMob?: string;
   formParagraphLower?: string;
+  formParagraphLowerMob?: string;
 }
 
 const FormScreen: React.FC<FormScreenProps> = ({
   formParagraphLower,
   formParagraph,
+  formParagraphLowerMob,
 }) => {
   const [passengers, setPassengers] = useState(1);
   const [luggage, setLuggage] = useState(1);
@@ -28,6 +31,9 @@ const FormScreen: React.FC<FormScreenProps> = ({
         </h2>
         <Form />
         <p className="paragraph mt64 text-center">{formParagraphLower}</p>
+        <p className="paragraph form-lower-mob text-center">
+          {formParagraphLowerMob}
+        </p>
       </div>
     </section>
   );

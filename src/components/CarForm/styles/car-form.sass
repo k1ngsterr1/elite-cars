@@ -1,5 +1,15 @@
 @import "../../../styles/variables"
 
+.swiper-slide
+    display: flex
+    align-items: center
+    justify-content: center
+
+.popup-content
+    background-color: transparent !important
+    background: transparent !important
+    border: none !important
+
 .form-container
     width: 90%
     margin: clamp(25px,11.681999999999999vw,100px) auto
@@ -23,6 +33,61 @@
         width: 83%
         // margin-top: $m32mob
         // margin-bottom: clamp(10px,4.6728vw,40px)
+
+        .form-swiper
+            width: 100%
+
+            .slide
+                display: flex
+                flex-direction: column
+
+                .car-card
+                    width: clamp(90px,42.0552vw,360px)
+                    height: clamp(90px,42.0552vw,360px)
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    background-color: $white
+
+                    .checkbox
+                        width: clamp(10px,4.6728vw,40px)
+                        height: clamp(10px,4.6728vw,40px)
+                        border: 2px solid #ddd
+                        appearance: none
+                        border-radius: 50%
+                        margin-top: $m16mob
+                        &:checked
+                            background-color: $orange
+
+                    .card-text
+                        color: $orange
+                        font-family: Inter
+                        font-size: clamp(8.5px,3.9718799999999996vw,34px)
+                        font-style: normal
+                        font-weight: 400
+                        line-height: normal
+                        text-transform: capitalize
+                        margin-top: $m16mob
+                        // margin-bottom: $m8mob
+
+                    .car-card-image
+                        width: 90%
+                        // margin-top: $m8mob
+
+                .field
+                    width: 65%
+                    height: clamp(22.5px,10.5138vw,90px)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    background-color: $white
+
+                    .text, .icon
+                        font-size: clamp(11px,5.140079999999999vw,44px) !important
+
+                    .text
+                        font-family: Inter
+                        margin-left: $m16mob
 
     .form-heading
         color: $orange

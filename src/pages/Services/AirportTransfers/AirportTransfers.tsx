@@ -285,31 +285,34 @@ const AirportTransfers = () => {
             of time, especially in the world of travel. With our impeccable
             track record, you never have to worry about missing a flight or an
             important meeting. We also believe in transparent pricing, so what
-            you see is what you pay. There are no hidden charges or last-minute
-            surprises with us. No matter where you are, you can expect the same
-            level of luxury and professionalism that Elite Arrival is known for.
-            To book a service with Elite Arrival, simply visit our online
-            booking portal or contact our 24/7 customer support. Your safety is
-            our utmost priority, and we take all necessary safety measures. Our
-            fleet is regularly serviced and maintained to meet the highest
-            safety standards, and our chauffeurs undergo rigorous training and
-            background checks. We also adapt to the latest health and safety
-            guidelines to ensure your well-being.
-            <br />
-            <br />
-            Whether you need transportation for a large corporate group or a
-            special event, Elite Arrival offers customized solutions to meet
-            your specific requirements. Don't just take our word for it – hear
-            what our clients have to say. They have experienced the luxury,
-            professionalism, and excellence of Elite Arrival's Chicago airport
-            car service firsthand. Choose Elite Arrival today and experience the
-            journey of excellence. Contact us now to book your ride and let us
-            exceed your expectations with our refined, comfortable, and
-            exceptional service
+            you see is what you pay.
           </p>
           <div className="mt64" style={{ width: "100%" }}>
             <h3 className="heading-s text-center">Send Request</h3>
             <Form />
+            <div className="form-lower-mob paragraph text-center">
+              There are no hidden charges or last-minute surprises with us. No
+              matter where you are, you can expect the same level of luxury and
+              professionalism that Elite Arrival is known for. To book a service
+              with Elite Arrival, simply visit our online booking portal or
+              contact our 24/7 customer support. Your safety is our utmost
+              priority, and we take all necessary safety measures. Our fleet is
+              regularly serviced and maintained to meet the highest safety
+              standards, and our chauffeurs undergo rigorous training and
+              background checks. We also adapt to the latest health and safety
+              guidelines to ensure your well-being.
+              <br />
+              <br />
+              Whether you need transportation for a large corporate group or a
+              special event, Elite Arrival offers customized solutions to meet
+              your specific requirements. Don't just take our word for it – hear
+              what our clients have to say. They have experienced the luxury,
+              professionalism, and excellence of Elite Arrival's Chicago airport
+              car service firsthand. Choose Elite Arrival today and experience
+              the journey of excellence. Contact us now to book your ride and
+              let us exceed your expectations with our refined, comfortable, and
+              exceptional service
+            </div>
           </div>
         </div>
         <Footer />

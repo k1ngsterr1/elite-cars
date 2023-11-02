@@ -275,30 +275,33 @@ const SpecialEvents = () => {
             the city to support your favorite team, Elite Arrival offers
             affordable and reliable transportation services. We will take care
             of getting you to and from the game, allowing you to focus on
-            enjoying the experience. If you're attending a concert in Chicago,
-            our luxury limousines and chauffeured transportation vehicles are
-            ready to provide you with the ultimate concert experience. Gather
-            your group and let us take care of the transportation, making sure
-            you arrive in a fun and exciting way.
-            <br />
-            <br />
-            And when it comes to birthday parties, Elite Arrival wants to
-            celebrate with you. Whether you're heading to a local bar or a
-            special party in your honor, our elegant touch will make your
-            special day unforgettable. Let us take care of the transportation,
-            so you can focus on enjoying your celebration. With Elite Arrival,
-            you can expect the same level of luxury, safety, and reliability
-            that sets us apart as the premier choice for elite car rental with a
-            driver in Chicago. We are committed to making your special event
-            seamless and stress-free, allowing you to fully enjoy the occasion.
-            Contact Elite Arrival today to book your transportation for your
-            next special event and experience the difference of our unparalleled
-            chauffeured services. Trust us to elevate your travel experience to
-            new heights and make your event truly memorable.
+            enjoying the experience.
           </p>
           <div className="mt64" style={{ width: "100%" }}>
             <h3 className="heading-s text-center">Send Request</h3>
             <Form />
+            <div className="form-lower-mob paragraph text-center">
+              If you're attending a concert in Chicago, our luxury limousines
+              and chauffeured transportation vehicles are ready to provide you
+              with the ultimate concert experience. Gather your group and let us
+              take care of the transportation, making sure you arrive in a fun
+              and exciting way.
+              <br />
+              <br />
+              And when it comes to birthday parties, Elite Arrival wants to
+              celebrate with you. Whether you're heading to a local bar or a
+              special party in your honor, our elegant touch will make your
+              special day unforgettable. Let us take care of the transportation,
+              so you can focus on enjoying your celebration. With Elite Arrival,
+              you can expect the same level of luxury, safety, and reliability
+              that sets us apart as the premier choice for elite car rental with
+              a driver in Chicago. We are committed to making your special event
+              seamless and stress-free, allowing you to fully enjoy the
+              occasion. Contact Elite Arrival today to book your transportation
+              for your next special event and experience the difference of our
+              unparalleled chauffeured services. Trust us to elevate your travel
+              experience to new heights and make your event truly memorable.
+            </div>
           </div>
         </div>
         <Footer />

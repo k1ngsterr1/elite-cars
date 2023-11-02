@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPerson, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
 import TimePicker from "react-time-picker";
@@ -8,6 +12,11 @@ import ThanksPopup from "../Popup/ThanksPopup";
 import "react-datepicker/dist/react-datepicker.css"; // Import the CSS
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 import "./styles/car-form.css";
 
@@ -30,11 +39,16 @@ const luggageOptions = [
   { value: "No", label: "No" },
 ];
 
+const sedan = require("../../assets/sedan.webp");
+const premium_sedan = require("../../assets/premium_sedan.webp");
+const SUV = require("../../assets/SUV.webp");
+const van = require("../../assets/van.webp");
+
 const BookingForm: React.FC = () => {
   // Step 1
   const [currentStep, setCurrentStep] = useState(1);
   const [passengers, setPassengers] = useState(1);
-  const [carType, setCarType] = useState(null);
+  const [selectedCar, setSelectedCar] = useState("");
   const [serviceType, setServiceType] = useState(null);
   const [luggage, setLuggage] = useState(null);
   const [isOpen, setOpen] = useState(false);
@@ -55,6 +69,14 @@ const BookingForm: React.FC = () => {
     setPassengers(1);
   }
 
+  const handleCheckboxChange = (carType: any) => {
+    if (selectedCar === carType) {
+      setSelectedCar("");
+    } else {
+      setSelectedCar(carType);
+    }
+  };
+
   const sendEmail = () => {
     setOpen((o) => !o);
     emailjs
@@ -62,7 +84,7 @@ const BookingForm: React.FC = () => {
         process.env.REACT_APP_SERVICE_ID!,
         process.env.REACT_APP_SECOND_TEMPLATE_ID!,
         {
-          carType: carType,
+          carType: selectedCar,
           serviceType: serviceType,
           luggage: luggage,
           passengers: passengers,
@@ -89,7 +111,7 @@ const BookingForm: React.FC = () => {
 
   const handleNextClick = () => {
     if (currentStep === 1) {
-      if (carType && serviceType && luggage && passengers) {
+      if (selectedCar && serviceType && luggage && passengers) {
         setCurrentStep(2);
       } else {
         alert("Please fill out all fields in Step 1 before proceeding!");
@@ -116,13 +138,118 @@ const BookingForm: React.FC = () => {
         <>
           <div className="mob-form-step-1">
             <h3 className="form-heading">Step 1</h3>
-            <div className="form-group mt32">
+            <div className="form-group text-center mt32">
               <label className="label">Select Your Car Type</label>
-              <Select
-                options={carOptions}
-                className="selector"
-                onChange={(option: any) => setCarType(option?.value)}
-              />
+              <Swiper
+                className="form-swiper"
+                slidesPerView={1}
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                navigation={true}
+                centeredSlides={true}
+                pagination={false}
+                style={
+                  {
+                    "--swiper-navigation-color": "#FF5722",
+                  } as React.CSSProperties
+                }
+              >
+                <SwiperSlide className="slide">
+                  <div className="car-card">
+                    <input
+                      type="checkbox"
+                      className="checkbox"
+                      checked={selectedCar === "Sedan"}
+                      onChange={() => handleCheckboxChange("Sedan")}
+                    />
+                    <span className="card-text orange">Sedan</span>
+                    <img className="car-card-image" src={sedan} alt="sedan" />
+                  </div>
+                  <div className="field orange mt16">
+                    <FontAwesomeIcon
+                      className="icon orange"
+                      icon={faBriefcase}
+                    />
+                    <span className="text">4</span>
+                  </div>
+                  <div className="field orange mt16">
+                    <FontAwesomeIcon className="icon orange" icon={faPerson} />
+                    <span className="text">4</span>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="slide">
+                  <div className="car-card">
+                    <input
+                      type="checkbox"
+                      className="checkbox"
+                      checked={selectedCar === "Premium Sedan"}
+                      onChange={() => handleCheckboxChange("Premium Sedan")}
+                    />
+                    <span className="card-text orange">Premium Sedan</span>
+                    <img
+                      className="car-card-image"
+                      src={premium_sedan}
+                      alt="premium_sedan"
+                    />
+                  </div>
+                  <div className="field orange mt16">
+                    <FontAwesomeIcon
+                      className="icon orange"
+                      icon={faBriefcase}
+                    />
+                    <span className="text">4</span>
+                  </div>
+                  <div className="field orange mt16">
+                    <FontAwesomeIcon className="icon orange" icon={faPerson} />
+                    <span className="text">4</span>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="slide">
+                  <div className="car-card">
+                    <input
+                      type="checkbox"
+                      className="checkbox"
+                      checked={selectedCar === "Suv"}
+                      onChange={() => handleCheckboxChange("Suv")}
+                    />
+                    <span className="card-text orange">SUV</span>
+                    <img className="car-card-image" src={SUV} alt="sedan" />
+                  </div>
+                  <div className="field orange mt16">
+                    <FontAwesomeIcon
+                      className="icon orange"
+                      icon={faBriefcase}
+                    />
+                    <span className="text">4</span>
+                  </div>
+                  <div className="field orange mt16">
+                    <FontAwesomeIcon className="icon orange" icon={faPerson} />
+                    <span className="text">4</span>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="slide">
+                  <div className="car-card">
+                    <input
+                      type="checkbox"
+                      className="checkbox"
+                      checked={selectedCar === "Van"}
+                      onChange={() => handleCheckboxChange("Van")}
+                    />
+                    <span className="card-text orange">Van</span>
+                    <img className="car-card-image" src={van} alt="sedan" />
+                  </div>
+                  <div className="field orange mt16">
+                    <FontAwesomeIcon
+                      className="icon orange"
+                      icon={faBriefcase}
+                    />
+                    <span className="text">4</span>
+                  </div>
+                  <div className="field orange mt16">
+                    <FontAwesomeIcon className="icon orange" icon={faPerson} />
+                    <span className="text">4</span>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
             <div className="form-group mt32">
               <label className="label">Select Service Type</label>
@@ -189,7 +316,7 @@ const BookingForm: React.FC = () => {
                   options={carOptions}
                   className="selector"
                   name="carType"
-                  onChange={(option: any) => setCarType(option?.value)}
+                  onChange={(option: any) => setSelectedCar(option?.value)}
                 />
               </div>
               <div className="form-group mt64">
