@@ -2,7 +2,7 @@
 
 .review-tab
     width: 70%
-    height: auto
+    height: 250px
     background-color: #F7F7F7
     margin: auto
     margin-bottom: $m16mob
@@ -13,6 +13,7 @@
         display: flex
         align-items: center
         justify-content: space-between
+        margin: auto
 
         .review-name
             width: 90%
@@ -37,6 +38,19 @@
                 line-height: normal
                 text-transform: capitalize
                 margin-left: $m8mob
+
+        .screenshot
+            width: clamp(100px,46.727999999999994vw,400px)
+            height: clamp(14.5px,6.77556vw,58px)
+            color: $black
+            background-color: $orange
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            text-transform: capitalize
+            border-radius: 20px
+            border: none
+            margin-top: clamp(6px,2.80368vw,24px)
 
     .client-review
         width: 90%

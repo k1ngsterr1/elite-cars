@@ -23,6 +23,7 @@ const ReviewsTab: React.FC<ReviewsProps> = ({ clientName, clientReview }) => {
           <div className="circle">a</div>
           <span className="client-name">{clientName}</span>
         </div>
+        <button className="screenshot">Screenshot</button>
       </div>
       <div className="rating"></div>
       <p className="client-review">{clientReview}</p>

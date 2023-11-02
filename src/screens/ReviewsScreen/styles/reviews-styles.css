@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .review-tab {
   width: 70%;
-  height: auto;
+  height: 250px;
   background-color: #F7F7F7;
   margin: auto;
   margin-bottom: clamp(8px, 3.73824vw, 32px);
@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
 }
 .review-tab .review-upper .review-name {
   width: 90%;
@@ -37,6 +38,19 @@
   line-height: normal;
   text-transform: capitalize;
   margin-left: clamp(4px, 1.86912vw, 16px);
+}
+.review-tab .review-upper .screenshot {
+  width: clamp(100px, 46.728vw, 400px);
+  height: clamp(14.5px, 6.77556vw, 58px);
+  color: #2C2C2C;
+  background-color: #FF5722;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  border-radius: 20px;
+  border: none;
+  margin-top: clamp(6px, 2.80368vw, 24px);
 }
 .review-tab .client-review {
   width: 90%;
