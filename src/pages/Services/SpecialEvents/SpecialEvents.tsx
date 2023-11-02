@@ -21,8 +21,8 @@ const rate05 = require("../../../assets/rates_05.webp");
 const fordExpedition = require("../../../assets/expedition-rate.webp");
 const sprinterRate = require("../../../assets/sprinter-rate.webp");
 
-const service = require("../../../assets/service_special_mob.webp");
-const service_pc = require("../../../assets/service_special_event.webp");
+const service = require("../../../assets/service_events_mob.webp");
+const service_pc = require("../../../assets/service_events.webp");
 
 const SpecialEvents = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);

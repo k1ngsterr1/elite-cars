@@ -22,7 +22,7 @@ const fordExpedition = require("../../../assets/expedition-rate.webp");
 const sprinterRate = require("../../../assets/sprinter-rate.webp");
 
 const service = require("../../../assets/service_airport.webp");
-const service_pc = require("../../../assets/service_airport_pc.webp");
+const service_pc = require("../../../assets/service_airport.webp");
 
 const AirportTransfers = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);

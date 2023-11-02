@@ -22,7 +22,7 @@ const fordExpedition = require("../../../assets/expedition-rate.webp");
 const sprinterRate = require("../../../assets/sprinter-rate.webp");
 
 const service = require("../../../assets/service_corporate_mob.webp");
-const service_pc = require("../../../assets/service_corporate_travel.webp");
+const service_pc = require("../../../assets/service_corporate.webp");
 
 const CorporateTravel = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);

@@ -22,7 +22,7 @@ const fordExpedition = require("../../../assets/expedition-rate.webp");
 const sprinterRate = require("../../../assets/sprinter-rate.webp");
 
 const service = require("../../../assets/service_nationwide_mob.webp");
-const service_pc = require("../../../assets/service_nationwide_pc.webp");
+const service_pc = require("../../../assets/service_nationwide.webp");
 
 const Nationwide = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);

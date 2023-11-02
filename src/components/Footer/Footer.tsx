@@ -44,6 +44,9 @@ const Footer = () => {
             <Link to="/contacts" className="link mt8">
               Contacts
             </Link>
+            <Link to="/policy" className="link mt8">
+              Privacy Policy
+            </Link>
             <div className="navigation-container mt32">
               <span className="nav-bold">Services</span>
               <Link to="/services/airport-transfers" className="link mt16">
@@ -108,6 +111,9 @@ const Footer = () => {
               </Link>
               <Link to="/contacts" className="link mt8">
                 Contacts
+              </Link>
+              <Link to="/policy" className="link mt8">
+                Privacy Policy
               </Link>
             </nav>
           </div>
