@@ -23,6 +23,11 @@
   display: block !important;
 }
 
+.service {
+  width: clamp(172.5px, 80.6058vw, 690px) !important;
+  height: clamp(172.5px, 80.6058vw, 690px) !important;
+}
+
 .react-time-picker {
   width: 100%;
   background-color: white;
