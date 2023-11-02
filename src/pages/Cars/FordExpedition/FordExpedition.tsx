@@ -5,12 +5,14 @@ import PriceTable from "../../../components/PriceTable/PriceTable";
 import CarFeature from "../../../components/CarFeature/CarFeature";
 import FormScreen from "../../../screens/FormScreen/FormScreen";
 import Footer from "../../../components/Footer/Footer";
+import Popup from "reactjs-popup";
 
 import { Button } from "../../../components/Button/Button";
 import { Form, Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
+import { Zoom } from "react-awesome-reveal";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -25,6 +27,19 @@ const icon = require("../../../assets/icon.svg").default;
 
 const FordExpedition = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isOpen, setOpened] = useState();
+  const [activeImage, setActiveImage] = useState("");
+
+  const openModal = (imageSrc: any) => {
+    setActiveImage(imageSrc);
+    setModalOpen(true);
+    console.log("ZOO");
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -133,6 +148,7 @@ const FordExpedition = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -140,6 +156,7 @@ const FordExpedition = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -147,6 +164,7 @@ const FordExpedition = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -154,6 +172,7 @@ const FordExpedition = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -161,6 +180,7 @@ const FordExpedition = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -190,6 +210,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -197,6 +218,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -204,6 +226,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -211,6 +234,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -218,6 +242,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -225,6 +250,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -232,6 +258,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -239,6 +266,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -246,6 +274,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -253,6 +282,7 @@ const FordExpedition = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -348,6 +378,23 @@ const FordExpedition = () => {
 
         <FormScreen formParagraph="The Ford Expedition is a full-size SUV that offers a perfect combination of power and refinement. Its spacious cabin provides comfortable seating for up to eight passengers, making it ideal for family trips or outdoor adventures. The Expedition is equipped with advanced technology features such as a touchscreen infotainment system, Apple CarPlay, and Android Auto compatibility. With its impressive towing capacity and versatile cargo space, this SUV is well-suited for both everyday driving and outdoor activities. The Ford Expedition delivers a smooth and comfortable ride, making it an excellent choice for those seeking a balance of luxury and capability." />
         <Footer />
+        <Popup
+          open={modalOpen}
+          modal
+          onClose={closeModal}
+          className="modal-photo"
+          position="center center"
+          overlayStyle={{ background: "rgba(0,0,0,0.7)" }}
+        >
+          <Zoom>
+            <img
+              src={activeImage}
+              className="photo"
+              alt="Enlarged car"
+              onClick={closeModal}
+            />
+          </Zoom>
+        </Popup>
       </div>
     </>
   );

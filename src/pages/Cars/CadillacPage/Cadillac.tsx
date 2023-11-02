@@ -5,12 +5,14 @@ import PriceTable from "../../../components/PriceTable/PriceTable";
 import CarFeature from "../../../components/CarFeature/CarFeature";
 import FormScreen from "../../../screens/FormScreen/FormScreen";
 import Footer from "../../../components/Footer/Footer";
+import Popup from "reactjs-popup";
 
 import { Form, Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "../../../components/Button/Button";
 import { Helmet } from "react-helmet";
+import { Zoom } from "react-awesome-reveal";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -25,6 +27,19 @@ const icon = require("../../../assets/icon.svg").default;
 
 const CadillacEscalade = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isOpen, setOpened] = useState();
+  const [activeImage, setActiveImage] = useState("");
+
+  const openModal = (imageSrc: any) => {
+    setActiveImage(imageSrc);
+    setModalOpen(true);
+    console.log("ZOO");
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -137,6 +152,7 @@ const CadillacEscalade = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -144,6 +160,7 @@ const CadillacEscalade = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -151,6 +168,7 @@ const CadillacEscalade = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -158,6 +176,7 @@ const CadillacEscalade = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -165,6 +184,7 @@ const CadillacEscalade = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -194,6 +214,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -201,6 +222,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -208,6 +230,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -215,6 +238,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -222,6 +246,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -229,6 +254,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -236,6 +262,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -243,6 +270,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -250,6 +278,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -257,6 +286,7 @@ const CadillacEscalade = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -352,6 +382,23 @@ const CadillacEscalade = () => {
 
         <FormScreen formParagraph="The Cadillac Escalade ESV Sport is a luxurious SUV that combines style, comfort, and versatility. Its spacious interior provides ample room for passengers and luggage, making it ideal for family trips or group travel. The Escalade ESV Sport is equipped with premium features such as leather seating, a panoramic sunroof, and a state-of-the-art entertainment system. The advanced safety systems, including forward collision alert and lane-keeping assist, ensure a safe and secure journey. With its powerful engine and smooth handling, this SUV offers both luxury and performance." />
         <Footer />
+        <Popup
+          open={modalOpen}
+          modal
+          onClose={closeModal}
+          className="modal-photo"
+          position="center center"
+          overlayStyle={{ background: "rgba(0,0,0,0.7)" }}
+        >
+          <Zoom>
+            <img
+              src={activeImage}
+              className="photo"
+              alt="Enlarged car"
+              onClick={closeModal}
+            />
+          </Zoom>
+        </Popup>
       </div>
     </>
   );

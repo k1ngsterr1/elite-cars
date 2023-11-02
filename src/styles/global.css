@@ -287,6 +287,10 @@
     width: clamp(200px, 20.832vw, 800px);
     height: clamp(200px, 20.832vw, 800px);
   }
+  .service {
+    width: clamp(172.5px, 17.9676vw, 690px) !important;
+    height: clamp(172.5px, 17.9676vw, 690px) !important;
+  }
   .mt356 {
     margin-top: clamp(178px, 18.54048vw, 712px) !important;
   }

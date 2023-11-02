@@ -5,6 +5,7 @@ import PriceTable from "../../../components/PriceTable/PriceTable";
 import CarFeature from "../../../components/CarFeature/CarFeature";
 import FormScreen from "../../../screens/FormScreen/FormScreen";
 import Footer from "../../../components/Footer/Footer";
+import Popup from "reactjs-popup";
 import SwiperCore from "swiper";
 
 import { Button } from "../../../components/Button/Button";
@@ -12,6 +13,8 @@ import { Form, Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
+
+import { Zoom } from "react-awesome-reveal";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -26,6 +29,19 @@ const icon = require("../../../assets/icon.svg").default;
 
 const CadillacCT6 = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isOpen, setOpened] = useState();
+  const [activeImage, setActiveImage] = useState("");
+
+  const openModal = (imageSrc: any) => {
+    setActiveImage(imageSrc);
+    setModalOpen(true);
+    console.log("ZOO");
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -134,6 +150,7 @@ const CadillacCT6 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -141,6 +158,7 @@ const CadillacCT6 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -148,6 +166,7 @@ const CadillacCT6 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -155,6 +174,7 @@ const CadillacCT6 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -191,6 +211,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -198,6 +219,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -205,6 +227,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -212,6 +235,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -219,6 +243,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -226,6 +251,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -233,6 +259,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -240,6 +267,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -247,6 +275,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -254,6 +283,7 @@ const CadillacCT6 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -349,6 +379,23 @@ const CadillacCT6 = () => {
 
         <FormScreen formParagraph="The Cadillac CT6 Luxury is a top-of-the-line sedan that offers a truly luxurious experience. Its plush leather seats provide maximum comfort, allowing passengers to relax and enjoy the ride. The advanced technology features include a touchscreen infotainment system, Bluetooth connectivity, and a premium sound system, ensuring a seamless and enjoyable journey. The powerful engine and smooth handling of the CT6 Luxury make it a pleasure to drive, providing a refined and exhilarating driving experience." />
         <Footer />
+        <Popup
+          open={modalOpen}
+          modal
+          onClose={closeModal}
+          className="modal-photo"
+          position="center center"
+          overlayStyle={{ background: "rgba(0,0,0,0.7)" }}
+        >
+          <Zoom>
+            <img
+              src={activeImage}
+              className="photo"
+              alt="Enlarged car"
+              onClick={closeModal}
+            />
+          </Zoom>
+        </Popup>
       </div>
     </>
   );

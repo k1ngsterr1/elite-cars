@@ -5,13 +5,14 @@ import PriceTable from "../../../components/PriceTable/PriceTable";
 import CarFeature from "../../../components/CarFeature/CarFeature";
 import FormScreen from "../../../screens/FormScreen/FormScreen";
 import Footer from "../../../components/Footer/Footer";
-import SwiperCore from "swiper";
+import Popup from "reactjs-popup";
 
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Helmet } from "react-helmet";
 import { Form, Link } from "react-router-dom";
 import { Button } from "../../../components/Button/Button";
+import { Zoom } from "react-awesome-reveal";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -19,14 +20,31 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 import "../CadillacPage/styles/car.css";
-import ThanksPopup from "../../../components/Popup/ThanksPopup";
 
 const cadillacMob = require("../../../assets/bmw-7-mob.webp");
 const bmwPc = require("../../../assets/bmw-7.webp");
 const icon = require("../../../assets/icon.svg").default;
 
+// interface ModalProps extends HTMLAttributes<HTMLDivElement> {
+//   isOpen: boolean;
+//   onClose: () => void;
+// }
+
 const BMW7 = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isOpen, setOpened] = useState();
+  const [activeImage, setActiveImage] = useState("");
+
+  const openModal = (imageSrc: any) => {
+    setActiveImage(imageSrc);
+    setModalOpen(true);
+    console.log("ZOO");
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -135,6 +153,7 @@ const BMW7 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -142,6 +161,7 @@ const BMW7 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -149,6 +169,7 @@ const BMW7 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -156,6 +177,7 @@ const BMW7 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -163,6 +185,7 @@ const BMW7 = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -192,6 +215,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -199,6 +223,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -206,6 +231,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -213,6 +239,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -220,6 +247,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -227,6 +255,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -234,6 +263,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -241,6 +271,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -248,6 +279,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -255,6 +287,7 @@ const BMW7 = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -350,6 +383,23 @@ const BMW7 = () => {
           />
         </div>
         <FormScreen formParagraph="The BMW 7 Series is a perfect blend of style, performance, and luxury. Its sleek exterior design exudes elegance and sophistication, while the opulent interior features high-quality materials and advanced technology. The BMW 7 Series is equipped with innovative features such as gesture control, wireless charging, and a customizable digital instrument cluster. With its powerful engines and precise handling, this luxury sedan delivers a dynamic and exhilarating driving experience. Additionally, the BMW 7 Series prioritizes safety with its advanced safety systems, ensuring a secure and comfortable ride." />
+        <Popup
+          open={modalOpen}
+          modal
+          onClose={closeModal}
+          className="modal-photo"
+          position="center center"
+          overlayStyle={{ background: "rgba(0,0,0,0.7)" }}
+        >
+          <Zoom>
+            <img
+              src={activeImage}
+              className="photo"
+              alt="Enlarged car"
+              onClick={closeModal}
+            />
+          </Zoom>
+        </Popup>
         <Footer />
       </div>
     </>

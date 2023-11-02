@@ -5,6 +5,7 @@ import PriceTable from "../../../components/PriceTable/PriceTable";
 import CarFeature from "../../../components/CarFeature/CarFeature";
 import FormScreen from "../../../screens/FormScreen/FormScreen";
 import Footer from "../../../components/Footer/Footer";
+import Popup from "reactjs-popup";
 import SwiperCore from "swiper";
 
 import { Navigation, Pagination } from "swiper/modules";
@@ -12,6 +13,7 @@ import { Form, Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "../../../components/Button/Button";
 import { Helmet } from "react-helmet";
+import { Zoom } from "react-awesome-reveal";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -26,6 +28,19 @@ const icon = require("../../../assets/icon.svg").default;
 
 const MBSprinter = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isOpen, setOpened] = useState();
+  const [activeImage, setActiveImage] = useState("");
+
+  const openModal = (imageSrc: any) => {
+    setActiveImage(imageSrc);
+    setModalOpen(true);
+    console.log("ZOO");
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -33,6 +48,24 @@ const MBSprinter = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Cadillac Escalade ESV Sport | Luxury Car Rental with Driver in Chicago
+        </title>
+        <meta
+          property="og:title"
+          content="Mercedes-Benz Sprinter | Luxury Car Rental with Driver in Chicago"
+        ></meta>
+        <meta
+          property="og:description"
+          content="Travel in style and comfort with the Mercedes-Benz Sprinter. Experience the luxury of the Mercedes-Benz Sprinter and enjoy a seamless journey in Chicago"
+        ></meta>
+        <meta
+          name="description"
+          content="Travel in style and comfort with the Mercedes-Benz Sprinter. Experience the luxury of the Mercedes-Benz Sprinter and enjoy a seamless journey in Chicago"
+        ></meta>
+      </Helmet>
       <div className="screen">
         <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu}></Header>
         {isMenuOpen && <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />}
@@ -116,6 +149,7 @@ const MBSprinter = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -123,6 +157,7 @@ const MBSprinter = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -130,6 +165,7 @@ const MBSprinter = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -137,6 +173,7 @@ const MBSprinter = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -144,6 +181,7 @@ const MBSprinter = () => {
           <SwiperSlide>
             <img
               className="car-img-gallery mt64"
+              onClick={() => openModal(cadillacMob)}
               src={cadillacMob}
               alt="cadillac"
             />
@@ -171,6 +209,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -178,6 +217,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -185,6 +225,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -192,6 +233,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -199,6 +241,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -206,6 +249,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -213,6 +257,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -220,6 +265,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -227,6 +273,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -234,6 +281,7 @@ const MBSprinter = () => {
             <SwiperSlide>
               <img
                 className="car-img-gallery mt64"
+                onClick={() => openModal(cadillacMob)}
                 src={cadillacMob}
                 alt="cadillac"
               />
@@ -326,6 +374,23 @@ const MBSprinter = () => {
         </div>
         <FormScreen formParagraph="The Mercedes-Benz Sprinter is a luxury van that offers spacious and comfortable transportation for group travel or corporate events. Its interior is designed with comfort in mind, featuring plush seating, ample legroom, and high-end amenities such as a mini-fridge and entertainment system. The Sprinter's advanced safety features, including lane-keeping assist and collision prevention assist, provide peace of mind during the journey. With its smooth ride and powerful engine, this luxury van ensures a first-class experience for both business and leisure travel." />
         <Footer />
+        <Popup
+          open={modalOpen}
+          modal
+          onClose={closeModal}
+          className="modal-photo"
+          position="center center"
+          overlayStyle={{ background: "rgba(0,0,0,0.7)" }}
+        >
+          <Zoom>
+            <img
+              src={activeImage}
+              className="photo"
+              alt="Enlarged car"
+              onClick={closeModal}
+            />
+          </Zoom>
+        </Popup>
       </div>
     </>
   );
