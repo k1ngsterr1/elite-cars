@@ -70,7 +70,7 @@ const RatesScreen = () => {
             carImage={rate04}
             carCategorie="Luxury SUV"
             carName="2023 Cadillac Escalade ESV Sport"
-            carHourPrice="$136.00"
+            carHourPrice="$188.00"
             carMilePrice="$3.50"
           />
           <CarRate
@@ -79,7 +79,7 @@ const RatesScreen = () => {
             carImage={fordExpedition}
             carCategorie="Luxury SUV"
             carName="Ford Expedition"
-            carHourPrice="$136.00"
+            carHourPrice="$188.00"
             carMilePrice="$3.50"
           />
           <CarRate
@@ -88,8 +88,8 @@ const RatesScreen = () => {
             carImage={sprinterRate}
             carCategorie="Van"
             carName="Mercedes Sprinter"
-            carHourPrice="$136.00"
-            carMilePrice="$3.00"
+            carHourPrice="$465.00"
+            carMilePrice="$4.00"
           />
         </div>
       </div>
@@ -132,7 +132,7 @@ const RatesScreen = () => {
               carImage={rate04}
               carCategorie="Luxury SUV"
               carName="2023 Cadillac Escalade ESV Sport"
-              carHourPrice="$136.00"
+              carHourPrice="$188.00"
               carMilePrice="$3.50"
             />
           </div>
@@ -145,8 +145,8 @@ const RatesScreen = () => {
                 carImage={fordExpedition}
                 carCategorie="Luxury SUV"
                 carName="Ford Expedition"
-                carHourPrice="$136.00"
-                carMilePrice="$3.00"
+                carHourPrice="$188.00"
+                carMilePrice="$3.50"
               />
               <CarRate
                 navigate={() => navigate("/cars/mercedes-sprinter")}
@@ -154,8 +154,8 @@ const RatesScreen = () => {
                 carImage={sprinterRate}
                 carCategorie="Van"
                 carName="Mercedes Sprinter"
-                carHourPrice="$188.00"
-                carMilePrice="$3.50"
+                carHourPrice="$465.00"
+                carMilePrice="$4.00"
               />
             </div>
           </div>

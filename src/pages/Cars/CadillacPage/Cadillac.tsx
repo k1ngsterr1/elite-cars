@@ -133,7 +133,7 @@ const CadillacEscalade = () => {
           </div>
         </section>
         <img src={cadillacPc} alt="car-pc" className="car-pc-img" />
-        <Swiper
+        {/* <Swiper
           slidesPerView={1}
           spaceBetween={100}
           loop={true}
@@ -292,8 +292,8 @@ const CadillacEscalade = () => {
               />
             </SwiperSlide>
           </Swiper>
-        </div>
-        <div className="content-pc column items-center mt128">
+        </div> */}
+        <div className="content-pc column items-center mt356">
           <h3 className="heading-s text-centers">
             <span className="orange">Prices</span>
           </h3>
@@ -341,7 +341,7 @@ const CadillacEscalade = () => {
         <div className="content mt64 align-center">
           <h2 className="car-heading-s text-center">Prices</h2>
           <PriceTable
-            cityRent="136$"
+            cityRent="188$"
             courtyYard="102"
             minimalRentTime="6"
             holidayPrices="112"

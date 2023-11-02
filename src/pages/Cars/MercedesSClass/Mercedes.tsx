@@ -131,7 +131,7 @@ const MercedesSClass = () => {
           </div>
         </section>
         <img src={cadillacPc} alt="car-pc" className="car-pc-img" />
-        <Swiper
+        {/* <Swiper
           slidesPerView={1}
           spaceBetween={100}
           loop={true}
@@ -187,8 +187,8 @@ const MercedesSClass = () => {
               alt="cadillac"
             />
           </SwiperSlide>
-        </Swiper>
-        <div className="content-pc items-center column justify-center mt356">
+        </Swiper> */}
+        {/* <div className="content-pc items-center column justify-center mt356">
           <h2 className="heading-s text-center">
             <span className="orange">Gallery</span>
           </h2>
@@ -290,8 +290,8 @@ const MercedesSClass = () => {
               />
             </SwiperSlide>
           </Swiper>
-        </div>
-        <div className="content-pc column items-center mt128">
+        </div> */}
+        <div className="content-pc column items-center mt356">
           <h3 className="heading-s text-centers">
             <span className="orange">Prices</span>
           </h3>

@@ -96,7 +96,7 @@ const PricesPage = () => {
             carImage={rate04}
             carCategorie="Luxury Sedan"
             carName="2023 Cadillac Escalade ESV Sport"
-            carHourPrice="$136.00"
+            carHourPrice="$188.00"
             carMilePrice="$3.50"
           />
           <CarRate
@@ -114,8 +114,8 @@ const PricesPage = () => {
             carImage={fordExpedition}
             carCategorie="Luxury SUV"
             carName="Ford Expedition"
-            carHourPrice="$136.00"
-            carMilePrice="$3.00"
+            carHourPrice="$188.00"
+            carMilePrice="$3.50"
           />
 
           <h3 className="heading-third mt64">Arrivals</h3>
@@ -297,7 +297,7 @@ const PricesPage = () => {
                 carImage={rate04}
                 carCategorie="Luxury Sedan"
                 carName="2023 Cadillac Escalade ESV Sport"
-                carHourPrice="$136.00"
+                carHourPrice="$188.00"
                 carMilePrice="$3.50"
               />
             </div>
@@ -308,8 +308,8 @@ const PricesPage = () => {
                 carImage={fordExpedition}
                 carCategorie="Luxury SUV"
                 carName="Ford Expedition"
-                carHourPrice="$136.00"
-                carMilePrice="$3.00"
+                carHourPrice="$188.00"
+                carMilePrice="$3.50"
               />
               <CarRate
                 navigate={() => navigate("/cars/mercedes-sprinter")}
