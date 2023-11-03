@@ -91,7 +91,7 @@ const FordExpedition = () => {
           </p>
           <div className="button-row">
             <Button text="Order Now" marginTop="mt64" scroll="contact" />
-            <span className="price mt16">From $136.00 / hour</span>
+            <span className="price mt16">From $188.00 / hour</span>
             <span className="price mt16">From $3.50 / mile</span>
           </div>
         </section>
@@ -122,7 +122,7 @@ const FordExpedition = () => {
             <div className="button-row-car">
               <Button text="Order Now" marginTop="mt32" scroll="contacts" />
               <div className="prices-group mt32">
-                <span className="text-price orange">From $136.00 / hour</span>
+                <span className="text-price orange">From $188.00 / hour</span>
                 <span className="text-price orange mt8">From $3.50 / mile</span>
               </div>
             </div>

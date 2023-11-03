@@ -92,8 +92,8 @@ const MBSprinter = () => {
           </p>
           <div className="button-row">
             <Button text="Order Now" marginTop="mt64" scroll="contact" />
-            <span className="price mt16">From $136.00 / hour</span>
-            <span className="price mt16">From $3.50 / mile</span>
+            <span className="price mt16">From $465.00 / hour</span>
+            <span className="price mt16">From $4.00 / mile</span>
           </div>
         </section>
         <section className="content-pc mt128">
@@ -123,8 +123,8 @@ const MBSprinter = () => {
             <div className="button-row-car">
               <Button text="Order Now" marginTop="mt32" scroll="contacts" />
               <div className="prices-group mt32">
-                <span className="text-price orange">From $136.00 / hour</span>
-                <span className="text-price orange mt8">From $3.50 / mile</span>
+                <span className="text-price orange">From $465.00 / hour</span>
+                <span className="text-price orange mt8">From $4.00 / mile</span>
               </div>
             </div>
           </div>
@@ -293,7 +293,7 @@ const MBSprinter = () => {
             <span className="orange">Prices</span>
           </h3>
           <PriceTable
-            cityRent="136$"
+            cityRent="465$"
             courtyYard="102"
             minimalRentTime="6"
             holidayPrices="112"
@@ -335,7 +335,7 @@ const MBSprinter = () => {
         <div className="content mt64 align-center">
           <h2 className="car-heading-s text-center">Prices</h2>
           <PriceTable
-            cityRent="136$"
+            cityRent="465$"
             courtyYard="102"
             minimalRentTime="6"
             holidayPrices="112"
