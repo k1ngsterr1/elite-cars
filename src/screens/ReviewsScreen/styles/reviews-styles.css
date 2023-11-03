@@ -119,7 +119,7 @@
   }
   .review-upper .screenshot {
     width: clamp(110px, 11.4576vw, 440px) !important;
-    height: clamp(20px, 2.0832vw, 80px) !important;
+    height: clamp(17.5px, 1.8228vw, 70px) !important;
     color: #2C2C2C;
     background-color: #FF5722;
     font-style: normal;
@@ -130,6 +130,11 @@
     border: none;
     margin-top: clamp(6px, 2.80368vw, 24px);
     cursor: pointer;
+    transition: 0.3s all;
+  }
+  .review-upper .screenshot:hover {
+    color: #FF5722;
+    background-color: #2C2C2C;
   }
   .client-review {
     width: 90%;

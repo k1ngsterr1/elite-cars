@@ -187,12 +187,18 @@ const BookingForm: React.FC = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="slide">
-                  <div className="car-card">
+                  <div
+                    className="car-card"
+                    onClick={() => handleCardClick("Premium Sedan")}
+                  >
                     <input
                       type="checkbox"
                       className="checkbox"
                       checked={selectedCar === "Premium Sedan"}
-                      onChange={() => handleCheckboxChange("Premium Sedan")}
+                      onChange={(e) => {
+                        e.stopPropagation();
+                        handleCheckboxChange("Premium Sedan");
+                      }}
                     />
                     <span className="card-text orange">Premium Sedan</span>
                     <img
@@ -214,12 +220,18 @@ const BookingForm: React.FC = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="slide">
-                  <div className="car-card">
+                  <div
+                    className="car-card"
+                    onClick={() => handleCardClick("Suv")}
+                  >
                     <input
                       type="checkbox"
                       className="checkbox"
                       checked={selectedCar === "Suv"}
-                      onChange={() => handleCheckboxChange("Suv")}
+                      onChange={(e) => {
+                        e.stopPropagation();
+                        handleCheckboxChange("Suv");
+                      }}
                     />
                     <span className="card-text orange">SUV</span>
                     <img className="car-card-image" src={SUV} alt="sedan" />
@@ -237,12 +249,18 @@ const BookingForm: React.FC = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="slide">
-                  <div className="car-card">
+                  <div
+                    className="car-card"
+                    onClick={() => handleCardClick("Van")}
+                  >
                     <input
                       type="checkbox"
                       className="checkbox"
                       checked={selectedCar === "Van"}
-                      onChange={() => handleCheckboxChange("Van")}
+                      onChange={(e) => {
+                        e.stopPropagation();
+                        handleCheckboxChange("Van");
+                      }}
                     />
                     <span className="card-text orange">Van</span>
                     <img className="car-card-image" src={van} alt="sedan" />
@@ -335,12 +353,18 @@ const BookingForm: React.FC = () => {
                   }
                 >
                   <SwiperSlide className="slide">
-                    <div className="car-card">
+                    <div
+                      className="car-card"
+                      onClick={() => handleCardClick("Sedan")}
+                    >
                       <input
                         type="checkbox"
                         className="checkbox"
                         checked={selectedCar === "Sedan"}
-                        onChange={() => handleCheckboxChange("Sedan")}
+                        onChange={(e) => {
+                          e.stopPropagation();
+                          handleCheckboxChange("Sedan");
+                        }}
                       />
                       <span className="card-text orange">Sedan</span>
                       <img className="car-card-image" src={sedan} alt="sedan" />
@@ -361,12 +385,18 @@ const BookingForm: React.FC = () => {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="slide">
-                    <div className="car-card">
+                    <div
+                      className="car-card"
+                      onClick={() => handleCardClick("Premium Sedan")}
+                    >
                       <input
                         type="checkbox"
                         className="checkbox"
                         checked={selectedCar === "Premium Sedan"}
-                        onChange={() => handleCheckboxChange("Premium Sedan")}
+                        onChange={(e) => {
+                          e.stopPropagation();
+                          handleCheckboxChange("Premium Sedan");
+                        }}
                       />
                       <span className="card-text orange">Premium Sedan</span>
                       <img
@@ -391,12 +421,18 @@ const BookingForm: React.FC = () => {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="slide">
-                    <div className="car-card">
+                    <div
+                      className="car-card"
+                      onClick={() => handleCardClick("Suv")}
+                    >
                       <input
                         type="checkbox"
                         className="checkbox"
                         checked={selectedCar === "Suv"}
-                        onChange={() => handleCheckboxChange("Suv")}
+                        onChange={(e) => {
+                          e.stopPropagation();
+                          handleCheckboxChange("Suv");
+                        }}
                       />
                       <span className="card-text orange">SUV</span>
                       <img className="car-card-image" src={SUV} alt="sedan" />
@@ -417,12 +453,18 @@ const BookingForm: React.FC = () => {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="slide">
-                    <div className="car-card">
+                    <div
+                      className="car-card"
+                      onClick={() => handleCardClick("Van")}
+                    >
                       <input
                         type="checkbox"
                         className="checkbox"
                         checked={selectedCar === "Van"}
-                        onChange={() => handleCheckboxChange("Van")}
+                        onChange={(e) => {
+                          e.stopPropagation();
+                          handleCheckboxChange("Van");
+                        }}
                       />
                       <span className="card-text orange">Van</span>
                       <img className="car-card-image" src={van} alt="sedan" />
