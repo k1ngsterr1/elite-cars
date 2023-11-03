@@ -238,6 +238,20 @@ const PricesPage = () => {
               </tr>
             </tbody>
           </table>
+          <h4 className="heading-third mt32">On-Site Coordinator</h4>
+          <p className="paragraph text-center mt16">
+            For groups, meetings, and special events, we provide coordination
+            and assistance. Our representatives are available for $65.00 per
+            hour, with a minimum of 4.0 hours
+          </p>
+
+          <h4 className="heading-third mt32">Child Seats</h4>
+          <p className="paragraph text-center mt16">
+            For groups, meetings, and special events, we provide coordination
+            and assistance. Our representatives are available for $65.00 per
+            hour, with a minimum of 4.0 hours
+          </p>
+
           <p className="paragraph text-center w90 auto mt32">
             Experience the convenience, comfort, and professionalism of Elite
             Arrival's car rental service with drivers in Chicago. Contact us
