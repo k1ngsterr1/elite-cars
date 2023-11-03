@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { BingMap, Pushpin } from "bingmaps-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -64,6 +65,58 @@ const BookingForm: React.FC = () => {
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
+
+  const [query, setQuery] = useState("");
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+
+  const [dropOffQuery, setDropOffQuery] = useState("");
+  const [dropOffSuggestions, setDropOffSuggestions] = useState([]);
+
+  useEffect(() => {
+    if (query.length > 2 || dropOffQuery.length > 2) {
+      // Fetch suggestions for pickupAddress
+      fetch(
+        `http://dev.virtualearth.net/REST/v1/Locations?query=${query}&key=Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const places = data.resourceSets[0].resources.map(
+            (res: any) => res.name
+          );
+          setSuggestions(places);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+      // Fetch suggestions for dropOffAddress
+      fetch(
+        `http://dev.virtualearth.net/REST/v1/Locations?query=${dropOffQuery}&key=Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const places = data.resourceSets[0].resources.map(
+            (res: any) => res.name
+          );
+          setDropOffSuggestions(places);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    } else {
+      setSuggestions([]);
+      setDropOffSuggestions([]);
+    }
+  }, [query, dropOffQuery]);
+  const handlePickupAddressChange = (address: string) => {
+    setQuery(address);
+    setPickUpAddress(address);
+  };
+
+  const handleDropoffAddressChange = (address: string) => {
+    setDropOffQuery(address);
+    setDropoffAddress(address);
+  };
 
   if (passengers < 1) {
     setPassengers(1);
@@ -553,9 +606,21 @@ const BookingForm: React.FC = () => {
                 type="text"
                 placeholder="Enter Location"
                 name="pickupAddress"
-                onChange={(e: any) => setPickUpAddress(e.target.value)}
+                value={query}
+                onChange={(e) => handlePickupAddressChange(e.target.value)}
                 className="b-form"
               />
+              <div className="mt16">
+                {suggestions.map((suggestion, index) => (
+                  <div
+                    key={index}
+                    className="orange paragraph mt8"
+                    onClick={() => handlePickupAddressChange(suggestion)}
+                  >
+                    {suggestion}
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="form-group mt32">
               <label className="label">Dropoff Location</label>
@@ -563,9 +628,21 @@ const BookingForm: React.FC = () => {
                 type="text"
                 name="dropoffAddress"
                 placeholder="Enter Location"
-                onChange={(e: any) => setDropoffAddress(e.target.value)}
+                value={dropOffQuery}
+                onChange={(e) => handleDropoffAddressChange(e.target.value)}
                 className="b-form"
               />
+              <div className="mt16">
+                {dropOffSuggestions.map((suggestion, index) => (
+                  <div
+                    key={index}
+                    className="orange paragraph mt8"
+                    onClick={() => handleDropoffAddressChange(suggestion)}
+                  >
+                    {suggestion}
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="form-group mt32">
               <label className="label">Pick-up Date</label>
@@ -609,9 +686,21 @@ const BookingForm: React.FC = () => {
                   type="text"
                   name="pickupAddress"
                   placeholder="Enter Location"
-                  onChange={(e: any) => setPickUpAddress(e.target.value)}
+                  value={query}
+                  onChange={(e) => handlePickupAddressChange(e.target.value)}
                   className="b-form"
                 />
+                <div className="mt16">
+                  {suggestions.map((suggestion, index) => (
+                    <div
+                      key={index}
+                      className="orange paragraph mt8"
+                      onClick={() => handlePickupAddressChange(suggestion)}
+                    >
+                      {suggestion}
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="form-group mt64">
                 <label className="label">Dropoff Location</label>
@@ -619,9 +708,21 @@ const BookingForm: React.FC = () => {
                   type="text"
                   name="dropoffAddress"
                   placeholder="Enter Location"
+                  value={dropOffQuery}
                   onChange={(e: any) => setDropoffAddress(e.target.value)}
                   className="b-form"
                 />
+                <div className="mt16">
+                  {dropOffSuggestions.map((suggestion, index) => (
+                    <div
+                      key={index}
+                      className="orange paragraph mt8"
+                      onClick={() => handleDropoffAddressChange(suggestion)}
+                    >
+                      {suggestion}
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="form-group mt64">
                 <label className="label">Pick-up Date</label>

@@ -85,7 +85,7 @@ const ReviewsScreen = () => {
               onClickFunction={() =>
                 handleOpenScreenshot("https://i.ibb.co/9W6SJ5k/review.png")
               }
-              clientName="Client"
+              clientName="Mark McGee"
               clientReview="I have a great experience! Thanks for the great customer service you provide your clients! Highly recommend this company!"
             ></ReviewsTab>
           </SwiperSlide>
@@ -94,7 +94,7 @@ const ReviewsScreen = () => {
               onClickFunction={() =>
                 handleOpenScreenshot("https://i.ibb.co/bJ0qsBY/review-3.png")
               }
-              clientName="Client"
+              clientName="Colleen"
               clientReview="You exceeded my expectations during my recent trip to Chicago. The driver was friendly and knowledgeable, providing great recommendations for places to visit in the city. The Ford Expedition was spacious and well-maintained. I will definitely be using Elite Arrival for my future trips to Chicago"
             ></ReviewsTab>
           </SwiperSlide>
@@ -103,7 +103,7 @@ const ReviewsScreen = () => {
               onClickFunction={() =>
                 handleOpenScreenshot("https://i.ibb.co/ZmwJ99j/review-2.png")
               }
-              clientName="Client"
+              clientName="Mike"
               clientReview="Elite Arrival truly knows how to provide a first-class experience. The driver was courteous and professional, making sure I had everything I needed during my ride to downtown Chicago. The Ford Expedition was in pristine condition and offered a smooth and enjoyable ride"
             ></ReviewsTab>
           </SwiperSlide>
@@ -131,7 +131,7 @@ const ReviewsScreen = () => {
               onClickFunction={() =>
                 handleOpenScreenshot("https://i.ibb.co/9W6SJ5k/review.png")
               }
-              clientName="Client"
+              clientName="Mark McGee"
               clientReview="I have a great experience! Thanks for the great customer service you provide your clients! Highly recommend this company!"
             ></ReviewsTab>
           </SwiperSlide>
@@ -140,7 +140,7 @@ const ReviewsScreen = () => {
               onClickFunction={() =>
                 handleOpenScreenshot("https://i.ibb.co/bJ0qsBY/review-3.png")
               }
-              clientName="Client"
+              clientName="Colleen"
               clientReview="You exceeded my expectations during my recent trip to Chicago. The driver was friendly and knowledgeable, providing great recommendations for places to visit in the city. The Ford Expedition was spacious and well-maintained. I will definitely be using Elite Arrival for my future trips to Chicago"
             ></ReviewsTab>
           </SwiperSlide>
@@ -149,7 +149,7 @@ const ReviewsScreen = () => {
               onClickFunction={() =>
                 handleOpenScreenshot("https://i.ibb.co/ZmwJ99j/review-2.png")
               }
-              clientName="Client"
+              clientName="Mike"
               clientReview="Elite Arrival truly knows how to provide a first-class experience. The driver was courteous and professional, making sure I had everything I needed during my ride to downtown Chicago. The Ford Expedition was in pristine condition and offered a smooth and enjoyable ride"
             ></ReviewsTab>
           </SwiperSlide>
