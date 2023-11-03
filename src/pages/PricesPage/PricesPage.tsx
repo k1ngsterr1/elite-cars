@@ -244,14 +244,74 @@ const PricesPage = () => {
             and assistance. Our representatives are available for $65.00 per
             hour, with a minimum of 4.0 hours
           </p>
-
-          <h4 className="heading-third mt32">Child Seats</h4>
+          <h4 className="heading-third mt64">Child Seats</h4>
           <p className="paragraph text-center mt16">
-            For groups, meetings, and special events, we provide coordination
-            and assistance. Our representatives are available for $65.00 per
-            hour, with a minimum of 4.0 hours
+            We prioritize the safety and comfort of your family. Child seats in
+            appropriate sizes for infants and toddlers are available at an
+            additional charge. Please secure the seat in the vehicle and ensure
+            your child is properly belted. Inform our agent of your child's age
+            and weight when booking.
           </p>
-
+          <h4 className="heading-third mt64">Other Details</h4>
+          <p className="paragraph text-center mt16">
+            - A 12% service charge and a recommended chauffeur's tip of 20%
+            (adjustable at your discretion) are added to hourly and mileage
+            rates, as well as airport transfer rates.
+          </p>
+          <p className="paragraph text-center mt16">
+            - All hourly charter services have a two-hour minimum charge, except
+            for Downtown transfers which require only one hour.
+          </p>
+          <p className="paragraph text-center mt16">
+            - Passengers who have difficulty finding their vehicle must call us
+            for assistance before leaving their pickup location to avoid full
+            charges for a No-Show. Please note that vehicles may take up to 15
+            minutes to arrive curbside at O'Hare or Midway due to TSA security
+            procedures.
+          </p>
+          <h4 className="heading-third mt64">Meet and Greet Service:</h4>
+          <p className="paragraph text-center mt16">
+            Take advantage of our Meet and Greet service for pick-ups at O'Hare
+            and Midway Airports. This service incurs an additional fee of $50.
+          </p>
+          <h4 className="heading-third mt64">Late/Early Hours Fee:</h4>
+          <p className="paragraph text-center mt16">
+            between 11:00 PM and 4:59 AM, a premium rate of $15.00-$25.00
+            applies.
+          </p>
+          <h4 className="heading-third mt64">Holiday Rates:</h4>
+          <p className="paragraph text-center mt16">
+            During holidays, our rates include an additional $20.00 over the
+            regular rate
+          </p>
+          <h4 className="heading-third mt64">Cancellation Policy:</h4>
+          <p className="paragraph text-center mt16">
+            In Chicago, reservations over $500 must be canceled at least 72
+            hours before the service, reservations between $100 and $500 must be
+            canceled at least 24 hours before the service, and reservations
+            under $100 must be canceled at least 2 hours before the service.
+            Nationally, reservations must be canceled at least 24 hours before
+            the service. Cancellations made later or customer no-shows will
+            result in a 100% charge on your credit card based on the quoted
+            rate.
+          </p>
+          <h4 className="heading-third mt64 text-center">
+            Miscellaneous Rates and Terms:
+          </h4>
+          <p className="paragraph text-center mt16">
+            - Our rates are estimates and do not include airport fees, parking,
+            or tolls.
+            <br /> <br />
+            - Wait Time charges apply for every 15 minutes you are late after
+            your pick-up time, up to an hourly chartered car rate.
+            <br />
+            <br />
+            - Additional stops along your route are $20.00 each, while
+            out-of-line stops require a special quote.
+            <br />
+            <br />- If excessive cleaning is required, a $250.00 custodial fee
+            will be charged for carpet cleaning and odor removal.
+          </p>
           <p className="paragraph text-center w90 auto mt32">
             Experience the convenience, comfort, and professionalism of Elite
             Arrival's car rental service with drivers in Chicago. Contact us

@@ -41,7 +41,7 @@ const luggageOptions = [
 
 const sedan = require("../../assets/sedan.webp");
 const premium_sedan = require("../../assets/premium_sedan.webp");
-const SUV = require("../../assets/suv.webp");
+const SUV = require("../../assets/SUV.webp");
 const van = require("../../assets/van.webp");
 
 const BookingForm: React.FC = () => {

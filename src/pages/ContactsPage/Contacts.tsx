@@ -171,7 +171,10 @@ const Contacts = () => {
             <RegularButton marginTop="mt32" text="Submit" />
           </form>
           {/* <h2 className="heading-fourth mt64">Our Location</h2> */}
-          <div className="contact-link-container mt32">
+          <div
+            className="contact-link-container mt32"
+            style={{ width: "100%" }}
+          >
             <FontAwesomeIcon icon={faPhone} className="fa-icon" />
             <a href="tel: +1 (312) 972-3890" className="contact-link">
               +1 (312) 972-3890
