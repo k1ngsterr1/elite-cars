@@ -72,6 +72,15 @@ const BookingForm: React.FC = () => {
   const [dropOffQuery, setDropOffQuery] = useState("");
   const [dropOffSuggestions, setDropOffSuggestions] = useState([]);
 
+  const formattedSuggestions = suggestions.map((suggestion) => ({
+    label: suggestion,
+    value: suggestion,
+  }));
+  const formattedDropOffSuggestions = dropOffSuggestions.map((suggestion) => ({
+    label: suggestion,
+    value: suggestion,
+  }));
+
   useEffect(() => {
     if (query.length > 2 || dropOffQuery.length > 2) {
       // Fetch suggestions for pickupAddress
@@ -614,7 +623,7 @@ const BookingForm: React.FC = () => {
                 {suggestions.map((suggestion, index) => (
                   <div
                     key={index}
-                    className="orange paragraph mt8"
+                    className="orange paragraph  mt8"
                     onClick={() => handlePickupAddressChange(suggestion)}
                   >
                     {suggestion}
@@ -682,15 +691,18 @@ const BookingForm: React.FC = () => {
               {" "}
               <div className="form-group mt64">
                 <label className="label">Pickup Location</label>
-                <input
-                  type="text"
+                <Select
                   name="pickupAddress"
-                  placeholder="Enter Location"
-                  value={query}
-                  onChange={(e) => handlePickupAddressChange(e.target.value)}
+                  placeholder="Enter Pickup Location"
+                  options={formattedSuggestions}
+                  onInputChange={(inputValue: string) => setQuery(inputValue)} // Capturing input
+                  onChange={(selectedOption: any) =>
+                    handlePickupAddressChange(selectedOption.value)
+                  }
                   className="b-form"
+                  noOptionsMessage={() => "Loading..."} // Display a loading message instead of 'No Options'
                 />
-                <div className="mt16">
+                {/* <div className="mt16">
                   {suggestions.map((suggestion, index) => (
                     <div
                       key={index}
@@ -700,19 +712,24 @@ const BookingForm: React.FC = () => {
                       {suggestion}
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
               <div className="form-group mt64">
                 <label className="label">Dropoff Location</label>
-                <input
-                  type="text"
+                <Select
                   name="dropoffAddress"
-                  placeholder="Enter Location"
-                  value={dropOffQuery}
-                  onChange={(e: any) => setDropoffAddress(e.target.value)}
+                  placeholder="Enter Dropoff Location"
+                  options={formattedDropOffSuggestions}
+                  onInputChange={(inputValue: string) =>
+                    setDropOffQuery(inputValue)
+                  } // Capturing input
+                  onChange={(selectedOption: any) =>
+                    handleDropoffAddressChange(selectedOption.value)
+                  }
                   className="b-form"
+                  noOptionsMessage={() => "Loading..."} // Display a loading message instead of 'No Options'
                 />
-                <div className="mt16">
+                {/* <div className="mt16">
                   {dropOffSuggestions.map((suggestion, index) => (
                     <div
                       key={index}
@@ -722,7 +739,7 @@ const BookingForm: React.FC = () => {
                       {suggestion}
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
               <div className="form-group mt64">
                 <label className="label">Pick-up Date</label>
