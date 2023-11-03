@@ -48,6 +48,7 @@
   flex-direction: column;
   align-items: center;
   background-color: white;
+  cursor: pointer;
 }
 .form-container .form-group .form-swiper .slide .car-card .checkbox {
   width: clamp(10px, 4.6728vw, 40px);

@@ -48,6 +48,7 @@
                     flex-direction: column
                     align-items: center
                     background-color: $white
+                    cursor: pointer
 
                     .checkbox
                         width: clamp(10px,4.6728vw,40px)
@@ -83,7 +84,7 @@
                     background-color: $white
 
                     .text, .icon
-                        font-size: clamp(11px,5.140079999999999vw,44px) 
+                        font-size: clamp(11px,5.140079999999999vw,44px)
 
                     .text
                         font-family: Inter
@@ -178,8 +179,6 @@
 
 @media screen and  (min-width: 1024px)
 
-  
-
     .form-container
         width: clamp(690px,71.8704vw,2760px)
         height: auto
@@ -236,11 +235,11 @@
                         height: clamp(125px,13.02vw,500px)
 
                         .checkbox
-                            width: clamp(10px,1.0416vw,40px) !important 
+                            width: clamp(10px,1.0416vw,40px) !important
                             height: clamp(10px,1.0416vw,40px) !important
                             border: 2px solid #ddd !important
                             appearance: none
-                            border-radius: 50% 
+                            border-radius: 50%
                             margin-top: $m16 !important
                             &:checked
                                 background-color: $orange
@@ -255,7 +254,7 @@
         .title-row
             width: 70%
             height: auto
-            display: flex   
+            display: flex
             align-items: center
             justify-content: space-between
             margin-top: $m32

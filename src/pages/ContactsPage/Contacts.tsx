@@ -172,7 +172,7 @@ const Contacts = () => {
           </form>
           {/* <h2 className="heading-fourth mt64">Our Location</h2> */}
           <div
-            className="contact-link-container mt32"
+            className="contact-link-container justify-center mt32"
             style={{ width: "100%" }}
           >
             <FontAwesomeIcon icon={faPhone} className="fa-icon" />

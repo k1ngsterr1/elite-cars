@@ -48,7 +48,7 @@ const BookingForm: React.FC = () => {
   // Step 1
   const [currentStep, setCurrentStep] = useState(1);
   const [passengers, setPassengers] = useState(1);
-  const [selectedCar, setSelectedCar] = useState("");
+  const [selectedCar, setSelectedCar] = useState(null);
   const [serviceType, setServiceType] = useState(null);
   const [luggage, setLuggage] = useState(null);
   const [isOpen, setOpen] = useState(false);
@@ -71,11 +71,15 @@ const BookingForm: React.FC = () => {
 
   const handleCheckboxChange = (carType: any) => {
     if (selectedCar === carType) {
-      setSelectedCar("");
+      setSelectedCar(null);
     } else {
       setSelectedCar(carType);
     }
   };
+
+  function handleCardClick(carType: any) {
+    handleCheckboxChange(carType);
+  }
 
   const sendEmail = () => {
     setOpen((o) => !o);
@@ -154,12 +158,18 @@ const BookingForm: React.FC = () => {
                 }
               >
                 <SwiperSlide className="slide">
-                  <div className="car-card">
+                  <div
+                    className="car-card"
+                    onClick={() => handleCardClick("Sedan")}
+                  >
                     <input
                       type="checkbox"
                       className="checkbox"
                       checked={selectedCar === "Sedan"}
-                      onChange={() => handleCheckboxChange("Sedan")}
+                      onChange={(e) => {
+                        e.stopPropagation();
+                        handleCheckboxChange("Sedan");
+                      }}
                     />
                     <span className="card-text orange">Sedan</span>
                     <img className="car-card-image" src={sedan} alt="sedan" />
