@@ -294,7 +294,7 @@ const FordExpedition = () => {
             <span className="orange">Prices</span>
           </h3>
           <PriceTable
-            cityRent="136$"
+            cityRent="188$"
             courtyYard="102"
             minimalRentTime="6"
             holidayPrices="112"
@@ -337,7 +337,7 @@ const FordExpedition = () => {
         <div className="content mt64 align-center">
           <h2 className="car-heading-s text-center">Prices</h2>
           <PriceTable
-            cityRent="136$"
+            cityRent="188$"
             courtyYard="102"
             minimalRentTime="6"
             holidayPrices="112"

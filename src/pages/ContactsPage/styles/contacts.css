@@ -59,7 +59,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-left: clamp(8px, 3.73824vw, 32px);
+  margin-left: clamp(4px, 1.86912vw, 16px);
   text-decoration: none;
 }
 
@@ -160,6 +160,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: clamp(8px, 0.83328vw, 32px);
+    margin-left: clamp(4px, 0.41664vw, 16px);
   }
 }/*# sourceMappingURL=contacts.css.map */

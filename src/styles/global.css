@@ -53,6 +53,10 @@
   align-items: center !important;
 }
 
+.ml8 {
+  margin-left: clamp(4px, 1.86912vw, 16px);
+}
+
 .ml16 {
   margin-left: clamp(8px, 3.73824vw, 32px);
 }
@@ -280,6 +284,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .ml8 {
+    margin-left: clamp(4px, 0.41664vw, 16px);
+  }
   .form-lower-mob {
     display: none !important;
   }
