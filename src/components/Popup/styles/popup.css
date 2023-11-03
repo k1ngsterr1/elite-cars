@@ -1,7 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.modal-animation {
+  width: 100% !important;
+}
+
+.popup-content {
+  width: auto !important;
+}
+
 .modal-window {
-  position: absolute;
   width: clamp(183px, 85.51224vw, 732px);
   height: auto;
   display: flex;
@@ -9,7 +16,6 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  right: -40%;
   border-radius: clamp(9px, 4.20552vw, 36px);
 }
 .modal-window .modal-window-content {
@@ -64,6 +70,7 @@
     justify-content: center;
   }
   .popup-content {
+    width: auto !important;
     background-color: transparent !important;
     border: none !important;
   }

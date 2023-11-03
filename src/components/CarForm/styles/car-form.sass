@@ -83,7 +83,7 @@
                     background-color: $white
 
                     .text, .icon
-                        font-size: clamp(11px,5.140079999999999vw,44px) !important
+                        font-size: clamp(11px,5.140079999999999vw,44px) 
 
                     .text
                         font-family: Inter
@@ -178,6 +178,8 @@
 
 @media screen and  (min-width: 1024px)
 
+  
+
     .form-container
         width: clamp(690px,71.8704vw,2760px)
         height: auto
@@ -197,10 +199,63 @@
         flex-direction: column
         align-items: center
 
+        .gallery-switcher
+            width: 50%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            margin: auto
+
+            .field
+                width: 50% !important
+                height: clamp(18px,1.87488vw,72px) !important
+
+                .text, .icon
+                    margin-left: $m8 !important
+                    font-size: clamp(9px,0.93744vw,36px) !important
+
+            .form-group
+
+                .label
+                    color: $white
+                    font-family: Inter
+                    font-size: $font18
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+                    text-transform: capitalize
+
+                .slide
+                    display: flex
+                    flex-direction: column
+
+                    .car-card
+                        width: clamp(125px,13.02vw,500px)
+                        height: clamp(125px,13.02vw,500px)
+
+                        .checkbox
+                            width: clamp(10px,1.0416vw,40px) !important 
+                            height: clamp(10px,1.0416vw,40px) !important
+                            border: 2px solid #ddd !important
+                            appearance: none
+                            border-radius: 50% 
+                            margin-top: $m16 !important
+                            &:checked
+                                background-color: $orange
+
+                        .card-text
+                            font-size: clamp(12.5px,1.302vw,50px)
+                            margin-top: clamp(6px,0.62496vw,24px)
+
+                        .card-text
+                            font-size: clamp(8.5px,0.88536vw,34px) !important
+
         .title-row
             width: 70%
             height: auto
-            display: flex
+            display: flex   
             align-items: center
             justify-content: space-between
             margin-top: $m32

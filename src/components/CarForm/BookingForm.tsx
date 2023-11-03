@@ -41,7 +41,7 @@ const luggageOptions = [
 
 const sedan = require("../../assets/sedan.webp");
 const premium_sedan = require("../../assets/premium_sedan.webp");
-const SUV = require("../../assets/SUV.webp");
+const SUV = require("../../assets/suv.webp");
 const van = require("../../assets/van.webp");
 
 const BookingForm: React.FC = () => {
@@ -308,17 +308,134 @@ const BookingForm: React.FC = () => {
               <span className="title">Select Vehicle</span>
               <span className="title">Final Details</span>
             </div>
-            <div className="input-row">
-              {" "}
+            <div className="gallery-switcher">
               <div className="form-group mt64">
                 <label className="label">Select Your Car Type</label>
-                <Select
-                  options={carOptions}
-                  className="selector"
-                  name="carType"
-                  onChange={(option: any) => setSelectedCar(option?.value)}
-                />
+                <Swiper
+                  className="form-swiper"
+                  slidesPerView={1}
+                  modules={[Navigation, Pagination, Scrollbar, A11y]}
+                  navigation={true}
+                  centeredSlides={true}
+                  pagination={false}
+                  style={
+                    {
+                      "--swiper-navigation-color": "#FF5722",
+                    } as React.CSSProperties
+                  }
+                >
+                  <SwiperSlide className="slide">
+                    <div className="car-card">
+                      <input
+                        type="checkbox"
+                        className="checkbox"
+                        checked={selectedCar === "Sedan"}
+                        onChange={() => handleCheckboxChange("Sedan")}
+                      />
+                      <span className="card-text orange">Sedan</span>
+                      <img className="car-card-image" src={sedan} alt="sedan" />
+                    </div>
+                    <div className="field orange mt16">
+                      <FontAwesomeIcon
+                        className="icon orange"
+                        icon={faBriefcase}
+                      />
+                      <span className="text">4</span>
+                    </div>
+                    <div className="field orange mt16">
+                      <FontAwesomeIcon
+                        className="icon orange"
+                        icon={faPerson}
+                      />
+                      <span className="text">4</span>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="slide">
+                    <div className="car-card">
+                      <input
+                        type="checkbox"
+                        className="checkbox"
+                        checked={selectedCar === "Premium Sedan"}
+                        onChange={() => handleCheckboxChange("Premium Sedan")}
+                      />
+                      <span className="card-text orange">Premium Sedan</span>
+                      <img
+                        className="car-card-image"
+                        src={premium_sedan}
+                        alt="premium_sedan"
+                      />
+                    </div>
+                    <div className="field orange mt16">
+                      <FontAwesomeIcon
+                        className="icon orange"
+                        icon={faBriefcase}
+                      />
+                      <span className="text">4</span>
+                    </div>
+                    <div className="field orange mt16">
+                      <FontAwesomeIcon
+                        className="icon orange"
+                        icon={faPerson}
+                      />
+                      <span className="text">4</span>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="slide">
+                    <div className="car-card">
+                      <input
+                        type="checkbox"
+                        className="checkbox"
+                        checked={selectedCar === "Suv"}
+                        onChange={() => handleCheckboxChange("Suv")}
+                      />
+                      <span className="card-text orange">SUV</span>
+                      <img className="car-card-image" src={SUV} alt="sedan" />
+                    </div>
+                    <div className="field orange mt16">
+                      <FontAwesomeIcon
+                        className="icon orange"
+                        icon={faBriefcase}
+                      />
+                      <span className="text">4</span>
+                    </div>
+                    <div className="field orange mt16">
+                      <FontAwesomeIcon
+                        className="icon orange"
+                        icon={faPerson}
+                      />
+                      <span className="text">4</span>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="slide">
+                    <div className="car-card">
+                      <input
+                        type="checkbox"
+                        className="checkbox"
+                        checked={selectedCar === "Van"}
+                        onChange={() => handleCheckboxChange("Van")}
+                      />
+                      <span className="card-text orange">Van</span>
+                      <img className="car-card-image" src={van} alt="sedan" />
+                    </div>
+                    <div className="field orange mt16">
+                      <FontAwesomeIcon
+                        className="icon orange"
+                        icon={faBriefcase}
+                      />
+                      <span className="text">4</span>
+                    </div>
+                    <div className="field orange mt16">
+                      <FontAwesomeIcon
+                        className="icon orange"
+                        icon={faPerson}
+                      />
+                      <span className="text">4</span>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
               </div>
+            </div>
+            <div className="input-row">
               <div className="form-group mt64">
                 <label className="label">Select Service Type</label>
                 <Select

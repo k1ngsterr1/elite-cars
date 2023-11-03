@@ -51,6 +51,7 @@
   border-radius: 20px;
   border: none;
   margin-top: clamp(6px, 2.80368vw, 24px);
+  cursor: pointer;
 }
 .review-tab .client-review {
   width: 90%;
@@ -115,6 +116,20 @@
     line-height: normal;
     text-transform: capitalize;
     margin-left: clamp(4px, 0.41664vw, 16px);
+  }
+  .review-upper .screenshot {
+    width: clamp(110px, 11.4576vw, 440px) !important;
+    height: clamp(20px, 2.0832vw, 80px) !important;
+    color: #2C2C2C;
+    background-color: #FF5722;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 50px !important;
+    border: none;
+    margin-top: clamp(6px, 2.80368vw, 24px);
+    cursor: pointer;
   }
   .client-review {
     width: 90%;
