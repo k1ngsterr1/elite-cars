@@ -332,11 +332,11 @@ const BookingForm: React.FC = () => {
                       className="icon orange"
                       icon={faBriefcase}
                     />
-                    <span className="text">12</span>
+                    <span className="text">13</span>
                   </div>
                   <div className="field orange mt16">
                     <FontAwesomeIcon className="icon orange" icon={faPerson} />
-                    <span className="text">12</span>
+                    <span className="text">13</span>
                   </div>
                 </SwiperSlide>
               </Swiper>
@@ -536,14 +536,14 @@ const BookingForm: React.FC = () => {
                         className="icon orange"
                         icon={faBriefcase}
                       />
-                      <span className="text">12</span>
+                      <span className="text">13</span>
                     </div>
                     <div className="field orange mt16">
                       <FontAwesomeIcon
                         className="icon orange"
                         icon={faPerson}
                       />
-                      <span className="text">12</span>
+                      <span className="text">13</span>
                     </div>
                   </SwiperSlide>
                 </Swiper>

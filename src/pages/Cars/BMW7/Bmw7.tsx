@@ -95,7 +95,7 @@ const BMW7 = () => {
           </p>
           <div className="button-row">
             <Button text="Order Now" marginTop="mt64" scroll="contact" />
-            <span className="price mt16">From $136.00 / hour</span>
+            <span className="price mt16">From $188.00 / hour</span>
             <span className="price mt16">From $3.50 / mile</span>
           </div>
         </section>
@@ -127,7 +127,7 @@ const BMW7 = () => {
             <div className="button-row-car">
               <Button text="Order Now" marginTop="mt32" scroll="contacts" />
               <div className="prices-group mt32">
-                <span className="text-price orange">From $136.00 / hour</span>
+                <span className="text-price orange">From $188.00 / hour</span>
                 <span className="text-price orange mt8">From $3.50 / mile</span>
               </div>
             </div>
@@ -299,7 +299,7 @@ const BMW7 = () => {
             <span className="orange">Prices</span>
           </h3>
           <PriceTable
-            cityRent="136$"
+            cityRent="188$"
             courtyYard="102"
             minimalRentTime="6"
             holidayPrices="112"
@@ -343,7 +343,7 @@ const BMW7 = () => {
         <div className="content mt64 align-center">
           <h2 className="car-heading-s text-center">Prices</h2>
           <PriceTable
-            cityRent="136$"
+            cityRent="188$"
             courtyYard="102"
             minimalRentTime="6"
             holidayPrices="112"

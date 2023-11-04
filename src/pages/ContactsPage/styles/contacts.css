@@ -154,11 +154,11 @@
   }
   .contacts-container .map-content .location-container .fa-icon, .contacts-container .map-content .location-container .contact-link {
     color: #FF5722;
-    text-align: right;
     font-family: Inter;
     font-size: clamp(10px, 1.0416vw, 40px);
     font-style: normal;
     font-weight: 400;
+    text-align: left;
     line-height: normal;
     margin-left: clamp(4px, 0.41664vw, 16px);
   }

@@ -150,6 +150,7 @@
     font-family: Inter;
     font-size: clamp(8px, 0.83328vw, 32px);
     font-style: normal;
+    text-align: left;
     font-weight: 400;
     line-height: 146%;
     text-decoration: none;
