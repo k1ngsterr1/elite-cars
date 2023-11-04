@@ -35,7 +35,7 @@ const PriceTable: React.FC<TableProps> = ({
         </tr>
         <tr className="request-row-main">
           <td className="request-data" colSpan={2}>
-            Courtyard rent ($ / km)
+            Courtyard rent ($ / mile)
           </td>
         </tr>
         <tr className="request-row-add">
@@ -71,7 +71,7 @@ const PriceTable: React.FC<TableProps> = ({
         <tr>
           <td className="table-additional-heading-pc">City rent ($ / hour)</td>
           <td className="table-additional-heading-pc">
-            Courtyard rent ($ / km)
+            Courtyard rent ($ / mile)
           </td>
           <td className="table-additional-heading-pc">Minimal rent time</td>
           <td className="table-additional-heading-pc">Holiday Prices</td>

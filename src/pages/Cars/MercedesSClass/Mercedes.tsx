@@ -297,7 +297,7 @@ const MercedesSClass = () => {
           </h3>
           <PriceTable
             cityRent="188$"
-            courtyYard="102"
+            courtyYard="3.50$"
             minimalRentTime="6"
             holidayPrices="112"
           />
@@ -339,7 +339,7 @@ const MercedesSClass = () => {
           <h2 className="car-heading-s text-center">Prices</h2>
           <PriceTable
             cityRent="188$"
-            courtyYard="102"
+            courtyYard="3.50$"
             minimalRentTime="6"
             holidayPrices="112"
           />

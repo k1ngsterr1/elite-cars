@@ -294,7 +294,7 @@ const MBSprinter = () => {
           </h3>
           <PriceTable
             cityRent="465$"
-            courtyYard="102"
+            courtyYard="4.00$"
             minimalRentTime="6"
             holidayPrices="112"
           />
@@ -336,7 +336,7 @@ const MBSprinter = () => {
           <h2 className="car-heading-s text-center">Prices</h2>
           <PriceTable
             cityRent="465$"
-            courtyYard="102"
+            courtyYard="4.00$"
             minimalRentTime="6"
             holidayPrices="112"
           />
