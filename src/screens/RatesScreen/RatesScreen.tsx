@@ -41,7 +41,7 @@ const RatesScreen = () => {
             navigate={() => navigate("/cars/cadillac-ct6")}
             marginTop="mt64"
             carImage={rate01}
-            carCategorie="Premium Sedan"
+            carCategorie="Sedan"
             carName="Cadillac CT6 Luxury"
             carHourPrice="$136.00"
             carMilePrice="$3.00"
@@ -103,7 +103,7 @@ const RatesScreen = () => {
               navigate={() => navigate("/cars/cadillac-ct6")}
               marginTop="mt64"
               carImage={rate01}
-              carCategorie="Premium Sedan"
+              carCategorie="Sedan"
               carName="Cadillac CT6 Luxury"
               carHourPrice="$136.00"
               carMilePrice="$3.00"

@@ -85,7 +85,7 @@ const BookingForm: React.FC = () => {
     if (query.length > 2 || dropOffQuery.length > 2) {
       // Fetch suggestions for pickupAddress
       fetch(
-        `http://dev.virtualearth.net/REST/v1/Locations?query=${query}&key=Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn`
+        `https://dev.virtualearth.net/REST/v1/Locations?query=${query}&key=Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -100,7 +100,7 @@ const BookingForm: React.FC = () => {
 
       // Fetch suggestions for dropOffAddress
       fetch(
-        `http://dev.virtualearth.net/REST/v1/Locations?query=${dropOffQuery}&key=Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn`
+        `https://dev.virtualearth.net/REST/v1/Locations?query=${dropOffQuery}&key=Av8PI_RnVrQpZ-gaBBkTGBqwbzn_0heKbd1tjpKdYyIu_iIweBT4N0Rgr_RCWqZn`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -395,7 +395,7 @@ const BookingForm: React.FC = () => {
           <div className="pc-form-step-1">
             <div className="title-row">
               <span className="title orange">Ride Info</span>
-              <span className="title">Select Vehicle</span>
+              <span className="title">Select Address</span>
               <span className="title">Final Details</span>
             </div>
             <div className="gallery-switcher">
@@ -684,7 +684,7 @@ const BookingForm: React.FC = () => {
             {" "}
             <div className="title-row">
               <span className="title">Ride Info</span>
-              <span className="title orange">Select Vehicle</span>
+              <span className="title orange">Select Address</span>
               <span className="title">Final Details</span>
             </div>
             <div className="input-row">
@@ -823,7 +823,7 @@ const BookingForm: React.FC = () => {
             {" "}
             <div className="title-row">
               <span className="title">Ride Info</span>
-              <span className="title">Select Vehicle</span>
+              <span className="title">Select Address</span>
               <span className="title orange">Final Details</span>
             </div>
             <div className="input-row">
