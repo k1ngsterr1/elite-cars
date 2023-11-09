@@ -94,7 +94,7 @@ const CadillacCT6 = () => {
           <div className="button-row">
             <Button text="Order Now" marginTop="mt64" scroll="contact" />
             <span className="price mt16">From $136.00 / hour</span>
-            <span className="price mt16">From $3.50 / mile</span>
+            <span className="price mt16">From $3.00 / mile</span>
           </div>
         </section>
         <section className="content-pc mt128">
@@ -125,7 +125,7 @@ const CadillacCT6 = () => {
               <Button text="Order Now" marginTop="mt32" scroll="contacts" />
               <div className="prices-group mt32">
                 <span className="text-price orange">From $136.00 / hour</span>
-                <span className="text-price orange mt8">From $3.50 / mile</span>
+                <span className="text-price orange mt8">From $3.00 / mile</span>
               </div>
             </div>
           </div>
@@ -296,7 +296,7 @@ const CadillacCT6 = () => {
           </h3>
           <PriceTable
             cityRent="136$"
-            courtyYard="3.50$"
+            courtyYard="3.00$"
             minimalRentTime="6"
             holidayPrices="112"
           />
@@ -338,8 +338,8 @@ const CadillacCT6 = () => {
         <div className="content mt64 align-center">
           <h2 className="car-heading-s text-center">Prices</h2>
           <PriceTable
-            cityRent="188$"
-            courtyYard="3.50$"
+            cityRent="136$"
+            courtyYard="3.00$"
             minimalRentTime="6"
             holidayPrices="112"
           />

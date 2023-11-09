@@ -141,7 +141,7 @@ const Footer = () => {
               <div className="contact-group">
                 <FontAwesomeIcon className="icon" icon={faPhone} />
                 <a className="link-g" href="tel:+1 (312) 972-3890">
-                  +1(312)972-3890
+                  +1(312)9723890
                 </a>
               </div>
               <span className="contact-bold">Email:</span>

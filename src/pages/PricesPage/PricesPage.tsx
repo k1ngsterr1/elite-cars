@@ -94,7 +94,7 @@ const PricesPage = () => {
             navigate={() => navigate("/cars/cadillac-escalade")}
             marginTop="mt32"
             carImage={rate04}
-            carCategorie="Luxury Sedan"
+            carCategorie="Luxury SUV"
             carName="2023 Cadillac Escalade ESV Sport"
             carHourPrice="$188.00"
             carMilePrice="$3.50"
@@ -369,7 +369,7 @@ const PricesPage = () => {
                 navigate={() => navigate("/cars/cadillac-escalade")}
                 marginTop="mt32"
                 carImage={rate04}
-                carCategorie="Luxury Sedan"
+                carCategorie="Luxury SUV"
                 carName="2023 Cadillac Escalade ESV Sport"
                 carHourPrice="$188.00"
                 carMilePrice="$3.50"

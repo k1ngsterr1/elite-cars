@@ -51,7 +51,7 @@ const MBSprinter = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>
-          Cadillac Escalade ESV Sport | Luxury Car Rental with Driver in Chicago
+          Mercedes-Benz Sprinter | Luxury Car Rental with Driver in Chicago
         </title>
         <meta
           property="og:title"

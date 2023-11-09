@@ -95,7 +95,7 @@ const CorporateTravel = () => {
             </h2>
             <PriceTable
               cityRent="136$"
-              courtyYard="102"
+              courtyYard="3.00$"
               minimalRentTime="6"
               holidayPrices="112"
             />
@@ -109,7 +109,7 @@ const CorporateTravel = () => {
                 navigate={() => navigate("/cars/cadillac-ct6")}
                 marginTop="mt32"
                 carImage={rate01}
-                carCategorie="Premium Sedan"
+                carCategorie="Sedan"
                 carName="Cadillac CT6 Luxury"
                 carHourPrice="$136.00"
                 carMilePrice="$3.00"
@@ -136,9 +136,9 @@ const CorporateTravel = () => {
                 navigate={() => navigate("/cars/cadillac-escalade")}
                 marginTop="mt32"
                 carImage={rate04}
-                carCategorie="Luxury Sedan"
+                carCategorie="Luxury SUV"
                 carName="2023 Cadillac Escalade ESV Sport"
-                carHourPrice="$136.00"
+                carHourPrice="$188.00"
                 carMilePrice="$3.50"
               />
             </div>
@@ -149,8 +149,8 @@ const CorporateTravel = () => {
                 carImage={fordExpedition}
                 carCategorie="Luxury SUV"
                 carName="Ford Expedition"
-                carHourPrice="$136.00"
-                carMilePrice="$3.00"
+                carHourPrice="$188.00"
+                carMilePrice="$3.50"
               />
               <CarRate
                 navigate={() => navigate("/cars/mercedes-sprinter")}
@@ -158,8 +158,8 @@ const CorporateTravel = () => {
                 carImage={sprinterRate}
                 carCategorie="Van"
                 carName="Mercedes Sprinter"
-                carHourPrice="$188.00"
-                carMilePrice="$3.50"
+                carHourPrice="$465.00"
+                carMilePrice="$4.00"
               />
             </div>
           </div>
@@ -211,7 +211,7 @@ const CorporateTravel = () => {
           </h2>
           <PriceTable
             cityRent="136$"
-            courtyYard="102"
+            courtyYard="3.00$"
             minimalRentTime="6"
             holidayPrices="112"
           />
@@ -222,7 +222,7 @@ const CorporateTravel = () => {
             navigate={() => navigate("/cars/cadillac-ct6")}
             marginTop="mt32"
             carImage={rate01}
-            carCategorie="Premium Sedan"
+            carCategorie="Sedan"
             carName="Cadillac CT6 Luxury"
             carHourPrice="$136.00"
             carMilePrice="$3.00"
@@ -249,9 +249,9 @@ const CorporateTravel = () => {
             navigate={() => navigate("/cars/cadillac-escalade")}
             marginTop="mt32"
             carImage={rate04}
-            carCategorie="Luxury Sedan"
+            carCategorie="Luxury SUV"
             carName="2023 Cadillac Escalade ESV Sport"
-            carHourPrice="$136.00"
+            carHourPrice="$188.00"
             carMilePrice="$3.50"
           />
           <CarRate
@@ -269,8 +269,8 @@ const CorporateTravel = () => {
             carImage={fordExpedition}
             carCategorie="Luxury SUV"
             carName="Ford Expedition"
-            carHourPrice="$136.00"
-            carMilePrice="$3.00"
+            carHourPrice="$188.00"
+            carMilePrice="$3.50"
           />
           <p className="paragraph text-center mt128 ">
             Whether you need to transport your executive team to an off-site
